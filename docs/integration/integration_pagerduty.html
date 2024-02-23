@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>PagerDuty Integration Guide &#8212; Workspace ONE Intelligence  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/adctheme.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/toggle.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+      <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="Workspace ONE Intelligence  documentation" href="../index.html" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <script type="text/javascript">try{document.domain="vmware.com"}catch(e){};</script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-49786008-1']);
+    _gaq.push(['_setDomainName', 'apteligent.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_addIgnoredRef', 'apteligent.com']);   // Stops Self Referrals
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  
+  <meta name="google-translate-customization" content="f0837c562504ad7b-d669caf2b7375c11-g99fd8de75f76752f-14"></meta>
+
+  </head><body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PK9468"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PK9468');</script>
+<!-- End Google Tag Manager -->
+
+
+  <div id="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+          <div id="searchbox" style="display: none">
+              <form class="search" action="../search.html" method="get">
+                <div class="search-wrapper">
+                  <input class="prettysearch" type="text" name="q" size="18" />
+                  <input type="submit" value="Search" class="searchbutton" />
+                </div>
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+      <ul><li class="toctree-l1" id="docs-home"><a href="../index.html">Docs Home</a></li></ul>
+      <ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ios/ios.html">Apple SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../android/android.html">Android SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development_platforms/index.html">Development Platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/eula_accepted.html">SDK Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../release_notes/release_notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/downloads.html">EULA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/checksums.html">SDK Download Checksums</a></li>
+</ul>
+
+      <div id="sidebar-toc-clear"></div>
+      
+    </div>
+  </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            <div class="container">
+              <div class="row">
+                <div class="span12">
+                  
+  <section id="pagerduty-integration-guide">
+<span id="integrate-pagerduty"></span><h1>PagerDuty Integration Guide<a class="headerlink" href="#pagerduty-integration-guide" title="Permalink to this heading">¶</a></h1>
+<p>This topic describes how to integrate Apteligent alerts with <a class="reference external" href="http://PagerDuty.com">PagerDuty</a>. Using Apteligent’s PagerDuty integration, whenever a Apteligent alert is triggered, it will automatically trigger an incident in PagerDuty so that customers can take advantage of PagerDuty’s schedule management, alerting, and incident tracking system. See also the related <a class="reference external" href="http://www.pagerduty.com/docs/guides/crittercism-integration-guide/">PagerDuty instructions</a>.</p>
+<p>To configure alert integration with PagerDuty:</p>
+<ol class="arabic">
+<li><p>In the Apteligent Alert center, click <strong>Add Integration</strong> to create a new alert integration.</p>
+<img alt="../_images/integration-pagerduty-new-alert.png" src="../_images/integration-pagerduty-new-alert.png" />
+</li>
+<li><p>For the Integration type, select <strong>PagerDuty</strong>.</p></li>
+<li><p>Enter a custom name (for example, <code class="docutils literal notranslate"><span class="pre">My</span> <span class="pre">New</span> <span class="pre">PD</span> <span class="pre">Integration:</span></code>).</p>
+<img alt="../_images/integration-pagerduty-new-alert-details.png" src="../_images/integration-pagerduty-new-alert-details.png" />
+</li>
+<li><p>Get the service key for the integration by creating a new service in your PagerDuty account. Log into your PagerDuty account, go to the Services Tab, and click <strong>+ Add New Service</strong>.</p>
+<img alt="../_images/integration-pagerduty-new-service.png" src="../_images/integration-pagerduty-new-service.png" />
+</li>
+<li><p>Specify the settings for this new service.</p>
+<img alt="../_images/integration-pagerduty-new-service-add.png" src="../_images/integration-pagerduty-new-service-add.png" />
+<p>In this dialog:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Enter a name for your integration.</p></li>
+<li><p>Select an escalation policy.</p></li>
+<li><p>For the Integration Type, select <strong>Crittercism</strong>.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Click <strong>Add Service</strong>.</p></li>
+<li><p>In the Apteligent Alert Integration, copy the <code class="docutils literal notranslate"><span class="pre">Service</span> <span class="pre">API</span> <span class="pre">Key</span></code>.</p>
+<blockquote>
+<div><img alt="../_images/integration-pagerduty-alert.png" src="../_images/integration-pagerduty-alert.png" />
+</div></blockquote>
+</li>
+<li><p>Return to the Apteligent alert center, paste the copied Service API Key into the <strong>Service Key</strong> field, and then click <strong>Create Integration</strong>.</p>
+<img alt="../_images/integration-pagerduty-alert-details.png" src="../_images/integration-pagerduty-alert-details.png" />
+</li>
+</ol>
+<p>For additional assistance, contact Apteligent Support (<a class="reference external" href="mailto:support&#37;&#52;&#48;apteligent&#46;com">support<span>&#64;</span>apteligent<span>&#46;</span>com</a>).</p>
+</section>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+	<script type="text/javascript" charset="utf-8" src="../_static/toc.js"></script>
+  </body>
+</html>

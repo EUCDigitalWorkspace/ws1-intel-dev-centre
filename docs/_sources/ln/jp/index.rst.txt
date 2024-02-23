@@ -1,0 +1,19 @@
+:orphan:
+
+.. Crittercism Documentation Japanese
+
+.. _japanese_documentation:
+
+Japanese Documentation
+=======================
+
+.. toctree::
+   :maxdepth: 2
+   
+   overview
+   quickstart
+   android
+   ios
+   api
+
+

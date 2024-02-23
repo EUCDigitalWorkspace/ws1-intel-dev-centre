@@ -1,0 +1,36 @@
+.. _integrate_victorops:
+
+VictorOps Integration Guide
+---------------------------
+
+Apteligent provides seamless integration with `VictorOps <http://victorops.com>`_. Using Apteligent's VictorOps integration, whenever a Apteligent alert is triggered, it will automatically 
+trigger an incident in VictorOps so that customers can take advantage of VictorOp's on-call schedule 
+management and incident notification system. 
+
+Here's how you can take advantage of this integration in less than 5 minutes:
+
+1. In the Apteligent Alert Center, click **Alert Integrations**, then click **Add Integration**.
+
+   .. image:: ../img/integration-victorops-new.png
+
+2. Select **VictorOps** as the Integration type and give your new Alert Integration a custom name (for example, ``VictorOps Integration``).
+
+   .. image:: ../img/integration-victorops-name.png
+
+3. To get the service key for the integration, you need to create a new service in your VictorOps account. Log into your VictorOps account, then click **Settings** in the top menu. You should see the following screen.
+
+   .. image:: ../img/integration-victorops-settings.png
+
+4. Click **Integrations** in the top right corner. Under Incoming Alerts, click **Alert Ingestion API**. Copy the Post URL string.
+
+   .. image:: ../img/integration-victorops-ingest.png
+
+5. Go back to Apteligent and paste the URL from VictorOps into the URL field.
+
+   .. image:: ../img/integration-victorops-new-paste.png
+
+6. Change the ``$routing_key`` string to an arbitrary string of your choosing, such as VO-alert.
+
+   .. image:: ../img/integration-victorops-url.png
+
+7. Click **Create Integration**.

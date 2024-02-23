@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>CrittercismCallback &#8212; Workspace ONE Intelligence  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/adctheme.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/toggle.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <link rel="search" title="Search" href="../../search.html" />
+    <link rel="top" title="Workspace ONE Intelligence  documentation" href="../../index.html" />
+      <link rel="up" title="Android SDK" href="../android.html" />
+      <link rel="next" title="CrashData" href="crash_data.html" />
+      <link rel="prev" title="CrittercismConfig" href="crittercism_config.html" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <script type="text/javascript">try{document.domain="vmware.com"}catch(e){};</script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-49786008-1']);
+    _gaq.push(['_setDomainName', 'apteligent.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_addIgnoredRef', 'apteligent.com']);   // Stops Self Referrals
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  
+  <meta name="google-translate-customization" content="f0837c562504ad7b-d669caf2b7375c11-g99fd8de75f76752f-14"></meta>
+
+  </head><body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PK9468"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PK9468');</script>
+<!-- End Google Tag Manager -->
+
+
+  <div id="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+          <div id="searchbox" style="display: none">
+              <form class="search" action="../../search.html" method="get">
+                <div class="search-wrapper">
+                  <input class="prettysearch" type="text" name="q" size="18" />
+                  <input type="submit" value="Search" class="searchbutton" />
+                </div>
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+      <ul><li class="toctree-l1" id="docs-home"><a href="../../index.html">Docs Home</a></li></ul>
+      <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../overview/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ios/ios.html">Apple SDK</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../android.html">Android SDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../android.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../android.html#release-notes">Release Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../android.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../android.html#guide">Guide</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../android.html#sdk-references">SDK References</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="crittercism.html">Crittercism</a></li>
+<li class="toctree-l3"><a class="reference internal" href="crittercism_config.html">CrittercismConfig</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">CrittercismCallback</a></li>
+<li class="toctree-l3"><a class="reference internal" href="crash_data.html">CrashData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="network_instrumentation.html">NetworkInstrumentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../android.html#features">Features</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../development_platforms/index.html">Development Platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../downloads/eula_accepted.html">SDK Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release_notes/release_notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../downloads/downloads.html">EULA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../downloads/checksums.html">SDK Download Checksums</a></li>
+</ul>
+
+      <div id="sidebar-toc-clear"></div>
+      
+    </div>
+  </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            <div class="container">
+              <div class="row">
+                <div class="span12">
+                  
+  <section id="crittercismcallback">
+<span id="android-crittercism-callback"></span><h1>CrittercismCallback<a class="headerlink" href="#crittercismcallback" title="Permalink to this heading">¶</a></h1>
+<p>Import <code class="docutils literal notranslate"><span class="pre">com.crittercism.app</span></code> package to use this class.</p>
+<p>This interface class is used to get crash data from the previous session.
+To use this class, you need to create a new class that implements the methods
+in this interface.</p>
+<p>See <a class="reference internal" href="crittercism.html#android-detect-crash"><span class="std std-ref">Detecting a Crash Occurred</span></a> for more details</p>
+<section id="interface-methods">
+<h2>Interface Methods<a class="headerlink" href="#interface-methods" title="Permalink to this heading">¶</a></h2>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>onDataReceived (t)</p>
+</div>
+<div class="discussion docutils container">
+<p>This method is called when Workspace ONE Intelligence SDK detects that
+there was a crash in the previous session.</p>
+<p>This method will receive a <cite>CrashData</cite>. See <a class="reference internal" href="crash_data.html#android-crash-data"><span class="std std-ref">CrashData</span></a> for details</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">onDataReceived</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">t</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="seealso docutils container">
+<ul class="simple">
+<li><p><a class="reference internal" href="crittercism.html#android-detect-crash"><span class="std std-ref">Detecting a Crash Occurred</span></a></p></li>
+<li><p><a class="reference internal" href="crash_data.html#android-crash-data"><span class="std std-ref">CrashData</span></a></p></li>
+</ul>
+</div>
+</div>
+</section>
+</section>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+	<script type="text/javascript" charset="utf-8" src="../../_static/toc.js"></script>
+  </body>
+</html>

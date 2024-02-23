@@ -1,0 +1,1023 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>WS1Intelligence &#8212; Workspace ONE Intelligence  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/adctheme.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/toggle.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <link rel="search" title="Search" href="../../search.html" />
+    <link rel="top" title="Workspace ONE Intelligence  documentation" href="../../index.html" />
+      <link rel="up" title="Apple SDK" href="../ios.html" />
+      <link rel="next" title="WS1Config" href="ws1config_h.html" />
+      <link rel="prev" title="CRFilter" href="crfilter_h.html" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <script type="text/javascript">try{document.domain="vmware.com"}catch(e){};</script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-49786008-1']);
+    _gaq.push(['_setDomainName', 'apteligent.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_addIgnoredRef', 'apteligent.com']);   // Stops Self Referrals
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  
+  <meta name="google-translate-customization" content="f0837c562504ad7b-d669caf2b7375c11-g99fd8de75f76752f-14"></meta>
+
+  </head><body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PK9468"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PK9468');</script>
+<!-- End Google Tag Manager -->
+
+
+  <div id="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+          <div id="searchbox" style="display: none">
+              <form class="search" action="../../search.html" method="get">
+                <div class="search-wrapper">
+                  <input class="prettysearch" type="text" name="q" size="18" />
+                  <input type="submit" value="Search" class="searchbutton" />
+                </div>
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+      <ul><li class="toctree-l1" id="docs-home"><a href="../../index.html">Docs Home</a></li></ul>
+      <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../overview/overview.html">Overview</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../ios.html">Apple SDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../ios.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ios.html#release-notes">Release Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ios.html#application-requirements">Application Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ios.html#guides">Guides</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../ios.html#sdk-references">SDK References</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="crfilter_h.html">CRFilter</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">WS1Intelligence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ws1config_h.html">WS1Config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ws1filter_h.html">WS1Filter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ws1constants_h.html">WS1Constants</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ios.html#features">Features</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../android/android.html">Android SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../development_platforms/index.html">Development Platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../downloads/eula_accepted.html">SDK Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release_notes/release_notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../downloads/downloads.html">EULA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../downloads/checksums.html">SDK Download Checksums</a></li>
+</ul>
+
+      <div id="sidebar-toc-clear"></div>
+      
+    </div>
+  </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            <div class="container">
+              <div class="row">
+                <div class="span12">
+                  
+  <section id="ws1intelligence">
+<h1>WS1Intelligence<a class="headerlink" href="#ws1intelligence" title="Permalink to this heading">¶</a></h1>
+<section id="initialization">
+<h2>Initialization<a class="headerlink" href="#initialization" title="Permalink to this heading">¶</a></h2>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>+ enable</p>
+</div>
+<div class="discussion docutils container">
+<p>Initializes Workspace ONE Intelligence SDK. This method will use the app ID string
+value specified in the application’s info.plist file with the key ‘WS1IntelligenceAppID’</p>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">enable</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">func</span> <span class="n">enable</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>+ enableWithConfig:</p>
+</div>
+<div class="discussion docutils container">
+<p>Initializes Workspace ONE Intelligence SDK with a config. This method will use the app ID string
+value specified in the application’s info.plist file with the key ‘WS1IntelligenceAppID’
+After this call completes, changes to the config object will have no affect on the behavior of
+Workspace ONE Intelligence SDK.</p>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">enableWithConfig:</span><span class="p">(</span><span class="n">WS1Config</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">config</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">func</span> <span class="n">enable</span><span class="p">(</span><span class="n">withConfig</span><span class="p">:</span> <span class="n">config</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>config</p></td>
+<td><p>Your custom WS1Config</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>+ enableWithAppID:</p>
+</div>
+<div class="discussion docutils container">
+<p>Initializes Workspace ONE Intelligence SDK with the given App ID (found
+on the Workspace ONE Intelligence web portal).</p>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">enableWithAppID:</span><span class="p">(</span><span class="bp">NSString</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">appId</span>
+</pre></div>
+</div>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">func</span> <span class="n">enable</span><span class="p">(</span><span class="n">withAppID</span><span class="p">:</span> <span class="n">appID</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>appId</p></td>
+<td><p>Your iOS appId</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>+ enableWithAppID:config:</p>
+</div>
+<div class="discussion docutils container">
+<p>Initializes Workspace ONE Intelligence SDK with the given App ID (found
+on the Workspace ONE Intelligence web portal). After this call completes,
+changes to the config object will have no affect on the behavior of
+Workspace ONE Intelligence SDK.</p>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">enableWithAppID:</span><span class="p">(</span><span class="bp">NSString</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">appId</span><span class="w"> </span><span class="nf">config:</span><span class="p">(</span><span class="n">WS1Config</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">config</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">func</span> <span class="n">enable</span><span class="p">(</span><span class="n">withAppID</span><span class="p">:</span> <span class="n">appID</span><span class="p">,</span>
+                     <span class="n">config</span><span class="p">:</span> <span class="n">ws1Config</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>appId</p></td>
+<td><p>Your iOS appId</p></td>
+</tr>
+<tr class="row-even"><td><p>config</p></td>
+<td><p>Your custom WS1Config</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="logging-breadcrumbs">
+<span id="breadcrumbs-ios-ws1"></span><h2>Logging Breadcrumbs<a class="headerlink" href="#logging-breadcrumbs" title="Permalink to this heading">¶</a></h2>
+<div class="sdk-section-discussion docutils container">
+<p>A <em>breadcrumb</em> is a developer-defined text string (up to 140 characters) that
+allows developers to capture app run-time information. Example breadcrumbs may
+include variable values, progress through the code, user actions, or low memory
+warnings. For an introduction, see <a class="reference internal" href="../../overview/overview.html#breadcrumbs"><span class="std std-ref">Breadcrumbs</span></a>.</p>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>+ leaveBreadcrumb:</p>
+</div>
+<div class="discussion docutils container">
+<p>Breadcrumbs provide the ability to track activity within your app. A breadcrumb
+is a free form string you supply, which will be timestamped. Crash events, or other
+events, may refer to these for additional diagnostic details.</p>
+<p>Breadcrumbs are limited to 140 characters.</p>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">leaveBreadcrumb:</span><span class="p">(</span><span class="bp">NSString</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">breadcrumb</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">func</span> <span class="n">leaveBreadcrumb</span><span class="p">(</span><span class="n">breadcrumb</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>breadcrumb</p></td>
+<td><p>The custom string to leave a breadcrumb, maximum of 140 characters</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>+ setAsyncBreadcrumbMode:</p>
+</div>
+<div class="discussion docutils container">
+<p>By default, breadcrumbs are flushed to disk immediately when written. This is by design - in order to provide an accurate record of everything that happened up until the point your app crashed. To improve performance you can instruct the library to perform all breadcrumb writes on a background thread. This means that breadcrums are not guaranteed to be saved immediately prior to a crash.</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setAsyncBreadcrumbMode:</span><span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nv">writeAsync</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">func</span> <span class="n">setAsyncBreadcrumbMode</span><span class="p">(</span><span class="n">writeAsync</span><span class="p">:</span> <span class="nb">Bool</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>writeAsync</p></td>
+<td><p>YES to write breadcrumbs in a background thread</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="seealso docutils container">
+<ul class="simple">
+<li><p><a class="reference internal" href="../../overview/overview.html#breadcrumbs"><span class="std std-ref">Introduction to Breadcrumbs</span></a></p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="logging-errors-and-handled-exceptions">
+<span id="logging-errors-and-he-ios-ws1"></span><h2>Logging Errors and Handled Exceptions<a class="headerlink" href="#logging-errors-and-handled-exceptions" title="Permalink to this heading">¶</a></h2>
+<div class="toggle docutils container" id="errors-ios-ws1">
+<div class="header docutils container">
+<p>+ logError:</p>
+</div>
+<div class="discussion docutils container">
+<p>Logging errors is a way of reporting NSError errors your app has received.
+If the method is passed an NSError, the stack trace of the thread that is
+logging the error will be displayed on the Crittercism web portal.</p>
+<p>Logging errors may also be used for tracking NSError errors returned by
+Apple methods and 3rd party library errors. Errors are grouped by stacktrace,
+much like crash reports. Errors may be viewed in the “Handled Exceptions”
+area of the Workspace ONE Intelligence portal.</p>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<blockquote>
+<div><div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">+</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">logError:</span><span class="p">(</span><span class="bp">NSError</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">func</span> <span class="n">logError</span><span class="p">(</span><span class="n">error</span><span class="p">:</span> <span class="n">Error</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>error</p></td>
+<td><p>Error to log</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>+ logError:stacktrace:</p>
+</div>
+<div class="discussion docutils container">
+<p>Logging errors is a way of reporting NSError errors your app has received.
+If the method is passed an NSError, the stack trace of the thread that is
+logging the error will be displayed on the Crittercism web portal.</p>
+<p>Logging errors may also be used for tracking NSError errors returned by
+Apple methods and 3rd party library errors. Errors are grouped by stacktrace,
+much like crash reports. Errors may be viewed in the “Handled Exceptions”
+area of the Workspace ONE Intelligence portal.</p>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">+</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">logError:</span><span class="p">(</span><span class="bp">NSError</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">error</span><span class="w"> </span><span class="nf">stacktrace:</span><span class="p">(</span><span class="bp">NSArray</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">stacktrace</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">func</span> <span class="n">logError</span><span class="p">(</span><span class="n">error</span><span class="p">:</span> <span class="n">Error</span> <span class="n">stacktrace</span><span class="p">:</span> <span class="n">Stacktrace</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>error</p></td>
+<td><p>Error to log</p></td>
+</tr>
+<tr class="row-even"><td><p>stacktrace</p></td>
+<td><p>Array of strings representing a stacktrace</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="availability docutils container">
+<p>Introduced in SDK v5.9.1</p>
+</div>
+</div>
+<div class="toggle docutils container" id="handled-exceptions-ios-ws1">
+<div class="header docutils container">
+<p>+ logHandledException:</p>
+</div>
+<div class="discussion docutils container">
+<p>Handled exceptions may be used for tracking exceptions caught
+in a <code class="docutils literal notranslate"><span class="pre">try</span></code>/<code class="docutils literal notranslate"><span class="pre">catch</span></code> statement, 3rd party library exceptions, and monitoring
+areas in the code that may currently be using assertions. Handled
+exceptions can also be used to track error events such as low memory warnings. For an
+introduction, see <a class="reference internal" href="../../overview/overview.html#handled-exceptions"><span class="std std-ref">Handled Exceptions</span></a>.</p>
+<p>Handled exceptions are grouped by stacktrace, much like crash reports.
+Handled exceptions may be viewed in the “Handled Exceptions” area of the
+Workspace ONE Intelligence portal.</p>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">+</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">logHandledException:</span><span class="p">(</span><span class="bp">NSException</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">exception</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">func</span> <span class="n">logHandledException</span><span class="p">(</span><span class="n">exception</span><span class="p">:</span> <span class="bp">NSException</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>exception</p></td>
+<td><p>Exception to log</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="seealso docutils container">
+<ul class="simple">
+<li><p><a class="reference internal" href="../../overview/overview.html#handled-exceptions"><span class="std std-ref">Introduction to Handled Exception</span></a></p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="logging-network-request">
+<span id="network-requests-ios-ws1"></span><h2>Logging Network Request<a class="headerlink" href="#logging-network-request" title="Permalink to this heading">¶</a></h2>
+<div class="sdk-section-discussion docutils container">
+<p>Network Insights data for <code class="docutils literal notranslate"><span class="pre">NSURLSession</span></code> and <code class="docutils literal notranslate"><span class="pre">NSURLConnection</span></code> is
+automatically captured and reported to Workspace ONE Intelligence simply by
+initializing the SDK. See <a class="reference internal" href="../ios_apm.html#net-stats-ios"><span class="std std-ref">Network Insights</span></a></p>
+<p>If you want to log network requests manually or customize what data gets
+reported, use these methods.</p>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>+ addFilter:</p>
+</div>
+<div class="discussion docutils container">
+<p>Adds an additional filter for network instrumentation.</p>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">addFilter:</span><span class="p">(</span><span class="n">WS1Filter</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">filter</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">func</span> <span class="n">add</span><span class="p">(</span><span class="bp">filter</span><span class="p">:</span> <span class="n">WS1Filter</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>filter</p></td>
+<td><p>WS1Filter filter to add</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>+ logNetworkRequest:url:latency:bytesRead:bytesSent:responseCode:error:</p>
+</div>
+<div class="discussion docutils container">
+<p>Logging endpoints is a way of manually logging Network Insights data for
+custom network libraries which fall outside Workspace ONE Intelligence’s
+monitoring of NSURLConnection and NSURLSession method
+calls.</p>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">+</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">logNetworkRequest:</span><span class="p">(</span><span class="bp">NSString</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">method</span>
+<span class="w">                      </span><span class="nl">url</span><span class="p">:(</span><span class="bp">NSURL</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">url</span>
+<span class="w">                  </span><span class="nl">latency</span><span class="p">:(</span><span class="n">NSTimeInterval</span><span class="p">)</span><span class="nv">latency</span>
+<span class="w">                </span><span class="nl">bytesRead</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">bytesRead</span>
+<span class="w">                </span><span class="nl">bytesSent</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">bytesSent</span>
+<span class="w">             </span><span class="nl">responseCode</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">responseCode</span>
+<span class="w">                    </span><span class="nl">error</span><span class="p">:(</span><span class="bp">NSError</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">error</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">func</span> <span class="n">logNetworkRequest</span><span class="p">(</span><span class="n">method</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span>
+                            <span class="n">url</span> <span class="n">url</span><span class="p">:</span> <span class="bp">NSURL</span><span class="p">,</span>
+                    <span class="n">latency</span> <span class="n">latency</span><span class="p">:</span> <span class="n">NSTimeInterval</span><span class="p">,</span>
+                <span class="n">bytesRead</span> <span class="n">bytesRead</span><span class="p">:</span> <span class="nb">Int</span><span class="p">,</span>
+                <span class="n">bytesSent</span> <span class="n">bytesSent</span><span class="p">:</span> <span class="nb">Int</span><span class="p">,</span>
+          <span class="n">responseCode</span> <span class="n">responseCode</span><span class="p">:</span> <span class="nb">Int</span><span class="p">,</span>
+                        <span class="n">error</span> <span class="n">error</span><span class="p">:</span> <span class="bp">NSError</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Bool</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>method</p></td>
+<td><p>The connection method, such as GET, POST, HEAD, PUT, DELETE, TRACE, OPTIONS, CONNECT, PATCH</p></td>
+</tr>
+<tr class="row-even"><td><p>url</p></td>
+<td><p>The endpoint URL</p></td>
+</tr>
+<tr class="row-odd"><td><p>latency</p></td>
+<td><p>The time between start of request and receipt of response, in seconds</p></td>
+</tr>
+<tr class="row-even"><td><p>bytesRead</p></td>
+<td><p>The number of bytes included in response body</p></td>
+</tr>
+<tr class="row-odd"><td><p>bytesSent</p></td>
+<td><p>The number of bytes included in request body</p></td>
+</tr>
+<tr class="row-even"><td><p>responseCode</p></td>
+<td><p>HTTP status code, generally 100-599, e.g. 200 == OK, 400 == Bad Request, can be 0 if there is an error</p></td>
+</tr>
+<tr class="row-odd"><td><p>error</p></td>
+<td><p>A non-nil error can be logged if network request failed to contact server, etc. Pass nil if there was no error</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="retval docutils container">
+<p>Returns YES if the request was properly logged. Returns NO otherwise.</p>
+</div>
+<div class="seealso docutils container">
+<ul class="simple">
+<li><p><a class="reference internal" href="../ios_apm.html#net-stats-ios"><span class="std std-ref">Network Insights</span></a></p></li>
+<li><p><a class="reference external" href="https://www.apteligent.com/developer-resources/network-insights-best-practices/">Network Insights Best Practices</a></p></li>
+</ul>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>+ logNetworkRequest:urlString:latency:bytesRead:bytesSent:responseCode:error:</p>
+</div>
+<div class="discussion docutils container">
+<p>Logging endpoints is a way of manually logging Network Insights data for
+custom network libraries which fall outside Workspace ONE Intelligence’s
+monitoring of NSURLConnection and NSURLSession method
+calls.</p>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">+</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">logNetworkRequest:</span><span class="p">(</span><span class="bp">NSString</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">method</span>
+<span class="w">                </span><span class="nl">urlString</span><span class="p">:(</span><span class="bp">NSString</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">urlString</span>
+<span class="w">                  </span><span class="nl">latency</span><span class="p">:(</span><span class="n">NSTimeInterval</span><span class="p">)</span><span class="nv">latency</span>
+<span class="w">                </span><span class="nl">bytesRead</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">bytesRead</span>
+<span class="w">                </span><span class="nl">bytesSent</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">bytesSent</span>
+<span class="w">             </span><span class="nl">responseCode</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">responseCode</span>
+<span class="w">                    </span><span class="nl">error</span><span class="p">:(</span><span class="bp">NSError</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">error</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">func</span> <span class="n">logNetworkRequest</span><span class="p">(</span><span class="n">method</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span>
+                <span class="n">urlString</span> <span class="n">urlString</span><span class="p">:</span> <span class="bp">NSString</span><span class="p">,</span>
+                    <span class="n">latency</span> <span class="n">latency</span><span class="p">:</span> <span class="n">NSTimeInterval</span><span class="p">,</span>
+                <span class="n">bytesRead</span> <span class="n">bytesRead</span><span class="p">:</span> <span class="nb">Int</span><span class="p">,</span>
+                <span class="n">bytesSent</span> <span class="n">bytesSent</span><span class="p">:</span> <span class="nb">Int</span><span class="p">,</span>
+          <span class="n">responseCode</span> <span class="n">responseCode</span><span class="p">:</span> <span class="nb">Int</span><span class="p">,</span>
+                        <span class="n">error</span> <span class="n">error</span><span class="p">:</span> <span class="bp">NSError</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Bool</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>method</p></td>
+<td><p>The connection method, such as GET, POST, HEAD, PUT, DELETE, TRACE, OPTIONS, CONNECT, PATCH</p></td>
+</tr>
+<tr class="row-even"><td><p>urlString</p></td>
+<td><p>The endpoint URL in string</p></td>
+</tr>
+<tr class="row-odd"><td><p>latency</p></td>
+<td><p>The time between start of request and receipt of response, in seconds</p></td>
+</tr>
+<tr class="row-even"><td><p>bytesRead</p></td>
+<td><p>The number of bytes included in response body</p></td>
+</tr>
+<tr class="row-odd"><td><p>bytesSent</p></td>
+<td><p>The number of bytes included in request body</p></td>
+</tr>
+<tr class="row-even"><td><p>responseCode</p></td>
+<td><p>HTTP status code, generally 100-599, e.g. 200 == OK, 400 == Bad Request, can be 0 if there is an error</p></td>
+</tr>
+<tr class="row-odd"><td><p>error</p></td>
+<td><p>A non-nil error can be logged if network request failed to contact server, etc. Pass nil if there was no error</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="retval docutils container">
+<p>Returns YES if the request was properly logged. Returns NO otherwise.</p>
+</div>
+</div>
+<div class="toggle docutils container" id="network-update-location-ios-ws1">
+<div class="header docutils container">
+<p>+ updateLocationToLatitude:longitude:</p>
+</div>
+<div class="discussion docutils container">
+<p>Inform Workspace ONE Intelligence SDK of the device’s most recent
+location for use with event reporting.</p>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">updateLocationToLatitude:</span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="nv">location</span><span class="w"> </span><span class="nf">longitude:</span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="nv">longitude</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">func</span> <span class="n">updateLocation</span><span class="p">(</span><span class="n">toLatitude</span><span class="p">:</span> <span class="n">double</span><span class="p">,</span> <span class="n">longitude</span><span class="p">:</span> <span class="n">double</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>latitude</p></td>
+<td><p>Location of the user / device</p></td>
+</tr>
+<tr class="row-even"><td><p>longitude</p></td>
+<td><p>Location of the user / device</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="availability docutils container">
+<p>Introduced in SDK v5.9.3</p>
+</div>
+</div>
+</section>
+<section id="setting-username">
+<span id="username-ios"></span><h2>Setting Username<a class="headerlink" href="#setting-username" title="Permalink to this heading">¶</a></h2>
+<div class="sdk-section-discussion docutils container">
+<p>This interface sets a relationship between a provided username string and the device UUID.</p>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>+ setUsername:</p>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setUsername:</span><span class="p">(</span><span class="bp">NSString</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">username</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">func</span> <span class="n">setUsername</span><span class="p">(</span><span class="n">username</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>username</p></td>
+<td><p>The new username</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="logging-user-flows">
+<span id="userflows-ios-ws1"></span><h2>Logging User Flows<a class="headerlink" href="#logging-user-flows" title="Permalink to this heading">¶</a></h2>
+<div class="sdk-section-discussion docutils container">
+<p>User flows allow developers to track key interactions or user flows in their
+app such as login, account registration, and in app purchase.</p>
+<p>For an introduction, see <a class="reference internal" href="../../overview/overview.html#userflows"><span class="std std-ref">User Flows Monitoring</span></a>.</p>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>+ beginUserFlow:</p>
+</div>
+<div class="discussion docutils container">
+<p>Inititializes and begins a user flow</p>
+<p>User flows allow developers to track key interactions or user flows in their
+app such as login, account registration, and in app purchase. The Workspace
+ONE Intelligence SDK will automatically track application load time as a user
+flow. You can specify additional user flows by adding code to your application.</p>
+<p>Beginning a user flow starts a user flow. Ending, failing, or cancelling a
+user flow stops a user flow. Otherwise, the user flow will be marked as
+crashed or timed out. If a crash occurs, all in progress user flows are
+marked crashed and will be reported with the crash.</p>
+<p>All user flows will appear on Workspace ONE Intelligence portal except for
+cancelled user flows.</p>
+<p>User flows with the same name are aggregated together in the portal by
+Workspace ONE Intelligence.
+Only one user flow for a given name can be in progress at a given time. If you
+begin a second user flow with the same name while another is in progress, the
+first user flow will be cancelled and the new one will take its place.</p>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">beginUserFlow:</span><span class="p">(</span><span class="bp">NSString</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">name</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">func</span> <span class="n">beginUserFlow</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>name</p></td>
+<td><p>The name of the user flow</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="seealso docutils container">
+<ul class="simple">
+<li><p><a class="reference internal" href="../../overview/overview.html#userflows"><span class="std std-ref">Introduction to User Flows</span></a></p></li>
+<li><p><a class="reference external" href="https://www.apteligent.com/developer-resources/three-ways-to-improve-user-experience-through-userflows/">Three Ways to Improve User Experience through User Flows</a></p></li>
+<li><p><a class="reference external" href="https://www.apteligent.com/developer-resources/part-2-tracking-user-experience-with-advanced-userflows/">Tracking User Experience with Advanced User Flows</a></p></li>
+</ul>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>+ beginUserFlow:timeout:</p>
+</div>
+<div class="discussion docutils container">
+<p>Inititializes and begins a user flow with a specified timeout. If the user flow
+is not otherwise completed before this time elapses, the user flow will be marked
+as timed out.</p>
+<p>User flows allow developers to track key interactions or user flows in their
+app such as login, account registration, and in app purchase. The Workspace
+ONE Intelligence SDK will automatically track application load time as a user
+flow. You can specify additional user flows by adding code to your application.</p>
+<p>Beginning a user flow starts a user flow. Ending, failing, or cancelling a
+user flow stops a user flow. Otherwise, the user flow will be marked as
+crashed or timed out. If a crash occurs, all in progress user flows are
+marked crashed and will be reported with the crash.</p>
+<p>All user flows will appear on Workspace ONE Intelligence portal except for
+cancelled user flows.</p>
+<p>User flows with the same name are aggregated together in the portal by
+Workspace ONE Intelligence.
+Only one user flow for a given name can be in progress at a given time. If you
+begin a second user flow with the same name while another is in progress, the
+first user flow will be cancelled and the new one will take its place.</p>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">beginUserFlow:</span><span class="p">(</span><span class="bp">NSString</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">name</span>
+<span class="w">              </span><span class="nl">timeout</span><span class="p">:(</span><span class="n">NSTimeInterval</span><span class="p">)</span><span class="nv">timeout</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">func</span> <span class="n">beginUserFlow</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">String</span> <span class="n">timeout</span><span class="p">:</span> <span class="n">TimeInterval</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>name</p></td>
+<td><p>The name of the user flow</p></td>
+</tr>
+<tr class="row-even"><td><p>timeout</p></td>
+<td><p>Timeout for this user flow in seconds</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="seealso docutils container">
+<ul class="simple">
+<li><p><a class="reference internal" href="../../overview/overview.html#userflows"><span class="std std-ref">Introduction to User Flows</span></a></p></li>
+<li><p><a class="reference external" href="https://www.apteligent.com/developer-resources/three-ways-to-improve-user-experience-through-userflows/">Three Ways to Improve User Experience through User Flows</a></p></li>
+<li><p><a class="reference external" href="https://www.apteligent.com/developer-resources/part-2-tracking-user-experience-with-advanced-userflows/">Tracking User Experience with Advanced User Flows</a></p></li>
+</ul>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>+ cancelUserFlow:</p>
+</div>
+<div class="discussion docutils container">
+<p>Cancel a user flow as if it never existed. The user flow will not be reported.</p>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">cancelUserFlow:</span><span class="p">(</span><span class="bp">NSString</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">name</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">func</span> <span class="n">cancelUserFlow</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>name</p></td>
+<td><p>The name of the user flow</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>+ endUserFlow:</p>
+</div>
+<div class="discussion docutils container">
+<p>End an already begun user flow successfully.</p>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">endUserFlow:</span><span class="p">(</span><span class="bp">NSString</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">name</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">func</span> <span class="n">endUserFlow</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>name</p></td>
+<td><p>The name of the user flow</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>+ failUserFlow:</p>
+</div>
+<div class="discussion docutils container">
+<p>End an already begun user flow as a failure.</p>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">failUserFlow:</span><span class="p">(</span><span class="bp">NSString</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">name</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">func</span> <span class="n">failUserFlow</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>name</p></td>
+<td><p>The name of the user flow</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="detecting-a-crash-occurred">
+<span id="ws1-crash-occured"></span><h2>Detecting a Crash Occurred<a class="headerlink" href="#detecting-a-crash-occurred" title="Permalink to this heading">¶</a></h2>
+<div class="sdk-section-discussion docutils container">
+<p>You can listen to <a class="reference internal" href="ws1constants_h.html#lastcrashnotification-ios-ws1"><span class="std std-ref">WS1NotificationDidCrashOnLastLoad</span></a>
+to get more app crash information on the previous run.</p>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>+ didCrashOnLastLoad:</p>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">+</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">didCrashOnLastLoad</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">func</span> <span class="n">didCrashOnLastLoad</span> <span class="p">-&gt;</span> <span class="nb">Bool</span>
+</pre></div>
+</div>
+</div>
+<div class="retval docutils container">
+<p>Returns YES if the app crashed on the last load, returns NO otherwise.</p>
+</div>
+<div class="seealso docutils container">
+<ul class="simple">
+<li><p><a class="reference internal" href="ws1constants_h.html#lastcrashnotification-ios-ws1"><span class="std std-ref">WS1NotificationDidCrashOnLastLoad</span></a></p></li>
+<li><p><a class="reference internal" href="ws1constants_h.html#lastcrashuserinfo-ios-ws1"><span class="std std-ref">Last Crash UserInfo Keys</span></a></p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="opt-out-status">
+<span id="opt-out-ios-ws1"></span><h2>Opt Out Status<a class="headerlink" href="#opt-out-status" title="Permalink to this heading">¶</a></h2>
+<div class="sdk-section-discussion docutils container">
+<p>Workspace ONE Intelligence SDK provides an opt-out setting that disables all
+reporting to Workspace ONE Intelligence.
+This allows developers to implement code that asks end users whether they want
+to opt out of Workspace ONE Intelligence.
+For an introduction, see <a class="reference internal" href="../../overview/overview.html#opt-out"><span class="std std-ref">Opt Out of Workspace ONE Intelligence</span></a>.</p>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>+ getOptOutStatus</p>
+</div>
+<div class="discussion docutils container">
+<p>Retrieve current opt out status.</p>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">+</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">getOptOutStatus</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">func</span> <span class="n">getOptOutStatus</span> <span class="p">-&gt;</span> <span class="nb">Bool</span>
+</pre></div>
+</div>
+</div>
+<div class="retval docutils container">
+<p>Return <code class="docutils literal notranslate"><span class="pre">YES</span></code> if the user has opted out of reporting Workspace ONE
+Intelligence data.</p>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>+ setOptOutStatus:</p>
+</div>
+<div class="discussion docutils container">
+<p>If you wish to offer your users the ability to opt out of Workspace ONE
+Intelligence data reporting, you can set the OptOutStatus to YES.
+If you do so, there will be no information/requests sent from
+that user’s app and any pending crash reports will be purged.</p>
+<p>Typically, a developer would connect this API call to a checkbox in a
+settings menu.</p>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setOptOutStatus:</span><span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nv">status</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">func</span> <span class="n">setOptOutStatus</span><span class="p">(</span><span class="n">status</span><span class="p">:</span> <span class="nb">Bool</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>status</p></td>
+<td><p>set to YES to disable Workspace ONE Intelligence</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="setting-log-verbosity-of-workspace-one-intelligence-sdk">
+<span id="ios-tune-logging-ws1"></span><h2>Setting Log Verbosity Of Workspace ONE Intelligence SDK<a class="headerlink" href="#setting-log-verbosity-of-workspace-one-intelligence-sdk" title="Permalink to this heading">¶</a></h2>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>+ loggingLevel</p>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">+</span> <span class="p">(</span><span class="n">WS1IntelligenceLoggingLevel</span><span class="p">)</span><span class="nf">loggingLevel</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">func</span> <span class="n">loggingLevel</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="n">WS1IntelligenceLoggingLevel</span>
+</pre></div>
+</div>
+</div>
+<div class="retval docutils container">
+<p>The current logging level of the verbosity of Workspace ONE Intelligence
+SDK log messages.</p>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>+ setLoggingLevel:</p>
+</div>
+<div class="discussion docutils container">
+<p>Set the logging level to tune the verbosity log messages from Workspace
+ONE Intelligence SDK.  The default value is <code class="docutils literal notranslate"><span class="pre">WS1IntelligenceLoggingLevelWarning</span></code>.</p>
+<p>See <a class="reference internal" href="ws1constants_h.html#ws1-logging-level"><span class="std std-ref">WS1IntelligenceLoggingLevel</span></a> to see various logging levels.</p>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setLoggingLevel:</span><span class="p">(</span><span class="n">WS1IntelligenceLoggingLevel</span><span class="p">)</span><span class="nv">loggingLevel</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">func</span> <span class="n">setLoggingLevel</span><span class="p">(</span><span class="n">loggingLevel</span><span class="p">:</span> <span class="n">WS1IntelligenceLoggingLevel</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>loggingLevel</p></td>
+<td><p>The log verbosity of Workspace ONE Intelligence SDK</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="workspace-one-intelligence-device-uuid">
+<span id="device-uuid-ios-ws1"></span><h2>Workspace ONE Intelligence Device UUID<a class="headerlink" href="#workspace-one-intelligence-device-uuid" title="Permalink to this heading">¶</a></h2>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>+ getUserUUID</p>
+</div>
+<div class="discussion docutils container">
+<p>Get the unique identifier for this device generated by Workspace ONE
+Intelligence SDK.  This is <strong>NOT</strong> the device’s UDID.</p>
+<p>If called before enabling the SDK, this will return an empty string.
+All Workspace ONE Intelligence enabled apps on a device will share the
+UUID created by the first installed Workspace ONE Intelligence enabled
+app.</p>
+<p>If all Workspace ONE Intelligence enabled applications are removed from
+a device, a new UUID will be generated when the next one is installed.</p>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">+</span> <span class="p">(</span><span class="bp">NSString</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nf">getUserUUID</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">func</span> <span class="n">getUserUUID</span> <span class="p">-&gt;</span> <span class="nb">String</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+	<script type="text/javascript" charset="utf-8" src="../../_static/toc.js"></script>
+  </body>
+</html>

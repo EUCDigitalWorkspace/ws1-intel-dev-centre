@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Logging Crashes &#8212; Workspace ONE Intelligence  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/adctheme.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/toggle.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+      <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="Workspace ONE Intelligence  documentation" href="../index.html" />
+      <link rel="up" title="Apple SDK" href="ios.html" />
+      <link rel="next" title="Network Insights" href="ios_apm.html" />
+      <link rel="prev" title="WS1Constants" href="sdk/ws1constants_h.html" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <script type="text/javascript">try{document.domain="vmware.com"}catch(e){};</script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-49786008-1']);
+    _gaq.push(['_setDomainName', 'apteligent.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_addIgnoredRef', 'apteligent.com']);   // Stops Self Referrals
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  
+  <meta name="google-translate-customization" content="f0837c562504ad7b-d669caf2b7375c11-g99fd8de75f76752f-14"></meta>
+
+  </head><body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PK9468"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PK9468');</script>
+<!-- End Google Tag Manager -->
+
+
+  <div id="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+          <div id="searchbox" style="display: none">
+              <form class="search" action="../search.html" method="get">
+                <div class="search-wrapper">
+                  <input class="prettysearch" type="text" name="q" size="18" />
+                  <input type="submit" value="Search" class="searchbutton" />
+                </div>
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+      <ul><li class="toctree-l1" id="docs-home"><a href="../index.html">Docs Home</a></li></ul>
+      <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview/overview.html">Overview</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="ios.html">Apple SDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ios.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios.html#release-notes">Release Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios.html#application-requirements">Application Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios.html#guides">Guides</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios.html#sdk-references">SDK References</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="ios.html#features">Features</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="ios.html#out-of-the-box-features">Out-of-the-box Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios.html#main-features">Main Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios.html#other-features">Other Features</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../android/android.html">Android SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development_platforms/index.html">Development Platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/eula_accepted.html">SDK Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../release_notes/release_notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/downloads.html">EULA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/checksums.html">SDK Download Checksums</a></li>
+</ul>
+
+      <div id="sidebar-toc-clear"></div>
+      
+    </div>
+  </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            <div class="container">
+              <div class="row">
+                <div class="span12">
+                  
+  <section id="logging-crashes">
+<span id="crashes-ios"></span><h1>Logging Crashes<a class="headerlink" href="#logging-crashes" title="Permalink to this heading">¶</a></h1>
+<p>Once Workspace ONE Intelligence SDK is initialized within your app, crashes will
+automatically be captured and reported to the Workspace ONE Intelligence
+platform.</p>
+<section id="testing-crash-reporting">
+<h2>Testing Crash Reporting<a class="headerlink" href="#testing-crash-reporting" title="Permalink to this heading">¶</a></h2>
+<p>When testing crash reporting, be sure to disconnect the Xcode debugger. The
+debugger will hit a breakpoint before a crash actually occurs, which prevents
+Workspace ONE Intelligence SDK from detecting a crash. To detach the debugger,
+you can go to the ‘“Debug” menu in Xcode and click “Detach” while the app is
+running.
+Alternatively, you can click the “stop” button in the upper left hand corner of
+Xcode. Next, go to your device or simulator, and open the app manually. Now you
+should be able to test crash reporting without Xcode interfering.</p>
+</section>
+<section id="handling-offline-crashes">
+<h2>Handling Offline Crashes<a class="headerlink" href="#handling-offline-crashes" title="Permalink to this heading">¶</a></h2>
+<p>If a user’s device does not have Internet connectivity, Workspace ONE
+Intelligence SDK caches any crashes that have occurred on the device until they
+can be sent to Workspace ONE Intelligence. By default, Workspace ONE
+Intelligence SDK caches up to three crashes on the device.  If more than the
+maximum number of crashes occur, the oldest crash will be overwritten.</p>
+</section>
+<section id="further-readings">
+<h2>Further Readings<a class="headerlink" href="#further-readings" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="sdk/ws1constants_h.html#lastcrashnotification-ios-ws1"><span class="std std-ref">Last Crash Notification</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+	<script type="text/javascript" charset="utf-8" src="../_static/toc.js"></script>
+  </body>
+</html>

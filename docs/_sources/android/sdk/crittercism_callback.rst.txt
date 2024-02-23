@@ -1,0 +1,99 @@
+.. To add a method in this file, please use the following format.
+..
+.. In general, each method needs to be enclosed in .. container:: toggle
+.. In toggle container, we have header (required), discussion (optional),
+.. declaration (optional), parameters (optional), retval (optional),
+.. availability (optional).
+..
+.. If a method is deprecated, you can mark the header as deprecated.
+.. So you would have .. container :: header deprecated
+..
+.. .. container:: toggle
+..
+..    .. container:: header
+..
+..       <insert method name here>
+..
+..    .. container:: discussion
+..
+..       <Insert method summary>
+..
+..    .. container:: declaration
+..
+..       <insert method declaration in a code block>
+..
+..       For iOS, use
+..
+..       .. example-code::
+..
+..          .. code-block:: objective-c
+..
+..             <insert obj-c code>
+..
+..          .. code-block:: swift
+..
+..             <insert swift code>
+..
+..       For other platform, use code block
+..
+..    .. container:: parameters
+..
+..       +--------+-------------------------------+
+..       | param1 | description                   |
+..       +--------+-------------------------------+
+..
+..    .. container:: retVal
+..
+..       <discuss return value>
+..
+..    .. container:: availability
+..
+..       <discuss when this method is introduced>
+..       <discuss when this method is deprecated>
+..
+..    .. container:: seealso
+..
+..       <list some useful links here>
+..
+
+.. _android_crittercism_callback:
+
+CrittercismCallback
+===================
+
+Import ``com.crittercism.app`` package to use this class.
+
+This interface class is used to get crash data from the previous session.
+To use this class, you need to create a new class that implements the methods
+in this interface.
+
+See :ref:`android_detect_crash` for more details
+
+Interface Methods
+-----------------
+
+.. container:: toggle
+
+    .. container:: header
+
+       onDataReceived (t)
+
+    .. container:: discussion
+
+       This method is called when Workspace ONE Intelligence SDK detects that
+       there was a crash in the previous session.
+
+       This method will receive a `CrashData`. See :ref:`android_crash_data` for details
+
+    .. container:: declaration
+
+       .. code-block:: java
+
+          void onDataReceived(T t)
+
+    .. container:: seealso
+
+       * :ref:`android_detect_crash`
+       * :ref:`android_crash_data`
+
+

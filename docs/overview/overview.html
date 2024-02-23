@@ -1,0 +1,462 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Overview &#8212; Workspace ONE Intelligence  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/adctheme.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/toggle.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+      <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="Workspace ONE Intelligence  documentation" href="../index.html" />
+      <link rel="next" title="Apple SDK" href="../ios/ios.html" />
+      <link rel="prev" title="Workspace ONE Intelligence SDK Documentation" href="../index.html" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <script type="text/javascript">try{document.domain="vmware.com"}catch(e){};</script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-49786008-1']);
+    _gaq.push(['_setDomainName', 'apteligent.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_addIgnoredRef', 'apteligent.com']);   // Stops Self Referrals
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  
+  <meta name="google-translate-customization" content="f0837c562504ad7b-d669caf2b7375c11-g99fd8de75f76752f-14"></meta>
+
+  </head><body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PK9468"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PK9468');</script>
+<!-- End Google Tag Manager -->
+
+
+  <div id="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+          <div id="searchbox" style="display: none">
+              <form class="search" action="../search.html" method="get">
+                <div class="search-wrapper">
+                  <input class="prettysearch" type="text" name="q" size="18" />
+                  <input type="submit" value="Search" class="searchbutton" />
+                </div>
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+      <ul><li class="toctree-l1" id="docs-home"><a href="../index.html">Docs Home</a></li></ul>
+      <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#supported-platforms">Supported Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#usage-tracking">Usage Tracking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#crash-reporting">Crash Reporting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#user-flows-monitoring">User Flows Monitoring</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#data-reported-with-user-flows">Data Reported with User Flows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#user-flows-final-states">User Flows Final States</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#user-flows-traces">User Flows Traces</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#mobile-device-telemetry">Mobile Device Telemetry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#handled-exceptions">Handled Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#breadcrumbs">Breadcrumbs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#automatic-breadcrumbs">Automatic Breadcrumbs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#user-name">User Name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#network-insights">Network Insights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#symbolication">Symbolication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#opt-out-of-workspace-one-intelligence">Opt Out of Workspace ONE Intelligence</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ios/ios.html">Apple SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../android/android.html">Android SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development_platforms/index.html">Development Platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/eula_accepted.html">SDK Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../release_notes/release_notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/downloads.html">EULA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/checksums.html">SDK Download Checksums</a></li>
+</ul>
+
+      <div id="sidebar-toc-clear"></div>
+      
+    </div>
+  </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            <div class="container">
+              <div class="row">
+                <div class="span12">
+                  
+  <section id="introduction">
+<span id="overview"></span><span id="id1"></span><h1>Overview<a class="headerlink" href="#introduction" title="Permalink to this heading">¶</a></h1>
+<p>Workspace ONE Intelligence SDK monitors, prioritizes, troubleshoots, and trends
+your mobile app performance issues in real-time; this document provides a
+detailed explanation on how this is accomplished.</p>
+<p>Workspace ONE Intelligence SDK offers the following capabilities:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#app-load"><span class="std std-ref">Usage Tracking</span></a></p></li>
+<li><p><a class="reference internal" href="#crash"><span class="std std-ref">Crash Reporting</span></a></p></li>
+<li><p><a class="reference internal" href="#symbolicating"><span class="std std-ref">Symbolication</span></a></p></li>
+<li><p><a class="reference internal" href="#handled-exceptions"><span class="std std-ref">Handled Exceptions</span></a></p></li>
+<li><p><a class="reference internal" href="#net-stats"><span class="std std-ref">Network Insights</span></a></p></li>
+<li><p><a class="reference internal" href="#breadcrumbs"><span class="std std-ref">Breadcrumbs</span></a></p></li>
+<li><p><a class="reference internal" href="#automatic-breadcrumbs"><span class="std std-ref">Automatic Breadcrumbs</span></a></p></li>
+<li><p><a class="reference internal" href="#user-metadata"><span class="std std-ref">User Name</span></a></p></li>
+<li><p><a class="reference internal" href="#userflows"><span class="std std-ref">User Flows Monitoring</span></a></p></li>
+<li><p><a class="reference internal" href="#mobile-device-telemetry"><span class="std std-ref">Mobile Device Telemetry</span></a></p></li>
+</ul>
+<section id="supported-platforms">
+<span id="id2"></span><h2>Supported Platforms<a class="headerlink" href="#supported-platforms" title="Permalink to this heading">¶</a></h2>
+<p>Developers can integrate Workspace ONE Intelligence SDK for apps that run on
+the following platforms:</p>
+<ul class="simple">
+<li><p>Apple iOS</p></li>
+<li><p>Android</p></li>
+<li><p>Cordova</p></li>
+</ul>
+</section>
+<section id="usage-tracking">
+<span id="app-load"></span><h2>Usage Tracking<a class="headerlink" href="#usage-tracking" title="Permalink to this heading">¶</a></h2>
+<p>An <cite>app load</cite> occurs whenever a user launches the app on their device.
+When the user begins using an instrumented application, Workspace ONE
+Intelligence SDK automatically records an app load event.
+Workspace ONE Intelligence platform then aggregates app loads into rolling daily
+and monthly active user counts (using a unique identifier generated by Workspace
+ONE Intelligence SDK), and provides (on the <cite>Crash Trends</cite> page)
+insight into the relative usage of the application’s released versions.
+For example, you can see the number of app loads per version of your app,
+or the percentage of app loads that resulted in a crash (crash percentage).</p>
+</section>
+<section id="crash-reporting">
+<span id="crash"></span><h2>Crash Reporting<a class="headerlink" href="#crash-reporting" title="Permalink to this heading">¶</a></h2>
+<p>A <cite>crash</cite> is a run-time exception that occurs due to some unexpected event that
+terminates the user session. Crashes are events that are not handled within a
+<code class="docutils literal notranslate"><span class="pre">try</span></code>/<code class="docutils literal notranslate"><span class="pre">catch</span></code> block in the app.
+When an app crash occurs, Workspace ONE Intelligence SDK records the device
+state and sends the stack trace to the Workspace ONE Intelligence platform.
+The Crash Reporting page of the platform shows the event, alongside additional
+metrics to help with root cause analysis and debugging. Crashes are grouped
+together to make it easier to identify the most frequent crashes.
+Workspace ONE Intelligence alerts the developer of the error, and provides the
+information necessary to reproduce the issue in local development / testing.</p>
+<p>Tracking exceptions allows developers to:</p>
+<ul class="simple">
+<li><p>Identify potential hotspots where errors might occur.</p></li>
+<li><p>Analyze exceptions by viewing the stacktrace, diagnostics, metadata,
+and breadcrumbs related to that issue.</p></li>
+<li><p>Prioritize and resolve bugs to reduce or eliminate errors and crashes.</p></li>
+</ul>
+</section>
+<section id="user-flows-monitoring">
+<span id="userflows"></span><h2>User Flows Monitoring<a class="headerlink" href="#user-flows-monitoring" title="Permalink to this heading">¶</a></h2>
+<p>User flows allows developers to track key interactions or user flows in their app such as login, account registration, and in app purchase. By default, Workspace ONE Intelligence SDK automatically tracks application load time as a user flow.  The SDK can report additional user flows by adding a few more lines of code to your application.</p>
+<p>A <strong>user flow failure rate</strong> can be monitored in the Workspace ONE Intelligence
+platform. Each failed user flow comes with a slew of diagnostics that allow
+developers to debug why a particular user flow is failing.</p>
+<section id="data-reported-with-user-flows">
+<h3>Data Reported with User Flows<a class="headerlink" href="#data-reported-with-user-flows" title="Permalink to this heading">¶</a></h3>
+<p>The following information is reported with each user flow:</p>
+<ul class="simple">
+<li><p>User flow group name (eg. “user login”)</p></li>
+<li><dl class="simple">
+<dt>Completion state:  success and failure (crashed, timed out or declared failure)</dt><dd><ul>
+<li><p>On Android, a failure reason can be included as a string. It will appear in the ‘user_flow_failure_reason’ column in the Workspace ONE Intelligence platform</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Start time</p></li>
+<li><p>Stop time</p></li>
+<li><p>Active time (the time the user flow was running in the foreground)</p></li>
+<li><p>Diagnostics which include <em>app version</em>, <em>operating system</em>, <em>device Model</em>,
+<em>carrier</em>, and more</p></li>
+</ul>
+</section>
+<section id="user-flows-final-states">
+<span id="userflow-final-states"></span><h3>User Flows Final States<a class="headerlink" href="#user-flows-final-states" title="Permalink to this heading">¶</a></h3>
+<p>Each user flow may stop in one of a few possible <em>final states</em>.</p>
+<ul class="simple">
+<li><p><strong>Success</strong>.  A success state is reached by calling the <em>end userflow</em> API
+of Workspace ONE Intelligence SDK.
+Success can be used to denote that a user flow’s goal was accomplished.</p></li>
+<li><p><strong>Cancelled</strong>.  A cancelled state is reached through the <em>cancel userflow</em> API
+of Workspace ONE Intelligence SDK.
+An unfinished user flow that is cancelled is removed and will not be reported
+to Workspace ONE Intelligence.  Hence, cancelled user flows are ignored.</p></li>
+<li><dl class="simple">
+<dt><strong>Failed states:</strong></dt><dd><ul>
+<li><p>Declared failures. A declared failure state is reached by calling the
+<em>fail user flow</em> API of Workspace ONE Intelligence SDK.
+Declared failure states can be used to denote that a user flow’s goal was
+not accomplished.
+<em>Example:</em> If a user does not allow your photo-sharing app
+to access the phone’s camera during onboarding, you may wish to declare
+the onboarding user flow you’ve defined as failed.</p></li>
+<li><p>Crashed.  A crashed state occurs only if the app crashes while the user
+flow is in progress.
+During a crash, Workspace ONE Intelligence SDK automatically marks all
+started user flows as crashed, and reports the user flows to Workspace ONE
+Intelligence. On the Workspace ONE Intelligence platform, users may view
+which crashes impacted a user flow.</p></li>
+<li><p>Timed Out.  A timed out state is reached when a user flow has remained
+started longer than a specified period of time.
+The timed out user flow is stopped and sent to Workspace ONE Intelligence.
+Timeout periods for user flows can be adjusted in the Workspace ONE
+Intelligence platform.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If a developer does not specify success, failure, or cancelled state in code,
+then the only possible remaining final states a user flow can reach are
+crashed and timed out.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Once a user flow has stopped in a final state, the state can no longer
+be changed.
+In particular, user flows are not marked as crashed if they had already been
+marked success or failed before the app crashed.</p>
+</div>
+</section>
+<section id="user-flows-traces">
+<h3>User Flows Traces<a class="headerlink" href="#user-flows-traces" title="Permalink to this heading">¶</a></h3>
+<p>Every non-successful user flow (failed, crashed, or timed out) is reported
+with a log of events that occurred while the user flow was in progress.
+User flows traces can be used by developers to diagnose why a user flow is
+failing.  The events collected include <a class="reference internal" href="#breadcrumbs"><span class="std std-ref">Breadcrumbs</span></a> left by the
+developer, networking calls captured by <a class="reference internal" href="#net-stats"><span class="std std-ref">Network Insights</span></a>, and
+important system events that may have impacted the user flow.
+The following <em>system breadcrumbs</em> are captured automatically by Workspace ONE
+Intelligence SDK:</p>
+<ul class="simple">
+<li><p>Network connectivity gained / lost</p></li>
+<li><p>Network connection type changes (eg. wireless to wifi)</p></li>
+<li><p>App backgrounds</p></li>
+<li><p>App foregrounds</p></li>
+</ul>
+</section>
+</section>
+<section id="mobile-device-telemetry">
+<span id="id3"></span><h2>Mobile Device Telemetry<a class="headerlink" href="#mobile-device-telemetry" title="Permalink to this heading">¶</a></h2>
+<p>New in Version 24.1.0, You can opt in for the Mobile Device Telemetry feature by enabling the ‘DEX Telemetry Flag’ when you install the 24.1.0 version of IntelligenceSDK.</p>
+</section>
+<section id="handled-exceptions">
+<span id="id4"></span><h2>Handled Exceptions<a class="headerlink" href="#handled-exceptions" title="Permalink to this heading">¶</a></h2>
+<p>Handled exceptions are anticipated errors that developers can log by calling an
+API of Workspace ONE Intelligence SDK.
+For example, a <cite>handled exception</cite> can be a run-time exception that gets
+handled within a <code class="docutils literal notranslate"><span class="pre">try</span></code> / <code class="docutils literal notranslate"><span class="pre">catch</span></code> block
+and logged with Workspace ONE Intelligence SDK.
+The Workspace ONE Intelligence platform displays handled exception metrics to
+help developers with root cause analysis and debugging.</p>
+</section>
+<section id="breadcrumbs">
+<span id="id5"></span><h2>Breadcrumbs<a class="headerlink" href="#breadcrumbs" title="Permalink to this heading">¶</a></h2>
+<p>A <cite>breadcrumb</cite> is a developer-defined text string that is analogous to a log
+message.
+Developers insert breadcrumbs to capture app run-time information, such as
+variable values, app states, progress through the code, user actions, time
+performance for user experience, and to flag events within callbacks (such as
+low memory warnings). Each breadcrumb can contain up to 140 characters.</p>
+<p>To leave a breadcrumb, developers simply insert an API call (after initializing
+Workspace ONE Intelligence SDK) at a point of interest in the code.
+Developers can also attach breadcrumbs to crashes and handled exceptions (both
+of which always have stacktraces) in order to:</p>
+<ul class="simple">
+<li><p>Identify and analyze session events/state/variables to capture for debugging.</p></li>
+<li><p>Use this information, along with stack traces, diagnostics, and metadata, to
+determine the root cause of the issue.</p></li>
+</ul>
+<p>Developers use breadcrumbs to supplement IDE debugging, allowing them to
+capture useful information about app behavior once the apps have been
+distributed to a larger user audience.</p>
+<p>For each session, Workspace ONE Intelligence SDK automatically stores a
+<code class="docutils literal notranslate"><span class="pre">session_start</span></code> breadcrumb to mark the beginning of a user session, and the
+most recent 99 breadcrumbs that were left before a crash.</p>
+</section>
+<section id="automatic-breadcrumbs">
+<span id="id6"></span><h2>Automatic Breadcrumbs<a class="headerlink" href="#automatic-breadcrumbs" title="Permalink to this heading">¶</a></h2>
+<p><cite>Automatic breadcrumbs</cite> allow developers to get additional information about
+the steps users have taken or key events that happen in the apps without
+requiring additional code changes. Events that trigger these breadcrumbs are
+stored by our SDK and displayed in our platform alongside developer-defined
+breadcrumbs, allowing you to trace back through the last steps users took or
+key events in your app before an error occurred. These breadcrumbs help you
+reproduce issues more easily and contain valuable diagnostics information.</p>
+<p>Here are the different events that are stored as automatic breadcrumbs:</p>
+<ul class="simple">
+<li><p>Handled Exceptions​​</p></li>
+<li><dl class="simple">
+<dt>App Background/Foreground</dt><dd><ul>
+<li><p>“App foregrounded” - for UIApplicationDidBecomeActiveNotification events</p></li>
+<li><p>“App backgrounded” - for UIApplicationWillResignActiveNotification events</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>App termination</dt><dd><ul>
+<li><p>“Application terminated” - for UIApplicationWillTerminateNotification event</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Network Breadcrumbs</dt><dd><ul>
+<li><p>URL</p></li>
+<li><p>Request type</p></li>
+<li><p>Latency</p></li>
+<li><p>HTTP Status</p></li>
+<li><p>Bytes in/Bytes out</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Network Connectivity Changes</dt><dd><ul>
+<li><p>“Internet connection UP”</p></li>
+<li><p>“Internet connection DOWN”</p></li>
+<li><p>“XX (Connectivity State) connectivity gained”</p></li>
+<li><p>“Switching from XX (Connectivity State) to XX (Connectivity State)”</p></li>
+<li><p>Android connectivity states are: unknown, disconnected, 2G, 3G, EDGE,
+GPRS, LTE, Wifi</p></li>
+<li><p>Apple connectivity states are limited to: Wifi, cellular</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>UIView Loads (and View Names)</dt><dd><ul>
+<li><p>(Name of the View) loaded</p></li>
+<li><p>(Name of the View) unloaded</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>App Launched</dt><dd><ul>
+<li><p>“Session Start”</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="user-name">
+<span id="user-metadata"></span><h2>User Name<a class="headerlink" href="#user-name" title="Permalink to this heading">¶</a></h2>
+<p>Developers can associate a user name with each event in order to help differentiate
+users on both the WS1 Intelligence Platform and the client.</p>
+<p>This capability allows customer support staff:</p>
+<ul class="simple">
+<li><p>to search by user name to determine how many crashes a given user has
+experienced, and</p></li>
+<li><p>to view a list of users who experienced a crash or handled exception.</p></li>
+<li><p>to search the users for app loads, user flows and network insights features with custom dashboards.</p></li>
+</ul>
+<p>Tracking user names, in combination with stack traces and diagnostics,
+enables support staff to better correlate data, priorities issues, and respond
+to support tickets.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Workspace ONE Intelligence takes user privacy very seriously. If we detect an
+app sending Device Identifiers or other personally identifying information
+(PII) that does not help with debugging a crash, we will ask the app
+developer to remove the gathering of this information through our service.</p>
+</div>
+</section>
+<section id="network-insights">
+<span id="net-stats"></span><h2>Network Insights<a class="headerlink" href="#network-insights" title="Permalink to this heading">¶</a></h2>
+<p>Whenever an app makes a network call, Workspace ONE Intelligence SDK monitors
+and captures the following information:</p>
+<ul class="simple">
+<li><p>service name</p></li>
+<li><p>device type</p></li>
+<li><p>device OS and OS version</p></li>
+<li><p>app version</p></li>
+<li><p>location information, if given by the app</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Location information allows visibility into a user’s geographic location,
+which can help with quantifying the number of app users within a geographic
+region, or with contextualizing a certain issue based on location
+(e.g. outages). Workspace ONE Intelligence SDK does not collect location information for itself. Instead, the SDK provides an API for the app to use to send latitude &amp; longitude coordinates for the device, if it chooses.</p>
+</div>
+<ul class="simple">
+<li><p>endpoint URI</p></li>
+</ul>
+<p>For HTTP calls (such as REST apps), Workspace ONE Intelligence SDK monitors and
+captures the following information:</p>
+<ul class="simple">
+<li><p>HTTP URL</p></li>
+<li><p>HTTP status codes to help determine whether a call succeeded or failed</p></li>
+<li><p>latency (elapsed time between request and response received)</p></li>
+<li><p>amount of data received in the response</p></li>
+</ul>
+</section>
+<section id="symbolication">
+<span id="symbolicating"></span><h2>Symbolication<a class="headerlink" href="#symbolication" title="Permalink to this heading">¶</a></h2>
+<p>Symbolication is the process of translating stack traces into a human-readable
+form by mapping hexadecimal addresses to function names using symbol file(s).
+Workspace ONE Intelligence automatically symbolicates crashes once you have
+uploaded your app’s symbol file(s).</p>
+<ul class="simple">
+<li><p>For Apple applications, stack traces are reported in hexidecimal characters.
+Symbolication allows developers to convert these hex strings into
+human-readable text.</p></li>
+<li><p>For Android applications that use the ProGuard tool to obfuscate their
+method names, developers can use a Proguard mapping file to replace the
+obfuscated name with a human-readable name.
+For more information, see <a class="reference internal" href="../android/android_install.html#symbolicate-android"><span class="std std-ref">Configuring Proguard Symbolication</span></a>.</p></li>
+</ul>
+</section>
+<section id="opt-out-of-workspace-one-intelligence">
+<span id="opt-out"></span><h2>Opt Out of Workspace ONE Intelligence<a class="headerlink" href="#opt-out-of-workspace-one-intelligence" title="Permalink to this heading">¶</a></h2>
+<p>Certain app users might want to opt out of Workspace ONE Intelligence logging
+and tracking. Workspace ONE Intelligence SDK provides a static opt-out status
+setting that disables all app reporting to Workspace ONE Intelligence.
+This feature is optional. If used, developers must implement the code that
+prompts the app user to select whether or not to opt out.
+If a user has opted out, their instance of the app will not report any activity
+back to Workspace ONE Intelligence.</p>
+</section>
+</section>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+	<script type="text/javascript" charset="utf-8" src="../_static/toc.js"></script>
+  </body>
+</html>

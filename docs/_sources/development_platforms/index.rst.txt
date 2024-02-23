@@ -1,0 +1,13 @@
+.. Development Platforms
+
+.. _development_platforms:
+
+Development Platforms
+=====================
+
+This topic describes how to integrate Workspace ONE Intelligence with the following mobile application development platforms.
+
+.. toctree::
+   :maxdepth: 1
+
+   cordova

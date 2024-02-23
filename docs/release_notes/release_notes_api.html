@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>API Release Notes &#8212; Workspace ONE Intelligence  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/adctheme.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/toggle.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+      <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="Workspace ONE Intelligence  documentation" href="../index.html" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <script type="text/javascript">try{document.domain="vmware.com"}catch(e){};</script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-49786008-1']);
+    _gaq.push(['_setDomainName', 'apteligent.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_addIgnoredRef', 'apteligent.com']);   // Stops Self Referrals
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  
+  <meta name="google-translate-customization" content="f0837c562504ad7b-d669caf2b7375c11-g99fd8de75f76752f-14"></meta>
+
+  </head><body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PK9468"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PK9468');</script>
+<!-- End Google Tag Manager -->
+
+
+  <div id="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+          <div id="searchbox" style="display: none">
+              <form class="search" action="../search.html" method="get">
+                <div class="search-wrapper">
+                  <input class="prettysearch" type="text" name="q" size="18" />
+                  <input type="submit" value="Search" class="searchbutton" />
+                </div>
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+      <ul><li class="toctree-l1" id="docs-home"><a href="../index.html">Docs Home</a></li></ul>
+      <ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ios/ios.html">Apple SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../android/android.html">Android SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development_platforms/index.html">Development Platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/eula_accepted.html">SDK Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="release_notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/downloads.html">EULA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/checksums.html">SDK Download Checksums</a></li>
+</ul>
+
+      <div id="sidebar-toc-clear"></div>
+      
+    </div>
+  </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            <div class="container">
+              <div class="row">
+                <div class="span12">
+                  
+  <section id="api-release-notes">
+<span id="release-notes-api"></span><h1>API Release Notes<a class="headerlink" href="#api-release-notes" title="Permalink to this heading">¶</a></h1>
+<section id="version-2-mar-29-2017">
+<h2>Version 2 (Mar 29, 2017)<a class="headerlink" href="#version-2-mar-29-2017" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>/transactions/{appId}/group/{groupName}/traces now returns device ID</p></li>
+<li><p>Exception /paginatedtable can filter by status</p></li>
+<li><p>Updated API docs: /transactions/{appId}/group/{groupName}/traces uses ‘foregroundSeconds’ not ‘foregroundSecs’ and can only filter by failure state</p></li>
+</ul>
+</section>
+<section id="version-2-mar-15-2017">
+<h2>Version 2 (Mar 15, 2017)<a class="headerlink" href="#version-2-mar-15-2017" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fixed a bug in the exception /paginatedtable endpoint – app versions are now handled correctly</p></li>
+<li><p>In the docs, clarified that ‘period of time in days’ in the paginatedtable endpoints will return the number of days requested plus the currently accruing day</p></li>
+</ul>
+</section>
+<section id="version-2-feb-15-2017">
+<h2>Version 2 (Feb 15, 2017)<a class="headerlink" href="#version-2-feb-15-2017" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Added a benchmarks endpoint for performance data across platforms and business segments</p></li>
+<li><p>A bug that caused the exception/paginatedtable endpoint to ignore startDate and endDate was fixed</p></li>
+<li><p>The exception/paginatedtable endpoing now accepts a ‘dailyOccurrences’ parameter</p></li>
+<li><p>Work done to resolve timeout errors in the /apps endpoint</p></li>
+</ul>
+</section>
+<section id="version-2-sept-28-2016">
+<h2>Version 2 (Sept 28, 2016)<a class="headerlink" href="#version-2-sept-28-2016" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt>API v2 endpoints now use a new pattern: Parts of the endpoint that remain</dt><dd><p>constant, such as /crash or /trends, appear at the beginning of the URL, and
+parts that can change, such as app ID or crash hash, appear at the end, in
+ascending order of specificity. So, for example,
+<a class="reference external" href="https://developers.crittercism.com/v2/APP">https://developers.crittercism.com/v2/APP</a> ID/trends/dau is now
+<a class="reference external" href="https://developers.crittercism.com/v2/trends/dau/APP">https://developers.crittercism.com/v2/trends/dau/APP</a> ID
+This change only applies to v2 endpoints. Please see the docs for more details.</p>
+</dd>
+</dl>
+</li>
+<li><p>Added a userData endpoint for handled exceptions</p></li>
+</ul>
+</section>
+<section id="version-1-0-jun-23-2016">
+<h2>Version 1.0 (Jun 23, 2016)<a class="headerlink" href="#version-1-0-jun-23-2016" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Released the paginated tables endpoint</p></li>
+<li><p>Updated the docs for the crashRateBySegment endpoint</p></li>
+</ul>
+</section>
+<section id="version-1-0-jun-10-2016">
+<h2>Version 1.0 (Jun 10, 2016)<a class="headerlink" href="#version-1-0-jun-10-2016" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>API now uses our new data platform</p></li>
+<li><p>Released user flows endpoints</p></li>
+<li><p>Fixed an error that happened when /crash/summaries was called with a lastOccurredStart date</p></li>
+</ul>
+</section>
+<section id="version-1-0-apr-29-2016">
+<h2>Version 1.0 (Apr 29, 2016)<a class="headerlink" href="#version-1-0-apr-29-2016" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>The paginated table endpoint skips apps which have no crashes</p></li>
+</ul>
+</section>
+<section id="version-1-0-apr-14-2016">
+<h2>Version 1.0 (Apr 14, 2016)<a class="headerlink" href="#version-1-0-apr-14-2016" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>The /apps endpoint has been updated with Apteligent’s new public API endpoints</p></li>
+<li><p>Released the /crashRateBySegment endpoint</p></li>
+</ul>
+</section>
+<section id="version-1-0-mar-31-2016">
+<h2>Version 1.0 (Mar 31, 2016)<a class="headerlink" href="#version-1-0-mar-31-2016" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Added release notes for future API updates</p></li>
+<li><p>Revised the docs for the APM Graph endpoint</p></li>
+</ul>
+</section>
+</section>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+	<script type="text/javascript" charset="utf-8" src="../_static/toc.js"></script>
+  </body>
+</html>

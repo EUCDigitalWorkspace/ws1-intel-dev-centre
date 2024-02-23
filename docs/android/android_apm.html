@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Network Insights &#8212; Workspace ONE Intelligence  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/adctheme.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/toggle.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+      <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="Workspace ONE Intelligence  documentation" href="../index.html" />
+      <link rel="up" title="Android SDK" href="android.html" />
+      <link rel="next" title="Android Intelligence SDK Network Insights Clients User Guide" href="android_net_insights_user_guide.html" />
+      <link rel="prev" title="NetworkInstrumentation" href="sdk/network_instrumentation.html" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <script type="text/javascript">try{document.domain="vmware.com"}catch(e){};</script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-49786008-1']);
+    _gaq.push(['_setDomainName', 'apteligent.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_addIgnoredRef', 'apteligent.com']);   // Stops Self Referrals
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  
+  <meta name="google-translate-customization" content="f0837c562504ad7b-d669caf2b7375c11-g99fd8de75f76752f-14"></meta>
+
+  </head><body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PK9468"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PK9468');</script>
+<!-- End Google Tag Manager -->
+
+
+  <div id="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+          <div id="searchbox" style="display: none">
+              <form class="search" action="../search.html" method="get">
+                <div class="search-wrapper">
+                  <input class="prettysearch" type="text" name="q" size="18" />
+                  <input type="submit" value="Search" class="searchbutton" />
+                </div>
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+      <ul><li class="toctree-l1" id="docs-home"><a href="../index.html">Docs Home</a></li></ul>
+      <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ios/ios.html">Apple SDK</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="android.html">Android SDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="android.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android.html#release-notes">Release Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android.html#guide">Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android.html#sdk-references">SDK References</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="android.html#features">Features</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="android.html#out-of-the-box-features">Out-of-the-box Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="android.html#main-features">Main Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="android.html#other-features">Other Features</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../development_platforms/index.html">Development Platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/eula_accepted.html">SDK Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../release_notes/release_notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/downloads.html">EULA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/checksums.html">SDK Download Checksums</a></li>
+</ul>
+
+      <div id="sidebar-toc-clear"></div>
+      
+    </div>
+  </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            <div class="container">
+              <div class="row">
+                <div class="span12">
+                  
+  <section id="network-insights">
+<span id="net-stats-android"></span><h1>Network Insights<a class="headerlink" href="#network-insights" title="Permalink to this heading">¶</a></h1>
+<p>Whenever an app makes a network call, Workspace ONE Intelligence SDK monitors
+and captures certain information automatically.
+You can optionally configure filtering and location details.
+For an introduction, see <a class="reference internal" href="../overview/overview.html#net-stats"><span class="std std-ref">Network Insights</span></a>.</p>
+<p>When Network Insights is enabled, the performance of HTTP traffic generated by
+either <code class="docutils literal notranslate"><span class="pre">java.net.HttpURLConnection</span></code> or <code class="docutils literal notranslate"><span class="pre">OkHttp</span></code> will be monitored.
+No action is needed in order to turn on Network Performance Monitoring.
+Simply initialize Workspace ONE Intelligence SDK as normal.</p>
+<section id="filtering-captured-data">
+<h2>Filtering Captured Data<a class="headerlink" href="#filtering-captured-data" title="Permalink to this heading">¶</a></h2>
+<p>By default, all URLs are stripped of query parameters before being sent to
+Workspace ONE Intelligence. For example the URL
+<code class="docutils literal notranslate"><span class="pre">www.yoururl.com/login?secret=foobar</span></code> would be reported as
+<code class="docutils literal notranslate"><span class="pre">www.yoururl.com/login</span></code>. It is also possible to add url blacklists to
+completely prevent sensitive URLs from being sent to Workspace ONE Intelligence.
+See <a class="reference internal" href="sdk/crittercism_config.html#android-crittercism-config-apm"><span class="std std-ref">CrittercismConfig</span></a> for further information.</p>
+</section>
+<section id="blacklisting-urls">
+<h2>Blacklisting URLs<a class="headerlink" href="#blacklisting-urls" title="Permalink to this heading">¶</a></h2>
+<p>URL blacklisting can be used to prevent sensitive URLs from being captured by
+the network instrumentation. Use
+<a class="reference internal" href="sdk/crittercism_config.html#android-blacklist-urls"><span class="std std-ref">CrittercismConfiguration.setURLBlacklistPatterns()</span></a>
+for configuring URLs that should not be monitored by Workspace ONE Intelligence
+SDK. This configuration option must be set at initialization time of Workspace
+ONE Intelligence.</p>
+</section>
+<section id="updating-the-location">
+<h2>Updating the Location<a class="headerlink" href="#updating-the-location" title="Permalink to this heading">¶</a></h2>
+<p>Network Insights can tie location information to network data, if the application provides the location.
+By default, location information is not obtained by Workspace ONE Intelligence SDK.</p>
+<p>You can update location information by using the
+<a class="reference internal" href="sdk/crittercism.html#network-update-location-android"><span class="std std-ref">Crittercism.updateLocation (Location)</span></a>
+method.</p>
+</section>
+<section id="further-readings">
+<h2>Further Readings<a class="headerlink" href="#further-readings" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="sdk/crittercism.html#log-network-request"><span class="std std-ref">Logging Network Request</span></a></p></li>
+<li><p><a class="reference external" href="https://www.apteligent.com/developer-resources/network-insights-best-practices/">Network Insights Best Practices</a></p></li>
+</ul>
+</section>
+</section>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+	<script type="text/javascript" charset="utf-8" src="../_static/toc.js"></script>
+  </body>
+</html>

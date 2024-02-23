@@ -1,0 +1,625 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>CrittercismConfig &#8212; Workspace ONE Intelligence  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/adctheme.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/toggle.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <link rel="search" title="Search" href="../../search.html" />
+    <link rel="top" title="Workspace ONE Intelligence  documentation" href="../../index.html" />
+      <link rel="up" title="Android SDK" href="../android.html" />
+      <link rel="next" title="CrittercismCallback" href="crittercism_callback.html" />
+      <link rel="prev" title="Crittercism" href="crittercism.html" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <script type="text/javascript">try{document.domain="vmware.com"}catch(e){};</script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-49786008-1']);
+    _gaq.push(['_setDomainName', 'apteligent.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_addIgnoredRef', 'apteligent.com']);   // Stops Self Referrals
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  
+  <meta name="google-translate-customization" content="f0837c562504ad7b-d669caf2b7375c11-g99fd8de75f76752f-14"></meta>
+
+  </head><body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PK9468"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PK9468');</script>
+<!-- End Google Tag Manager -->
+
+
+  <div id="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+          <div id="searchbox" style="display: none">
+              <form class="search" action="../../search.html" method="get">
+                <div class="search-wrapper">
+                  <input class="prettysearch" type="text" name="q" size="18" />
+                  <input type="submit" value="Search" class="searchbutton" />
+                </div>
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+      <ul><li class="toctree-l1" id="docs-home"><a href="../../index.html">Docs Home</a></li></ul>
+      <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../overview/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ios/ios.html">Apple SDK</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../android.html">Android SDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../android.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../android.html#release-notes">Release Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../android.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../android.html#guide">Guide</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../android.html#sdk-references">SDK References</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="crittercism.html">Crittercism</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">CrittercismConfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="crittercism_callback.html">CrittercismCallback</a></li>
+<li class="toctree-l3"><a class="reference internal" href="crash_data.html">CrashData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="network_instrumentation.html">NetworkInstrumentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../android.html#features">Features</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../development_platforms/index.html">Development Platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../downloads/eula_accepted.html">SDK Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release_notes/release_notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../downloads/downloads.html">EULA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../downloads/checksums.html">SDK Download Checksums</a></li>
+</ul>
+
+      <div id="sidebar-toc-clear"></div>
+      
+    </div>
+  </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            <div class="container">
+              <div class="row">
+                <div class="span12">
+                  
+  <section id="crittercismconfig">
+<span id="android-crittercism-config-apm"></span><h1>CrittercismConfig<a class="headerlink" href="#crittercismconfig" title="Permalink to this heading">¶</a></h1>
+<p>Import <code class="docutils literal notranslate"><span class="pre">com.crittercism.app</span></code> package to use this class.</p>
+<p>This object is used to specify various configuration options to Workspace ONE
+Intelligence SDK.
+Once this object is set up, you can pass it to <code class="docutils literal notranslate"><span class="pre">Crittercism.initialize()</span></code>.
+After Workspace ONE Intelligence SDK is initialized, changes to this object will
+have no effect.</p>
+<section id="creating-a-config">
+<h2>Creating a Config<a class="headerlink" href="#creating-a-config" title="Permalink to this heading">¶</a></h2>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>CrittercismConfig ()</p>
+</div>
+<div class="discussion docutils container">
+<p>Creates a new CrittercismConfig object with the default values for the above
+properties. You can modify the config values and pass this object into
+<code class="docutils literal notranslate"><span class="pre">Crittercism.initialize()</span></code>.</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="nf">CrittercismConfig</span><span class="w"> </span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="retval docutils container">
+<p>Returns <code class="docutils literal notranslate"><span class="pre">CrittercismConfig</span></code> with default values.</p>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>CrittercismConfig (configToCopy)</p>
+</div>
+<div class="discussion docutils container">
+<p>Create a copy of the input CrittercismConfig.</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="nf">CrittercismConfig</span><span class="w"> </span><span class="p">((</span><span class="n">CrittercismConfig</span><span class="w"> </span><span class="n">configToCopy</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>configToCopy</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">CrittercismConfig</span></code> to copy</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="retval docutils container">
+<p>Returns a new instance of <code class="docutils literal notranslate"><span class="pre">CrittercismConfig</span></code> with the same values as configToCopy.</p>
+</div>
+</div>
+</section>
+<section id="network-insights-configuration">
+<h2>Network Insights Configuration<a class="headerlink" href="#network-insights-configuration" title="Permalink to this heading">¶</a></h2>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>isServiceMonitoringEnabled ()</p>
+</div>
+<div class="discussion docutils container">
+<p>Returns a boolean that describes whether Workspace ONE Intelligence SDK
+automatically instruments network monitoring.</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">isServiceMonitoringEnabled</span><span class="w"> </span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="retval docutils container">
+<p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if Network Insights is enabled at all.
+Returns <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
+</div>
+</div>
+<div class="toggle docutils container" id="android-enable-apm">
+<div class="header docutils container">
+<p>setServiceMonitoringEnabled (isEnabled)</p>
+</div>
+<div class="discussion docutils container">
+<p>If this flag is set to <code class="docutils literal notranslate"><span class="pre">False</span></code>, then no instrumentation will be
+installed <strong>and</strong> the thread that sends Network Insights data will
+be disabled.</p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">True</span></code> (enabled)</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setServiceMonitoringEnabled</span><span class="w"> </span><span class="p">(</span><span class="kt">boolean</span><span class="w"> </span><span class="n">isEnabled</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>isEnabled</p></td>
+<td><p>Determines whether Workspace ONE Intelligence SDK should automatically instrument network traffic.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="availability docutils container">
+<p>Introduced in Workspace ONE Intelligence Android SDK 5.0</p>
+</div>
+</div>
+<div class="toggle docutils container" id="android-enable-apm-deprecated">
+<div class="header deprecated docutils container">
+<p>setOptmzEnabled (isEnabled)</p>
+</div>
+<div class="discussion docutils container">
+<p>If this flag is set to <code class="docutils literal notranslate"><span class="pre">False</span></code>, then no instrumentation will be
+installed <strong>and</strong> the thread that sends Network Insights data will
+be disabled.</p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">True</span></code> (enabled)</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setOptmzEnabled</span><span class="w"> </span><span class="p">(</span><span class="kt">boolean</span><span class="w"> </span><span class="n">isEnabled</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>isEnabled</p></td>
+<td><p>Determines whether Workspace ONE Intelligence SDK should automatically instrument network traffic.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="availability docutils container">
+<p>Deprecated in Android SDK 5.0</p>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>getURLBlacklistPatterns ()</p>
+</div>
+<div class="discussion docutils container">
+<p>Retrieve a list of blacklisted URLs.
+Network Insights data that pertains to URLs that match any of the
+patterns in the returned list will not be sent to Workspace ONE
+Intelligence.
+Patterns are case sensitive and may be any length.</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">getURLBlacklistPatterns</span><span class="w"> </span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="retval docutils container">
+<p>Returns a copy of blacklisted URLs for which Network Insights data will
+not be reported to Workspace ONE Intelligence.</p>
+</div>
+</div>
+<div class="toggle docutils container" id="android-blacklist-urls">
+<div class="header docutils container">
+<p>setURLBlacklistPatterns (patterns)</p>
+</div>
+<div class="discussion docutils container">
+<p>Set a list of blacklisted URLs.
+Network Insights data that pertains to URLs that match any of the
+patterns in the supplied list will not be sent to Workspace ONE
+Intelligence.
+Patterns are case sensitive and may be any length.</p>
+<p>For example, you may provide URLs that may contain sensitive information.
+Note that by default all query parameters are removed before being sent
+to Workspace ONE Intelligence.</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setURLBlacklistPatterns</span><span class="w"> </span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">patterns</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>patterns</p></td>
+<td><p>List of URL patterns to blacklist</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>getPreserveQueryStringPatterns ()</p>
+</div>
+<div class="discussion docutils container">
+<p>Returns a copy of the list of URL string patterns for which the query
+strings will be preserved when Network Insights data is sent to Workspace
+ONE Intelligence. URLs that are not in this list will have their query
+strings removed before Network Insights data is sent to Workspace ONE
+Intelligence.</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">getPreserveQueryStringPatterns</span><span class="w"> </span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="retval docutils container">
+<p>Returns a copy of the list of URL string patterns for which the query
+strings will be preserved.</p>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>setPreserveQueryStringPatterns (patterns)</p>
+</div>
+<div class="discussion docutils container">
+<p>Set a list of URL patterns for which the query strings will be preserved
+when Network Insights data is sent to Workspace ONE Intelligence.
+URLs that are not in this list will have their query strings removed
+before Network Insights data is sent to Workspace ONE Intelligence.
+If a URL in this list is also blacklisted, then the blacklist takes
+priority and network data will not be sent to Workspace ONE Intelligence
+for that URL.</p>
+<p>Patterns are case sensitive and may be any length. A zero length string will
+result in all query strings being included in Network Insights data sent
+to Workspace ONE Intelligence.</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setPreserveQueryStringPatterns</span><span class="w"> </span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">patterns</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>patterns</p></td>
+<td><p>List of URL patterns for which to preserve the query strings</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="set-custom-version-name">
+<h2>Set Custom Version Name<a class="headerlink" href="#set-custom-version-name" title="Permalink to this heading">¶</a></h2>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>getCustomVersionName ()</p>
+</div>
+<div class="discussion docutils container">
+<p>Retrieves the custom version name that will be reported to Workspace ONE
+Intelligence.</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getCustomVersionName</span><span class="w"> </span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="retval docutils container">
+<p>Returns the custom version name that will be reported to Workspace ONE
+Intelligence, or null if Workspace ONE Intelligence SDK uses the
+<code class="docutils literal notranslate"><span class="pre">android:versionName</span></code> from the <code class="docutils literal notranslate"><span class="pre">AndroidManifest.xml</span></code>.
+.</p>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>setCustomVersionName (customVersionName)</p>
+</div>
+<div class="discussion docutils container">
+<p>Set a custom app version that will be reported to Workspace ONE
+Intelligence.</p>
+<p>By default, Workspace ONE Intelligence SDK uses the
+<code class="docutils literal notranslate"><span class="pre">android:versionName</span></code> from the <code class="docutils literal notranslate"><span class="pre">AndroidManifest.xml</span></code> when reporting
+data to Workspace ONE Intelligence. Depending on how teams version their
+apps, it may be desirable to set a custom version string.</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setCustomVersionName</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">customVersionName</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>customVersionName</p></td>
+<td><p>The version name that will be reported to Workspace ONE Intelligence.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>isVersionCodeToBeIncludedInVersionString ()</p>
+</div>
+<div class="discussion docutils container">
+<p>Returns a boolean to indicate whether Workspace ONE Intelligence SDK
+concatenates the app version code to the app version that will be
+reported to Workspace ONE Intelligence. The app’s version code is
+defined in <code class="docutils literal notranslate"><span class="pre">android:versionCode</span></code> in the <code class="docutils literal notranslate"><span class="pre">AndroidManifest.xml</span></code>.</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">isVersionCodeToBeIncludedInVersionString</span><span class="w"> </span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="retval docutils container">
+<p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if the app’s version code is concatenated to the version
+name.</p>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>setVersionCodeToBeIncludedInVersionString (shouldIncludeVersionCode)</p>
+</div>
+<div class="discussion docutils container">
+<p>Tells Workspace ONE Intelligence SDK whether or not to concatenate the
+app version code to the app version that will be reported to Workspace
+ONE Intelligence. The app’s version code is defined in
+<code class="docutils literal notranslate"><span class="pre">android:versionCode</span></code> in the <code class="docutils literal notranslate"><span class="pre">AndroidManifest.xml</span></code>.</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setVersionCodeToBeIncludedInVersionString</span><span class="w"> </span><span class="p">(</span><span class="kt">boolean</span><span class="w"> </span><span class="n">shouldIncludeVersionCode</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>shouldIncludeVersionCode</p></td>
+<td><p>True if the app’s version code should be concatenated to the version name.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="delay-app-load-configuration">
+<span id="delay-sending-app-load"></span><h2>Delay App Load Configuration<a class="headerlink" href="#delay-app-load-configuration" title="Permalink to this heading">¶</a></h2>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>delaySendingAppLoad ()</p>
+</div>
+<div class="discussion docutils container">
+<p>Determines if Workspace ONE Intelligence SDK delays automatic app load
+events until the developer calls <code class="docutils literal notranslate"><span class="pre">sendAppLoadData</span></code>.</p>
+<p>By default, the return value is <code class="docutils literal notranslate"><span class="pre">False</span></code> and Workspace ONE Intelligence
+SDK automatically reports an app load event when Workspace ONE
+Intelligence SDK is initialized.</p>
+<p>The delay app load feature is most often used to delay counting an app
+load until after a user has passed a login screen.</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">delaySendingAppLoad</span><span class="w"> </span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="retval docutils container">
+<p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if Workspace ONE Intelligence SDK should automatically
+send app load request.
+Returns <code class="docutils literal notranslate"><span class="pre">False</span></code> if the app will send app load request manually by
+calling <code class="docutils literal notranslate"><span class="pre">sendAppLoadData</span></code>.</p>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>setDelaySendingAppLoad (delaySendingAppLoad)</p>
+</div>
+<div class="discussion docutils container">
+<p>Configure delayed app load events.
+By default, Workspace ONE Intelligence SDK immediately reports an app
+load when Workspace ONE Intelligence SDK is initialized.
+Set <code class="docutils literal notranslate"><span class="pre">delaySendingAppLoad</span></code> to <code class="docutils literal notranslate"><span class="pre">True</span></code> if the Workspace ONE Intelligence
+SDK should delay sending app load events until the app developer calls
+<code class="docutils literal notranslate"><span class="pre">sendAppLoadData</span></code>.
+Otherwise, set it to <code class="docutils literal notranslate"><span class="pre">False</span></code> to keep default behavior and send app
+loads automatically.</p>
+<p>The delay app load feature is most often used to delay counting an app
+load until after a user has passed a login screen.</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setDelaySendingAppLoad</span><span class="w"> </span><span class="p">(</span><span class="kt">boolean</span><span class="w"> </span><span class="n">delaySendingAppLoad</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>delaySendingAppLoad</p></td>
+<td><p>A boolean to indicate whether Workspace ONE Intelligence SDK should delay automatic app loads.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="send-data-on-wifi-only">
+<span id="disable-cellular-data-android"></span><h2>Send Data On Wifi Only<a class="headerlink" href="#send-data-on-wifi-only" title="Permalink to this heading">¶</a></h2>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>allowsCellularAccess ()</p>
+</div>
+<div class="discussion docutils container">
+<p>Returns a boolean to determine if Workspace ONE Intelligence SDK is
+allowed to send data while on a cellular network.</p>
+<p>Default value is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">allowsCellularAccess</span><span class="w"> </span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="retval docutils container">
+<p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if Workspace ONE Intelligence SDK is allowed to send data
+while on a cellular network. Returns <code class="docutils literal notranslate"><span class="pre">False</span></code> if Workspace ONE
+Intelligence SDK is only sending data on Wifi network.</p>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>setAllowsCellularAccess (allowsCellularAccess)</p>
+</div>
+<div class="discussion docutils container">
+<p>Set whether Workspace ONE Intelligence SDK sends data on cellular
+networks.
+The default value is <code class="docutils literal notranslate"><span class="pre">True</span></code>, which means that Workspace ONE
+Intelligence SDK sends data on both wifi and cellular networks.
+You can set it to <code class="docutils literal notranslate"><span class="pre">False</span></code> if Workspace ONE Intelligence SDK should
+only send data on wifi network.</p>
+<p>This feature requires adding the <code class="docutils literal notranslate"><span class="pre">ACCESS_NETWORK_STATE</span></code> permission to
+your <code class="docutils literal notranslate"><span class="pre">AndroidManifest.xml</span></code>.
+Please see <a class="reference internal" href="../android_install.html#permissions-required"><span class="std std-ref">Permissions Required</span></a>.</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setAllowsCellularAccess</span><span class="w"> </span><span class="p">(</span><span class="kt">boolean</span><span class="w"> </span><span class="n">allowsCellularAccess</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>allowsCellularAccess</p></td>
+<td><p>Set to <code class="docutils literal notranslate"><span class="pre">True</span></code> to allow Workspace ONE Intelligence SDK to send data on a cellular network. Set to <code class="docutils literal notranslate"><span class="pre">False</span></code> to allow sending data on wifi only.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="availability docutils container">
+<p>Introduced in Android SDK 5.7.0</p>
+</div>
+</div>
+</section>
+<section id="include-system-log-data-logcat">
+<span id="logcat-android"></span><h2>Include System Log Data (Logcat)<a class="headerlink" href="#include-system-log-data-logcat" title="Permalink to this heading">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Workspace ONE Intelligence platform does not support collection of system
+log data (logcat).
+The following no-op methods are left from old Apteligent platform and
+have no effect on the behavior of SDK versions 6.0.0 and above.</p>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>isLogcatReportingEnabled ()</p>
+</div>
+<div class="discussion docutils container">
+<p>Returns a boolean to determine if system log data (logcat) is included in
+crashes reported by Workspace ONE Intelligence SDK to the old platform.</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">isLogcatReportingEnabled</span><span class="w"> </span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="retval docutils container">
+<p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if system log data is included in crashes reported
+by Workspace ONE Intelligence SDK to the old platform.</p>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>setLogcatReportingEnabled (shouldCollectLogcat)</p>
+</div>
+<div class="discussion docutils container">
+<p>Set whether system log data (logcat) should be included with crashes
+reported by Workspace ONE Intelligence SDK to the old Apteligent
+platform.
+Note that Workspace ONE Intelligence platform does not support logcat
+collection.
+Including system log data (logcat) can be helpful for debugging crashes
+and handled exceptions, but it comes at the cost of slightly increasing
+disk and network usage, which is why this feature must be manually
+enabled.
+Workspace ONE Intelligence SDK collects and sends the last 100 lines of
+logcat data to the old Apteligent platform.</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setLogcatReportingEnabled</span><span class="w"> </span><span class="p">(</span><span class="kt">boolean</span><span class="w"> </span><span class="n">shouldCollectLogcat</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>shouldCollectLogcat</p></td>
+<td><p>Set to <code class="docutils literal notranslate"><span class="pre">True</span></code> to allow Workspace ONE Intelligence SDK to collect system log data. Set to <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+</section>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+	<script type="text/javascript" charset="utf-8" src="../../_static/toc.js"></script>
+  </body>
+</html>

@@ -1,0 +1,151 @@
+:orphan:
+
+Setting Up Workspace ONE Intelligence SDK for iOS
+=================================================
+
+.. _install_ios:
+
+Installing Workspace ONE Intelligence SDK for iOS
+-------------------------------------------------
+
+.. todo Add detail and screen shots to steps 2 and 3 below.
+
+.. note::
+
+   Cocoapods is no longer supported as a means of installing Workspace ONE Intelligence SDK. Please use Swift Package Manager as described below.
+
+
+There are two ways you can add the Workspace ONE Intelligence SDK for Apple to your
+project:
+
+* **Swift Package Manager (SPM) (recommended)**
+   Add the Workspace ONE Intelligence SDK package from this URL: <SPM.developer.vmware.com>
+   TODO: add package URL
+   
+* **Manual**
+
+    #. :ref:`Download <downloads>` and unzip the iOS SDK. Copy the resulting folder in your source folder.
+
+    #. Drag the ``WS1Intelligence.xcframework`` into your XCode project. The iOS framework is in the ``iOS`` folder.
+
+    #. Go to your XCode project: click on Build Phases and under "Link Binary with Libraries" add (‘+’) ``SystemConfiguration.framework`` and ``CoreData.framework``.
+
+.. _initialize_ios:
+
+Basic Setup
+-----------
+
+Obtain your app ID from Workspace ONE Intelligence platform.
+
+1. **Import the Workspace ONE Intelligence SDK header**.
+
+For Objective-C apps, import the Workspace ONE Intelligence SDK header in your
+application delegate's implementation file.  For Swift applications, place this
+import in your ``bridging-header.h`` file.
+
+.. code-block:: objective-c
+
+   #import <WS1Intelligence/WS1Intelligence.h>
+
+2. **Enable Workspace ONE Intelligence SDK**.
+
+Call ``enableWithAppID`` in your AppDelegate's ``application:didFinishLaunchingWithOptions:`` method.
+
+Objective-C
+
+.. code-block:: objective-c
+
+  - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [WS1Intelligence enableWithAppID:@"YOUR APP ID GOES HERE"];
+    // other code for your app
+    return YES;
+  }
+
+Swift
+
+.. code-block:: swift
+
+  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    WS1Intelligence.enable(withAppID: "YOUR APP ID GOES HERE")
+    // other code for your app
+    return true
+  }
+
+Register your app at the Workspace ONE Intelligence portal to get an App ID
+to be used in place of ``"YOUR APP ID GOES HERE"``.
+
+.. _setup_dsym_upload:
+
+3. **Setup Automatic dSYM Uploads**.
+
+.. include:: ./ios_upload_dsym_include.txt
+
+Your app is now integrated with Workspace ONE Intelligence!  Additional features require adding more code to your project.
+
+
+Interoperability with other SDKs
+--------------------------------
+
+Recommended initialization orders:
+
+
+Crashlytics:
+
+ Workspace ONE Intelligence SDK should be initialized before Crashlytics
+
+Objective-C
+
+.. code-block:: objective-c
+
+    [WS1Intelligence enableWithAppID:@"YOUR APP ID GOES HERE"];
+
+    // Initialize Crashlytics
+
+Swift
+
+.. code-block:: swift
+
+    WS1Intelligence.enable(withAppID: "YOUR APP ID GOES HERE")
+
+    // Initialize Crashlytics
+
+AppDynamics:
+
+ AppDynamics should be initialized before Workspace ONE Intelligence SDK
+
+Objective-C
+
+.. code-block:: objective-c
+
+    // Initialize AppDynamics
+
+    [WS1Intelligence enableWithAppID:@"YOUR APP ID GOES HERE"];
+
+Swift
+
+.. code-block:: swift
+
+
+    // Initialize Crashlytics
+
+    WS1Intelligence.enable(withAppID: "YOUR APP ID GOES HERE")
+
+New Relic:
+
+ Workspace ONE Intelligence SDK should be initialized before New Relic
+
+Objective-C
+
+.. code-block:: objective-c
+
+    [WS1Intelligence enableWithAppID:@"YOUR APP ID GOES HERE"];
+
+    // Initialize New Relic
+
+Swift
+
+.. code-block:: swift
+
+    WS1Intelligence.enable(withAppID: "YOUR APP ID GOES HERE")
+
+    // Initialize New Relic

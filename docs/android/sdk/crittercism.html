@@ -1,0 +1,985 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Crittercism &#8212; Workspace ONE Intelligence  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/adctheme.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/toggle.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <link rel="search" title="Search" href="../../search.html" />
+    <link rel="top" title="Workspace ONE Intelligence  documentation" href="../../index.html" />
+      <link rel="up" title="Android SDK" href="../android.html" />
+      <link rel="next" title="CrittercismConfig" href="crittercism_config.html" />
+      <link rel="prev" title="Android Release Notes" href="../../release_notes/release_notes_android.html" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <script type="text/javascript">try{document.domain="vmware.com"}catch(e){};</script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-49786008-1']);
+    _gaq.push(['_setDomainName', 'apteligent.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_addIgnoredRef', 'apteligent.com']);   // Stops Self Referrals
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  
+  <meta name="google-translate-customization" content="f0837c562504ad7b-d669caf2b7375c11-g99fd8de75f76752f-14"></meta>
+
+  </head><body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PK9468"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PK9468');</script>
+<!-- End Google Tag Manager -->
+
+
+  <div id="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+          <div id="searchbox" style="display: none">
+              <form class="search" action="../../search.html" method="get">
+                <div class="search-wrapper">
+                  <input class="prettysearch" type="text" name="q" size="18" />
+                  <input type="submit" value="Search" class="searchbutton" />
+                </div>
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+      <ul><li class="toctree-l1" id="docs-home"><a href="../../index.html">Docs Home</a></li></ul>
+      <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../overview/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ios/ios.html">Apple SDK</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../android.html">Android SDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../android.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../android.html#release-notes">Release Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../android.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../android.html#guide">Guide</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../android.html#sdk-references">SDK References</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Crittercism</a></li>
+<li class="toctree-l3"><a class="reference internal" href="crittercism_config.html">CrittercismConfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="crittercism_callback.html">CrittercismCallback</a></li>
+<li class="toctree-l3"><a class="reference internal" href="crash_data.html">CrashData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="network_instrumentation.html">NetworkInstrumentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../android.html#features">Features</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../development_platforms/index.html">Development Platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../downloads/eula_accepted.html">SDK Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release_notes/release_notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../downloads/downloads.html">EULA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../downloads/checksums.html">SDK Download Checksums</a></li>
+</ul>
+
+      <div id="sidebar-toc-clear"></div>
+      
+    </div>
+  </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            <div class="container">
+              <div class="row">
+                <div class="span12">
+                  
+  <section id="crittercism">
+<h1>Crittercism<a class="headerlink" href="#crittercism" title="Permalink to this heading">¶</a></h1>
+<p>Import <code class="docutils literal notranslate"><span class="pre">com.crittercism.app</span></code> package to use this class.</p>
+<section id="initialization">
+<h2>Initialization<a class="headerlink" href="#initialization" title="Permalink to this heading">¶</a></h2>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>initialize (context, appID)</p>
+</div>
+<div class="discussion docutils container">
+<p>Initialize Workspace ONE Intelligence SDK.
+After calling this method, crashes and Network Insights information
+will be automatically reported to the Workspace ONE Intelligence servers.
+In addition, all other Workspace ONE Intelligence SDK methods will be
+enabled for use.</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">synchronized</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">initialize</span><span class="w"> </span><span class="p">(</span><span class="n">Context</span><span class="w"> </span><span class="n">context</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">appID</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>context</p></td>
+<td><p>An Android Context</p></td>
+</tr>
+<tr class="row-even"><td><p>appID</p></td>
+<td><p>Your unique Workspace ONE Intelligence app ID which can be found on the Workspace ONE Intelligence web portal</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>initialize (context, appID, config)</p>
+</div>
+<div class="discussion docutils container">
+<p>Initialize Workspace ONE Intelligence SDK.
+After calling this method, crashes and Network Insights information
+will be automatically reported to the Workspace ONE Intelligence servers.
+In addition, all other Workspace ONE Intelligence SDK methods will be
+enabled for use.</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">synchronized</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">initialize</span><span class="w"> </span><span class="p">(</span><span class="n">Context</span><span class="w"> </span><span class="n">context</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">appID</span><span class="p">,</span><span class="w"> </span><span class="n">CrittercismConfig</span><span class="w"> </span><span class="n">config</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>context</p></td>
+<td><p>An Android Context</p></td>
+</tr>
+<tr class="row-even"><td><p>appID</p></td>
+<td><p>Your unique Workspace ONE Intelligence app ID which can be found on the Workspace ONE Intelligence web portal</p></td>
+</tr>
+<tr class="row-odd"><td><p>config</p></td>
+<td><p>Instance of CrittercismConfig with the desired settings for Workspace ONE Intelligence SDK to use. See <a class="reference internal" href="crittercism_config.html#android-crittercism-config-apm"><span class="std std-ref">CrittercismConfig</span></a> for further information.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="logging-breadcrumbs">
+<span id="breadcrumbs-android"></span><h2>Logging Breadcrumbs<a class="headerlink" href="#logging-breadcrumbs" title="Permalink to this heading">¶</a></h2>
+<div class="sdk-section-discussion docutils container">
+<p>A <em>breadcrumb</em> is a developer-defined text string (up to 140 characters) that
+allows developers to capture app run-time information. Example breadcrumbs may
+include variable values, progress through the code, user actions, or low memory
+warnings. For an introduction, see <a class="reference internal" href="../../overview/overview.html#breadcrumbs"><span class="std std-ref">Breadcrumbs</span></a>.</p>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>leaveBreadcrumb (breadcrumb)</p>
+</div>
+<div class="discussion docutils container">
+<p>Breadcrumbs provide the ability to track activity within your app. A
+breadcrumb is a free form string you supply, which will be timestamped,
+and stored in case a crash occurs. Crash reports will contain the
+breadcrumb trail from the run of your app that crashed, as well as that
+of the prior run.</p>
+<p>Userflows will also contain breadcrumbs that are created between the userflow’s start and end timestamp.</p>
+<p>Breadcrumbs are limited to 140 characters, and only the most recent 100
+are kept.</p>
+<p>Workspace ONE Intelligence SDK will automatically insert a
+breadcrumb marked <code class="docutils literal notranslate"><span class="pre">session_start</span></code> on each initial launch, or
+foreground of your app.</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">leaveBreadcrumb</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">breadcrumb</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>breadcrumb</p></td>
+<td><p>The custom string to leave a breadcrumb, maximum of 140 characters</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="logging-handled-exceptions">
+<span id="logging-he-android"></span><h2>Logging Handled Exceptions<a class="headerlink" href="#logging-handled-exceptions" title="Permalink to this heading">¶</a></h2>
+<div class="toggle docutils container" id="handled-exceptions-android">
+<div class="header docutils container">
+<p>logHandledException (exception)</p>
+</div>
+<div class="discussion docutils container">
+<p>Handled exceptions may be used for tracking exceptions caught
+in a <code class="docutils literal notranslate"><span class="pre">try</span></code>/<code class="docutils literal notranslate"><span class="pre">catch</span></code> statement, 3rd party library exceptions, and monitoring
+areas in the code that may currently be using assertions. Handled
+exceptions can also be used to track error events such as low memory warnings. For an
+introduction, see <a class="reference internal" href="../../overview/overview.html#handled-exceptions"><span class="std std-ref">Handled Exceptions</span></a>.</p>
+<p>Handled exceptions are grouped by stacktrace, much like crash reports.
+Handled exceptions may be viewed in the “Handled Exceptions” area of the
+Workspace ONE Intelligence portal.</p>
+<p>We limit logging handled exceptions to once per minute. If you’ve logged an
+exception within the last minute, we buffer the last five exceptions and send
+those after a minute has passed.</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">logHandledException</span><span class="w"> </span><span class="p">(</span><span class="n">Throwable</span><span class="w"> </span><span class="n">t</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>exception</p></td>
+<td><p>Exception to log</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="seealso docutils container">
+<ul class="simple">
+<li><p><a class="reference internal" href="../../overview/overview.html#handled-exceptions"><span class="std std-ref">Introduction to Handled Exception</span></a></p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="logging-network-request">
+<span id="log-network-request"></span><h2>Logging Network Request<a class="headerlink" href="#logging-network-request" title="Permalink to this heading">¶</a></h2>
+<div class="sdk-section-discussion docutils container">
+<p>Network Insignts automatically monitors HTTP traffic generated by
+either <code class="docutils literal notranslate"><span class="pre">java.net.HttpURLConnection</span></code> or <code class="docutils literal notranslate"><span class="pre">OkHttp</span></code> on devices running
+Android Marshmallow and earlier versions.</p>
+<p>If you are using <code class="docutils literal notranslate"><span class="pre">OkHttp</span></code> version 3.3.0 and above,
+please see <a class="reference internal" href="#okhttp-instrumentation-android"><span class="std std-ref">Instrumenting OkHttpClient (Beta)</span></a>.</p>
+<p>For other Android versions or networking libraries, you can manually capture
+traffic data and provide it to Workspace ONE Intelligence SDK with the
+following methods:</p>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>logNetworkRequest(method, url, latency, bytesRead, bytesSent, responseCode, error)</p>
+</div>
+<div class="discussion docutils container">
+<p>This method allows developers to manually log Network Insights data.
+This is useful for monitoring networking libraries that Workspace ONE
+Intelligence SDK does not itself instrument.</p>
+<p>A network request will NOT be logged in the following cases:</p>
+<ul class="simple">
+<li><p>A null string is provided for the method parameter.</p></li>
+<li><p>A null URL is provided for the URL parameter.</p></li>
+<li><p>A negative value is provided for the response time parameter.</p></li>
+<li><p>An excessively large value is provided for the response time parameter (i.e., <code class="docutils literal notranslate"><span class="pre">System.currentTimeMillis()</span> <span class="pre">-</span> <span class="pre">responseTimeMillis</span> <span class="pre">&lt;</span> <span class="pre">0</span></code>).</p></li>
+<li><p>A negative value is provided for the bytes read parameter.</p></li>
+<li><p>A negative value is provided for the bytes sent parameter.</p></li>
+</ul>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">logNetworkRequest</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">method</span><span class="p">,</span>
+<span class="w">                                     </span><span class="n">URL</span><span class="w"> </span><span class="n">url</span><span class="p">,</span>
+<span class="w">                                     </span><span class="kt">long</span><span class="w"> </span><span class="n">latency</span><span class="p">,</span>
+<span class="w">                                     </span><span class="kt">long</span><span class="w"> </span><span class="n">bytesRead</span><span class="p">,</span>
+<span class="w">                                     </span><span class="kt">long</span><span class="w"> </span><span class="n">bytesSent</span><span class="p">,</span>
+<span class="w">                                     </span><span class="kt">int</span><span class="w"> </span><span class="n">responseCode</span><span class="p">,</span>
+<span class="w">                                     </span><span class="n">Exception</span><span class="w"> </span><span class="n">error</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>method</p></td>
+<td><p>The connection method, such as GET, POST, HEAD, PUT, DELETE, TRACE, OPTIONS, CONNECT, PATCH</p></td>
+</tr>
+<tr class="row-even"><td><p>url</p></td>
+<td><p>The endpoint URL</p></td>
+</tr>
+<tr class="row-odd"><td><p>latency</p></td>
+<td><p>The time between start of request and receipt of response, in milliseconds</p></td>
+</tr>
+<tr class="row-even"><td><p>bytesRead</p></td>
+<td><p>The number of bytes included in response body</p></td>
+</tr>
+<tr class="row-odd"><td><p>bytesSent</p></td>
+<td><p>The number of bytes included in request body</p></td>
+</tr>
+<tr class="row-even"><td><p>responseCode</p></td>
+<td><p>HTTP status code, generally 100-599, e.g. 200 == OK, 400 == Bad Request, can be 0 if there is an error</p></td>
+</tr>
+<tr class="row-odd"><td><p>error</p></td>
+<td><p>Exception instance for a failed request. Null if no error.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="availability docutils container">
+<p>Introduced in Android SDK 5.1.0</p>
+</div>
+<div class="seealso docutils container">
+<ul class="simple">
+<li><p><a class="reference internal" href="../android_apm.html#net-stats-android"><span class="std std-ref">Network Insights</span></a></p></li>
+<li><p><a class="reference external" href="https://www.apteligent.com/developer-resources/network-insights-best-practices/">Network Insights Best Practices</a></p></li>
+</ul>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>logNetworkRequest(method, urlString, latency, bytesRead, bytesSent, responseCode, error)</p>
+</div>
+<div class="discussion docutils container">
+<p>This method allows developers to manually log Network Insights data.
+This is useful for monitoring networking libraries that Workspace ONE
+Intelligence SDK does not itself instrument.</p>
+<p>A network request will NOT be logged in the following cases:</p>
+<ul class="simple">
+<li><p>A null string is provided for the method parameter.</p></li>
+<li><p>A null URL is provided for the URL parameter.</p></li>
+<li><p>A negative value is provided for the response time parameter.</p></li>
+<li><p>An excessively large value is provided for the response time parameter (i.e., <code class="docutils literal notranslate"><span class="pre">System.currentTimeMillis()</span> <span class="pre">-</span> <span class="pre">responseTimeMillis</span> <span class="pre">&lt;</span> <span class="pre">0</span></code>).</p></li>
+<li><p>A negative value is provided for the bytes read parameter.</p></li>
+<li><p>A negative value is provided for the bytes sent parameter.</p></li>
+</ul>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">logNetworkRequest</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">method</span><span class="p">,</span>
+<span class="w">                                     </span><span class="n">String</span><span class="w"> </span><span class="n">urlString</span><span class="p">,</span>
+<span class="w">                                     </span><span class="kt">long</span><span class="w"> </span><span class="n">latency</span><span class="p">,</span>
+<span class="w">                                     </span><span class="kt">long</span><span class="w"> </span><span class="n">bytesRead</span><span class="p">,</span>
+<span class="w">                                     </span><span class="kt">long</span><span class="w"> </span><span class="n">bytesSent</span><span class="p">,</span>
+<span class="w">                                     </span><span class="kt">int</span><span class="w"> </span><span class="n">responseCode</span><span class="p">,</span>
+<span class="w">                                     </span><span class="n">Exception</span><span class="w"> </span><span class="n">error</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>method</p></td>
+<td><p>The connection method, such as GET, POST, HEAD, PUT, DELETE, TRACE, OPTIONS, CONNECT, PATCH</p></td>
+</tr>
+<tr class="row-even"><td><p>urlString</p></td>
+<td><p>The endpoint URL in String</p></td>
+</tr>
+<tr class="row-odd"><td><p>latency</p></td>
+<td><p>The time between start of request and receipt of response, in milliseconds</p></td>
+</tr>
+<tr class="row-even"><td><p>bytesRead</p></td>
+<td><p>The number of bytes included in response body</p></td>
+</tr>
+<tr class="row-odd"><td><p>bytesSent</p></td>
+<td><p>The number of bytes included in request body</p></td>
+</tr>
+<tr class="row-even"><td><p>responseCode</p></td>
+<td><p>HTTP status code, generally 100-599, e.g. 200 == OK, 400 == Bad Request, can be 0 if there is an error</p></td>
+</tr>
+<tr class="row-odd"><td><p>error</p></td>
+<td><p>Exception instance for a failed request. Null if no error.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="availability docutils container">
+<p>Introduced in Android SDK 5.1.0</p>
+</div>
+<div class="seealso docutils container">
+<ul class="simple">
+<li><p><a class="reference internal" href="../android_apm.html#net-stats-android"><span class="std std-ref">Network Insights</span></a></p></li>
+<li><p><a class="reference external" href="https://www.apteligent.com/developer-resources/network-insights-best-practices/">Network Insights Best Practices</a></p></li>
+</ul>
+</div>
+</div>
+<div class="toggle docutils container" id="network-update-location-android">
+<div class="header docutils container">
+<p>updateLocation (curLocation)</p>
+</div>
+<div class="discussion docutils container">
+<p>Inform Workspace ONE Intelligence SDK of the device’s most recent
+location for use with Network Insights.</p>
+<p>If the app uses this method to provide a recent location to the SDK,
+then Network Insights will tie location information to the network data.</p>
+<p>You have the option of updating location information with data given by
+<code class="docutils literal notranslate"><span class="pre">android.location.LocationManager.NETWORK_PROVIDER</span></code> or
+<code class="docutils literal notranslate"><span class="pre">android.location.LocationManager.GPS_PROVIDER</span></code>.
+This allows more accurate data to be sent to the server.</p>
+<p>As explained in the Android Developer Guide, in order to receive location
+updates from the network or GPS provider, your <code class="docutils literal notranslate"><span class="pre">AndroidManifest.xml`</span>
+<span class="pre">file</span> <span class="pre">must</span> <span class="pre">include</span> <span class="pre">either</span> <span class="pre">the</span> <span class="pre">``ACCESS_COARSE_LOCATION</span></code> or
+<code class="docutils literal notranslate"><span class="pre">ACCESS_FINE_LOCATION</span></code> permissions.</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">updateLocation</span><span class="w"> </span><span class="p">(</span><span class="n">Location</span><span class="w"> </span><span class="n">curLocation</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>location</p></td>
+<td><p>Location of the user / device</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="availability docutils container">
+<p>Introduced in Android SDK 4.2.0</p>
+</div>
+</div>
+</section>
+<section id="logging-user-metadata">
+<span id="metadata-android"></span><h2>Logging User Metadata<a class="headerlink" href="#logging-user-metadata" title="Permalink to this heading">¶</a></h2>
+<div class="sdk-section-discussion docutils container">
+<p>Developers can set user metadata to tracking information about individual users.
+For an introduction, see <a class="reference internal" href="../../overview/overview.html#user-metadata"><span class="std std-ref">User Name</span></a>.</p>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>setUsername (username)</p>
+</div>
+<div class="discussion docutils container">
+<p>Setting a username will allow the ability to monitor app performance for each
+user. We recommend setting a username to a value that can be tied back to your customer support system.</p>
+<p>Valid inputs are strings with a length of 1 to 32 characters</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setUsername</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">username</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>username</p></td>
+<td><p>The new username</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="logging-user-flows">
+<span id="userflows-android"></span><h2>Logging User Flows<a class="headerlink" href="#logging-user-flows" title="Permalink to this heading">¶</a></h2>
+<div class="sdk-section-discussion docutils container">
+<p>User flows allow developers to track key interactions or user flows in their
+app such as login, account registration, and in app purchase.</p>
+<p>For an introduction, see <a class="reference internal" href="../../overview/overview.html#userflows"><span class="std std-ref">User Flows Monitoring</span></a>.</p>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>beginUserFlow (name)</p>
+</div>
+<div class="discussion docutils container">
+<p>Init and begin a user flow with a default value.</p>
+<p>User flows allow developers to track key interactions or user flows in their
+app such as login, account registration, and in app purchase. The Workspace
+ONE Intelligence SDK will automatically track application load time as a user
+flow. You can specify additional user flows by adding code to your application.</p>
+<p>Beginning a user flow starts a user flow. Ending, failing, or cancelling a
+user flow stops a user flow. Otherwise, the user flow will be marked as
+crashed or timed out. If a crash occurs, all in progress user flows are
+marked crashed and will be reported with the crash.</p>
+<p>All user flows will appear on Workspace ONE Intelligence portal except for
+cancelled user flows.</p>
+<p>User flows with the same name are aggregated together in the portal by
+Workspace ONE Intelligence.
+Only one user flow for a given name can be in progress at a given time. If you
+begin a second user flow with the same name while another is in progress, the
+first user flow will be cancelled and the new one will take its place.</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">beginUserFlow</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>name</p></td>
+<td><p>The name of the user flow</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="seealso docutils container">
+<ul class="simple">
+<li><p><a class="reference internal" href="../../overview/overview.html#userflows"><span class="std std-ref">Introduction to User Flows</span></a></p></li>
+<li><p><a class="reference external" href="https://www.apteligent.com/developer-resources/three-ways-to-improve-user-experience-through-userflows/">Three Ways to Improve User Experience through User Flows</a></p></li>
+<li><p><a class="reference external" href="https://www.apteligent.com/developer-resources/part-2-tracking-user-experience-with-advanced-userflows/">Tracking User Experience with Advanced User Flows</a></p></li>
+</ul>
+</div>
+</div>
+<div class="toggle docutils container" id="cancel-userflow-android">
+<div class="header docutils container">
+<p>cancelUserFlow (name)</p>
+</div>
+<div class="discussion docutils container">
+<p>Cancel a user flow as if it never existed. The userflow will not be reported.</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">cancelUserFlow</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>name</p></td>
+<td><p>The name of the user flow</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>endUserFlow (name)</p>
+</div>
+<div class="discussion docutils container">
+<p>End an already begun user flow successfully.</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">endUserFlow</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>name</p></td>
+<td><p>The name of the user flow</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>failUserFlow (name, failureReason)</p>
+</div>
+<div class="discussion docutils container">
+<p>End an already begun user flow as a failure, and give a reason why it failed.</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">failUserFlow</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>name</p></td>
+<td><p>The name of the user flow.</p></td>
+</tr>
+<tr class="row-even"><td><p>failureReason</p></td>
+<td><p>The reason the user flow failed.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>failUserFlow (name)</p>
+</div>
+<div class="discussion docutils container">
+<p>End an already begun user flow as a failure.</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">failUserFlow</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>name</p></td>
+<td><p>The name of the user flow</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>setUserFlowValue (name, value)</p>
+</div>
+<div class="discussion docutils container">
+<p>Set the currency cents value of a user flow.</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setUserFlowValue</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>value</p></td>
+<td><p>The value of the user flow</p></td>
+</tr>
+<tr class="row-even"><td><p>name</p></td>
+<td><p>The name of the user flow</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>getUserFlowValue (name)</p>
+</div>
+<div class="discussion docutils container">
+<p>Get the currency cents value of a user flow.</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getUserFlowValue</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>name</p></td>
+<td><p>The name of the user flow</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="detecting-a-crash-occurred">
+<span id="android-detect-crash"></span><h2>Detecting a Crash Occurred<a class="headerlink" href="#detecting-a-crash-occurred" title="Permalink to this heading">¶</a></h2>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>getPreviousSessionCrashData (crashListener)</p>
+</div>
+<div class="discussion docutils container">
+<p>Submit a callback to this method to get crash data from the previous session.
+The callback will receive crash information, see <a class="reference internal" href="crash_data.html#android-crash-data"><span class="std std-ref">CrashData</span></a> for details.</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">getPreviousSessionCrashData</span><span class="w"> </span><span class="p">(</span><span class="n">CrittercismCallback</span><span class="o">&lt;</span><span class="n">CrashData</span><span class="o">&gt;</span><span class="w"> </span><span class="n">crashListener</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="seealso docutils container">
+<ul class="simple">
+<li><p><a class="reference internal" href="crittercism_callback.html#android-crittercism-callback"><span class="std std-ref">CrittercismCallback</span></a></p></li>
+<li><p><a class="reference internal" href="crash_data.html#android-crash-data"><span class="std std-ref">CrashData</span></a></p></li>
+</ul>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>didCrashOnLastLoad ()</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">didCrashOnLastLoad</span><span class="w"> </span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="retval docutils container">
+<p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if the app crashed on the last load, returns <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
+</div>
+</div>
+</section>
+<section id="delay-sending-app-load-data">
+<span id="delay-sending-app-load-android"></span><h2>Delay Sending App Load Data<a class="headerlink" href="#delay-sending-app-load-data" title="Permalink to this heading">¶</a></h2>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>sendAppLoadData ()</p>
+</div>
+<div class="discussion docutils container">
+<p>Tell Workspace ONE Intelligence SDK to send an app load event that was
+delayed. By default, Workspace ONE Intelligence SDK sends app load events
+automatically when your app is started. However, if you set
+..:ref:<cite>delaySendingAppLoad &lt;delay_sending_app_load&gt;</cite>
+flag to <code class="docutils literal notranslate"><span class="pre">True</span></code> on config, you can call this method to manually send app
+load events later.</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">sendAppLoadData</span><span class="w"> </span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="seealso docutils container">
+<ul class="simple">
+<li><p><a class="reference internal" href="crittercism_config.html#delay-sending-app-load"><span class="std std-ref">Delay App Load Configuration</span></a></p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="instrumenting-okhttpclient-beta">
+<span id="okhttp-instrumentation-android"></span><h2>Instrumenting OkHttpClient (Beta)<a class="headerlink" href="#instrumenting-okhttpclient-beta" title="Permalink to this heading">¶</a></h2>
+<div class="sdk-section-discussion docutils container">
+<p>Workspace ONE Intelligence Android SDK offers users the ability to instrument
+OkHttpClients to collect network insights.</p>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>getNetworkInstrumentation()</p>
+</div>
+<div class="discussion docutils container">
+<blockquote>
+<div><p>Enables OkHttpClient instrumentation to collect network insights.
+It must be called on the main UI thread after the OkHttpClient is set.
+Once the method is invoked, Workspace ONE Intelligence SDK will
+automatically log network calls made with the returned instrumented client
+to the Network Insights page of the Workspace ONE Intelligence portal.</p>
+<p>Here’s an example of how to instrument a client:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">OkHttpClient</span><span class="w"> </span><span class="n">uninstrumentedClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">OkHttpClient</span><span class="p">();</span>
+<span class="n">OkHttpClient</span><span class="w"> </span><span class="n">instrumentedClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Crittercism</span><span class="p">.</span><span class="na">getNetworkInstrumentation</span><span class="p">().</span><span class="na">instrumentOkHttpClient</span><span class="p">(</span><span class="n">uninstrumentedClient</span><span class="p">);</span>
+<span class="c1">// now you can use the instrumented client for network calls (on a different thread)</span>
+<span class="n">instrumentedClient</span><span class="p">.</span><span class="na">newCall</span><span class="p">(...).</span><span class="na">execute</span><span class="p">();</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">NetworkInstrumentor</span><span class="w"> </span><span class="nf">getNetworkInstrumentation</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="availability docutils container">
+<p>Introduced in Workspace ONE Intelligence Android SDK 5.8.11-beta11.
+Requires OkHttp 3.3.0 and above.</p>
+</div>
+</div>
+</section>
+<section id="instrumenting-webview">
+<span id="webview-instrumentation-android"></span><h2>Instrumenting WebView<a class="headerlink" href="#instrumenting-webview" title="Permalink to this heading">¶</a></h2>
+<div class="sdk-section-discussion docutils container">
+<p>Workspace ONE Intelligence Android SDK offers users the ability to instrument
+WebViews.
+This method only works for WebViews where JavaScript has already been
+enabled.</p>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>instrumentWebView (webView)</p>
+</div>
+<div class="discussion docutils container">
+<blockquote>
+<div><p>Enables WebViews instrumentation. This method only works if JavaScript has
+already been enabled. It must be called on the UI thread after the
+WebViewClient is set and before the webpage is loaded. Once the method is
+invoked, Workspace ONE Intelligence SDK will automatically log any
+uncaught JavaScript exceptions to the Handled Exceptions page of the
+Workspace ONE Intelligence portal.</p>
+<p>Here’s an example of how to configure and instrument a WebView:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// 1) Optionally set your own WebViewClient.</span>
+<span class="n">myWebView</span><span class="p">.</span><span class="na">setWebViewClient</span><span class="p">(</span><span class="n">myWebViewClient</span><span class="p">);</span>
+
+<span class="c1">// 2) Enable JavaScript.</span>
+<span class="n">myWebView</span><span class="p">.</span><span class="na">getSettings</span><span class="p">().</span><span class="na">setJavaScriptEnabled</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+
+<span class="c1">// 3) Instrument WebView.</span>
+<span class="n">Crittercism</span><span class="p">.</span><span class="na">instrumentWebView</span><span class="p">(</span><span class="n">myWebView</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference internal" href="#webview-instrumentation-android"><span class="std std-ref">Instrumenting WebView</span></a> must be enabled in
+<a class="reference internal" href="../../html5/html5.html#hybrid-apps-html5"><span class="std std-ref">Hybrid Apps</span></a> in order for API calls of Workspace ONE
+Intelligence SDK in the JavaScript code layer to communicate with the
+native code layer.</p>
+</div>
+</div></blockquote>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">instrumentWebView</span><span class="p">(</span><span class="n">WebView</span><span class="w"> </span><span class="n">webView</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="availability docutils container">
+<p>Introduced in Android SDK 5.3.0</p>
+</div>
+</div>
+</section>
+<section id="opt-in-status">
+<span id="opt-out-android"></span><h2>Opt In Status<a class="headerlink" href="#opt-in-status" title="Permalink to this heading">¶</a></h2>
+<div class="sdk-section-discussion docutils container">
+<p>Workspace ONE Intelligence SDK provides an opt-out setting that disables all
+reporting to Workspace ONE Intelligence.
+This allows developers to implement code that asks end users whether they want
+to opt out of Workspace ONE Intelligence.
+For an introduction, see <a class="reference internal" href="../../overview/overview.html#opt-out"><span class="std std-ref">Opt Out of Workspace ONE Intelligence</span></a>.</p>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>getOptInStatus (telemetryType)</p>
+</div>
+<div class="discussion docutils container">
+<p>Retrieve current opt-in status for the specified telemetry type.</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">getOptInStatus</span><span class="p">(</span><span class="kd">final</span><span class="w"> </span><span class="n">TelemetryType</span><span class="w"> </span><span class="n">telemetryType</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="retval docutils container">
+<p>Return <code class="docutils literal notranslate"><span class="pre">True</span></code> if the current opt-in state allows reporting Workspace ONE
+Intelligence SDK data for the specified telemetry type.</p>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>setOptInStatus (telemetryType, isOptedIn)</p>
+</div>
+<div class="discussion docutils container">
+<p>If you wish to offer your users the ability to opt out of Workspace ONE
+Intelligence SDK’s reporting, you can set the OptInStatus for TelemetryType ‘Application’ to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
+There will be no information/requests sent from that user’s app.
+If you do so, any pending crash reports will be purged.</p>
+<p>If you wish to offer your users the ability to opt out of Workspace ONE
+Intelligence SDK’s DEX Telemetry reporting, you can set the OptInStatus for TelemetryType ‘DEX’ to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
+No more device information will be sent from that user’s app.</p>
+<p>Typically, a developer would connect these API calls to checkboxes in a
+settings menu.</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setOptInStatus</span><span class="p">(</span><span class="kd">final</span><span class="w"> </span><span class="n">TelemetryType</span><span class="w"> </span><span class="n">telemetryType</span><span class="p">,</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">isOptedIn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>isOptedIn</p></td>
+<td><p>set to <code class="docutils literal notranslate"><span class="pre">False</span></code> to disable Workspace ONE Intelligence SDK’s reporting for the specified TelemetryType</p></td>
+</tr>
+<tr class="row-even"><td><p>telemetryType</p></td>
+<td><p>use Crittercism.TelemetryType.APPLICATION for crash, exceptions, userflows, breadcrumbs and network insights</p>
+<p>use Crittercism.TelemetryType.DEX for device Digital Employee Experience information</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="setting-log-verbosity-of-workspace-one-intelligence-sdk">
+<span id="android-tune-logging"></span><h2>Setting Log Verbosity of Workspace ONE Intelligence SDK<a class="headerlink" href="#setting-log-verbosity-of-workspace-one-intelligence-sdk" title="Permalink to this heading">¶</a></h2>
+<div class="sdk-section-discussion docutils container">
+<p>By default, Workspace ONE Intelligence SDK prints a few messages to the
+device logcat that may be useful to verify that Workspace ONE Intelligence
+SDK is initialized and properly working.  You can tune the amount of log
+messages that Workspace ONE Intelligence displays.</p>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>getLoggingLevel ()</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">LoggingLevel</span><span class="w"> </span><span class="nf">getLoggingLevel</span><span class="w"> </span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="retval docutils container">
+<p>The current logging level of the verbosity of log messages of Workspace
+ONE Intelligence SDK.</p>
+</div>
+<div class="seealso docutils container">
+<ul class="simple">
+<li><p><a class="reference internal" href="#android-logging-level-constants"><span class="std std-ref">Logging Level Constants</span></a></p></li>
+</ul>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>setLoggingLevel (loggingLevel)</p>
+</div>
+<div class="discussion docutils container">
+<p>Set the logging level to tune the verbosity of log messages of Workspace
+ONE Intelligence.
+The default value is <code class="docutils literal notranslate"><span class="pre">Crittercism.LoggingLevel.Warning</span></code>.</p>
+<p>See <a class="reference internal" href="#android-logging-level-constants"><span class="std std-ref">Logging Level Constants</span></a></p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setLoggingLevel</span><span class="w"> </span><span class="p">(</span><span class="n">LoggingLevel</span><span class="w"> </span><span class="n">loggingLevel</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>loggingLevel</p></td>
+<td><p>The verbosity of Workspace ONE Intelligence SDK logging</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="seealso docutils container">
+<ul class="simple">
+<li><p><a class="reference internal" href="#android-logging-level-constants"><span class="std std-ref">Logging Level Constants</span></a></p></li>
+</ul>
+</div>
+</div>
+<div class="toggle docutils container" id="android-logging-level-constants">
+<div class="header docutils container">
+<p>Crittercism.LoggingLevel</p>
+</div>
+<div class="discussion docutils container">
+<p>Enum used to describe Workspace ONE Intelligence SDK logging level.</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">enum</span><span class="w"> </span><span class="n">LoggingLevel</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Silent</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Error</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Warning</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Info</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Debug</span><span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="constants docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Crittercism.LoggingLevel.Silent</span></code></p></td>
+<td><p>Turns off all log messages from Workspace ONE Intelligence SDK.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Crittercism.LoggingLevel.Error</span></code></p></td>
+<td><p>Only print errors form Workspace ONE Intelligence SDK. An error is an unexpected event that will result not capturing important data.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Crittercism.LoggingLevel.Warning</span></code></p></td>
+<td><p>Only print warnings from Workspace ONE Intelligence SDK.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Crittercism.LoggingLevel.Info</span></code></p></td>
+<td><p><em>(Default)</em> Print more verbose info logs.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Crittercism.LoggingLevel.Debug</span></code></p></td>
+<td><p>The most verbose level of logging, used to print Workspace ONE Intelligence SDK debug logs.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="seealso docutils container">
+<ul class="simple">
+<li><p><a class="reference internal" href="#android-tune-logging"><span class="std std-ref">Setting Log Verbosity of Workspace ONE Intelligence SDK</span></a></p></li>
+</ul>
+</div>
+</div>
+</section>
+</section>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+	<script type="text/javascript" charset="utf-8" src="../../_static/toc.js"></script>
+  </body>
+</html>

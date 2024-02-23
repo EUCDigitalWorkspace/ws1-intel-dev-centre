@@ -1,0 +1,1980 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>SDK Data &#8212; Workspace ONE Intelligence  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/adctheme.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/toggle.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+      <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="Workspace ONE Intelligence  documentation" href="../index.html" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <script type="text/javascript">try{document.domain="vmware.com"}catch(e){};</script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-49786008-1']);
+    _gaq.push(['_setDomainName', 'apteligent.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_addIgnoredRef', 'apteligent.com']);   // Stops Self Referrals
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  
+  <meta name="google-translate-customization" content="f0837c562504ad7b-d669caf2b7375c11-g99fd8de75f76752f-14"></meta>
+
+  </head><body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PK9468"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PK9468');</script>
+<!-- End Google Tag Manager -->
+
+
+  <div id="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+          <div id="searchbox" style="display: none">
+              <form class="search" action="../search.html" method="get">
+                <div class="search-wrapper">
+                  <input class="prettysearch" type="text" name="q" size="18" />
+                  <input type="submit" value="Search" class="searchbutton" />
+                </div>
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+      <ul><li class="toctree-l1" id="docs-home"><a href="../index.html">Docs Home</a></li></ul>
+      <ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ios/ios.html">Apple SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../android/android.html">Android SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development_platforms/index.html">Development Platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eula_accepted.html">SDK Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../release_notes/release_notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="downloads.html">EULA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="checksums.html">SDK Download Checksums</a></li>
+</ul>
+
+      <div id="sidebar-toc-clear"></div>
+      
+    </div>
+  </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            <div class="container">
+              <div class="row">
+                <div class="span12">
+                  
+  <section id="sdk-data">
+<span id="data-sheet"></span><h1>SDK Data<a class="headerlink" href="#sdk-data" title="Permalink to this heading">¶</a></h1>
+<p>The page summarize what data the Workspace ONE Intelligence SDK reports.
+No personally identifiable information (PII) is accessed, sent, or stored at
+any time.
+The Workspace ONE SDKs track individual devices using random device identifiers.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#datasheet-appload-android"><span class="std std-ref">Android App Loads</span></a></p></li>
+<li><p><a class="reference internal" href="#datasheet-appload-ios"><span class="std std-ref">iOS App Loads</span></a></p></li>
+<li><p><a class="reference internal" href="#datasheet-breadcrumb-android"><span class="std std-ref">Android Breadcrumbs</span></a></p></li>
+<li><p><a class="reference internal" href="#datasheet-breadcrumb-ios"><span class="std std-ref">iOS Breadcrumbs</span></a></p></li>
+<li><p><a class="reference internal" href="#datasheet-crash-android"><span class="std std-ref">Android Crashes</span></a></p></li>
+<li><p><a class="reference internal" href="#datasheet-crash-ios"><span class="std std-ref">iOS Crashes</span></a></p></li>
+<li><p><a class="reference internal" href="#datasheet-he-android"><span class="std std-ref">Android Handled Exceptions</span></a></p></li>
+<li><p><a class="reference internal" href="#datasheet-he-ios"><span class="std std-ref">iOS Handled Exceptions</span></a></p></li>
+<li><p><a class="reference internal" href="#datasheet-net-event-android"><span class="std std-ref">Android Network Events</span></a></p></li>
+<li><p><a class="reference internal" href="#datasheet-net-event-ios"><span class="std std-ref">iOS Network Events</span></a></p></li>
+<li><p><a class="reference internal" href="#datasheet-net-error-android"><span class="std std-ref">Android Network Errors</span></a></p></li>
+<li><p><a class="reference internal" href="#datasheet-net-error-ios"><span class="std std-ref">iOS Network Errors</span></a></p></li>
+<li><p><a class="reference internal" href="#datasheet-user-flow-android"><span class="std std-ref">Android User Flows</span></a></p></li>
+<li><p><a class="reference internal" href="#datasheet-user-flow-ios"><span class="std std-ref">iOS User Flows</span></a></p></li>
+</ul>
+<section id="android-app-loads">
+<span id="datasheet-appload-android"></span><h2>Android App Loads<a class="headerlink" href="#android-app-loads" title="Permalink to this heading">¶</a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>App Load Type</p></td>
+<td><p>Sub-type of the app load event (session, background, etc)</p></td>
+</tr>
+<tr class="row-odd"><td><p>App ID</p></td>
+<td><p>Workspace ONE Intelligence app ID for this application</p></td>
+</tr>
+<tr class="row-even"><td><p>App Name</p></td>
+<td><p>The app name entered in the console for this app</p></td>
+</tr>
+<tr class="row-odd"><td><p>App Version</p></td>
+<td><p>Version string, set by developer</p></td>
+</tr>
+<tr class="row-even"><td><p>App Version Code</p></td>
+<td><p>Version int code</p></td>
+</tr>
+<tr class="row-odd"><td><p>Carrier</p></td>
+<td><p>Alphabetic name of current registered operator (when the user is registered to a network)</p></td>
+</tr>
+<tr class="row-even"><td><p>Current</p></td>
+<td><p>Indicates if the event was cached while device was offline</p></td>
+</tr>
+<tr class="row-odd"><td><p>Device Model</p></td>
+<td><p>The model of device detected for this event</p></td>
+</tr>
+<tr class="row-even"><td><p>Device UUID</p></td>
+<td><p>UUID which uniquely identifies the device, generated by Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-odd"><td><p>Library Version</p></td>
+<td><p>version number of the Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-even"><td><p>Locale</p></td>
+<td><p>Locale string</p></td>
+</tr>
+<tr class="row-odd"><td><p>MCC</p></td>
+<td><p>Mobile Country Code of current registered operator (when the user is registered to a network)</p></td>
+</tr>
+<tr class="row-even"><td><p>MNC</p></td>
+<td><p>Mobile Network Code of current registered operator (when the user is registered to a network)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Platform</p></td>
+<td><p>string identifying the origin platform</p></td>
+</tr>
+<tr class="row-even"><td><p>Protocol Version</p></td>
+<td><p>protocol version of the Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-odd"><td><p>Rate</p></td>
+<td><p>Sampling rate for this event type</p></td>
+</tr>
+<tr class="row-even"><td><p>Sent At</p></td>
+<td><p>Timestamp when the event was sent</p></td>
+</tr>
+<tr class="row-odd"><td><p>System Name</p></td>
+<td><p>OS name</p></td>
+</tr>
+<tr class="row-even"><td><p>System Version</p></td>
+<td><p>Version of the host operating system</p></td>
+</tr>
+<tr class="row-odd"><td><p>User Name</p></td>
+<td><p>The last known user name set by the application developer, if available.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="ios-app-loads">
+<span id="datasheet-appload-ios"></span><h2>iOS App Loads<a class="headerlink" href="#ios-app-loads" title="Permalink to this heading">¶</a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>App Load Type</p></td>
+<td><p>Sub-type of the app load event (session, background, etc)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Active Network</p></td>
+<td><p>Currently active connection type</p></td>
+</tr>
+<tr class="row-even"><td><p>App ID</p></td>
+<td><p>Workspace ONE Intelligence app ID for this application</p></td>
+</tr>
+<tr class="row-odd"><td><p>App Name</p></td>
+<td><p>The app name entered in the console for this app</p></td>
+</tr>
+<tr class="row-even"><td><p>Background Session</p></td>
+<td><p>Flag that indicates if the session was started in the background</p></td>
+</tr>
+<tr class="row-odd"><td><p>Battery Level</p></td>
+<td><p>Value representing the current battery level</p></td>
+</tr>
+<tr class="row-even"><td><p>Binary Image Architecture</p></td>
+<td><p>String which identifies the binary image architecture</p></td>
+</tr>
+<tr class="row-odd"><td><p>Binary Image Name</p></td>
+<td><p>Mach-O binary image name</p></td>
+</tr>
+<tr class="row-even"><td><p>Binary Image UUID</p></td>
+<td><p>Mach-O binary image UUID</p></td>
+</tr>
+<tr class="row-odd"><td><p>Boot Time</p></td>
+<td><p>Date that the system initially booted</p></td>
+</tr>
+<tr class="row-even"><td><p>Bundle Identifier</p></td>
+<td><p>String which identifies the organization and app name</p></td>
+</tr>
+<tr class="row-odd"><td><p>Bundle Short Version</p></td>
+<td><p>Public version number</p></td>
+</tr>
+<tr class="row-even"><td><p>Bundle Version</p></td>
+<td><p>Internal build number</p></td>
+</tr>
+<tr class="row-odd"><td><p>Carrier</p></td>
+<td><p>Alphabetic name of current registered operator (when the user is registered to a network)</p></td>
+</tr>
+<tr class="row-even"><td><p>Cold Launched</p></td>
+<td><p>Bool flag which indicates if this session was cold launched</p></td>
+</tr>
+<tr class="row-odd"><td><p>Custom Version</p></td>
+<td><p>Arbitrary version string which is explicitly set by the application developer</p></td>
+</tr>
+<tr class="row-even"><td><p>Debugger Attached</p></td>
+<td><p>Bool flag which indicates that the SDK detected a debugger</p></td>
+</tr>
+<tr class="row-odd"><td><p>Development Platform</p></td>
+<td><p>Development platform in use by the current application</p></td>
+</tr>
+<tr class="row-even"><td><p>Device Model</p></td>
+<td><p>The model of device detected for this event</p></td>
+</tr>
+<tr class="row-odd"><td><p>Device Type</p></td>
+<td><p>The type of device detected for this event</p></td>
+</tr>
+<tr class="row-even"><td><p>Device UUID</p></td>
+<td><p>UUID which uniquely identifies the device, generated by Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-odd"><td><p>Disk Space Free</p></td>
+<td><p>Disk space free in bytes</p></td>
+</tr>
+<tr class="row-even"><td><p>Disk Space Total</p></td>
+<td><p>Total disk space on this device in bytes</p></td>
+</tr>
+<tr class="row-odd"><td><p>IPv4 Address</p></td>
+<td><p>Current IPv4 address, SHA256 encoded</p></td>
+</tr>
+<tr class="row-even"><td><p>IPv6 Address</p></td>
+<td><p>Current IPv6 address, SHA256 encoded</p></td>
+</tr>
+<tr class="row-odd"><td><p>Languages</p></td>
+<td><p>Array of strings containing language preferences</p></td>
+</tr>
+<tr class="row-even"><td><p>Latitude</p></td>
+<td><p>Latitude value, if provided by the developer</p></td>
+</tr>
+<tr class="row-odd"><td><p>Library Version</p></td>
+<td><p>version number of the Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-even"><td><p>Locale</p></td>
+<td><p>Locale string</p></td>
+</tr>
+<tr class="row-odd"><td><p>Longitude</p></td>
+<td><p>Longitude value, if provided by the developer</p></td>
+</tr>
+<tr class="row-even"><td><p>MCC</p></td>
+<td><p>Mobile Country Code of current registered operator (when the user is registered to a network)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Memory Total</p></td>
+<td><p>Total amount of memory on this device in bytes</p></td>
+</tr>
+<tr class="row-even"><td><p>Memory Usage</p></td>
+<td><p>Current memory usage in bytes</p></td>
+</tr>
+<tr class="row-odd"><td><p>MNC</p></td>
+<td><p>Mobile Network Code of current registered operator (when the user is registered to a network)</p></td>
+</tr>
+<tr class="row-even"><td><p>On Cellular</p></td>
+<td><p>Device cellular connectivity state</p></td>
+</tr>
+<tr class="row-odd"><td><p>On WiFi</p></td>
+<td><p>Device connectivity state</p></td>
+</tr>
+<tr class="row-even"><td><p>Online</p></td>
+<td><p>Device wifi connectivity state</p></td>
+</tr>
+<tr class="row-odd"><td><p>Orientation</p></td>
+<td><p>Device orientation</p></td>
+</tr>
+<tr class="row-even"><td><p>Platform</p></td>
+<td><p>string identifying the origin platform</p></td>
+</tr>
+<tr class="row-odd"><td><p>Protocol Version</p></td>
+<td><p>protocol version of the Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-even"><td><p>Rate</p></td>
+<td><p>Sampling rate for this event type</p></td>
+</tr>
+<tr class="row-odd"><td><p>Session ID</p></td>
+<td><p>Unique UUID generated for each session</p></td>
+</tr>
+<tr class="row-even"><td><p>Session Number</p></td>
+<td><p>Incremented session number for this device</p></td>
+</tr>
+<tr class="row-odd"><td><p>System Name</p></td>
+<td><p>OS name</p></td>
+</tr>
+<tr class="row-even"><td><p>System Time Zone</p></td>
+<td><p>Current device time zone</p></td>
+</tr>
+<tr class="row-odd"><td><p>System Version</p></td>
+<td><p>Version of the host operating system</p></td>
+</tr>
+<tr class="row-even"><td><p>User Name</p></td>
+<td><p>The last known user name set by the application developer, if available.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="android-breadcrumbs">
+<span id="datasheet-breadcrumb-android"></span><h2>Android Breadcrumbs<a class="headerlink" href="#android-breadcrumbs" title="Permalink to this heading">¶</a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Custom Event Type</p></td>
+<td><p>Sub-type of custom metadata / breadcrumb</p></td>
+</tr>
+<tr class="row-odd"><td><p>Name</p></td>
+<td><p>Name of the custom event</p></td>
+</tr>
+<tr class="row-even"><td><p>App ID</p></td>
+<td><p>Workspace ONE Intelligence app ID for this application</p></td>
+</tr>
+<tr class="row-odd"><td><p>App Name</p></td>
+<td><p>The app name entered in the console for this app</p></td>
+</tr>
+<tr class="row-even"><td><p>App Version</p></td>
+<td><p>Version string, set by developer</p></td>
+</tr>
+<tr class="row-odd"><td><p>App Version Code</p></td>
+<td><p>Version int code</p></td>
+</tr>
+<tr class="row-even"><td><p>Device Model</p></td>
+<td><p>The model of device detected for this event</p></td>
+</tr>
+<tr class="row-odd"><td><p>Device UUID</p></td>
+<td><p>UUID which uniquely identifies the device, generated by Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-even"><td><p>Library Version</p></td>
+<td><p>version number of the Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-odd"><td><p>Locale</p></td>
+<td><p>Locale string</p></td>
+</tr>
+<tr class="row-even"><td><p>MCC</p></td>
+<td><p>Mobile Country Code of current registered operator (when the user is registered to a network)</p></td>
+</tr>
+<tr class="row-odd"><td><p>MNC</p></td>
+<td><p>Mobile Network Code of current registered operator (when the user is registered to a network)</p></td>
+</tr>
+<tr class="row-even"><td><p>Platform</p></td>
+<td><p>string identifying the origin platform</p></td>
+</tr>
+<tr class="row-odd"><td><p>Protocol Version</p></td>
+<td><p>protocol version of the Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-even"><td><p>Rate</p></td>
+<td><p>Sampling rate for this event type</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sent At</p></td>
+<td><p>Timestamp when the event was sent</p></td>
+</tr>
+<tr class="row-even"><td><p>System Name</p></td>
+<td><p>OS name</p></td>
+</tr>
+<tr class="row-odd"><td><p>System Version</p></td>
+<td><p>Version of the host operating system</p></td>
+</tr>
+<tr class="row-even"><td><p>User Name</p></td>
+<td><p>The last known user name set by the application developer, if available.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="ios-breadcrumbs">
+<span id="datasheet-breadcrumb-ios"></span><h2>iOS Breadcrumbs<a class="headerlink" href="#ios-breadcrumbs" title="Permalink to this heading">¶</a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Custom Event Type</p></td>
+<td><p>Sub-type of custom metadata / breadcrumb</p></td>
+</tr>
+<tr class="row-odd"><td><p>Name</p></td>
+<td><p>Name of the custom event</p></td>
+</tr>
+<tr class="row-even"><td><p>Active Network</p></td>
+<td><p>Currently active connection type</p></td>
+</tr>
+<tr class="row-odd"><td><p>App ID</p></td>
+<td><p>Workspace ONE Intelligence app ID for this application</p></td>
+</tr>
+<tr class="row-even"><td><p>App Name</p></td>
+<td><p>The app name entered in the console for this app</p></td>
+</tr>
+<tr class="row-odd"><td><p>Background Session</p></td>
+<td><p>Flag that indicates if the session was started in the background</p></td>
+</tr>
+<tr class="row-even"><td><p>Battery Level</p></td>
+<td><p>Value representing the current battery level</p></td>
+</tr>
+<tr class="row-odd"><td><p>Binary Image Architecture</p></td>
+<td><p>String which identifies the binary image architecture</p></td>
+</tr>
+<tr class="row-even"><td><p>Binary Image Name</p></td>
+<td><p>Mach-O binary image name</p></td>
+</tr>
+<tr class="row-odd"><td><p>Binary Image UUID</p></td>
+<td><p>Mach-O binary image UUID</p></td>
+</tr>
+<tr class="row-even"><td><p>Boot Time</p></td>
+<td><p>Date that the system initially booted</p></td>
+</tr>
+<tr class="row-odd"><td><p>Bundle Identifier</p></td>
+<td><p>String which identifies the organization and app name</p></td>
+</tr>
+<tr class="row-even"><td><p>Bundle Short Version</p></td>
+<td><p>Public version number</p></td>
+</tr>
+<tr class="row-odd"><td><p>Bundle Version</p></td>
+<td><p>Internal build number</p></td>
+</tr>
+<tr class="row-even"><td><p>Carrier</p></td>
+<td><p>Alphabetic name of current registered operator (when the user is registered to a network)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cold Launched</p></td>
+<td><p>Bool flag which indicates if this session was cold launched</p></td>
+</tr>
+<tr class="row-even"><td><p>Custom Version</p></td>
+<td><p>Arbitrary version string which is explicitly set by the application developer</p></td>
+</tr>
+<tr class="row-odd"><td><p>Debugger Attached</p></td>
+<td><p>Bool flag which indicates that the SDK detected a debugger</p></td>
+</tr>
+<tr class="row-even"><td><p>Development Platform</p></td>
+<td><p>Development platform in use by the current application</p></td>
+</tr>
+<tr class="row-odd"><td><p>Device Model</p></td>
+<td><p>The model of device detected for this event</p></td>
+</tr>
+<tr class="row-even"><td><p>Device Type</p></td>
+<td><p>The type of device detected for this event</p></td>
+</tr>
+<tr class="row-odd"><td><p>Device UUID</p></td>
+<td><p>UUID which uniquely identifies the device, generated by Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-even"><td><p>Disk Space Free</p></td>
+<td><p>Disk space free in bytes</p></td>
+</tr>
+<tr class="row-odd"><td><p>Disk Space Total</p></td>
+<td><p>Total disk space on this device in bytes</p></td>
+</tr>
+<tr class="row-even"><td><p>IPv4 Address</p></td>
+<td><p>Current IPv4 address, SHA256 encoded</p></td>
+</tr>
+<tr class="row-odd"><td><p>IPv6 Address</p></td>
+<td><p>Current IPv6 address, SHA256 encoded</p></td>
+</tr>
+<tr class="row-even"><td><p>Languages</p></td>
+<td><p>Array of strings containing language preferences</p></td>
+</tr>
+<tr class="row-odd"><td><p>Latitude</p></td>
+<td><p>Latitude value, if provided by the developer</p></td>
+</tr>
+<tr class="row-even"><td><p>Library Version</p></td>
+<td><p>version number of the Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-odd"><td><p>Locale</p></td>
+<td><p>Locale string</p></td>
+</tr>
+<tr class="row-even"><td><p>Longitude</p></td>
+<td><p>Longitude value, if provided by the developer</p></td>
+</tr>
+<tr class="row-odd"><td><p>MCC</p></td>
+<td><p>Mobile Country Code of current registered operator (when the user is registered to a network)</p></td>
+</tr>
+<tr class="row-even"><td><p>Memory Total</p></td>
+<td><p>Total amount of memory on this device in bytes</p></td>
+</tr>
+<tr class="row-odd"><td><p>Memory Usage</p></td>
+<td><p>Current memory usage in bytes</p></td>
+</tr>
+<tr class="row-even"><td><p>MNC</p></td>
+<td><p>Mobile Network Code of current registered operator (when the user is registered to a network)</p></td>
+</tr>
+<tr class="row-odd"><td><p>On Cellular</p></td>
+<td><p>Device cellular connectivity state</p></td>
+</tr>
+<tr class="row-even"><td><p>On WiFi</p></td>
+<td><p>Device connectivity state</p></td>
+</tr>
+<tr class="row-odd"><td><p>Online</p></td>
+<td><p>Device wifi connectivity state</p></td>
+</tr>
+<tr class="row-even"><td><p>Orientation</p></td>
+<td><p>Device orientation</p></td>
+</tr>
+<tr class="row-odd"><td><p>Platform</p></td>
+<td><p>string identifying the origin platform</p></td>
+</tr>
+<tr class="row-even"><td><p>Protocol Version</p></td>
+<td><p>protocol version of the Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-odd"><td><p>Rate</p></td>
+<td><p>Sampling rate for this event type</p></td>
+</tr>
+<tr class="row-even"><td><p>Session ID</p></td>
+<td><p>Unique UUID generated for each session</p></td>
+</tr>
+<tr class="row-odd"><td><p>Session Number</p></td>
+<td><p>Incremented session number for this device</p></td>
+</tr>
+<tr class="row-even"><td><p>System Name</p></td>
+<td><p>OS name</p></td>
+</tr>
+<tr class="row-odd"><td><p>System Time Zone</p></td>
+<td><p>Current device time zone</p></td>
+</tr>
+<tr class="row-even"><td><p>System Version</p></td>
+<td><p>Version of the host operating system</p></td>
+</tr>
+<tr class="row-odd"><td><p>User Name</p></td>
+<td><p>The last known user name set by the application developer, if available.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="android-crashes">
+<span id="datasheet-crash-android"></span><h2>Android Crashes<a class="headerlink" href="#android-crashes" title="Permalink to this heading">¶</a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Name</p></td>
+<td><p>Error name string</p></td>
+</tr>
+<tr class="row-odd"><td><p>Error Reason</p></td>
+<td><p>Error reason string</p></td>
+</tr>
+<tr class="row-even"><td><p>Error Thread ID</p></td>
+<td><p>The number corresponding to the crashed thread</p></td>
+</tr>
+<tr class="row-odd"><td><p>Error Stacktrace</p></td>
+<td><p>A string representing the stacktrace for the error</p></td>
+</tr>
+<tr class="row-even"><td><p>Is NDK</p></td>
+<td><p>Indicates if the crash is native</p></td>
+</tr>
+<tr class="row-odd"><td><p>Suspect Line</p></td>
+<td><p>Suspect line in the stacktrace</p></td>
+</tr>
+<tr class="row-even"><td><p>Thread ID</p></td>
+<td><p>Thread ID for thread XY</p></td>
+</tr>
+<tr class="row-odd"><td><p>Thread Name</p></td>
+<td><p>Name for thread XY, if such a name was set</p></td>
+</tr>
+<tr class="row-even"><td><p>Thread State</p></td>
+<td><p>State for thread XY</p></td>
+</tr>
+<tr class="row-odd"><td><p>Thread Stacktrace</p></td>
+<td><p>A string representing the stacktrace for thread XY</p></td>
+</tr>
+<tr class="row-even"><td><p>Activities</p></td>
+<td><p>Instance(s) of Activity that are visible / active while crash/exception occurred</p></td>
+</tr>
+<tr class="row-odd"><td><p>App ID</p></td>
+<td><p>Workspace ONE Intelligence app ID for this application</p></td>
+</tr>
+<tr class="row-even"><td><p>App Name</p></td>
+<td><p>The app name entered in the console for this app</p></td>
+</tr>
+<tr class="row-odd"><td><p>App Version</p></td>
+<td><p>Version string, set by developer</p></td>
+</tr>
+<tr class="row-even"><td><p>App Version Code</p></td>
+<td><p>Version int code</p></td>
+</tr>
+<tr class="row-odd"><td><p>Architecture</p></td>
+<td><p>Device architecture</p></td>
+</tr>
+<tr class="row-even"><td><p>Battery Level</p></td>
+<td><p>Value representing the current battery level</p></td>
+</tr>
+<tr class="row-odd"><td><p>Carrier</p></td>
+<td><p>Alphabetic name of current registered operator (when the user is registered to a network)</p></td>
+</tr>
+<tr class="row-even"><td><p>Device Model</p></td>
+<td><p>The model of device detected for this event</p></td>
+</tr>
+<tr class="row-odd"><td><p>Device UUID</p></td>
+<td><p>UUID which uniquely identifies the device, generated by Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-even"><td><p>Disk Space Free</p></td>
+<td><p>Disk space free in bytes</p></td>
+</tr>
+<tr class="row-odd"><td><p>Disk Space Total</p></td>
+<td><p>Total disk space on this device in bytes</p></td>
+</tr>
+<tr class="row-even"><td><p>DPI</p></td>
+<td><p>Device screen density (the logical density of the display)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Library Version</p></td>
+<td><p>version number of the Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-even"><td><p>Locale</p></td>
+<td><p>Locale string</p></td>
+</tr>
+<tr class="row-odd"><td><p>MCC</p></td>
+<td><p>Mobile Country Code of current registered operator (when the user is registered to a network)</p></td>
+</tr>
+<tr class="row-even"><td><p>Memory Total</p></td>
+<td><p>Total amount of memory on this device in bytes</p></td>
+</tr>
+<tr class="row-odd"><td><p>Memory Usage</p></td>
+<td><p>Current memory usage in bytes</p></td>
+</tr>
+<tr class="row-even"><td><p>MNC</p></td>
+<td><p>Mobile Network Code of current registered operator (when the user is registered to a network)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Orientation</p></td>
+<td><p>Device orientation</p></td>
+</tr>
+<tr class="row-even"><td><p>Platform</p></td>
+<td><p>string identifying the origin platform</p></td>
+</tr>
+<tr class="row-odd"><td><p>Protocol Version</p></td>
+<td><p>protocol version of the Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-even"><td><p>Rate</p></td>
+<td><p>Sampling rate for this event type</p></td>
+</tr>
+<tr class="row-odd"><td><p>SD Space Free</p></td>
+<td><p>SD space free in bytes</p></td>
+</tr>
+<tr class="row-even"><td><p>SD Space Total</p></td>
+<td><p>Total SD space in bytes</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sent At</p></td>
+<td><p>Timestamp when the event was sent</p></td>
+</tr>
+<tr class="row-even"><td><p>System Name</p></td>
+<td><p>OS name</p></td>
+</tr>
+<tr class="row-odd"><td><p>System Version</p></td>
+<td><p>Version of the host operating system</p></td>
+</tr>
+<tr class="row-even"><td><p>User Name</p></td>
+<td><p>The last known user name set by the application developer, if available.</p></td>
+</tr>
+<tr class="row-odd"><td><p>XDPI</p></td>
+<td><p>Horizontal screen density (the exact physical pixels per inch of the screen in the X dimension)</p></td>
+</tr>
+<tr class="row-even"><td><p>YDPI</p></td>
+<td><p>Vertical screen density (the exact physical pixels per inch of the screen in the Y dimension)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="ios-crashes">
+<span id="datasheet-crash-ios"></span><h2>iOS Crashes<a class="headerlink" href="#ios-crashes" title="Permalink to this heading">¶</a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Crashed Binary UUID</p></td>
+<td><p>The UUID of the loaded binary at the time of the crash</p></td>
+</tr>
+<tr class="row-odd"><td><p>Error Address</p></td>
+<td><p>Error address</p></td>
+</tr>
+<tr class="row-even"><td><p>Error Code</p></td>
+<td><p>Error code</p></td>
+</tr>
+<tr class="row-odd"><td><p>Error Reason</p></td>
+<td><p>Error reason string</p></td>
+</tr>
+<tr class="row-even"><td><p>Error Thread Number</p></td>
+<td><p>The number corresponding to the crashed thread</p></td>
+</tr>
+<tr class="row-odd"><td><p>Error Trace</p></td>
+<td><p>Backtrace of the error or exception as a FieldText value, with each stack frame separated by a newline character (n)</p></td>
+</tr>
+<tr class="row-even"><td><p>Error Type</p></td>
+<td><p>Signal Type</p></td>
+</tr>
+<tr class="row-odd"><td><p>Loaded Binary Image List</p></td>
+<td><p>A list of the loaded binary images that appear in the stack trace</p></td>
+</tr>
+<tr class="row-even"><td><p>Name</p></td>
+<td><p>Error name string</p></td>
+</tr>
+<tr class="row-odd"><td><p>Symbolicated</p></td>
+<td><p>Flag which signifies if the stack trace is symbolicated or not</p></td>
+</tr>
+<tr class="row-even"><td><p>Thread Traces</p></td>
+<td><p>A map with multiple entries, each which representing a thread running in the application at the time of the crash. The map key is the thread name, the value is the stacktrace as a FieldText attribute, with each stack frame separated by a newline (n) character.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Active Network</p></td>
+<td><p>Currently active connection type</p></td>
+</tr>
+<tr class="row-even"><td><p>App ID</p></td>
+<td><p>Workspace ONE Intelligence app ID for this application</p></td>
+</tr>
+<tr class="row-odd"><td><p>App Name</p></td>
+<td><p>The app name entered in the console for this app</p></td>
+</tr>
+<tr class="row-even"><td><p>Background Session</p></td>
+<td><p>Flag that indicates if the session was started in the background</p></td>
+</tr>
+<tr class="row-odd"><td><p>Battery Level</p></td>
+<td><p>Value representing the current battery level</p></td>
+</tr>
+<tr class="row-even"><td><p>Binary Image Architecture</p></td>
+<td><p>String which identifies the binary image architecture</p></td>
+</tr>
+<tr class="row-odd"><td><p>Binary Image Name</p></td>
+<td><p>Mach-O binary image name</p></td>
+</tr>
+<tr class="row-even"><td><p>Binary Image UUID</p></td>
+<td><p>Mach-O binary image UUID</p></td>
+</tr>
+<tr class="row-odd"><td><p>Boot Time</p></td>
+<td><p>Date that the system initially booted</p></td>
+</tr>
+<tr class="row-even"><td><p>Bundle Identifier</p></td>
+<td><p>String which identifies the organization and app name</p></td>
+</tr>
+<tr class="row-odd"><td><p>Bundle Short Version</p></td>
+<td><p>Public version number</p></td>
+</tr>
+<tr class="row-even"><td><p>Bundle Version</p></td>
+<td><p>Internal build number</p></td>
+</tr>
+<tr class="row-odd"><td><p>Carrier</p></td>
+<td><p>Alphabetic name of current registered operator (when the user is registered to a network)</p></td>
+</tr>
+<tr class="row-even"><td><p>Cold Launched</p></td>
+<td><p>Bool flag which indicates if this session was cold launched</p></td>
+</tr>
+<tr class="row-odd"><td><p>Custom Version</p></td>
+<td><p>Arbitrary version string which is explicitly set by the application developer</p></td>
+</tr>
+<tr class="row-even"><td><p>Debugger Attached</p></td>
+<td><p>Bool flag which indicates that the SDK detected a debugger</p></td>
+</tr>
+<tr class="row-odd"><td><p>Development Platform</p></td>
+<td><p>Development platform in use by the current application</p></td>
+</tr>
+<tr class="row-even"><td><p>Device Model</p></td>
+<td><p>The model of device detected for this event</p></td>
+</tr>
+<tr class="row-odd"><td><p>Device Type</p></td>
+<td><p>The type of device detected for this event</p></td>
+</tr>
+<tr class="row-even"><td><p>Device UUID</p></td>
+<td><p>UUID which uniquely identifies the device, generated by Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-odd"><td><p>Disk Space Free</p></td>
+<td><p>Disk space free in bytes</p></td>
+</tr>
+<tr class="row-even"><td><p>Disk Space Total</p></td>
+<td><p>Total disk space on this device in bytes</p></td>
+</tr>
+<tr class="row-odd"><td><p>IPv4 Address</p></td>
+<td><p>Current IPv4 address, SHA256 encoded</p></td>
+</tr>
+<tr class="row-even"><td><p>IPv6 Address</p></td>
+<td><p>Current IPv6 address, SHA256 encoded</p></td>
+</tr>
+<tr class="row-odd"><td><p>Languages</p></td>
+<td><p>Array of strings containing language preferences</p></td>
+</tr>
+<tr class="row-even"><td><p>Latitude</p></td>
+<td><p>Latitude value, if provided by the developer</p></td>
+</tr>
+<tr class="row-odd"><td><p>Library Version</p></td>
+<td><p>version number of the Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-even"><td><p>Locale</p></td>
+<td><p>Locale string</p></td>
+</tr>
+<tr class="row-odd"><td><p>MCC</p></td>
+<td><p>Mobile Country Code of current registered operator (when the user is registered to a network)</p></td>
+</tr>
+<tr class="row-even"><td><p>Memory Total</p></td>
+<td><p>Total amount of memory on this device in bytes</p></td>
+</tr>
+<tr class="row-odd"><td><p>Memory Usage</p></td>
+<td><p>Current memory usage in bytes</p></td>
+</tr>
+<tr class="row-even"><td><p>MNC</p></td>
+<td><p>Mobile Network Code of current registered operator (when the user is registered to a network)</p></td>
+</tr>
+<tr class="row-odd"><td><p>On Cellular</p></td>
+<td><p>Device cellular connectivity state</p></td>
+</tr>
+<tr class="row-even"><td><p>On WiFi</p></td>
+<td><p>Device connectivity state</p></td>
+</tr>
+<tr class="row-odd"><td><p>Online</p></td>
+<td><p>Device wifi connectivity state</p></td>
+</tr>
+<tr class="row-even"><td><p>Orientation</p></td>
+<td><p>Device orientation</p></td>
+</tr>
+<tr class="row-odd"><td><p>Platform</p></td>
+<td><p>string identifying the origin platform</p></td>
+</tr>
+<tr class="row-even"><td><p>Protocol Version</p></td>
+<td><p>protocol version of the Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-odd"><td><p>Rate</p></td>
+<td><p>Sampling rate for this event type</p></td>
+</tr>
+<tr class="row-even"><td><p>Session ID</p></td>
+<td><p>Unique UUID generated for each session</p></td>
+</tr>
+<tr class="row-odd"><td><p>Session Number</p></td>
+<td><p>Incremented session number for this device</p></td>
+</tr>
+<tr class="row-even"><td><p>System Name</p></td>
+<td><p>OS name</p></td>
+</tr>
+<tr class="row-odd"><td><p>System Time Zone</p></td>
+<td><p>Current device time zone</p></td>
+</tr>
+<tr class="row-even"><td><p>System Version</p></td>
+<td><p>Version of the host operating system</p></td>
+</tr>
+<tr class="row-odd"><td><p>User Name</p></td>
+<td><p>The last known user name set by the application developer, if available.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="android-handled-exceptions">
+<span id="datasheet-he-android"></span><h2>Android Handled Exceptions<a class="headerlink" href="#android-handled-exceptions" title="Permalink to this heading">¶</a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Name</p></td>
+<td><p>Error name string</p></td>
+</tr>
+<tr class="row-odd"><td><p>Error Reason</p></td>
+<td><p>Error reason string</p></td>
+</tr>
+<tr class="row-even"><td><p>Error Stacktrace</p></td>
+<td><p>A string representing the stacktrace for the error</p></td>
+</tr>
+<tr class="row-odd"><td><p>Suspect Line</p></td>
+<td><p>Suspect line</p></td>
+</tr>
+<tr class="row-even"><td><p>Activities</p></td>
+<td><p>Instance(s) of Activity that are visible / active while crash/exception occurred</p></td>
+</tr>
+<tr class="row-odd"><td><p>App ID</p></td>
+<td><p>Workspace ONE Intelligence app ID for this application</p></td>
+</tr>
+<tr class="row-even"><td><p>App Name</p></td>
+<td><p>The app name entered in the console for this app</p></td>
+</tr>
+<tr class="row-odd"><td><p>App Version</p></td>
+<td><p>Version string, set by developer</p></td>
+</tr>
+<tr class="row-even"><td><p>App Version Code</p></td>
+<td><p>Version int code</p></td>
+</tr>
+<tr class="row-odd"><td><p>Architecture</p></td>
+<td><p>Device architecture</p></td>
+</tr>
+<tr class="row-even"><td><p>Carrier</p></td>
+<td><p>Alphabetic name of current registered operator (when the user is registered to a network)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Device Model</p></td>
+<td><p>The model of device detected for this event</p></td>
+</tr>
+<tr class="row-even"><td><p>Device UUID</p></td>
+<td><p>UUID which uniquely identifies the device, generated by Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-odd"><td><p>DPI</p></td>
+<td><p>Device screen density (the logical density of the display)</p></td>
+</tr>
+<tr class="row-even"><td><p>Library Version</p></td>
+<td><p>version number of the Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-odd"><td><p>Locale</p></td>
+<td><p>Locale string</p></td>
+</tr>
+<tr class="row-even"><td><p>MCC</p></td>
+<td><p>Mobile Country Code of current registered operator (when the user is registered to a network)</p></td>
+</tr>
+<tr class="row-odd"><td><p>MNC</p></td>
+<td><p>Mobile Network Code of current registered operator (when the user is registered to a network)</p></td>
+</tr>
+<tr class="row-even"><td><p>Orientation</p></td>
+<td><p>Device orientation</p></td>
+</tr>
+<tr class="row-odd"><td><p>Platform</p></td>
+<td><p>string identifying the origin platform</p></td>
+</tr>
+<tr class="row-even"><td><p>Protocol Version</p></td>
+<td><p>protocol version of the Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-odd"><td><p>Rate</p></td>
+<td><p>Sampling rate for this event type</p></td>
+</tr>
+<tr class="row-even"><td><p>Sent At</p></td>
+<td><p>Timestamp when the event was sent</p></td>
+</tr>
+<tr class="row-odd"><td><p>System Name</p></td>
+<td><p>OS name</p></td>
+</tr>
+<tr class="row-even"><td><p>System Version</p></td>
+<td><p>Version of the host operating system</p></td>
+</tr>
+<tr class="row-odd"><td><p>User Name</p></td>
+<td><p>The last known user name set by the application developer, if available.</p></td>
+</tr>
+<tr class="row-even"><td><p>XDPI</p></td>
+<td><p>Horizontal screen density (the exact physical pixels per inch of the screen in the X dimension)</p></td>
+</tr>
+<tr class="row-odd"><td><p>YDPI</p></td>
+<td><p>Vertical screen density (the exact physical pixels per inch of the screen in the Y dimension)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="ios-handled-exceptions">
+<span id="datasheet-he-ios"></span><h2>iOS Handled Exceptions<a class="headerlink" href="#ios-handled-exceptions" title="Permalink to this heading">¶</a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Error Domain</p></td>
+<td><p>Error domain string provided by the application developer</p></td>
+</tr>
+<tr class="row-odd"><td><p>Error Domain Code</p></td>
+<td><p>Error code provided by the application developer</p></td>
+</tr>
+<tr class="row-even"><td><p>Error Log Type</p></td>
+<td><p>The type of object logged with the SDK API</p></td>
+</tr>
+<tr class="row-odd"><td><p>Error Reason</p></td>
+<td><p>Error reason string</p></td>
+</tr>
+<tr class="row-even"><td><p>Error Recovery Options</p></td>
+<td><p>Array of strings listing recovery option recommendations</p></td>
+</tr>
+<tr class="row-odd"><td><p>Error Recovery Suggestion</p></td>
+<td><p>Error string with recovery suggestion</p></td>
+</tr>
+<tr class="row-even"><td><p>Error Thread Name</p></td>
+<td><p>The name, if available, of the thread on which the exception occurred</p></td>
+</tr>
+<tr class="row-odd"><td><p>Error Thread Number</p></td>
+<td><p>The number corresponding to the thread on which the exception occurred</p></td>
+</tr>
+<tr class="row-even"><td><p>Error Trace</p></td>
+<td><p>Backtrace of the error or exception as a FieldText value, with each stack frame separated by a newline character (n)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Name</p></td>
+<td><p>Error name string</p></td>
+</tr>
+<tr class="row-even"><td><p>Symbolicated</p></td>
+<td><p>Flag which signifies if the stack trace is symbolicated or not</p></td>
+</tr>
+<tr class="row-odd"><td><p>Active Network</p></td>
+<td><p>Currently active connection type</p></td>
+</tr>
+<tr class="row-even"><td><p>App ID</p></td>
+<td><p>Workspace ONE Intelligence app ID for this application</p></td>
+</tr>
+<tr class="row-odd"><td><p>App Name</p></td>
+<td><p>The app name entered in the console for this app</p></td>
+</tr>
+<tr class="row-even"><td><p>Background Session</p></td>
+<td><p>Flag that indicates if the session was started in the background</p></td>
+</tr>
+<tr class="row-odd"><td><p>Battery Level</p></td>
+<td><p>Value representing the current battery level</p></td>
+</tr>
+<tr class="row-even"><td><p>Binary Image Architecture</p></td>
+<td><p>String which identifies the binary image architecture</p></td>
+</tr>
+<tr class="row-odd"><td><p>Binary Image Name</p></td>
+<td><p>Mach-O binary image name</p></td>
+</tr>
+<tr class="row-even"><td><p>Binary Image UUID</p></td>
+<td><p>Mach-O binary image UUID</p></td>
+</tr>
+<tr class="row-odd"><td><p>Boot Time</p></td>
+<td><p>Date that the system initially booted</p></td>
+</tr>
+<tr class="row-even"><td><p>Bundle Identifier</p></td>
+<td><p>String which identifies the organization and app name</p></td>
+</tr>
+<tr class="row-odd"><td><p>Bundle Short Version</p></td>
+<td><p>Public version number</p></td>
+</tr>
+<tr class="row-even"><td><p>Bundle Version</p></td>
+<td><p>Internal build number</p></td>
+</tr>
+<tr class="row-odd"><td><p>Carrier</p></td>
+<td><p>Alphabetic name of current registered operator (when the user is registered to a network)</p></td>
+</tr>
+<tr class="row-even"><td><p>Cold Launched</p></td>
+<td><p>Bool flag which indicates if this session was cold launched</p></td>
+</tr>
+<tr class="row-odd"><td><p>Custom Version</p></td>
+<td><p>Arbitrary version string which is explicitly set by the application developer</p></td>
+</tr>
+<tr class="row-even"><td><p>Debugger Attached</p></td>
+<td><p>Bool flag which indicates that the SDK detected a debugger</p></td>
+</tr>
+<tr class="row-odd"><td><p>Development Platform</p></td>
+<td><p>Development platform in use by the current application</p></td>
+</tr>
+<tr class="row-even"><td><p>Device Model</p></td>
+<td><p>The model of device detected for this event</p></td>
+</tr>
+<tr class="row-odd"><td><p>Device Type</p></td>
+<td><p>The type of device detected for this event</p></td>
+</tr>
+<tr class="row-even"><td><p>Device UUID</p></td>
+<td><p>UUID which uniquely identifies the device, generated by Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-odd"><td><p>Disk Space Free</p></td>
+<td><p>Disk space free in bytes</p></td>
+</tr>
+<tr class="row-even"><td><p>Disk Space Total</p></td>
+<td><p>Total disk space on this device in bytes</p></td>
+</tr>
+<tr class="row-odd"><td><p>IPv4 Address</p></td>
+<td><p>Current IPv4 address, SHA256 encoded</p></td>
+</tr>
+<tr class="row-even"><td><p>IPv6 Address</p></td>
+<td><p>Current IPv6 address, SHA256 encoded</p></td>
+</tr>
+<tr class="row-odd"><td><p>Languages</p></td>
+<td><p>Array of strings containing language preferences</p></td>
+</tr>
+<tr class="row-even"><td><p>Latitude</p></td>
+<td><p>Latitude value, if provided by the developer</p></td>
+</tr>
+<tr class="row-odd"><td><p>Library Version</p></td>
+<td><p>version number of the Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-even"><td><p>Locale</p></td>
+<td><p>Locale string</p></td>
+</tr>
+<tr class="row-odd"><td><p>MCC</p></td>
+<td><p>Mobile Country Code of current registered operator (when the user is registered to a network)</p></td>
+</tr>
+<tr class="row-even"><td><p>Memory Total</p></td>
+<td><p>Total amount of memory on this device in bytes</p></td>
+</tr>
+<tr class="row-odd"><td><p>Memory Usage</p></td>
+<td><p>Current memory usage in bytes</p></td>
+</tr>
+<tr class="row-even"><td><p>MNC</p></td>
+<td><p>Mobile Network Code of current registered operator (when the user is registered to a network)</p></td>
+</tr>
+<tr class="row-odd"><td><p>On Cellular</p></td>
+<td><p>Device cellular connectivity state</p></td>
+</tr>
+<tr class="row-even"><td><p>On WiFi</p></td>
+<td><p>Device connectivity state</p></td>
+</tr>
+<tr class="row-odd"><td><p>Online</p></td>
+<td><p>Device wifi connectivity state</p></td>
+</tr>
+<tr class="row-even"><td><p>Orientation</p></td>
+<td><p>Device orientation</p></td>
+</tr>
+<tr class="row-odd"><td><p>Platform</p></td>
+<td><p>string identifying the origin platform</p></td>
+</tr>
+<tr class="row-even"><td><p>Protocol Version</p></td>
+<td><p>protocol version of the Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-odd"><td><p>Rate</p></td>
+<td><p>Sampling rate for this event type</p></td>
+</tr>
+<tr class="row-even"><td><p>Session ID</p></td>
+<td><p>Unique UUID generated for each session</p></td>
+</tr>
+<tr class="row-odd"><td><p>Session Number</p></td>
+<td><p>Incremented session number for this device</p></td>
+</tr>
+<tr class="row-even"><td><p>System Name</p></td>
+<td><p>OS name</p></td>
+</tr>
+<tr class="row-odd"><td><p>System Time Zone</p></td>
+<td><p>Current device time zone</p></td>
+</tr>
+<tr class="row-even"><td><p>System Version</p></td>
+<td><p>Version of the host operating system</p></td>
+</tr>
+<tr class="row-odd"><td><p>User Name</p></td>
+<td><p>The last known user name set by the application developer, if available.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="android-network-events">
+<span id="datasheet-net-event-android"></span><h2>Android Network Events<a class="headerlink" href="#android-network-events" title="Permalink to this heading">¶</a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Bytes Received</p></td>
+<td><p>Number of bytes received for this network request</p></td>
+</tr>
+<tr class="row-odd"><td><p>Bytes Sent</p></td>
+<td><p>Number of bytes sent for this network request</p></td>
+</tr>
+<tr class="row-even"><td><p>End Time</p></td>
+<td><p>Time the request was ended</p></td>
+</tr>
+<tr class="row-odd"><td><p>HTTP Method</p></td>
+<td><p>The HTTP request method</p></td>
+</tr>
+<tr class="row-even"><td><p>HTTP Status Code</p></td>
+<td><p>The HTTP status code returned from the server</p></td>
+</tr>
+<tr class="row-odd"><td><p>Start Time</p></td>
+<td><p>Time the request was started</p></td>
+</tr>
+<tr class="row-even"><td><p>URL</p></td>
+<td><p>URL string for this network request</p></td>
+</tr>
+<tr class="row-odd"><td><p>App ID</p></td>
+<td><p>Workspace ONE Intelligence app ID for this application</p></td>
+</tr>
+<tr class="row-even"><td><p>App Name</p></td>
+<td><p>The app name entered in the console for this app</p></td>
+</tr>
+<tr class="row-odd"><td><p>App Version</p></td>
+<td><p>Version string, set by developer</p></td>
+</tr>
+<tr class="row-even"><td><p>App Version Code</p></td>
+<td><p>Version int code</p></td>
+</tr>
+<tr class="row-odd"><td><p>Carrier</p></td>
+<td><p>Alphabetic name of current registered operator (when the user is registered to a network)</p></td>
+</tr>
+<tr class="row-even"><td><p>Device Model</p></td>
+<td><p>The model of device detected for this event</p></td>
+</tr>
+<tr class="row-odd"><td><p>Device UUID</p></td>
+<td><p>UUID which uniquely identifies the device, generated by Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-even"><td><p>Library Version</p></td>
+<td><p>version number of the Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-odd"><td><p>Locale</p></td>
+<td><p>Locale string</p></td>
+</tr>
+<tr class="row-even"><td><p>MCC</p></td>
+<td><p>Mobile Country Code of current registered operator (when the user is registered to a network)</p></td>
+</tr>
+<tr class="row-odd"><td><p>MNC</p></td>
+<td><p>Mobile Network Code of current registered operator (when the user is registered to a network)</p></td>
+</tr>
+<tr class="row-even"><td><p>Platform</p></td>
+<td><p>string identifying the origin platform</p></td>
+</tr>
+<tr class="row-odd"><td><p>Protocol Version</p></td>
+<td><p>protocol version of the Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-even"><td><p>Rate</p></td>
+<td><p>Sampling rate for this event type</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sent At</p></td>
+<td><p>Timestamp when the event was sent</p></td>
+</tr>
+<tr class="row-even"><td><p>System Name</p></td>
+<td><p>OS name</p></td>
+</tr>
+<tr class="row-odd"><td><p>System Version</p></td>
+<td><p>Version of the host operating system</p></td>
+</tr>
+<tr class="row-even"><td><p>User Name</p></td>
+<td><p>The last known user name set by the application developer, if available.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="ios-network-events">
+<span id="datasheet-net-event-ios"></span><h2>iOS Network Events<a class="headerlink" href="#ios-network-events" title="Permalink to this heading">¶</a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Bytes Received</p></td>
+<td><p>Number of bytes received for this network request</p></td>
+</tr>
+<tr class="row-odd"><td><p>Bytes Sent</p></td>
+<td><p>Number of bytes sent for this network request</p></td>
+</tr>
+<tr class="row-even"><td><p>Elapsed Time</p></td>
+<td><p>Elapsed time in milliseconds for this request</p></td>
+</tr>
+<tr class="row-odd"><td><p>End Time</p></td>
+<td><p>Time the request was ended</p></td>
+</tr>
+<tr class="row-even"><td><p>HTTP Method</p></td>
+<td><p>The HTTP request method</p></td>
+</tr>
+<tr class="row-odd"><td><p>HTTP Status Code</p></td>
+<td><p>The HTTP status code returned from the server</p></td>
+</tr>
+<tr class="row-even"><td><p>Net API</p></td>
+<td><p>The OS-level API used for this network request</p></td>
+</tr>
+<tr class="row-odd"><td><p>Response MIME Type</p></td>
+<td><p>MIME type of the response, if applicable</p></td>
+</tr>
+<tr class="row-even"><td><p>Start Time</p></td>
+<td><p>Time the request was started</p></td>
+</tr>
+<tr class="row-odd"><td><p>URL</p></td>
+<td><p>URL string for this network request</p></td>
+</tr>
+<tr class="row-even"><td><p>Active Network</p></td>
+<td><p>Currently active connection type</p></td>
+</tr>
+<tr class="row-odd"><td><p>Active Time</p></td>
+<td><p>Time in milliseconds that the event was active and in the foreground</p></td>
+</tr>
+<tr class="row-even"><td><p>App ID</p></td>
+<td><p>Workspace ONE Intelligence app ID for this application</p></td>
+</tr>
+<tr class="row-odd"><td><p>App Name</p></td>
+<td><p>The app name entered in the console for this app</p></td>
+</tr>
+<tr class="row-even"><td><p>Background Session</p></td>
+<td><p>Flag that indicates if the session was started in the background</p></td>
+</tr>
+<tr class="row-odd"><td><p>Battery Level</p></td>
+<td><p>Value representing the current battery level</p></td>
+</tr>
+<tr class="row-even"><td><p>Binary Image Architecture</p></td>
+<td><p>String which identifies the binary image architecture</p></td>
+</tr>
+<tr class="row-odd"><td><p>Binary Image Name</p></td>
+<td><p>Mach-O binary image name</p></td>
+</tr>
+<tr class="row-even"><td><p>Binary Image UUID</p></td>
+<td><p>Mach-O binary image UUID</p></td>
+</tr>
+<tr class="row-odd"><td><p>Boot Time</p></td>
+<td><p>Date that the system initially booted</p></td>
+</tr>
+<tr class="row-even"><td><p>Bundle Identifier</p></td>
+<td><p>String which identifies the organization and app name</p></td>
+</tr>
+<tr class="row-odd"><td><p>Bundle Short Version</p></td>
+<td><p>Public version number</p></td>
+</tr>
+<tr class="row-even"><td><p>Bundle Version</p></td>
+<td><p>Internal build number</p></td>
+</tr>
+<tr class="row-odd"><td><p>Carrier</p></td>
+<td><p>Alphabetic name of current registered operator (when the user is registered to a network)</p></td>
+</tr>
+<tr class="row-even"><td><p>Child Count</p></td>
+<td><p>Number of child time span events</p></td>
+</tr>
+<tr class="row-odd"><td><p>Crash ID</p></td>
+<td><p>Event ID of the associated crash event</p></td>
+</tr>
+<tr class="row-even"><td><p>Cold Launched</p></td>
+<td><p>Bool flag which indicates if this session was cold launched</p></td>
+</tr>
+<tr class="row-odd"><td><p>Custom Version</p></td>
+<td><p>Arbitrary version string which is explicitly set by the application developer</p></td>
+</tr>
+<tr class="row-even"><td><p>Debugger Attached</p></td>
+<td><p>Bool flag which indicates that the SDK detected a debugger</p></td>
+</tr>
+<tr class="row-odd"><td><p>Development Platform</p></td>
+<td><p>Development platform in use by the current application</p></td>
+</tr>
+<tr class="row-even"><td><p>Device Model</p></td>
+<td><p>The model of device detected for this event</p></td>
+</tr>
+<tr class="row-odd"><td><p>Device Type</p></td>
+<td><p>The type of device detected for this event</p></td>
+</tr>
+<tr class="row-even"><td><p>Device UUID</p></td>
+<td><p>UUID which uniquely identifies the device, generated by Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-odd"><td><p>Disk Space Free</p></td>
+<td><p>Disk space free in bytes</p></td>
+</tr>
+<tr class="row-even"><td><p>Disk Space Total</p></td>
+<td><p>Total disk space on this device in bytes</p></td>
+</tr>
+<tr class="row-odd"><td><p>Elapsed Time Millis</p></td>
+<td><p>Time in milliseconds of the total duration of the event</p></td>
+</tr>
+<tr class="row-even"><td><p>End Time</p></td>
+<td><p>Date that the event was ended</p></td>
+</tr>
+<tr class="row-odd"><td><p>IPv4 Address</p></td>
+<td><p>Current IPv4 address, SHA256 encoded</p></td>
+</tr>
+<tr class="row-even"><td><p>IPv6 Address</p></td>
+<td><p>Current IPv6 address, SHA256 encoded</p></td>
+</tr>
+<tr class="row-odd"><td><p>Languages</p></td>
+<td><p>Array of strings containing language preferences</p></td>
+</tr>
+<tr class="row-even"><td><p>Latitude</p></td>
+<td><p>Latitude value, if provided by the developer</p></td>
+</tr>
+<tr class="row-odd"><td><p>Library Version</p></td>
+<td><p>version number of the Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-even"><td><p>Locale</p></td>
+<td><p>Locale string</p></td>
+</tr>
+<tr class="row-odd"><td><p>MCC</p></td>
+<td><p>Mobile Country Code of current registered operator (when the user is registered to a network)</p></td>
+</tr>
+<tr class="row-even"><td><p>Memory Total</p></td>
+<td><p>Total amount of memory on this device in bytes</p></td>
+</tr>
+<tr class="row-odd"><td><p>Memory Usage</p></td>
+<td><p>Current memory usage in bytes</p></td>
+</tr>
+<tr class="row-even"><td><p>MNC</p></td>
+<td><p>Mobile Network Code of current registered operator (when the user is registered to a network)</p></td>
+</tr>
+<tr class="row-odd"><td><p>On Cellular</p></td>
+<td><p>Device cellular connectivity state</p></td>
+</tr>
+<tr class="row-even"><td><p>On WiFi</p></td>
+<td><p>Device connectivity state</p></td>
+</tr>
+<tr class="row-odd"><td><p>Online</p></td>
+<td><p>Device wifi connectivity state</p></td>
+</tr>
+<tr class="row-even"><td><p>Orientation</p></td>
+<td><p>Device orientation</p></td>
+</tr>
+<tr class="row-odd"><td><p>Platform</p></td>
+<td><p>string identifying the origin platform</p></td>
+</tr>
+<tr class="row-even"><td><p>Protocol Version</p></td>
+<td><p>protocol version of the Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-odd"><td><p>Rate</p></td>
+<td><p>Sampling rate for this event type</p></td>
+</tr>
+<tr class="row-even"><td><p>Session ID</p></td>
+<td><p>Unique UUID generated for each session</p></td>
+</tr>
+<tr class="row-odd"><td><p>Session Number</p></td>
+<td><p>Incremented session number for this device</p></td>
+</tr>
+<tr class="row-even"><td><p>Start Time</p></td>
+<td><p>Date that the event was started</p></td>
+</tr>
+<tr class="row-odd"><td><p>System Name</p></td>
+<td><p>OS name</p></td>
+</tr>
+<tr class="row-even"><td><p>System Time Zone</p></td>
+<td><p>Current device time zone</p></td>
+</tr>
+<tr class="row-odd"><td><p>System Version</p></td>
+<td><p>Version of the host operating system</p></td>
+</tr>
+<tr class="row-even"><td><p>User Name</p></td>
+<td><p>The last known user name set by the application developer, if available.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="android-network-errors">
+<span id="datasheet-net-error-android"></span><h2>Android Network Errors<a class="headerlink" href="#android-network-errors" title="Permalink to this heading">¶</a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Bytes Sent</p></td>
+<td><p>Number of bytes sent for this network request</p></td>
+</tr>
+<tr class="row-odd"><td><p>HTTP Method</p></td>
+<td><p>The HTTP request method</p></td>
+</tr>
+<tr class="row-even"><td><p>Net Error Code</p></td>
+<td><p>Application-level error codes</p></td>
+</tr>
+<tr class="row-odd"><td><p>Net Error Table</p></td>
+<td><p>Error table number to look up the error code</p></td>
+</tr>
+<tr class="row-even"><td><p>URL</p></td>
+<td><p>URL string for this network request</p></td>
+</tr>
+<tr class="row-odd"><td><p>App ID</p></td>
+<td><p>Workspace ONE Intelligence app ID for this application</p></td>
+</tr>
+<tr class="row-even"><td><p>App Name</p></td>
+<td><p>The app name entered in the console for this app</p></td>
+</tr>
+<tr class="row-odd"><td><p>App Version</p></td>
+<td><p>Version string, set by developer</p></td>
+</tr>
+<tr class="row-even"><td><p>App Version Code</p></td>
+<td><p>Version int code</p></td>
+</tr>
+<tr class="row-odd"><td><p>Carrier</p></td>
+<td><p>Alphabetic name of current registered operator (when the user is registered to a network)</p></td>
+</tr>
+<tr class="row-even"><td><p>Device Model</p></td>
+<td><p>The model of device detected for this event</p></td>
+</tr>
+<tr class="row-odd"><td><p>Device UUID</p></td>
+<td><p>UUID which uniquely identifies the device, generated by Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-even"><td><p>Library Version</p></td>
+<td><p>version number of the Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-odd"><td><p>Locale</p></td>
+<td><p>Locale string</p></td>
+</tr>
+<tr class="row-even"><td><p>MCC</p></td>
+<td><p>Mobile Country Code of current registered operator (when the user is registered to a network)</p></td>
+</tr>
+<tr class="row-odd"><td><p>MNC</p></td>
+<td><p>Mobile Network Code of current registered operator (when the user is registered to a network)</p></td>
+</tr>
+<tr class="row-even"><td><p>Platform</p></td>
+<td><p>string identifying the origin platform</p></td>
+</tr>
+<tr class="row-odd"><td><p>Protocol Version</p></td>
+<td><p>protocol version of the Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-even"><td><p>Rate</p></td>
+<td><p>Sampling rate for this event type</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sent At</p></td>
+<td><p>Timestamp when the event was sent</p></td>
+</tr>
+<tr class="row-even"><td><p>System Name</p></td>
+<td><p>OS name</p></td>
+</tr>
+<tr class="row-odd"><td><p>System Version</p></td>
+<td><p>Version of the host operating system</p></td>
+</tr>
+<tr class="row-even"><td><p>User Name</p></td>
+<td><p>The last known user name set by the application developer, if available.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="ios-network-errors">
+<span id="datasheet-net-error-ios"></span><h2>iOS Network Errors<a class="headerlink" href="#ios-network-errors" title="Permalink to this heading">¶</a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Bytes Sent</p></td>
+<td><p>Number of bytes sent for this network request</p></td>
+</tr>
+<tr class="row-odd"><td><p>Error Domain</p></td>
+<td><p>Error domain string</p></td>
+</tr>
+<tr class="row-even"><td><p>HTTP Method</p></td>
+<td><p>The HTTP request method</p></td>
+</tr>
+<tr class="row-odd"><td><p>Name</p></td>
+<td><p>Name of the error</p></td>
+</tr>
+<tr class="row-even"><td><p>Net API</p></td>
+<td><p>The OS-level API used for this network request</p></td>
+</tr>
+<tr class="row-odd"><td><p>Net Error Code</p></td>
+<td><p>Application-level error codes</p></td>
+</tr>
+<tr class="row-even"><td><p>Net Error Table</p></td>
+<td><p>Error table number to look up the error code</p></td>
+</tr>
+<tr class="row-odd"><td><p>URL</p></td>
+<td><p>URL string for this network request</p></td>
+</tr>
+<tr class="row-even"><td><p>Active Network</p></td>
+<td><p>Currently active connection type</p></td>
+</tr>
+<tr class="row-odd"><td><p>App ID</p></td>
+<td><p>Workspace ONE Intelligence app ID for this application</p></td>
+</tr>
+<tr class="row-even"><td><p>App Name</p></td>
+<td><p>The app name entered in the console for this app</p></td>
+</tr>
+<tr class="row-odd"><td><p>Background Session</p></td>
+<td><p>Flag that indicates if the session was started in the background</p></td>
+</tr>
+<tr class="row-even"><td><p>Battery Level</p></td>
+<td><p>Value representing the current battery level</p></td>
+</tr>
+<tr class="row-odd"><td><p>Binary Image Architecture</p></td>
+<td><p>String which identifies the binary image architecture</p></td>
+</tr>
+<tr class="row-even"><td><p>Binary Image Name</p></td>
+<td><p>Mach-O binary image name</p></td>
+</tr>
+<tr class="row-odd"><td><p>Binary Image UUID</p></td>
+<td><p>Mach-O binary image UUID</p></td>
+</tr>
+<tr class="row-even"><td><p>Boot Time</p></td>
+<td><p>Date that the system initially booted</p></td>
+</tr>
+<tr class="row-odd"><td><p>Bundle Identifier</p></td>
+<td><p>String which identifies the organization and app name</p></td>
+</tr>
+<tr class="row-even"><td><p>Bundle Short Version</p></td>
+<td><p>Public version number</p></td>
+</tr>
+<tr class="row-odd"><td><p>Bundle Version</p></td>
+<td><p>Internal build number</p></td>
+</tr>
+<tr class="row-even"><td><p>Carrier</p></td>
+<td><p>Alphabetic name of current registered operator (when the user is registered to a network)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cold Launched</p></td>
+<td><p>Bool flag which indicates if this session was cold launched</p></td>
+</tr>
+<tr class="row-even"><td><p>Custom Version</p></td>
+<td><p>Arbitrary version string which is explicitly set by the application developer</p></td>
+</tr>
+<tr class="row-odd"><td><p>Debugger Attached</p></td>
+<td><p>Bool flag which indicates that the SDK detected a debugger</p></td>
+</tr>
+<tr class="row-even"><td><p>Development Platform</p></td>
+<td><p>Development platform in use by the current application</p></td>
+</tr>
+<tr class="row-odd"><td><p>Device Model</p></td>
+<td><p>The model of device detected for this event</p></td>
+</tr>
+<tr class="row-even"><td><p>Device Type</p></td>
+<td><p>The type of device detected for this event</p></td>
+</tr>
+<tr class="row-odd"><td><p>Device UUID</p></td>
+<td><p>UUID which uniquely identifies the device, generated by Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-even"><td><p>Disk Space Free</p></td>
+<td><p>Disk space free in bytes</p></td>
+</tr>
+<tr class="row-odd"><td><p>Disk Space Total</p></td>
+<td><p>Total disk space on this device in bytes</p></td>
+</tr>
+<tr class="row-even"><td><p>IPv4 Address</p></td>
+<td><p>Current IPv4 address, SHA256 encoded</p></td>
+</tr>
+<tr class="row-odd"><td><p>IPv6 Address</p></td>
+<td><p>Current IPv6 address, SHA256 encoded</p></td>
+</tr>
+<tr class="row-even"><td><p>Languages</p></td>
+<td><p>Array of strings containing language preferences</p></td>
+</tr>
+<tr class="row-odd"><td><p>Latitude</p></td>
+<td><p>Latitude value, if provided by the developer</p></td>
+</tr>
+<tr class="row-even"><td><p>Library Version</p></td>
+<td><p>version number of the Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-odd"><td><p>Locale</p></td>
+<td><p>Locale string</p></td>
+</tr>
+<tr class="row-even"><td><p>MCC</p></td>
+<td><p>Mobile Country Code of current registered operator (when the user is registered to a network)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Memory Total</p></td>
+<td><p>Total amount of memory on this device in bytes</p></td>
+</tr>
+<tr class="row-even"><td><p>Memory Usage</p></td>
+<td><p>Current memory usage in bytes</p></td>
+</tr>
+<tr class="row-odd"><td><p>MNC</p></td>
+<td><p>Mobile Network Code of current registered operator (when the user is registered to a network)</p></td>
+</tr>
+<tr class="row-even"><td><p>On Cellular</p></td>
+<td><p>Device cellular connectivity state</p></td>
+</tr>
+<tr class="row-odd"><td><p>On WiFi</p></td>
+<td><p>Device connectivity state</p></td>
+</tr>
+<tr class="row-even"><td><p>Online</p></td>
+<td><p>Device wifi connectivity state</p></td>
+</tr>
+<tr class="row-odd"><td><p>Orientation</p></td>
+<td><p>Device orientation</p></td>
+</tr>
+<tr class="row-even"><td><p>Platform</p></td>
+<td><p>string identifying the origin platform</p></td>
+</tr>
+<tr class="row-odd"><td><p>Protocol Version</p></td>
+<td><p>protocol version of the Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-even"><td><p>Rate</p></td>
+<td><p>Sampling rate for this event type</p></td>
+</tr>
+<tr class="row-odd"><td><p>Session ID</p></td>
+<td><p>Unique UUID generated for each session</p></td>
+</tr>
+<tr class="row-even"><td><p>Session Number</p></td>
+<td><p>Incremented session number for this device</p></td>
+</tr>
+<tr class="row-odd"><td><p>System Name</p></td>
+<td><p>OS name</p></td>
+</tr>
+<tr class="row-even"><td><p>System Time Zone</p></td>
+<td><p>Current device time zone</p></td>
+</tr>
+<tr class="row-odd"><td><p>System Version</p></td>
+<td><p>Version of the host operating system</p></td>
+</tr>
+<tr class="row-even"><td><p>User Name</p></td>
+<td><p>The last known user name set by the application developer, if available.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="android-user-flows">
+<span id="datasheet-user-flow-android"></span><h2>Android User Flows<a class="headerlink" href="#android-user-flows" title="Permalink to this heading">¶</a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Name</p></td>
+<td><p>Name of the user flow</p></td>
+</tr>
+<tr class="row-odd"><td><p>State</p></td>
+<td><p>User flow completion state (successful, failed, crashed, timed out)</p></td>
+</tr>
+<tr class="row-even"><td><p>User Flow Timeout</p></td>
+<td><p>Timeout time in milliseconds. User flow will automatically fail if this duration is reached.</p></td>
+</tr>
+<tr class="row-odd"><td><p>User Flow Type</p></td>
+<td><p>Sub-type of the user flow event (user-defined, system, etc)</p></td>
+</tr>
+<tr class="row-even"><td><p>Value</p></td>
+<td><p>The value in currency cents for this user flow</p></td>
+</tr>
+<tr class="row-odd"><td><p>Active Time</p></td>
+<td><p>Time in milliseconds that the event was active and in the foreground</p></td>
+</tr>
+<tr class="row-even"><td><p>App ID</p></td>
+<td><p>Workspace ONE Intelligence app ID for this application</p></td>
+</tr>
+<tr class="row-odd"><td><p>App Name</p></td>
+<td><p>The app name entered in the console for this app</p></td>
+</tr>
+<tr class="row-even"><td><p>App Version</p></td>
+<td><p>Version string, set by developer</p></td>
+</tr>
+<tr class="row-odd"><td><p>App Version Code</p></td>
+<td><p>Version int code</p></td>
+</tr>
+<tr class="row-even"><td><p>Carrier</p></td>
+<td><p>Alphabetic name of current registered operator (when the user is registered to a network)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Crash ID</p></td>
+<td><p>Event ID of the associated crash event</p></td>
+</tr>
+<tr class="row-even"><td><p>Device Model</p></td>
+<td><p>The model of device detected for this event</p></td>
+</tr>
+<tr class="row-odd"><td><p>Device UUID</p></td>
+<td><p>UUID which uniquely identifies the device, generated by Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-even"><td><p>Elapsed Time Millis</p></td>
+<td><p>Time in milliseconds of the total duration of the event</p></td>
+</tr>
+<tr class="row-odd"><td><p>End Time</p></td>
+<td><p>Date that the event was ended</p></td>
+</tr>
+<tr class="row-even"><td><p>Error Reason</p></td>
+<td><p>Failure reason for user flows marked as failed, if provided.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Library Version</p></td>
+<td><p>version number of the Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-even"><td><p>Locale</p></td>
+<td><p>Locale string</p></td>
+</tr>
+<tr class="row-odd"><td><p>MCC</p></td>
+<td><p>Mobile Country Code of current registered operator (when the user is registered to a network)</p></td>
+</tr>
+<tr class="row-even"><td><p>MNC</p></td>
+<td><p>Mobile Network Code of current registered operator (when the user is registered to a network)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Platform</p></td>
+<td><p>string identifying the origin platform</p></td>
+</tr>
+<tr class="row-even"><td><p>Protocol Version</p></td>
+<td><p>protocol version of the Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-odd"><td><p>Rate</p></td>
+<td><p>Sampling rate for this event type</p></td>
+</tr>
+<tr class="row-even"><td><p>Sent At</p></td>
+<td><p>Timestamp when the event was sent</p></td>
+</tr>
+<tr class="row-odd"><td><p>Start Time</p></td>
+<td><p>Date that the event was started</p></td>
+</tr>
+<tr class="row-even"><td><p>System Name</p></td>
+<td><p>OS name</p></td>
+</tr>
+<tr class="row-odd"><td><p>System Version</p></td>
+<td><p>Version of the host operating system</p></td>
+</tr>
+<tr class="row-even"><td><p>User Name</p></td>
+<td><p>The last known user name set by the application developer, if available.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="ios-user-flows">
+<span id="datasheet-user-flow-ios"></span><h2>iOS User Flows<a class="headerlink" href="#ios-user-flows" title="Permalink to this heading">¶</a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Name</p></td>
+<td><p>Name of the user flow</p></td>
+</tr>
+<tr class="row-odd"><td><p>State</p></td>
+<td><p>User flow completion state (successful, failed, crashed, timed out)</p></td>
+</tr>
+<tr class="row-even"><td><p>User Flow Timeout</p></td>
+<td><p>Timeout time in milliseconds. User flow will automatically fail if this duration is reached.</p></td>
+</tr>
+<tr class="row-odd"><td><p>User Flow Type</p></td>
+<td><p>Sub-type of the user flow event (user-defined, system, etc)</p></td>
+</tr>
+<tr class="row-even"><td><p>Active Network</p></td>
+<td><p>Currently active connection type</p></td>
+</tr>
+<tr class="row-odd"><td><p>Active Time</p></td>
+<td><p>Time in milliseconds that the event was active and in the foreground</p></td>
+</tr>
+<tr class="row-even"><td><p>App ID</p></td>
+<td><p>Workspace ONE Intelligence app ID for this application</p></td>
+</tr>
+<tr class="row-odd"><td><p>App Name</p></td>
+<td><p>The app name entered in the console for this app</p></td>
+</tr>
+<tr class="row-even"><td><p>Background Session</p></td>
+<td><p>Flag that indicates if the session was started in the background</p></td>
+</tr>
+<tr class="row-odd"><td><p>Battery Level</p></td>
+<td><p>Value representing the current battery level</p></td>
+</tr>
+<tr class="row-even"><td><p>Binary Image Architecture</p></td>
+<td><p>String which identifies the binary image architecture</p></td>
+</tr>
+<tr class="row-odd"><td><p>Binary Image Name</p></td>
+<td><p>Mach-O binary image name</p></td>
+</tr>
+<tr class="row-even"><td><p>Binary Image UUID</p></td>
+<td><p>Mach-O binary image UUID</p></td>
+</tr>
+<tr class="row-odd"><td><p>Boot Time</p></td>
+<td><p>Date that the system initially booted</p></td>
+</tr>
+<tr class="row-even"><td><p>Bundle Identifier</p></td>
+<td><p>String which identifies the organization and app name</p></td>
+</tr>
+<tr class="row-odd"><td><p>Bundle Short Version</p></td>
+<td><p>Public version number</p></td>
+</tr>
+<tr class="row-even"><td><p>Bundle Version</p></td>
+<td><p>Internal build number</p></td>
+</tr>
+<tr class="row-odd"><td><p>Carrier</p></td>
+<td><p>Alphabetic name of current registered operator (when the user is registered to a network)</p></td>
+</tr>
+<tr class="row-even"><td><p>Child Count</p></td>
+<td><p>Number of child time span events</p></td>
+</tr>
+<tr class="row-odd"><td><p>Crash ID</p></td>
+<td><p>Event ID of the associated crash event</p></td>
+</tr>
+<tr class="row-even"><td><p>Cold Launched</p></td>
+<td><p>Bool flag which indicates if this session was cold launched</p></td>
+</tr>
+<tr class="row-odd"><td><p>Custom Version</p></td>
+<td><p>Arbitrary version string which is explicitly set by the application developer</p></td>
+</tr>
+<tr class="row-even"><td><p>Debugger Attached</p></td>
+<td><p>Bool flag which indicates that the SDK detected a debugger</p></td>
+</tr>
+<tr class="row-odd"><td><p>Development Platform</p></td>
+<td><p>Development platform in use by the current application</p></td>
+</tr>
+<tr class="row-even"><td><p>Device Model</p></td>
+<td><p>The model of device detected for this event</p></td>
+</tr>
+<tr class="row-odd"><td><p>Device Type</p></td>
+<td><p>The type of device detected for this event</p></td>
+</tr>
+<tr class="row-even"><td><p>Device UUID</p></td>
+<td><p>UUID which uniquely identifies the device, generated by Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-odd"><td><p>Disk Space Free</p></td>
+<td><p>Disk space free in bytes</p></td>
+</tr>
+<tr class="row-even"><td><p>Disk Space Total</p></td>
+<td><p>Total disk space on this device in bytes</p></td>
+</tr>
+<tr class="row-odd"><td><p>Elapsed Time Millis</p></td>
+<td><p>Time in milliseconds of the total duration of the event</p></td>
+</tr>
+<tr class="row-even"><td><p>End Time</p></td>
+<td><p>Date that the event was ended</p></td>
+</tr>
+<tr class="row-odd"><td><p>IPv4 Address</p></td>
+<td><p>Current IPv4 address, SHA256 encoded</p></td>
+</tr>
+<tr class="row-even"><td><p>IPv6 Address</p></td>
+<td><p>Current IPv6 address, SHA256 encoded</p></td>
+</tr>
+<tr class="row-odd"><td><p>Languages</p></td>
+<td><p>Array of strings containing language preferences</p></td>
+</tr>
+<tr class="row-even"><td><p>Latitude</p></td>
+<td><p>Latitude value, if provided by the developer</p></td>
+</tr>
+<tr class="row-odd"><td><p>Library Version</p></td>
+<td><p>version number of the Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-even"><td><p>Locale</p></td>
+<td><p>Locale string</p></td>
+</tr>
+<tr class="row-odd"><td><p>Longitude</p></td>
+<td><p>Longitude value, if provided by the developer</p></td>
+</tr>
+<tr class="row-even"><td><p>MCC</p></td>
+<td><p>Mobile Country Code of current registered operator (when the user is registered to a network)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Memory Total</p></td>
+<td><p>Total amount of memory on this device in bytes</p></td>
+</tr>
+<tr class="row-even"><td><p>Memory Usage</p></td>
+<td><p>Current memory usage in bytes</p></td>
+</tr>
+<tr class="row-odd"><td><p>MNC</p></td>
+<td><p>Mobile Network Code of current registered operator (when the user is registered to a network)</p></td>
+</tr>
+<tr class="row-even"><td><p>On Cellular</p></td>
+<td><p>Device cellular connectivity state</p></td>
+</tr>
+<tr class="row-odd"><td><p>On WiFi</p></td>
+<td><p>Device connectivity state</p></td>
+</tr>
+<tr class="row-even"><td><p>Online</p></td>
+<td><p>Device wifi connectivity state</p></td>
+</tr>
+<tr class="row-odd"><td><p>Orientation</p></td>
+<td><p>Device orientation</p></td>
+</tr>
+<tr class="row-even"><td><p>Platform</p></td>
+<td><p>string identifying the origin platform</p></td>
+</tr>
+<tr class="row-odd"><td><p>Protocol Version</p></td>
+<td><p>protocol version of the Workspace ONE Intelligence SDK</p></td>
+</tr>
+<tr class="row-even"><td><p>Rate</p></td>
+<td><p>Sampling rate for this event type</p></td>
+</tr>
+<tr class="row-odd"><td><p>Session ID</p></td>
+<td><p>Unique UUID generated for each session</p></td>
+</tr>
+<tr class="row-even"><td><p>Session Number</p></td>
+<td><p>Incremented session number for this device</p></td>
+</tr>
+<tr class="row-odd"><td><p>Start Time</p></td>
+<td><p>Date that the event was started</p></td>
+</tr>
+<tr class="row-even"><td><p>System Name</p></td>
+<td><p>OS name</p></td>
+</tr>
+<tr class="row-odd"><td><p>System Time Zone</p></td>
+<td><p>Current device time zone</p></td>
+</tr>
+<tr class="row-even"><td><p>System Version</p></td>
+<td><p>Version of the host operating system</p></td>
+</tr>
+<tr class="row-odd"><td><p>User Name</p></td>
+<td><p>The last known user name set by the application developer, if available.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+	<script type="text/javascript" charset="utf-8" src="../_static/toc.js"></script>
+  </body>
+</html>

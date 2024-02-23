@@ -1,0 +1,87 @@
+.. _integrate_zapier:
+
+Zapier Integration Guide
+------------------------
+
+This topic describes how to integrate Apteligent alerts with
+`Zapier <http://zapier.com>`_. Zapier is a free integration platform that allows
+Apteligent users to connect alerts with hundreds of other apps.
+
+Using Apteligent's Zapier integration, whenever a Apteligent alert is
+triggered, Zapier will automatically run a corresponding action. This topic
+describes how to create an example "Zap", which creates a row in a Google
+Spreadsheet whenever a new Apteligent alert is created.
+
+
+Step 1. Choose a Trigger and Action
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1. From the Zapier dashboard, go to "Make a New Zap" and you will see the following.
+
+   .. image:: ../img/integration-zapier-choose-trigger.png
+
+2. Under "Choose a Trigger app..." select **Crittercism** and **New Alert**.
+
+   .. image:: ../img/integration-zapier-new-alert.png
+
+3. Under "Choose an Action app..." select **Google Docs** and **Create Spreadsheet Row**.
+
+     .. image:: ../img/integration-zapier-choose-action.png
+
+Step 2. Select a Apteligent Account
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Zapier will display a webhook URL to use in Apteligent. 
+
+1. Copy the URL.
+
+   .. image:: ../img/integration-zapier-select-crittercism.png
+
+2. Login to **Apteligent**, go to **Alert Center** and **Alert Integrations** and **Add Integration**.
+
+3. Select **Webhook** as the Integration type and give your integration a **Name**.
+
+4. Paste the URL from the previous step. 
+
+5. Click **Create Integration**.
+
+   .. image:: ../img/integration-zapier-new-alert-integration.png
+
+Step 3. Select a Google Docs Account
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Connect your Google account to Zapier. If this is your first time, you may be presented with a Google authentication screen.
+
+     .. image:: ../img/integration-zapier-select-google-docs.png
+
+Step 4. Filter Apteligent Triggers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You can choose to produce triggers for all Apteligent alerts or only a subset.
+The following example shows producing triggers for alerts related to the "app loads" metric only.
+
+.. image:: ../img/integration-zapier-filter-triggers.png
+
+
+Step 5. Match up Apteligent Alert to Google Docs Spreadsheet Row
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1. Create a new **Google Spreadsheet** with the following column headers: ``client_url``, ``event_type``, ``incident_key``, ``client``, ``details``, and ``description``.
+
+   .. image:: ../img/integration-zapier-make-spreadsheet.png
+
+2. Assuming you have correctly authenticated your Google Docs account with Zapier,
+   select the spreadsheet you just created and the first worksheet created.
+
+3. Match up fields from the Apteligent alert parameters with the spreadsheet columns.
+
+   .. image:: ../img/integration-zapier-trigger-action.png
+
+If your Zap is working correctly, every time your Apteligent alert is
+triggered, a new row will be created in your Google Spreadsheet. Depending on
+your Zapier level of service, it may take between 5 and 15 minutes for your
+spreadsheet to begin getting populated.
+
+.. image:: ../img/integration-zapier-google-sheets.png
+
+.. include:: ../shared/support_include.txt

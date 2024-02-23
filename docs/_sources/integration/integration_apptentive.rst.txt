@@ -1,0 +1,94 @@
+.. _integrate_apptentive:
+
+Apptentive Integration Guide
+----------------------------
+
+This topic describes how to integrate Workspace ONE Intelligence with
+`Apptentive <http://www.apptentive.com>`_.
+Apptentive is the leading enterprise SaaS platform for mobile customer
+communications. The company’s in-app messages, surveys, and intelligent ratings
+prompts empower brands to build meaningful relationships with their customers.
+
+This integration allows companies to pull Workspace ONE Intelligence performance
+data into Apptentive and allow product managers and marketers to:
+
+* proactively communicate with customers who experienced a bad user experience
+* analyze how performance issues impacted customer retention and NPS scores
+
+If there's a critical crash in the latest release of an app, use
+`Apptentive Notes <http://www.apptentive.com/features/notes/>`_ to send a
+targeted message to all users that had a bad user experience. Build trust and
+credibility with your customers by giving them a heads up before they even have
+a crash.
+
+.. image:: ../img/Apptentive-Apteligent-Notes-Mockup.png
+
+Using Apptentive’s `Surveys <http://www.apptentive.com/features/surveys/>`_
+with NPS templates, understand how customer segments impacted by performance
+issues were affected by a crash.  Drive internal remediation actions to reengage
+and retain these users.  For more information, read Apptentive's
+`blog post <http://www.apptentive.com/blog/apptentive-partners-apteligent/>`_
+announcing our integration.
+
+This document will guide you through the process of activating sending Workspace
+ONE Intelligence events into Apptentive through a few additional lines of code.
+
+Requirements
+============
+
+Before you start the integration process, please make sure you have the following:
+
+* Implemented the :ref:`Workspace ONE Intelligence SDK <downloads>`
+  (requires v5.6.1 of the iOS SDK) in the mobile app
+* Implemented the `Apptentive SDK <https://docs.apptentive.com/ios/integration/>`_ in the mobile app
+
+..  note::
+    This integration is currently only available on iOS. Android is coming soon.
+
+Implementation
+==============
+
+The Workspace ONE Intelligence SDK will create a notification that fires when
+the SDK knows that a crash occurred.  On iOS, when the user loads the app after
+a crash occurred, this notification will fire.  The notification will contain
+three pieces of information:
+
+* Crash Name: The name of the crash (i.e., NSRangeException)
+* Crash Reason: More details on why the crash occurred (i.e., "\***\ \-[__NSArrayM objectAtIndex:]:\ index 18446744073709551615 beyond bounds for empty array")
+* Crash Date: The date and time at which the crash occurred
+
+Sending a Crash Event to Apptentive
+####################################################
+
+To send these crash events to Apptentive, add two lines of code:
+
+1. Register an Observer to Capture the Workspace ONE Intelligence Event
+
+.. code-block:: objc
+
+	[[NSNotificationCenter defaultCenter] addObserver:self
+	    selector:@selector(crashDidOccur:)
+	    name:@"CRCrashNotification" object:nil];
+
+2. Send an Event to Apptentive Upon Notification
+
+.. code-block:: objc
+
+ - (void) crashDidOccur:(NSNotification*)notification {
+  // Send Event to Apptentive
+  [[Apptentive sharedConnection] engage:@"app_crashed" fromViewController:self];
+
+  // Send Data on Crash to Apptentive
+  NSDateFormatter *crashDateFormatter = [[NSDateFormatter alloc] init];
+  [crashDateFormatter setDateFormat:@"dd-MM-YYYY HH:mm:ss"];
+  NSString *lastCrashDateString = [crashDateFormatter stringFromDate:notification.userInfo[@"crashDate"]];
+  [[Apptentive sharedConnection] addCustomDeviceDataString:lastCrashDateString withKey:@"last_crash_date"];
+  [[Apptentive sharedConnection] addCustomDeviceDataString:notification.userInfo[@"crashName"]] withKey:@"last_crash_name"];
+  [[Apptentive sharedConnection] addCustomDeviceDataString:notification.userInfo[@"crashReason"] withKey:@"last_crash_reason"];
+ }
+
+To see a working example of the integration, check out the Apptentive Workspace
+ONE Intelligence example app here:
+`https://github.com/apptentive/apptentive-apteligent-example <https://github.com/apptentive/apptentive-apteligent-example>`_
+
+.. include:: ../shared/support_include.txt

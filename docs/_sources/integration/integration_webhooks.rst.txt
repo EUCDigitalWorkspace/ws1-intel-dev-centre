@@ -1,0 +1,47 @@
+.. _integrate_webhooks:
+
+Webhooks Integration Guide
+--------------------------
+
+This topic describes how to integrate Apteligent alerts with
+`Webhooks <http://en.wikipedia.org/wiki/Webhook>`_.
+
+Using Apteligent's webhooks integration, whenever a Apteligent alert is
+triggered, Apteligent will POST a message to a specified URL. In this topic,
+we will use `RequestBin <http://requestb.in/>` to demonstrate how to create a]
+webhook and inspect the message that is received.
+
+
+Step 1. Create a RequestBin
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1. Go to `RequestBin <http://requestb.in/>` and select **Create a RequestBin**.
+
+2. Copy the **Bin URL**.
+
+   .. image:: ../img/integration_webhook_requestbin_url.png
+
+Step 2. Create Apteligent Integration
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1. Login to **Apteligent**, go to **Alert Center** and **Alert Integrations** and **Add Integration**.
+
+2. Select **Webhook** as the Integration type and give your integration a **Name**.
+
+3. Paste the **Bin URL** from above.
+
+4. Click **Create Integration**.
+
+   .. image:: ../img/integration_webhook_create_integration.png
+
+Step 3. Inspect Payload
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Create a new alert then try triggering it. After a few minutes, if the alert
+is successful, you should see the following payload information when you reload
+the RequestBin site.
+
+.. image:: ../img/integration_webhook_requestbin_inspect.png
+
+
+.. include:: ../shared/support_include.txt

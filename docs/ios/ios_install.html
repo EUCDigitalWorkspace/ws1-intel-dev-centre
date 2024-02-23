@@ -1,0 +1,307 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Setting Up Workspace ONE Intelligence SDK for iOS &#8212; Workspace ONE Intelligence  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/adctheme.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/toggle.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+      <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="Workspace ONE Intelligence  documentation" href="../index.html" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <script type="text/javascript">try{document.domain="vmware.com"}catch(e){};</script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-49786008-1']);
+    _gaq.push(['_setDomainName', 'apteligent.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_addIgnoredRef', 'apteligent.com']);   // Stops Self Referrals
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  
+  <meta name="google-translate-customization" content="f0837c562504ad7b-d669caf2b7375c11-g99fd8de75f76752f-14"></meta>
+
+  </head><body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PK9468"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PK9468');</script>
+<!-- End Google Tag Manager -->
+
+
+  <div id="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+          <div id="searchbox" style="display: none">
+              <form class="search" action="../search.html" method="get">
+                <div class="search-wrapper">
+                  <input class="prettysearch" type="text" name="q" size="18" />
+                  <input type="submit" value="Search" class="searchbutton" />
+                </div>
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+      <ul><li class="toctree-l1" id="docs-home"><a href="../index.html">Docs Home</a></li></ul>
+      <ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios.html">Apple SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../android/android.html">Android SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development_platforms/index.html">Development Platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/eula_accepted.html">SDK Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../release_notes/release_notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/downloads.html">EULA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/checksums.html">SDK Download Checksums</a></li>
+</ul>
+
+      <div id="sidebar-toc-clear"></div>
+      
+    </div>
+  </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            <div class="container">
+              <div class="row">
+                <div class="span12">
+                  
+  <section id="setting-up-workspace-one-intelligence-sdk-for-ios">
+<h1>Setting Up Workspace ONE Intelligence SDK for iOS<a class="headerlink" href="#setting-up-workspace-one-intelligence-sdk-for-ios" title="Permalink to this heading">¶</a></h1>
+<section id="installing-workspace-one-intelligence-sdk-for-ios">
+<span id="install-ios"></span><h2>Installing Workspace ONE Intelligence SDK for iOS<a class="headerlink" href="#installing-workspace-one-intelligence-sdk-for-ios" title="Permalink to this heading">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Cocoapods is no longer supported as a means of installing Workspace ONE Intelligence SDK. Please use Swift Package Manager as described below.</p>
+</div>
+<p>There are two ways you can add the Workspace ONE Intelligence SDK for Apple to your
+project:</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Swift Package Manager (SPM) (recommended)</strong></dt><dd><p>Add the Workspace ONE Intelligence SDK package from this URL: &lt;SPM.developer.vmware.com&gt;
+TODO: add package URL</p>
+</dd>
+</dl>
+</li>
+<li><p><strong>Manual</strong></p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p><a class="reference internal" href="../downloads/downloads.html#downloads"><span class="std std-ref">Download</span></a> and unzip the iOS SDK. Copy the resulting folder in your source folder.</p></li>
+<li><p>Drag the <code class="docutils literal notranslate"><span class="pre">WS1Intelligence.xcframework</span></code> into your XCode project. The iOS framework is in the <code class="docutils literal notranslate"><span class="pre">iOS</span></code> folder.</p></li>
+<li><p>Go to your XCode project: click on Build Phases and under “Link Binary with Libraries” add (‘+’) <code class="docutils literal notranslate"><span class="pre">SystemConfiguration.framework</span></code> and <code class="docutils literal notranslate"><span class="pre">CoreData.framework</span></code>.</p></li>
+</ol>
+</div></blockquote>
+</li>
+</ul>
+</section>
+<section id="basic-setup">
+<span id="initialize-ios"></span><h2>Basic Setup<a class="headerlink" href="#basic-setup" title="Permalink to this heading">¶</a></h2>
+<p>Obtain your app ID from Workspace ONE Intelligence platform.</p>
+<ol class="arabic simple">
+<li><p><strong>Import the Workspace ONE Intelligence SDK header</strong>.</p></li>
+</ol>
+<p>For Objective-C apps, import the Workspace ONE Intelligence SDK header in your
+application delegate’s implementation file.  For Swift applications, place this
+import in your <code class="docutils literal notranslate"><span class="pre">bridging-header.h</span></code> file.</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#import &lt;WS1Intelligence/WS1Intelligence.h&gt;</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p><strong>Enable Workspace ONE Intelligence SDK</strong>.</p></li>
+</ol>
+<p>Call <code class="docutils literal notranslate"><span class="pre">enableWithAppID</span></code> in your AppDelegate’s <code class="docutils literal notranslate"><span class="pre">application:didFinishLaunchingWithOptions:</span></code> method.</p>
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">application:</span><span class="p">(</span><span class="bp">UIApplication</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">application</span><span class="w"> </span><span class="nf">didFinishLaunchingWithOptions:</span><span class="p">(</span><span class="bp">NSDictionary</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">launchOptions</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="p">[</span><span class="n">WS1Intelligence</span><span class="w"> </span><span class="n">enableWithAppID</span><span class="o">:</span><span class="s">@&quot;YOUR APP ID GOES HERE&quot;</span><span class="p">];</span>
+<span class="w">  </span><span class="c1">// other code for your app</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nb">YES</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="kc">_</span> <span class="n">application</span><span class="p">:</span> <span class="bp">UIApplication</span><span class="p">,</span> <span class="n">didFinishLaunchingWithOptions</span> <span class="n">launchOptions</span><span class="p">:</span> <span class="p">[</span><span class="n">UIApplicationLaunchOptionsKey</span><span class="p">:</span> <span class="nb">Any</span><span class="p">]?)</span> <span class="p">-&gt;</span> <span class="nb">Bool</span> <span class="p">{</span>
+  <span class="n">WS1Intelligence</span><span class="p">.</span><span class="n">enable</span><span class="p">(</span><span class="n">withAppID</span><span class="p">:</span> <span class="s">&quot;YOUR APP ID GOES HERE&quot;</span><span class="p">)</span>
+  <span class="c1">// other code for your app</span>
+  <span class="k">return</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Register your app at the Workspace ONE Intelligence portal to get an App ID
+to be used in place of <code class="docutils literal notranslate"><span class="pre">&quot;YOUR</span> <span class="pre">APP</span> <span class="pre">ID</span> <span class="pre">GOES</span> <span class="pre">HERE&quot;</span></code>.</p>
+<ol class="arabic simple" id="setup-dsym-upload" start="3">
+<li><p><strong>Setup Automatic dSYM Uploads</strong>.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can download the latest dSYM upload script for Workspace ONE
+Intelligence from the <a class="reference internal" href="../downloads/downloads.html#downloads"><span class="std std-ref">Download page</span></a>.
+The following refers to version 6.0.1 of dsym_upload.sh.
+Older versions of the script are no longer supported.
+SDK releases v6.0.0 and above are bundled with this script.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please note that cURL (a dependency for the script) has a known
+issue which may cause a failure inside the script while uploading
+large dSYM files. The version of cURL that ships with the latest
+OSX builds has been confirmed to exhibit this issue (7.64.1). If
+you experience problems during the upload phase of the script, try
+to upgrade to a newer version. Version 7.69.1 has been confirmed
+to resolved the issue.</p>
+</div>
+<p>In your Xcode application target’s “Build Phases” tab, add a new Run Script.</p>
+<img alt="../_images/xcode-run-script.png" src="../_images/xcode-run-script.png" />
+<p>Copy and paste the following code if you’re using <strong>Swift Package Manager</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">APP_ID</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR_APP_ID&gt;&quot;</span>
+<span class="nv">CREDENTIALS_FILE</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">SRCROOT</span><span class="si">}</span><span class="s2">/&lt;PATH_TO_CREDENTIALS_FILE&gt;&quot;</span>
+<span class="nb">source</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">PODS_ROOT</span><span class="si">}</span><span class="s2">/WS1IntelligenceSDK/dsym_upload.sh&quot;</span>
+</pre></div>
+</div>
+<p>If you <strong>manually installed</strong> the SDK, copy and paste this code:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">APP_ID</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR_APP_ID&gt;&quot;</span>
+<span class="nv">CREDENTIALS_FILE</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">SRCROOT</span><span class="si">}</span><span class="s2">/&lt;PATH_TO_CREDENTIALS_FILE&gt;&quot;</span>
+<span class="nb">source</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">SRCROOT</span><span class="si">}</span><span class="s2">/&lt;PATH_TO_SCRIPT&gt;/dsym_upload.sh&quot;</span>
+</pre></div>
+</div>
+<p>In both cases, you will need to add the included xcfilelist file in the Input File Lists section.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">$(</span>SRCROOT<span class="k">)</span>/&lt;PATH_TO_SCRIPT&gt;/dsym_upload.xcfilelist
+</pre></div>
+</div>
+<p>When you build your Xcode application, the dSYM files for your application (and
+any dependent modules to which you added the Run Script) will be uploaded to
+Workspace ONE Intelligence and become available for crash symbolication.</p>
+<section id="generate-dsym-files-in-build">
+<h3>Generate dSYM Files in Build<a class="headerlink" href="#generate-dsym-files-in-build" title="Permalink to this heading">¶</a></h3>
+<p>DWARF dSYM file generation can be toggled in the build options for the target. If you attempt to run the script without dSYM generation enabled, then the script will fail. Select ‘DWARF with dSYM File’ to generate the dSYM file.</p>
+<img alt="../_images/xcode-enable-dsym.png" src="../_images/xcode-enable-dsym.png" />
+</section>
+<section id="generate-credentials-file-from-workspace-one-intelligence-platform">
+<h3>Generate Credentials File from Workspace ONE Intelligence Platform<a class="headerlink" href="#generate-credentials-file-from-workspace-one-intelligence-platform" title="Permalink to this heading">¶</a></h3>
+<p>Log into the Workspace ONE Intelligence Platform and click the <strong>Service Accounts</strong> menu.</p>
+<img alt="../_images/ws1-service-accounts-button.png" src="../_images/ws1-service-accounts-button.png" />
+<p>At the top of the page, click the <strong>Add</strong> button to add a new account.</p>
+<img alt="../_images/ws1-service-accounts-add-button.png" src="../_images/ws1-service-accounts-add-button.png" />
+<p>Name the service account as desired.</p>
+<img alt="../_images/ws1-service-accounts-add-namefield-button.png" src="../_images/ws1-service-accounts-add-namefield-button.png" />
+<p>Click <strong>GENERATE CLIENT SECRET</strong> button.</p>
+<img alt="../_images/ws1-service-accounts-add-generate-button.png" src="../_images/ws1-service-accounts-add-generate-button.png" />
+<p>Save the .json file to your source repository and amend the path in the Xcode Script Phase</p>
+</section>
+<section id="common-dsym-upload-issues">
+<h3>Common dSYM Upload Issues<a class="headerlink" href="#common-dsym-upload-issues" title="Permalink to this heading">¶</a></h3>
+<ul>
+<li><p><strong>HTTP 403 Authentication Error</strong></p>
+<blockquote>
+<div><p>This most often occurs due to a missing, expired, or incorrect credentials file. Ensure that the correct credentials file is being used. This type of authentication error can also occur if the script is obtaining an incorrect app ID. Please verify in the logs that the correct app ID is being used.</p>
+</div></blockquote>
+</li>
+<li><p><strong>PROTOCOL_ERROR Failure during cURL Upload</strong></p>
+<blockquote>
+<div><p>It has been observed that the default cURL version which ships with current OSX builds may exhibit a known issue when uploading dSYM files. If you experience problems during the upload phase of the script, try to upgrade to a newer version. cURL version 7.69.1 and above has been verified to resolve this problem.</p>
+</div></blockquote>
+</li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>HTTP/2<span class="w"> </span>stream<span class="w"> </span><span class="m">1</span><span class="w"> </span>was<span class="w"> </span>not<span class="w"> </span>closed<span class="w"> </span>cleanly:<span class="w"> </span>PROTOCOL_ERROR<span class="w"> </span><span class="o">(</span>err<span class="w"> </span><span class="m">1</span><span class="o">)</span>
+</pre></div>
+</div>
+<ul>
+<li><p><strong>The dSYM upload script causes Xcode build to fail</strong></p>
+<blockquote>
+<div><p>The script will cause a build failure by default. This behavior is possible to disable by toggling a flag inside the script itself. You may wish to change this setting if you are building without internet access, or for other similar reasons. Note that crash symbolication cannot be completed without a matching dSYM for a particular build of an app.</p>
+</div></blockquote>
+</li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">REQUIRE_UPLOAD_SUCCESS</span><span class="o">=</span><span class="si">${</span><span class="nv">REQUIRE_UPLOAD_SUCCESS</span><span class="p">:=0</span><span class="si">}</span>
+</pre></div>
+</div>
+<p>Your app is now integrated with Workspace ONE Intelligence!  Additional features require adding more code to your project.</p>
+</section>
+</section>
+<section id="interoperability-with-other-sdks">
+<h2>Interoperability with other SDKs<a class="headerlink" href="#interoperability-with-other-sdks" title="Permalink to this heading">¶</a></h2>
+<p>Recommended initialization orders:</p>
+<p>Crashlytics:</p>
+<blockquote>
+<div><p>Workspace ONE Intelligence SDK should be initialized before Crashlytics</p>
+</div></blockquote>
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">WS1Intelligence</span><span class="w"> </span><span class="n">enableWithAppID</span><span class="o">:</span><span class="s">@&quot;YOUR APP ID GOES HERE&quot;</span><span class="p">];</span>
+
+<span class="c1">// Initialize Crashlytics</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="n">WS1Intelligence</span><span class="p">.</span><span class="n">enable</span><span class="p">(</span><span class="n">withAppID</span><span class="p">:</span> <span class="s">&quot;YOUR APP ID GOES HERE&quot;</span><span class="p">)</span>
+
+<span class="c1">// Initialize Crashlytics</span>
+</pre></div>
+</div>
+<p>AppDynamics:</p>
+<blockquote>
+<div><p>AppDynamics should be initialized before Workspace ONE Intelligence SDK</p>
+</div></blockquote>
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="c1">// Initialize AppDynamics</span>
+
+<span class="p">[</span><span class="n">WS1Intelligence</span><span class="w"> </span><span class="n">enableWithAppID</span><span class="o">:</span><span class="s">@&quot;YOUR APP ID GOES HERE&quot;</span><span class="p">];</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="c1">// Initialize Crashlytics</span>
+
+<span class="n">WS1Intelligence</span><span class="p">.</span><span class="n">enable</span><span class="p">(</span><span class="n">withAppID</span><span class="p">:</span> <span class="s">&quot;YOUR APP ID GOES HERE&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>New Relic:</p>
+<blockquote>
+<div><p>Workspace ONE Intelligence SDK should be initialized before New Relic</p>
+</div></blockquote>
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">WS1Intelligence</span><span class="w"> </span><span class="n">enableWithAppID</span><span class="o">:</span><span class="s">@&quot;YOUR APP ID GOES HERE&quot;</span><span class="p">];</span>
+
+<span class="c1">// Initialize New Relic</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="n">WS1Intelligence</span><span class="p">.</span><span class="n">enable</span><span class="p">(</span><span class="n">withAppID</span><span class="p">:</span> <span class="s">&quot;YOUR APP ID GOES HERE&quot;</span><span class="p">)</span>
+
+<span class="c1">// Initialize New Relic</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+	<script type="text/javascript" charset="utf-8" src="../_static/toc.js"></script>
+  </body>
+</html>

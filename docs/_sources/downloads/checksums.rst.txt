@@ -1,0 +1,20 @@
+:orphan:
+
+.. _checksums:
+
+SDK Download Checksums
+======================
+
+These are the checksums for our latest iOS and Android SDKs.  They can be used to verify the files from the :ref:`downloads page <downloads>`.
+
+.. Here's how to get the checksum: % sha1sum  < ~/Downloads/WS1Intelligence_v6.1.1.zip
+
+============================= ============================================= ========================================
+SDK                           File                                          SHA-1 Digest
+============================= ============================================= ========================================
+iOS 6.1.1                     WS1Intelligence_v6.1.1.zip                    467ac482700a795f872a35486a46cbcb9292ca2d
+iOS 6.0.1                     WS1Intelligence_v6_0_1.zip                    91b8425130e76c138fda9491e80e8a9b8609adad
+iOS dSYM Upload 6.1.1         WS1Intelligence_dsym_upload_v6_1.1.zip        3ffe41095a6dff017b016a90cfd611552bfefc32
+Android 5.8.12                crittercism_v5_8_12_sdkonly.jar               c085f664e591d43b363e33cc3a522fbf5ea6c93f
+Android NDK 5.8.12            crittercism_v5_8_12_ndk.jar                   76075ae993193887bce2303f14df6f72bde358cb
+============================= ============================================= ========================================

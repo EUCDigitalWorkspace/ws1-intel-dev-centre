@@ -1,0 +1,372 @@
+:orphan:
+
+.. HTML5 Documentation
+
+.. _html5:
+
+HTML5 SDK
+=========
+
+
+.. toctree::
+   :maxdepth: 2
+
+This topic describes how to use Apteligent with HTML5. Apteligent provides the HTML5 library
+using a content delivery network (CDN) for simplicity so that you can get crash reporting up and running
+within your application as quickly as possible.
+
+
+.. todo .. _install_html5:
+
+.. todo Installing the JavaScript File Locally
+.. todo --------------------------------------
+
+.. todo .. note::
+
+ .. todo   **Reviewers**: From Eddie: Need instructions for downloading the .js file and including it offline
+ .. todo   (PhoneGap or other Hybrid solutions with JavaScript). We should at least provide instructions
+  .. todo  on how to download the file for now until we have an idea for integrations with these different scenarios.
+
+.. _initialize_html5:
+
+Initializing the HTML5 SDK
+--------------------------
+
+Obtain your app ID from Workspace ONE Intelligence platform.
+
+To set up basic integration:
+
+1. Include the following Apteligent Javascript library from our CDN in your HTML using a ``<script>`` tag:
+
+.. code-block:: html
+
+       <script type="text/javascript" src="https://d1a62freaxhn7x.cloudfront.net/v2/24/crittercismClientLibraryMin.js"></script>
+
+2. Call ``Crittercism.init`` with your Apteligent App ID, when the document is ready (the ``document.ready`` event).
+
+The following example HTML document shows adding Apteligent to an application that uses jQuery.
+
+.. code-block:: html
+
+   <!DOCTYPE html>
+   <html>
+     <head>
+       <title>Example Document with Apteligent</title>
+       <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+       <script type="text/javascript" src="https://d1a62freaxhn7x.cloudfront.net/v2/24/crittercismClientLibraryMin.js"></script>
+       <script type="text/javascript">
+         $(document).ready(function() {
+           Crittercism.init({
+             appId: 'appId', // Example: 47cc67093475061e3d95369d
+             appVersion: '1.0' // Developer-provided application version
+           });
+         });
+       </script>
+     </head>
+   </html>
+
+``Crittercism.init(options)`` takes a single argument, ``options``.
+The ``options`` is a JSON dictionary containing key value pairs.
+
+   **Keys**
+
+   ====================== =======================================================================================
+   Name                   Description
+   ====================== =======================================================================================
+   ``appId``              AppId string obtained from Apteligent for a registered HTML5 app
+
+   ``appVersion``         Developer-provided application version (optional)
+
+   ``debug``              ``true``, causes HTML5 SDK to print messages to console.log (optional)
+   ====================== =======================================================================================
+
+View the raw `CrittercismIntegrationWithJQuery.html <https://gist.github.com/NinjaSudo/3895412#file-crittercismintegrationwithjquery-html>`_ hosted on GitHub.
+
+Now you have the basic crash reporting available from Apteligent. The rest of this topic describes optional features that you can add to your HTML code.
+
+.. note::
+
+    :ref:`hybrid_apps_html5` don't and shouldn't call ``Crittercism.init()``.
+    :ref:`hybrid_apps_html5` should include Apteligent Javascript library
+    using a ``<script>`` tag.
+
+.. _breadcrumbs_html5:
+
+Logging Breadcrumbs
+---------------------------------------------
+
+Use the ``leaveBreadcrumb`` API to write to a chronological log that is
+reported with crashes, handled exceptions, and userflows.
+
+.. include:: ../shared/breadcrumbs_include.txt
+
+Here's an example of how to leave a breadcrumb:
+
+.. code-block:: javascript
+
+   Crittercism.leaveBreadcrumb("User tapped a button");
+
+.. _handled_exceptions_html5:
+
+Logging Handled Exceptions
+---------------------------------------------
+
+Use the ``logHandledException`` API to track error conditions that do not
+necessarily cause a crash.
+
+.. include:: ../shared/handled_exceptions_include.txt
+
+Here's an example of how to log a handled exception:
+
+.. code-block:: javascript
+
+   try {
+     JSON.parse('this isnt valid json');
+   } catch(e) {
+     Crittercism.logHandledException(e);
+   }
+
+.. _metadata_html5:
+
+Logging User Metadata
+---------------------------------------------
+
+.. include:: ../shared/user_metadata_include.txt
+
+Adding a Username
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. include:: ../shared/set_username_include.txt
+
+Here's an example of how to set a user name:
+
+.. code-block:: javascript
+
+   Crittercism.setUsername("TomCritter");
+
+.. _userflows_html5:
+
+Logging Userflows
+--------------------
+
+.. note::
+
+    The Logging Userflows API is currently only supported for
+    :ref:`hybrid_apps_html5` .  The Logging Userflows API methods
+    currently act as NOP's in pure HTML5 web apps.
+
+Use the ``beginTransaction``, ``endTransaction``, and ``failTransaction``
+methods to log userflows.
+
+.. include:: ../shared/userflows_include.txt
+
+Here's an example of how to log a single userflow:
+
+.. code-block:: javascript
+
+    Crittercism.beginTransaction("login");
+    var didLogin = runMyLoginCode();
+    if didLogin {
+        Crittercism.endTransaction("login");
+    } else {
+        Crittercism.failTransaction("login");
+    };
+
+Beginning a Userflow
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. include:: ../shared/userflows_begin_include.txt
+
+Here's an example of how to begin a userflow:
+
+.. code-block:: javascript
+
+    Crittercism.beginTransaction("my_transaction");
+
+Ending a Userflow
+^^^^^^^^^^^^^^^^^^^^
+
+.. include:: ../shared/userflows_end_include.txt
+
+Here's an example of how to end a userflow, which is the same as marking it
+as succeeded:
+
+.. code-block:: javascript
+
+    Crittercism.endTransaction("my_transaction");
+
+Failing a Userflow
+^^^^^^^^^^^^^^^^^^^^^
+
+.. include:: ../shared/userflows_fail_include.txt
+
+Here's how to mark a userflow as failed:
+
+.. code-block:: javascript
+    
+    Crittercism.failTransaction("my_transaction");
+
+Modifying the Value of a Userflow
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Use the ``setTransactionValue`` method to modify the value of a userflow.
+The value of a userflow should be specified in  cents.
+
+.. include:: ../shared/userflows_value_include.txt
+
+.. code-block:: javascript
+
+    var valueInCents = 999;
+    Crittercism.setTransactionValue("my_transaction", valueInCents);
+
+.. _network_requests_html5:
+
+Logging Network Requests
+------------------------
+
+.. note::
+
+    The Logging Network Requests API is currently only supported for
+    :ref:`hybrid_apps_html5` .  The Logging Network Requests API methods
+    currently act as NOP's in pure HTML5 web apps.
+
+Use the ``logNetworkRequest`` method to manually log network library network access to URL's.
+
+Here's an example of how to log a network request:
+
+.. code-block:: javascript
+
+        Crittercism.logNetworkRequest("GET",
+                                      "http://www.abc123def456.com",
+                                      2000,
+                                      10000,
+                                      100,
+                                      200,
+                                      0)
+
+**Arguments**
+
+====================== =======================================================================================
+Name                   Description
+====================== =======================================================================================
+``method``             String HTTP verb such as "GET", "HEAD", "POST", "PUT", "DELETE", "TRACE", "OPTIONS", "CONNECT", or "PATCH".
+
+``url``                String, representing the contacted endpoint.
+
+``latency``            Number, representing the time between start of request and receipt of response, in milliseconds.
+
+``bytesRead``          Number, the number of bytes included in response body.
+
+``bytesSent``          Number, the number of bytes included in request body.
+
+``responseCode``       Number, HTTP status code, generally 100-599, e.g. 200 == OK, 400 == Bad Request, can be 0 if there is an error.
+
+``errorCode``          Number, a non-zero error code can be logged if network request failed to contact server, etc.  Pass 0 if there was no error.
+====================== =======================================================================================
+
+.. _hybrid_apps_html5:
+
+Hybrid Apps
+-----------
+
+The :ref:`html5` supports iOS and Android hybrid applications. A hybrid app is a
+mobile application built using both native code as well as javascript code which is run in a webview.  Using the installation instructions below, you will be able to monitor the performance of both the native code as well as javascript code in the webview in a unified view.
+
+.. _initialize_hybrid:
+
+To properly instrument a hybrid app, you'll need to follow these steps:
+
+1. **Install the Apteligent Native SDK**
+
+Download and install the native Apteligent SDKs.  
+
+* For iOS, follow the installation guide here: :ref:`install_ios`
+
+* For Android, follow the installation guide here: :ref:`install_android`
+
+2. **Initialize the Apteligent Native SDK**
+
+After the SDKs are installed, initialize the native Apteligent SDK in your app.  To obtain an app_id, register an iOS or Android app and use the app_id for that app.  Registering a separate HTML5 app is not necessary.  
+
+* For iOS: :ref:`initialize_ios`
+
+* For Android: :ref:`initialize_android`
+
+3.  **Enable Webview Monitoring**
+
+To monitor the performance of webviews including javascript error monitoring, enable monitoring the webview in the native SDK.  
+
+* For iOS: :ref:`monitor_web_views_ios_ws1`
+
+* For Android: :ref:`webview_instrumentation_android`
+
+.. note::
+  Hybrid apps automatically report uncaught JavaScript exceptions as handled
+  exceptions to Apteligent.  Hybrid apps also automatically log XMLHttpRequest
+  network requests.
+
+.. _customize_hybrid:
+
+Customized Instrumentation for Hybrid Apps
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In addition to automatically monitoring the performance of webviews, users can optionally add instrumentation to measure custom Userflows and custom logging in the HTML5 code to help debug errors:
+
+1.  **Integrate HTML5 SDK**
+
+In order to set up custom logging from the HTML5 SDK, include the Apteligent JavaScript library.  This will allow your JavaScript code to call any of the other :ref:`html5` API methods.  The JavaScript code layer of a hybrid app does not need to call ``Crittercism.init()`` since initialization is performed by the native code layer of the hybrid app.  Once the JavaScript library is included, calls to any of the :ref:`html5` methods will call the native code layer.  
+
+.. code-block:: html
+
+       <script type="text/javascript" src="https://d1a62freaxhn7x.cloudfront.net/v2/24/crittercismClientLibraryMin.js"></script>
+
+2.  **Custom Logging in Hybrid Apps**
+
+Add :ref:`breadcrumbs` in both JavaScript and native code to help debug errors in crashes, handled exceptions, or userflows.  All JavaScript exceptions are automatically sent as :ref:`handled_exceptions`.  Breadcrumbs can be logged in both the native SDK as well as the HTML5 SDK.  Regardless of where breadcrumbs are logged, they will appear in all crashes, handled exceptions, and userflows.  
+
+* To add a breadcrumb in the HTML5 SDK: :ref:`breadcrumbs_html5`
+
+* For iOS: :ref:`breadcrumbs_ios_ws1`
+
+* For Android: :ref:`breadcrumbs_android`
+
+3.  **Custom Userflows in Hybrid Apps**
+
+A common performance problem in many hybrid apps is UI lag and errors when the app switches between the hybrid UI and the webview.  Measure these transitions by adding Userflows.  Since the Apteligent HTML5 SDK can communicate directly with the native SDK, you can begin and end Userflows between the two SDKs.  
+
+For example, you can begin a Userflow in your native iOS SDK:
+
+Objective-C
+
+.. code-block:: objective-c
+
+  [Crittercism beginUserflow:@"Load Checkout Page"];
+
+Swift
+
+.. code-block:: swift
+
+  Crittercism.beginUserflow("Load Checkout Page")
+
+Then, you can end that same Userflow in your HTML5 SDK:
+
+.. code-block:: javascript
+
+    Crittercism.endTransaction("Load Checkout Page");
+
+This will allow you to measure the UI lag for transitioning between the native layer and the webview as well as monitor any crashes or javascript errors during the transition.  For more information on instrumenting Userflows, see the following:
+
+* For HTML5: :ref:`userflows_html5`
+
+* For iOS: :ref:`userflows_ios_ws1`
+
+* For Android: :ref:`userflows_android`
+
+.. _other_html5:
+
+.. todo Other Tasks
+.. todo --------------
+
+.. todo This section describes other optional tasks.
+
+.. todo .. _opt_out_html5:

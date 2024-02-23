@@ -1,0 +1,32 @@
+.. _integrate_slack:
+
+Slack Integration Guide
+-----------------------
+
+**Slack** is a cloud-based team collaboration tool. Configure Apteligent Webhooks to automatically send messages to a Slack channel. The Webhook is triggered by a specific alert; for example, an increase in crashes or latency.
+
+#. First, configure your Slack channel to accept incoming Webhook integrations. You'll get a Webhook URL that looks like this: ::
+
+    https://hooks.slack.com/services/S018ED53L/A1M62T7KL/PR0qkyXM3GYkREifOobHZFVG
+
+
+#. Run through the testing instructions given by Slack for your incoming Webhook. Once you've tested successfully, go to the Workspace ONE Intelligence platform.
+
+
+#. In the Workspace ONE Intelligence platform, go to **Alerts** and click on **Alert Integrations**. Select **Webhook** and enter the URL given to you by Slack, replacing the 'https' prefix with 'slack'. (Don't worry - all traffic sent by Workspace ONE Intelligence SDK will still be sent over https). Add the channel name like this: ::
+
+    slack://hooks.slack.com/services/S018ED53L/A1M62T7KL/PR0qkyXM3GYkREifOobHZFVG?channel=<CHANNEL_NAME>
+
+
+It will look like this in the Portal:
+
+    .. image:: ../img/integration-slack.png
+
+
+**Note**: You may optionally configure the sender's username and the emoji shown by the Slack client by adding some more parameters, like this (replace '<YOUR_USERNAME>' and '<ICON_TO_USE>' with the username and icon you want to use): ::
+
+    slack://hooks.slack.com/services/S018ED53L/A1M62T7KL/PR0qkyXM3GYkREifOobHZFVG?channel=<CHANNEL_NAME>&username=<YOUR_USERNAME>&icon_emoji=<ICON_TO_USE>
+
+You can see the list of supported Slack emoji icons `here <http://www.emoji-cheat-sheet.com/>`_. Just remember to strip off the : characters when you specify an emoji to the Workspace ONE Intelligence Webhook integration.
+
+.. include:: ../shared/support_include.txt

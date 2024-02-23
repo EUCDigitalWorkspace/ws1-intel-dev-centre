@@ -1,0 +1,485 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Unity Integration &#8212; Workspace ONE Intelligence  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/adctheme.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/toggle.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+      <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="Workspace ONE Intelligence  documentation" href="../index.html" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <script type="text/javascript">try{document.domain="vmware.com"}catch(e){};</script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-49786008-1']);
+    _gaq.push(['_setDomainName', 'apteligent.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_addIgnoredRef', 'apteligent.com']);   // Stops Self Referrals
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  
+  <meta name="google-translate-customization" content="f0837c562504ad7b-d669caf2b7375c11-g99fd8de75f76752f-14"></meta>
+
+  </head><body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PK9468"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PK9468');</script>
+<!-- End Google Tag Manager -->
+
+
+  <div id="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+          <div id="searchbox" style="display: none">
+              <form class="search" action="../search.html" method="get">
+                <div class="search-wrapper">
+                  <input class="prettysearch" type="text" name="q" size="18" />
+                  <input type="submit" value="Search" class="searchbutton" />
+                </div>
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+      <ul><li class="toctree-l1" id="docs-home"><a href="../index.html">Docs Home</a></li></ul>
+      <ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ios/ios.html">Apple SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../android/android.html">Android SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Development Platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/eula_accepted.html">SDK Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../release_notes/release_notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/downloads.html">EULA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/checksums.html">SDK Download Checksums</a></li>
+</ul>
+
+      <div id="sidebar-toc-clear"></div>
+      
+    </div>
+  </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            <div class="container">
+              <div class="row">
+                <div class="span12">
+                  
+  <section id="unity-integration">
+<span id="integrate-unity"></span><h1>Unity Integration<a class="headerlink" href="#unity-integration" title="Permalink to this heading">¶</a></h1>
+<p>Apteligent helps developers track and manage performance of mobile
+applications on several platforms. For more information, see <a class="reference internal" href="../overview/overview.html#overview"><span class="std std-ref">Overview</span></a>
+and the <a class="reference external" href="https://www.crittercism.com/solution-overview/">Solution Overview</a>.</p>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Unity version 5.</p></li>
+<li><p>iOS 6.0 and later</p></li>
+<li><p>Android 2.3 and later</p></li>
+</ul>
+</section>
+<section id="installing-the-unity-sdk">
+<h2>Installing the Unity SDK<a class="headerlink" href="#installing-the-unity-sdk" title="Permalink to this heading">¶</a></h2>
+<section id="obtaining-the-unity-sdk">
+<h3>1. Obtaining the Unity SDK<a class="headerlink" href="#obtaining-the-unity-sdk" title="Permalink to this heading">¶</a></h3>
+<p><a class="reference internal" href="../downloads/downloads.html#downloads"><span class="std std-ref">Download</span></a> our latest Unity Plugin. The download contains the following items:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Contains</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Plugins/iOS</span></code></p></td>
+<td><p>The iOS plugin binary</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Plugins/Android</span></code></p></td>
+<td><p>The Android plugin binary</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Plugins/Crittercism/Crittercism_IOS_Scripts</span></code></p></td>
+<td><p>Init Script and the C# bindings that call into the Apteligent iOS SDK</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Plugins/Crittercism/Crittercism_Android_Scripts</span></code></p></td>
+<td><p>Init Script and the C# bindings that call into the Apteligent Android SDK</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">DemoApp</span></code></p></td>
+<td><p>An example app</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="adding-the-sdk-to-your-project">
+<h3>2. Adding the SDK to your Project<a class="headerlink" href="#adding-the-sdk-to-your-project" title="Permalink to this heading">¶</a></h3>
+<p>Drag and drop the <code class="docutils literal notranslate"><span class="pre">Plugins</span></code> directory into your project’s <code class="docutils literal notranslate"><span class="pre">Assets</span></code> folder:</p>
+<img alt="../_images/unity_drag_plugins.png" class="align-center" src="../_images/unity_drag_plugins.png" />
+</section>
+<section id="modifying-your-android-manifest">
+<h3>Modifying Your Android Manifest<a class="headerlink" href="#modifying-your-android-manifest" title="Permalink to this heading">¶</a></h3>
+<p>A custom <code class="docutils literal notranslate"><span class="pre">AndroidManifiest.xml</span></code> file must be added to the <code class="docutils literal notranslate"><span class="pre">{Unity</span> <span class="pre">Project}/Plugins/Android</span></code> folder. Inside the file, verify you have the <code class="docutils literal notranslate"><span class="pre">INTERNET</span></code> and <code class="docutils literal notranslate"><span class="pre">ACCESS_NETWORK_STATE</span></code> permission in between the <code class="docutils literal notranslate"><span class="pre">&lt;manifest&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/manifest&gt;</span></code> tags so Apteligent can send data to our servers:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;uses-permission</span><span class="w"> </span><span class="na">android:name=</span><span class="s">&quot;android.permission.INTERNET&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;uses-permission</span><span class="w"> </span><span class="na">android:name=</span><span class="s">&quot;android.permission.ACCESS_NETWORK_STATE&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<p>For more granular data (optional), add the following permissions:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;uses-permission</span><span class="w"> </span><span class="na">android:name=</span><span class="s">&quot;android.permission.GET_TASKS&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="adding-the-apteligent-component">
+<h3>3. Adding the Apteligent Component<a class="headerlink" href="#adding-the-apteligent-component" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>In the Unity Editor, create a new GameObject. Rename the Game Object to “Crittercism Initializer”.</p></li>
+<li><p>Select the game object in the Hierarchy pane and attach the Apteligent script as a component.</p></li>
+</ul>
+<img alt="../_images/unity_embed_script.png" class="align-center" src="../_images/unity_embed_script.png" />
+</section>
+<section id="initializing-apteligent">
+<h3>4. Initializing Apteligent<a class="headerlink" href="#initializing-apteligent" title="Permalink to this heading">¶</a></h3>
+<p><strong>Fill in</strong> your iOS app ID and Android app ID</p>
+<img alt="../_images/unity_fill_app_id.png" class="align-center" src="../_images/unity_fill_app_id.png" />
+</section>
+<section id="configure-unity-build-and-player-settings">
+<h3>5. Configure Unity Build and Player Settings<a class="headerlink" href="#configure-unity-build-and-player-settings" title="Permalink to this heading">¶</a></h3>
+<p>The Unity IDE has several settings which impact the type of data the Apteligent SDK can report.
+This section will outline the effects of these settings and give recommended values for best support.</p>
+<section id="recommended-settings">
+<h4>Recommended Settings<a class="headerlink" href="#recommended-settings" title="Permalink to this heading">¶</a></h4>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Section</p></th>
+<th class="head"><p>Setting Name</p></th>
+<th class="head"><p>Recommended Setting</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Build Settings</p></td>
+<td><p>Script Debugging</p></td>
+<td><p>ON</p></td>
+</tr>
+<tr class="row-odd"><td><p>Player Settings &gt; Crash Reporting</p></td>
+<td><p>On .Net UnhandledException</p></td>
+<td><p>Silent Exit</p></td>
+</tr>
+<tr class="row-even"><td><p>Player Settings &gt; Crash Reporting</p></td>
+<td><p>Enable CrashReport API</p></td>
+<td><p>Disabled</p></td>
+</tr>
+<tr class="row-odd"><td><p>Player Settings &gt; Other Settings</p></td>
+<td><p>Scripting Backend</p></td>
+<td><p>IL2CPP</p></td>
+</tr>
+<tr class="row-even"><td><p>Player Settings &gt; Other Settings</p></td>
+<td><p>Script Call Optimization</p></td>
+<td><p>Either</p></td>
+</tr>
+<tr class="row-odd"><td><p>Apteligent SDK Setting</p></td>
+<td><p>SetLogUnhandledExceptionAsCrash</p></td>
+<td><p>false</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Script Debugging</strong> Script Debugging may be turned on in order to get file names and line numbers
+in crash stack traces. Without this setting, crash stack traces will only contain class names and
+function names.</p>
+<p><strong>On .Net Unhandled Exception</strong>
+When set to <strong>Crash</strong>, the app will immediately exit in the event of an Unhandled Exception. In this
+case, a native crash (C++) will be generated by the Apteligent SDK. When set to <strong>Silent Exit</strong>, the
+app will gracefully exit, which allows the capture of a C# stacktrace.</p>
+<p><strong>Enable CrashReport API</strong>
+Enables built-in Unity CrashReporter API. This setting is not related to the Apteligent SDK.</p>
+<p><strong>Scripting Backend</strong>
+Selects the scripting backend for the player. Native crashes can not be captured for the Mono2x
+scripting backend option. Behavior in mode IL2CPP depends on the Script Call Optimization setting. (iOS only)</p>
+<p><strong>Script Call Optimization (iOS only)</strong>
+Apteligent SDK can support either option.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Scrit Call Optimization Setting</p></th>
+<th class="head"><p>Script Handled Exception</p></th>
+<th class="head"><p>Script Unhandled Exception</p></th>
+<th class="head"><p>Unity Engine Crash</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>‘’Fast but no Exceptions’’</p></td>
+<td><p>C# Stacktrace (Exception)</p></td>
+<td><p>C# Stacktrace (Crash)</p></td>
+<td><p>C++ Stacktrace (Crash)</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘’Slow and Safe’’</p></td>
+<td><p>C# Stacktrace (Exception)</p></td>
+<td><p>C# Stacktrace(1) (Exception)</p></td>
+<td><p>C++ Stacktrace (Crash)</p></td>
+</tr>
+</tbody>
+</table>
+<p>(1) If <code class="docutils literal notranslate"><span class="pre">SetLogUnhandledExceptionAsCrash</span></code> is set, Unhandled exceptions in <code class="docutils literal notranslate"><span class="pre">Slow</span> <span class="pre">and</span> <span class="pre">Safe</span></code> mode will be
+logged in the <code class="docutils literal notranslate"><span class="pre">Crash</span></code> section on the Apteligent portal. Otherwise, they will default to the
+<code class="docutils literal notranslate"><span class="pre">Handled</span> <span class="pre">Exceptions</span></code> section.</p>
+<p><strong>SetLogUnhandledExceptionAsCrash</strong>
+This is an Apteligent SDK setting that changes where unhandled exceptions are presented in the
+Apteligent portal. See <a class="reference internal" href="#setlogunhandledexceptionascrash-api"><span class="std std-ref">SetLogUnhandledExceptionAsCrash API</span></a> for details.</p>
+</section>
+</section>
+<section id="android-optional-configuration">
+<h3>Android Optional Configuration<a class="headerlink" href="#android-optional-configuration" title="Permalink to this heading">¶</a></h3>
+<p>The Android Unity SDK provides additional configuration options to enable logcat collection,
+and customize version names. In order to perform these configurations, open <code class="docutils literal notranslate"><span class="pre">CrittercismAndroid.cs</span></code>
+script under <code class="docutils literal notranslate"><span class="pre">Plugins/Crittercism/Crittercism_Android_Scripts</span></code> directory.</p>
+<p>Inside <code class="docutils literal notranslate"><span class="pre">Init</span> <span class="pre">(string</span> <span class="pre">appID)</span></code> method, instantiate a <code class="docutils literal notranslate"><span class="pre">CrittercismConfig</span></code> object and invoke the
+<code class="docutils literal notranslate"><span class="pre">SetLogcatReportingEnabled</span> <span class="pre">(bool)</span></code> and <code class="docutils literal notranslate"><span class="pre">SetCustomVersionName</span> <span class="pre">(string)</span></code> methods. Then pass the
+configuration object to the initialization call.</p>
+<p>Here’s an example:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Init</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">appID</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">   </span><span class="n">CrittercismConfig</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CrittercismConfig</span><span class="w"> </span><span class="p">();</span>
+
+<span class="w">   </span><span class="c1">// enable logcat collection</span>
+<span class="w">   </span><span class="n">config</span><span class="p">.</span><span class="n">SetLogcatReportingEnabled</span><span class="w"> </span><span class="p">(</span><span class="k">true</span><span class="p">);</span>
+
+<span class="w">   </span><span class="c1">// set version name to myCustomVersion</span>
+<span class="w">   </span><span class="n">config</span><span class="p">.</span><span class="n">SetCustomVersionName</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;myCustomVersion&quot;</span><span class="p">);</span>
+
+<span class="w">   </span><span class="n">Init</span><span class="w"> </span><span class="p">(</span><span class="n">appID</span><span class="p">,</span><span class="w"> </span><span class="n">config</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="logging-crashes">
+<h2>Logging Crashes<a class="headerlink" href="#logging-crashes" title="Permalink to this heading">¶</a></h2>
+<section id="didcrashonlastload-api">
+<h3>DidCrashOnLastLoad API<a class="headerlink" href="#didcrashonlastload-api" title="Permalink to this heading">¶</a></h3>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">DidCrashOnLastLoad</span></code> API to test if the previous session of
+your app crashed.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="n">didCrash</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Crittercism</span><span class="p">.</span><span class="n">DidCrashOnLastLoad</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="setlogunhandledexceptionascrash-api">
+<span id="id1"></span><h3>SetLogUnhandledExceptionAsCrash API<a class="headerlink" href="#setlogunhandledexceptionascrash-api" title="Permalink to this heading">¶</a></h3>
+<p>Unhandled JavaScript exceptions are normally reported to the Handled Exceptions
+area of the Apteligent server because the app itself doesn’t crash.
+Use the <code class="docutils literal notranslate"><span class="pre">SetLogUnhandledExceptionAsCrash</span></code> API to request Apteligent
+to report unhandled JavaScript exceptions to the Crash Reports area of the
+Apteligent server instead.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Crittercism</span><span class="p">.</span><span class="n">SetLogUnhandledExceptionAsCrash</span><span class="p">(</span><span class="k">value</span><span class="p">);</span>
+<span class="n">Crittercism</span><span class="p">.</span><span class="n">GetLogUnhandledExceptionAsCrash</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">value</span></code> should be a bool, <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>.
+Here’s an example of how to use <code class="docutils literal notranslate"><span class="pre">SetLogUnhandledExceptionAsCrash</span></code>:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">void</span><span class="w"> </span><span class="nf">CallCriticalBusinessFunction</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">SetLogUnhandledExceptionAsCrash</span><span class="p">(</span><span class="k">true</span><span class="p">);</span>
+<span class="w">        </span><span class="n">CriticalBusinessFunction</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">SetLogUnhandledExceptionAsCrash</span><span class="p">(</span><span class="k">false</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="logging-handled-exceptions">
+<h2>Logging Handled Exceptions<a class="headerlink" href="#logging-handled-exceptions" title="Permalink to this heading">¶</a></h2>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">LogHandledException</span></code> API to track error conditions that do not
+necessarily cause a crash.</p>
+<p>Handled exceptions may be used for tracking exceptions caught
+in a <code class="docutils literal notranslate"><span class="pre">try</span></code>/<code class="docutils literal notranslate"><span class="pre">catch</span></code> statement, 3rd party library exceptions, and monitoring
+areas in the code that may currently be using assertions. Handled
+exceptions can also be used to track error events such as low memory warnings. For an
+introduction, see <a class="reference internal" href="../overview/overview.html#handled-exceptions"><span class="std std-ref">Handled Exceptions</span></a>.</p>
+<p>Handled exceptions are grouped by stacktrace, much like crash reports.
+Handled exceptions may be viewed in the “Handled Exceptions” area of the
+Workspace ONE Intelligence portal.</p>
+<p>Here’s an example of how to log a handled exception:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">TestException</span><span class="p">();</span>
+<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="n">Exception</span><span class="w"> </span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Crittercism</span><span class="p">.</span><span class="n">LogHandledException</span><span class="p">(</span><span class="n">error</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We limit to sending five exceptions per minute.</p>
+</div>
+</section>
+<section id="logging-breadcrumbs">
+<h2>Logging Breadcrumbs<a class="headerlink" href="#logging-breadcrumbs" title="Permalink to this heading">¶</a></h2>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">LeaveBreadcrumb</span></code> API to write to a chronological log that is
+reported with crashes and handled exceptions.</p>
+<p>A <em>breadcrumb</em> is a developer-defined text string (up to 140 characters) that
+allows developers to capture app run-time information. Example breadcrumbs may
+include variable values, progress through the code, user actions, or low memory
+warnings. For an introduction, see <a class="reference internal" href="../overview/overview.html#breadcrumbs"><span class="std std-ref">Breadcrumbs</span></a>.</p>
+<p>Here’s an example of how to leave a breadcrumb:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Crittercism</span><span class="p">.</span><span class="n">LeaveBreadcrumb</span><span class="p">(</span><span class="s">&quot;User started level 5&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="logging-user-metadata">
+<h2>Logging User Metadata<a class="headerlink" href="#logging-user-metadata" title="Permalink to this heading">¶</a></h2>
+<p>Developers can set user metadata to tracking information about individual users.
+For an introduction, see <a class="reference internal" href="../overview/overview.html#user-metadata"><span class="std std-ref">User Name</span></a>.</p>
+<section id="adding-a-username">
+<h3>Adding a Username<a class="headerlink" href="#adding-a-username" title="Permalink to this heading">¶</a></h3>
+<p>Setting a username will allow the ability to monitor app performance for each
+user. We recommend setting a username to a value that can be tied back to your customer support system.</p>
+<p>Here’s an example of how to set a user name:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Crittercism</span><span class="p">.</span><span class="n">SetUsername</span><span class="p">(</span><span class="s">&quot;MommaCritter&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="logging-userflows">
+<h2>Logging Userflows<a class="headerlink" href="#logging-userflows" title="Permalink to this heading">¶</a></h2>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">BeginUserflow</span></code>, <code class="docutils literal notranslate"><span class="pre">EndUserflow</span></code>, <code class="docutils literal notranslate"><span class="pre">FailUserflow</span></code>,
+and <code class="docutils literal notranslate"><span class="pre">CancelUserflow</span></code> methods to log userflows.</p>
+<p>User flows allow developers to track key interactions or user flows in their
+app such as login, account registration, and in app purchase. The Workspace
+ONE Intelligence SDK will automatically track application load time as a user
+flow. You can specify additional user flows by adding code to your application.</p>
+<p>Beginning a user flow starts a user flow. Ending, failing, or cancelling a
+user flow stops a user flow. Otherwise, the user flow will be marked as
+crashed or timed out. If a crash occurs, all in progress user flows are
+marked crashed and will be reported with the crash.</p>
+<p>All user flows will appear on Workspace ONE Intelligence portal except for
+cancelled user flows.</p>
+<p>User flows with the same name are aggregated together in the portal by
+Workspace ONE Intelligence.
+Only one user flow for a given name can be in progress at a given time. If you
+begin a second user flow with the same name while another is in progress, the
+first user flow will be cancelled and the new one will take its place.</p>
+<p>Here’s an example of how to log a single userflow:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Crittercism</span><span class="p">.</span><span class="n">BeginUserflow</span><span class="p">(</span><span class="s">&quot;login&quot;</span><span class="p">);</span>
+<span class="c1">// Run the code you want to monitor</span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">didLogin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RunMyLoginCode</span><span class="p">();</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">didLogin</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Crittercism</span><span class="p">.</span><span class="n">EndUserflow</span><span class="p">(</span><span class="s">&quot;login&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Crittercism</span><span class="p">.</span><span class="n">FailUserflow</span><span class="p">(</span><span class="s">&quot;login&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<section id="beginning-a-userflow">
+<h3>Beginning a Userflow<a class="headerlink" href="#beginning-a-userflow" title="Permalink to this heading">¶</a></h3>
+<p>Beginning a user flow tells Workspace ONE Intelligence SDK that the user flow
+has started. Workspace ONE Intelligence SDK starts timing the duration of the
+user flow and waits for the user flow to succeed, fail, or be cancelled in code.</p>
+<p>Here’s an example of how to begin a userflow:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Crittercism</span><span class="p">.</span><span class="n">BeginUserflow</span><span class="p">(</span><span class="s">&quot;my userflow&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>When beginning a userflow, you can also assign the userflow a value:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">var</span><span class="w"> </span><span class="n">valueInCents</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">100</span><span class="p">;</span>
+<span class="n">Crittercism</span><span class="p">.</span><span class="n">BeginUserflow</span><span class="p">(</span><span class="s">&quot;my userflow&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">valueInCents</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="ending-a-userflow">
+<h3>Ending a Userflow<a class="headerlink" href="#ending-a-userflow" title="Permalink to this heading">¶</a></h3>
+<p>Ending a user flow tells Workspace ONE Intelligence SDK that the given user flow
+has successfully completed. At this point, the user flow time is recorded, and
+the user flow will be reported to Workspace ONE Intelligence.</p>
+<p>Here’s an example of how to end a userflow, which is the same as marking it
+as succeeded:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Crittercism</span><span class="p">.</span><span class="n">EndUserflow</span><span class="p">(</span><span class="s">&quot;my userflow&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="failing-a-userflow">
+<h3>Failing a Userflow<a class="headerlink" href="#failing-a-userflow" title="Permalink to this heading">¶</a></h3>
+<p>Failing a user flow tells Workspace ONE Intelligence SDK that the given user
+flow has failed. At this point, the user flow time is recorded, and the user
+flow will be reported to Workspace ONE Intelligence.</p>
+<p>Here’s how to mark a userflow as failed:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Crittercism</span><span class="p">.</span><span class="n">FailUserflow</span><span class="p">(</span><span class="s">&quot;my userflow&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="cancelling-a-userflow">
+<h3>Cancelling a Userflow<a class="headerlink" href="#cancelling-a-userflow" title="Permalink to this heading">¶</a></h3>
+<p>Cancelling a user flow tells Workspace ONE Intelligence SDK that the given user
+flow has been cancelled. The user flow is not recorded and will not be reported
+to Workspace ONE Intelligence.</p>
+<p>If a developer does not specify success, failure, or cancelled in code, then
+the only possible remaining final states a user flow can reach are crashed and
+timed out.  See <a class="reference internal" href="../overview/overview.html#userflow-final-states"><span class="std std-ref">User Flows Final States</span></a> for more information.</p>
+<p>Here’s how to cancel a userflow:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Crittercism</span><span class="p">.</span><span class="n">CancelUserflow</span><span class="p">(</span><span class="s">&quot;my userflow&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="modifying-the-value-of-a-userflow">
+<h3>Modifying the Value of a Userflow<a class="headerlink" href="#modifying-the-value-of-a-userflow" title="Permalink to this heading">¶</a></h3>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">SetUserflowValue</span></code> and <code class="docutils literal notranslate"><span class="pre">GetUserflowValue</span></code> methods to modify
+the value of a userflow. The value of a userflow should be specified in
+cents.</p>
+<p>A developer may optionally set the value of each user flow. This allows
+stakeholders to more accurately evaluate the business impact of failing
+user flows.  Setting user flows values within the app is most useful when
+the value of a user flow can change based on user interactions. One example
+is in-app purchases of varying quantities.</p>
+<p>In addition to being able to specify user flows values in the code, a default
+user flows value may be specified in the Workspace ONE Intelligence portal.
+This allows changing user flows values on the fly.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">itemValueInCents</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">100</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">totalValueInCents</span>
+<span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">Crittercism</span><span class="p">.</span><span class="n">GetUserflowValue</span><span class="p">(</span><span class="s">&quot;shopping cart&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">itemValueInCents</span><span class="p">;</span>
+<span class="n">Crittercism</span><span class="p">.</span><span class="n">SetUserflowValue</span><span class="p">(</span><span class="s">&quot;shopping cart&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">totalValueInCents</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="setting-opt-out-status">
+<h2>Setting Opt Out Status<a class="headerlink" href="#setting-opt-out-status" title="Permalink to this heading">¶</a></h2>
+<p>Workspace ONE Intelligence SDK provides an opt-out setting that disables all
+reporting to Workspace ONE Intelligence.
+This allows developers to implement code that asks end users whether they want
+to opt out of Workspace ONE Intelligence.
+For an introduction, see <a class="reference internal" href="../overview/overview.html#opt-out"><span class="std std-ref">Opt Out of Workspace ONE Intelligence</span></a>.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Crittercism</span><span class="p">.</span><span class="n">SetOptOut</span><span class="w"> </span><span class="p">(</span><span class="k">true</span><span class="p">);</span>
+
+<span class="kt">bool</span><span class="w"> </span><span class="n">isOptedOut</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Crittercism</span><span class="p">.</span><span class="n">GetOptOut</span><span class="w"> </span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+	<script type="text/javascript" charset="utf-8" src="../_static/toc.js"></script>
+  </body>
+</html>

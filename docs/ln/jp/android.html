@@ -1,0 +1,1192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Android SDK &#8212; Workspace ONE Intelligence  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/adctheme.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/toggle.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <link rel="search" title="Search" href="../../search.html" />
+    <link rel="top" title="Workspace ONE Intelligence  documentation" href="../../index.html" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <script type="text/javascript">try{document.domain="vmware.com"}catch(e){};</script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-49786008-1']);
+    _gaq.push(['_setDomainName', 'apteligent.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_addIgnoredRef', 'apteligent.com']);   // Stops Self Referrals
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  
+  <meta name="google-translate-customization" content="f0837c562504ad7b-d669caf2b7375c11-g99fd8de75f76752f-14"></meta>
+
+  </head><body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PK9468"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PK9468');</script>
+<!-- End Google Tag Manager -->
+
+
+  <div id="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+          <div id="searchbox" style="display: none">
+              <form class="search" action="../../search.html" method="get">
+                <div class="search-wrapper">
+                  <input class="prettysearch" type="text" name="q" size="18" />
+                  <input type="submit" value="Search" class="searchbutton" />
+                </div>
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+      <ul><li class="toctree-l1" id="docs-home"><a href="../../index.html">Docs Home</a></li></ul>
+      <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ios/ios.html">Apple SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../android/android.html">Android SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../development_platforms/index.html">Development Platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../downloads/eula_accepted.html">SDK Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release_notes/release_notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../downloads/downloads.html">EULA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../downloads/checksums.html">SDK Download Checksums</a></li>
+</ul>
+
+      <div id="sidebar-toc-clear"></div>
+      
+    </div>
+  </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            <div class="container">
+              <div class="row">
+                <div class="span12">
+                  
+  <section id="android-sdk">
+<span id="android-jp"></span><h1>Android SDK<a class="headerlink" href="#android-sdk" title="Permalink to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<p>このトピックでは、Android アプリ (Android NDK アプリを含む) での Critercism の使い方を説明します。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>初めてCrittercismをご利用になる場合は、まず <a class="reference internal" href="quickstart.html#quickstart-jp"><span class="std std-ref">Crittercism クイックスタート</span></a> をご覧ください。
+Crittercism SDK は、最初に無料の Crittercism アカウントにサインアップし、アプリを登録し (必要な場合)、アプリのプラットフォームの Crittercism SDK をダウンロードしなければインストールできません。
+ダウンロードしたバージョンに関しては、 <a class="reference internal" href="../../release_notes/release_notes.html#release-notes"><span class="std std-ref">Release Notes</span></a> を参照してください。</p>
+</div>
+<section id="sdk">
+<span id="install-android-jp"></span><h2>SDK のインストール<a class="headerlink" href="#sdk" title="Permalink to this heading">¶</a></h2>
+<section id="maven">
+<h3>Maven からのインストール<a class="headerlink" href="#maven" title="Permalink to this heading">¶</a></h3>
+<p>pom.xml の <code class="docutils literal notranslate"><span class="pre">&lt;dependencies&gt;...&lt;/dependencies&gt;</span></code> タグの間に以下を追加します。</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;dependency&gt;</span>
+<span class="w">  </span><span class="nt">&lt;groupId&gt;</span>com.crittercism<span class="nt">&lt;/groupId&gt;</span>
+<span class="w">  </span><span class="nt">&lt;artifactId&gt;</span>crittercism-android-agent<span class="nt">&lt;/artifactId&gt;</span>
+<span class="w">  </span><span class="nt">&lt;version&gt;</span>LATEST<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</pre></div>
+</div>
+<p>あるいは NDK エージェントの場合には以下を追加します。</p>
+<blockquote>
+<div><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;dependency&gt;</span>
+<span class="w">  </span><span class="nt">&lt;groupId&gt;</span>com.crittercism<span class="nt">&lt;/groupId&gt;</span>
+<span class="w">  </span><span class="nt">&lt;artifactId&gt;</span>crittercism-android-ndk-agent<span class="nt">&lt;/artifactId&gt;</span>
+<span class="w">  </span><span class="nt">&lt;version&gt;</span>LATEST<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="gradle">
+<h3>Gradle からのインストール<a class="headerlink" href="#gradle" title="Permalink to this heading">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">build.gradle</span></code> ファイル (<code class="docutils literal notranslate"><span class="pre">projectname/app</span></code> ディレクトリ内) で、 <code class="docutils literal notranslate"><span class="pre">dependencies{...}</span></code> に Crittercism 依存性情報を追加します。</p>
+<div class="highlight-groovy notranslate"><div class="highlight"><pre><span></span><span class="n">compile</span><span class="w"> </span><span class="s1">&#39;com.crittercism:crittercism-android-agent:+&#39;</span>
+</pre></div>
+</div>
+<p>あるいは NDK エージェントの場合には以下を追加します。</p>
+<div class="highlight-groovy notranslate"><div class="highlight"><pre><span></span><span class="n">compile</span><span class="w"> </span><span class="s1">&#39;com.crittercism:crittercism-android-ndk-agent:+&#39;</span>
+</pre></div>
+</div>
+<p>これを追加した後は、gradle ファイルを必ずプロジェクトと同期させてください！</p>
+</section>
+<section id="id1">
+<h3>手動インストール<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h3>
+<p>1.Crittercism JAR ファイルを <code class="docutils literal notranslate"><span class="pre">libs</span></code> フォルダーにコピーします。
+2.Eclipse をお使いの場合は、プロジェクトを右クリックし、[Properties (プロパティ)] をクリックして [Java Build Path (Java ビルド パス)] を選択し、[ <strong>Add External Jar (外部 Jar の追加)</strong> ] をクリックしてから Crittercism JAR ファイルを追加します。</p>
+</section>
+</section>
+<section id="manifest">
+<h2>Manifest のセットアップ<a class="headerlink" href="#manifest" title="Permalink to this heading">¶</a></h2>
+<p>アプリの <code class="docutils literal notranslate"><span class="pre">AndroidManifest.xml</span></code> ファイルに次のパーミッションを追加します。</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">INTERNET</span></code></dt><dd><p><strong>必須</strong> です。 データを Crittercism にレポートするのに使用します。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">ACCESS_NETWORK_STATE</span></code></dt><dd><p><strong>オプション</strong> です。キャリア <em>やネットワーク</em> タイプといったネットワーク接続情報を提供できます。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">GET_TASKS</span></code></dt><dd><p><strong>オプション</strong> です。クラッシュ時に実行していたアクティビティに関する情報のクラッシュ・レポートを増強できます。</p>
+</dd>
+</dl>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;manifest</span><span class="w"> </span><span class="na">android:versionCode=</span><span class="s">&quot;3&quot;</span>
+<span class="w">    </span><span class="na">android:versionName=</span><span class="s">&quot;1.0&quot;</span>
+<span class="w">    </span><span class="na">package=</span><span class="s">&quot;com.crittercism.demo&quot;</span>
+<span class="w">    </span><span class="na">xmlns:android=</span><span class="s">&quot;http://schemas.android.com/apk/res/android&quot;</span><span class="nt">&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;uses-permission</span><span class="w"> </span><span class="na">android:name=</span><span class="s">&quot;android.permission.INTERNET&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;uses-permission</span><span class="w"> </span><span class="na">android:name=</span><span class="s">&quot;android.permission.ACCESS_NETWORK_STATE&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;uses-permission</span><span class="w"> </span><span class="na">android:name=</span><span class="s">&quot;android.permission.GET_TASKS&quot;</span><span class="nt">/&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;application</span><span class="w"> </span><span class="na">android:icon=</span><span class="s">&quot;@drawable/icon&quot;</span>
+<span class="w">        </span><span class="na">android:label=</span><span class="s">&quot;@string/app_name&quot;</span><span class="w"> </span><span class="na">android:name=</span><span class="s">&quot;.DemoApp&quot;</span><span class="nt">&gt;</span>
+
+<span class="w">        </span><span class="nt">&lt;activity</span><span class="w"> </span><span class="na">android:label=</span><span class="s">&quot;@string/app_name&quot;</span><span class="w"> </span><span class="na">android:name=</span><span class="s">&quot;.MainActivity&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;intent-filter&gt;</span>
+<span class="w">                </span><span class="nt">&lt;action</span><span class="w"> </span><span class="na">android:name=</span><span class="s">&quot;android.intent.action.MAIN&quot;</span><span class="nt">/&gt;</span>
+<span class="w">                </span><span class="nt">&lt;category</span><span class="w"> </span><span class="na">android:name=</span><span class="s">&quot;android.intent.category.LAUNCHER&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/intent-filter&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/activity&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;/application&gt;</span>
+<span class="nt">&lt;/manifest&gt;</span>
+</pre></div>
+</div>
+<p>これらパーミッションに関する詳細については、 <a class="reference external" href="http://developer.android.com/reference/android/Manifest.permission.html">Android Manifest のドキュメンテーション</a> を参照してください。</p>
+</section>
+<section id="crittercism">
+<span id="initialize-android-jp"></span><h2>Crittercism の初期化<a class="headerlink" href="#crittercism" title="Permalink to this heading">¶</a></h2>
+<p><em>初期化</em> とは、Crittercism と通信するためにアプリを編集するプロセスです。</p>
+<ol class="arabic simple">
+<li><p>このインポートと初期化は、コード内で一度だけ追加します。メイン アクティビティ (<code class="docutils literal notranslate"><span class="pre">android.intent.action.MAIN</span></code> インテント フィルタと同じアクティビティ) のトップに次のインポートを追加します。</p></li>
+</ol>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">com.crittercism.app.Crittercism</span><span class="p">;</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p><code class="docutils literal notranslate"><span class="pre">onCreate</span></code> アクティビティの始めのメイン スレッドで Crittercism を初期化します。</p></li>
+</ol>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Crittercism</span><span class="p">.</span><span class="na">initialize</span><span class="p">(</span><span class="n">getApplicationContext</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;CRITTERCISM_APP_ID&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Android アプリを構築します。</p></li>
+</ol>
+<p>これで Android アプリが Crittercism と統合されました。他の機能を使用するには、プロジェクトにさらにコードを追加する必要があります。</p>
+</section>
+<section id="proguard">
+<span id="symbolicate-android-jp"></span><h2>Proguard シンボリケーションの設定<a class="headerlink" href="#proguard" title="Permalink to this heading">¶</a></h2>
+<p>デバッグ シンボルが削除されているアプリの場合、 <em>シンボリケーション</em> とはシンボルをマッピングしてスタック トレースを人間が読める形態に翻訳することを言います。
+Crittercism では、自動的なサーバー側のシンボリケーションを提供しており、ユーザーがアプリのシンボル ファイルを提供する必要があります。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>本セクションに記載されている手順は、アプリを <a class="reference external" href="http://developer.android.com/tools/help/proguard.html">Android Proguard</a> を使って難読化する場合にのみ従ってください。
+そうでない場合には、本セクションは無視してください。</p>
+</div>
+<p>Android アプリケーションの場合、開発者には ProGuard ツールを使って関数名を難読化し、アプリ サイズを小さくして他者がアプリ ソースをリバース
+エンジニアリングできないようにするというオプションがあります。難読化された名前を人間が読める名前に置き換えるため、開発者は Proguard マッピング ファイルを使用します。</p>
+<section id="id2">
+<h3>ProGuard のセットアップ<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h3>
+<p>1.Crittercism を使ってプロジェクトを構築するには、Crittercism JAR をプロジェクトの <code class="docutils literal notranslate"><span class="pre">libs/</span></code> ディレクトリ内に配置します。</p>
+<p>2.プロジェクトの <code class="docutils literal notranslate"><span class="pre">proguard.cfg</span></code> ファイルに次の行を追加します。</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>-keep public class com.crittercism.**
+-keepclassmembers public class com.crittercism.*
+{
+    *;
+}
+</pre></div>
+</div>
+<p>3.行番号情報をを取得するには、ファイル名と行番号を必ず ProGuard <code class="docutils literal notranslate"><span class="pre">.cfg</span></code> 設定ファイル内に維持してください。</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">keepattributes</span><span class="w"> </span><span class="n">SourceFile</span><span class="p">,</span><span class="w"> </span><span class="n">LineNumberTable</span>
+</pre></div>
+</div>
+<p>この情報は、シンボリケーションされていないものまですべてのスタックトレースで見えるようになります。</p>
+</section>
+<section id="mapping-txt">
+<span id="proguard-upload-jp"></span><h3>mapping.txt ファイルのアップロード<a class="headerlink" href="#mapping-txt" title="Permalink to this heading">¶</a></h3>
+<p>クラッシュが自動的にシンボリケーションされるようにするには、 <code class="docutils literal notranslate"><span class="pre">mapping.txt</span></code> ファイルを [App Settings (アプリの設定)] ページでアップロードする必要があります。</p>
+<p>アップロードする各 <code class="docutils literal notranslate"><span class="pre">mapping.txt</span></code> ファイルは、アプリのバージョンに関連付けられます。各 mapping.txt ファイルは、1 つのバージョンのみに対するクラッシュをシンボリケーションします。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>バージョンに合った正しいファイルをアップロードするように注意してください！ 誤ったファイルをアップロードすると、 違うスタックトレースが取得されることがあります。
+誤ってバージョンに合っていない <code class="docutils literal notranslate"><span class="pre">mapping.txt</span></code> をアップロードしてしまった場合には、 そのファイルを削除してもう一度正しいファイルをアップロードしてください。</p>
+</div>
+<p>次のコマンドを使用して Crittercism サーバーに Proguard マッピング ファイルをアップロードします。</p>
+<p><strong>構文</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span><span class="s2">&quot;https://app.crittercism.com/api_beta/proguard/&lt;app_id&gt;&quot;</span><span class="w"> </span>-F<span class="w"> </span><span class="nv">proguard</span><span class="o">=</span>@<span class="s2">&quot;&lt;path/to/proguard-mapping.txt&gt;&quot;</span><span class="w"> </span>-F<span class="w"> </span><span class="nv">app_version</span><span class="o">=</span><span class="s2">&quot;app-version-name&quot;</span><span class="w"> </span>-F<span class="w"> </span><span class="nv">key</span><span class="o">=</span>&lt;key&gt;
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Specify the “&#64;” symbol when using this command.</p>
+</div>
+<p><strong>引数</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>名前</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">app_id</span></code></p></td>
+<td><p>アプリケーション ID。</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">path</span></code></p></td>
+<td><p>proguard-mapping.txt ファイルへのパス。</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">app-version-name</span></code></p></td>
+<td><p>アプリ バージョン名。</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">key</span></code></p></td>
+<td><p>キー。</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>戻り値</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>コード</p></th>
+<th class="head"><p>意味</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">200</span></code></p></td>
+<td><p>成功しました。</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">400</span></code></p></td>
+<td><p>指定した proguard ファイルに問題があります。HTML 応答本文が問題を説明します。</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">404</span></code></p></td>
+<td><p>アプリが見つからないか、トークンが正しくありません。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">CrittercismConfig</span></code> インスタンス内でカスタマイズされたアプリ バージョン名を設定した場合には、その文字列を使用し <code class="docutils literal notranslate"><span class="pre">app-version-name</span></code> 内のマニフェスト文字列は使用しないでください。また、アプリ バージョン内にアプリ バージョン コードを含む場合には、そのコードも <code class="docutils literal notranslate"><span class="pre">app-version-name</span></code> に含めます。</p>
+</div>
+<section id="id3">
+<h4>ビルド ファイルへのコマンドの追加<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h4>
+<p>ビルド ファイルに別のステップを挿入すると次の例に基づいてコマンドが実行できます。詳細については、Crittercism API ドキュメントを参照してください。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span><span class="s2">&quot;https://app.crittercism.com/api_beta/proguard/&lt;app_id&gt;&quot;</span><span class="w"> </span>-F<span class="w"> </span><span class="nv">proguard</span><span class="o">=</span>@<span class="s2">&quot;&lt;path/to/proguard-mapping.txt&gt;&quot;</span><span class="w"> </span>-F
+<span class="nv">app_version</span><span class="o">=</span><span class="s2">&quot;app-version-name&quot;</span><span class="w"> </span>-F<span class="w"> </span><span class="nv">key</span><span class="o">=</span>&lt;key&gt;
+</pre></div>
+</div>
+<p>Crittercism は Jenkins (人気のあるビルド システム) のプラグインを提供しており、Jenkins が作成した シンボル ファイルを自動的にアップロードします。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>この時点で、Crittercism はアプリケーションからアプリケーション パフォーマンス情報を受信できるようになっており、ビルド環境は Crittercism に自動的にシンボル ファイルを提供するようにセットアップされています。</p>
+</div>
+</section>
+</section>
+</section>
+<section id="android-ndk">
+<span id="symbolicate-android-ndk-jp"></span><h2>Android NDK シンボリケーションの設定<a class="headerlink" href="#android-ndk" title="Permalink to this heading">¶</a></h2>
+<p>デバッグ シンボルが削除されているアプリの場合、 <em>シンボリケーション</em> とはシンボルをマッピングしてスタック トレースを人間が読める形態に翻訳することを言います。
+Crittercism では、自動的なサーバー側のシンボリケーションを提供しており、ユーザーがアプリのシンボル ファイルを提供する必要があります。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>本セクションの手順は、Android NDK アプリがあり、NDK クラッシュ レポートが有効になっている場合にのみ従ってください。
+そうでない場合には、本セクションは無視してください。</p>
+</div>
+<p>NDK クラッシュ レポートを使用する Android NDK アプリケーションの場合、開発者は デバッグ文字を含むシンボル (.so) ファイルをアップロードしてスタック トレースを読むことができるテキストに変換することができます。</p>
+<section id="id4">
+<h3>コンソールを使ったシンボルのアップロード<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h3>
+<p>シンボルは、コンソールやターミナルを使ってアップロードできます。[App Settings (アプリ設定)] の [ <strong>Upload NDK Symbols (NDK シンボルのアップロード)</strong> ] タブの下に表示されるアプリの設定ページを参照してください。</p>
+<ol class="arabic simple">
+<li><p>ルート アプリケーション ディレクトリに移動します。</p></li>
+<li><p>Android プロジェクトで <code class="docutils literal notranslate"><span class="pre">obj</span></code> ディレクトリを zip で圧縮します。</p></li>
+<li><p>zip アーカイブをドロップ ボックス ([App Settings (アプリ設定)] の [ <strong>Upload NDK Symbols (NDK シンボルのアップロード)</strong> ] タブの下) にドラッグして NDK シンボルをアップロードします。200 OK とレポートが返ってシンボルをアップロードしたライブラリがどれか表示されるか、エラーがレポートされます。</p></li>
+<li><p>クラッシュ レポートへ移動して [ <strong>Add to Symbolication Queue (シンボリケーション キューに追加)</strong> ] をクリックします。</p></li>
+</ol>
+<p>これらのステップを完了すると、シンボリケーションしたネイティブ クラッシュが表示できるようになります。
+その後、そのビルドからのクラッシュは自動的にシンボリケーションされるようになります。</p>
+</section>
+<section id="ndk-symbol-upload-jp">
+<span id="id5"></span><h3>コマンドを使ったシンボルのアップロード<a class="headerlink" href="#ndk-symbol-upload-jp" title="Permalink to this heading">¶</a></h3>
+<p>次のコマンドを使用して Crittercism サーバーに NDK シンボル ファイルをアップロードすることもできます。</p>
+<p><strong>構文</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span><span class="s2">&quot;https://app.crittercism.com/api_beta/ndksym/&lt;app_id&gt;&quot;</span><span class="w"> </span>-F<span class="w"> </span><span class="nv">ndksym</span><span class="o">=</span>@<span class="s2">&quot;&lt;path/to/ndksym.so.zip&gt;&quot;</span><span class="w"> </span>-F<span class="w"> </span><span class="nv">key</span><span class="o">=</span>&lt;key&gt;
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Specify the “&#64;” symbol when using this command.</p>
+</div>
+<p><strong>引数</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>名前</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">app_id</span></code></p></td>
+<td><p>アプリケーション ID。</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">path</span></code></p></td>
+<td><p>ndksym.so.zip ファイルへのパス。</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">key</span></code></p></td>
+<td><p>キー。</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>戻り値</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>コード</p></th>
+<th class="head"><p>意味</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">200</span></code></p></td>
+<td><p>成功しました。</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">400</span></code></p></td>
+<td><p>指定した NDK シンボル ファイルに問題があります。HTML 応答本文がファイルの問題を説明します。</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">404</span></code></p></td>
+<td><p>アプリが見つからないか、トークンが正しくありません。</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="breadcrumbs-android-jp">
+<span id="id6"></span><h2>ブレッドクラムのロギング<a class="headerlink" href="#breadcrumbs-android-jp" title="Permalink to this heading">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">leaveBreadcrumb</span></code> API を使用して、
+クラッシュや処理される例外と共にレポートされる時系列ログに書き込みます。</p>
+<p>以下はブレッドクラムの残し方例です。</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Crittercism</span><span class="p">.</span><span class="na">leaveBreadcrumb</span><span class="p">(</span><span class="s">&quot;User tapped a button&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="handled-exceptions-android-jp">
+<span id="id7"></span><h2>処理される例外のロギング<a class="headerlink" href="#handled-exceptions-android-jp" title="Permalink to this heading">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">logHandledException</span></code> API を使用して、必ずしもクラッシュを生じるわけではないエラー条件を追跡します。</p>
+<p>処理される例外を使用すると、 <code class="docutils literal notranslate"><span class="pre">try</span></code>/<code class="docutils literal notranslate"><span class="pre">catch</span></code> ブロック内に閉じ込められた例外を追跡したり、第三者製の SDK をテストしたり、現在アサーションを使用している可能性のあるコード内のエリアをモニタしたりすることができます。処理される例外は、メモリ低下警告などのエラー イベントの追跡にも使用できます。詳細については、 <a class="reference internal" href="overview.html#handled-exceptions-jp"><span class="std std-ref">処理される例外</span></a> を参照してください。</p>
+<p>処理される例外は、クラッシュ レポートとほぼ同じようにスタックトレースごとにグループ分けされます。
+また、Crittercism ポータルの Handled Exceptions 処理される例外 エリアで表示できます。</p>
+<p>以下は処理される例外のロギング例です。</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Exception</span><span class="p">(</span><span class="s">&quot;Exception Reason&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">exception</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Crittercism</span><span class="p">.</span><span class="na">logHandledException</span><span class="p">(</span><span class="n">exception</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>処理される例外のロギングは、毎分 1 回に制限されています。直近 1 分以内に例外をログした場合には、それまでに発生した 5 回の例外をバッファし、1 分後にそれを送信します。</p>
+</div>
+</section>
+<section id="metadata-android-jp">
+<span id="id8"></span><h2>ユーザー メタデータのロギング<a class="headerlink" href="#metadata-android-jp" title="Permalink to this heading">¶</a></h2>
+<p>開発者は、個々のユーザーに関する情報を追跡するようにユーザーのメタデータを設定できます。
+詳細については、 <a class="reference internal" href="overview.html#user-metadata-jp"><span class="std std-ref">ユーザー メタデータ</span></a> を参照してください。</p>
+<section id="id9">
+<h3>ユーザー名の追加<a class="headerlink" href="#id9" title="Permalink to this heading">¶</a></h3>
+<p>ユーザー名を設定すると、各ユーザーのアプリ パフォーマンスがモニタできるようになります。
+いったんユーザー名を設定すると、Crittercism ポータルの「Userviews (ユーザー検索)」機能Zを使用して特定のユーザーに発生したクラッシュやエラーのリストを検索できるようになります。
+ユーザー名は、カスタマー サポート システムに関連付けられるような値に設定することを推奨します。</p>
+<p>以下はユーザー名の設定例です。</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Crittercism</span><span class="p">.</span><span class="na">setUsername</span><span class="p">(</span><span class="s">&quot;MommaCritter&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>1 から 32 文字までの文字列が有効な入力となります。</p>
+</div>
+</section>
+</section>
+<section id="other-android-jp">
+<span id="id10"></span><h2>その他のタスク<a class="headerlink" href="#other-android-jp" title="Permalink to this heading">¶</a></h2>
+<p>本セクションは、その他のオプションのタスクを説明します。</p>
+<section id="crash-android-jp">
+<span id="id11"></span><h3>クラッシュ レポートの向上<a class="headerlink" href="#crash-android-jp" title="Permalink to this heading">¶</a></h3>
+<p><em>クラッシュ</em> とは、ユーザーのセッションを終了させる予期しないイベントによって発生するランタイム例外のことを言います。
+クラッシュは <code class="docutils literal notranslate"><span class="pre">try</span></code>/<code class="docutils literal notranslate"><span class="pre">catch</span></code> ブロック内では処理されません。詳細については、 <a class="reference internal" href="overview.html#crash-jp"><span class="std std-ref">クラッシュ レポート (未処理例外)</span></a> を参照してください。</p>
+<p>アプリがその前のセッションでクラッシュしたかどうかを判断するには、次のようにして非同期要求を出します。</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">com.crittercism.app.Crittercism</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.crittercism.app.CritterCallback</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.crittercism.app.CritterUserData</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.crittercism.app.CritterUserDataRequest</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">android.os.Bundle</span><span class="p">;</span>
+
+<span class="nd">@Override</span><span class="w"> </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onCreate</span><span class="p">(</span><span class="n">Bundle</span><span class="w"> </span><span class="n">savedInstanceState</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Crittercism</span><span class="p">.</span><span class="na">initialize</span><span class="p">(</span><span class="n">getApplicationContext</span><span class="p">(),</span>
+<span class="w">        </span><span class="s">&quot;&lt;CRITTERCISM_APP_ID&gt;&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">crittercismConfig</span><span class="p">);</span>
+<span class="w">    </span><span class="n">someMethodInMyCode</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">someMethodInMyCode</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Instantiate callback object.</span>
+<span class="w">    </span><span class="n">CritterCallback</span><span class="w"> </span><span class="n">cb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CritterCallback</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// CritterCallback is an interface that requires you to implement</span>
+<span class="w">        </span><span class="c1">// onCritterDataReceived(CritterUserData).</span>
+<span class="w">        </span><span class="nd">@Override</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onCritterDataReceived</span><span class="p">(</span><span class="n">CritterUserData</span><span class="w"> </span><span class="n">userData</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">boolean</span><span class="w"> </span><span class="n">crashedOnLastLoad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">userData</span><span class="p">.</span><span class="na">crashedOnLastLoad</span><span class="p">();</span>
+<span class="w">            </span><span class="c1">// ...do something with crashedOnLastLoad</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">};</span>
+
+<span class="c1">// Instantiate data request object, and specify that it should include</span>
+<span class="c1">// information on whether the previous app session crashed.</span>
+
+<span class="n">CritterUserDataRequest</span><span class="w"> </span><span class="n">request</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CritterUserDataRequest</span><span class="p">(</span><span class="n">cb</span><span class="p">)</span>
+<span class="w">                                   </span><span class="p">.</span><span class="na">requestDidCrashOnLastLoad</span><span class="p">();</span>
+
+<span class="c1">// Fire off the request.</span>
+<span class="n">request</span><span class="p">.</span><span class="na">makeRequest</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>必ず <code class="docutils literal notranslate"><span class="pre">requestDidCrashOnLastLoad()</span></code> を呼び出すようにしてください。これを呼び出さない場合、ログに警告が表示され、 <code class="docutils literal notranslate"><span class="pre">false</span></code> の値が返されます。</p>
+</div>
+</section>
+<section id="net-stats-android-jp">
+<span id="id12"></span><h3>サービス モニタリングの設定<a class="headerlink" href="#net-stats-android-jp" title="Permalink to this heading">¶</a></h3>
+<p>アプリがネットワーク呼び出しを行うと、Crittercism は必ず特定の情報を自動的にモニタし、キャプチャします。
+フィルタリングや位置詳細はオプションで設定できます。詳細については、 <a class="reference internal" href="overview.html#net-stats-jp"><span class="std std-ref">サービス モニタリング</span></a> を参照してください。</p>
+<p>Crittercism を有効にすると、 <code class="docutils literal notranslate"><span class="pre">java.net.HttpURLConnection</span></code> または <code class="docutils literal notranslate"><span class="pre">org.apache.http.impl.client.DefaultHttpClient</span></code> のいずれかによって生成される HTTP トラフィックのパフォーマンスがモニタされます。ネットワーク パフォーマンス モニタリングをオンにするための操作は必要ありません。通常通り Crittercism を初期化するだけです。</p>
+<section id="id13">
+<h4>キャプチャしたデータのフィルタリング<a class="headerlink" href="#id13" title="Permalink to this heading">¶</a></h4>
+<p>要求の実際の内容が検閲されることはもちろん絶対にありませんが、Crittercism ウェブ ポータルに表示したくない URL があることもあります。デフォルトでは、Crittercism に送信される前にクエリ パラメーターからはすべての URL が消去されます。たとえば、 <code class="docutils literal notranslate"><span class="pre">www.yoururl.com/login?secret=foobar</span></code> という URL は <code class="docutils literal notranslate"><span class="pre">www.yoururl.com/login</span></code> とレポートされます。この動作を回避する方法は、以下のセクションの「特定の URL に対するクエリ パラメーターの維持」を参照してください。</p>
+<section id="url">
+<h5>URL のブラックリスト<a class="headerlink" href="#url" title="Permalink to this heading">¶</a></h5>
+<p>URL のブラックリスト機能を使用すると、慎重に扱うべき URL がネットワーク機器によってキャプチャされないようにすることができます。Crittercism にモニタされたくない URL に対し、 <code class="docutils literal notranslate"><span class="pre">CrittercismConfiguration</span></code> オブジェクトを <code class="docutils literal notranslate"><span class="pre">setURLBlacklistPatterns()</span></code> に使用します。この設定オプションは、Crittercism の初期化時に設定する必要があります。</p>
+<p><code class="docutils literal notranslate"><span class="pre">setURLBlacklistPatterns()</span></code> メソッドは、 <code class="docutils literal notranslate"><span class="pre">String</span></code> オブジェクトの <code class="docutils literal notranslate"><span class="pre">List</span></code> を使用してライブラリがキャプチャした URL と一致させます。URL の中に入力 <code class="docutils literal notranslate"><span class="pre">String</span></code> が含まれている場合、その URL は Crittercism にレポートされません。</p>
+<p>例:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">urlBlacklistPatterns</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="n">urlBlacklistPatterns</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;blacklisted_url&quot;</span><span class="p">);</span>
+
+<span class="n">CrittercismConfig</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CrittercismConfig</span><span class="p">();</span>
+<span class="n">config</span><span class="p">.</span><span class="na">setURLBlacklistPatterns</span><span class="p">(</span><span class="n">urlBlacklistPatterns</span><span class="p">);</span>
+
+<span class="n">Crittercism</span><span class="p">.</span><span class="na">initialize</span><span class="p">(</span><span class="n">getApplicationContext</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;&lt;CRITTERCISM_APP_ID&gt;&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">config</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="id14">
+<h5>特定の URL に対するクエリ パラメータの維持<a class="headerlink" href="#id14" title="Permalink to this heading">¶</a></h5>
+<p>上記に記述したように、URL は Crittercism に送信される前にクエリ パラメーターから消去されます。ただし、特定の URL に対してはクエリ パラメーターを維持しておく方がいいこともあります。特定の URL に対してクエリ パラメーターが消去されないようにするには、Crittercism の初期化時に <code class="docutils literal notranslate"><span class="pre">CrittercismConfiguration</span></code> オブジェクトを使って URL パターンのリストを提供することができます。
+パターンのリストを設定するには、 <code class="docutils literal notranslate"><span class="pre">setPreserveQueryStringPatterns(List&lt;String&gt;</span> <span class="pre">urlPatterns)</span></code> を呼び出します。</p>
+<p><code class="docutils literal notranslate"><span class="pre">setPreserveQueryStringPatterns()</span></code> に提供されるパターンのリストは、そのパターンが URL の部分文字列かどうかをチェックして URL と照合されます。</p>
+<p>例:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">preserveQueryPatterns</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="n">preserveQueryPatterns</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;mysite.com&quot;</span><span class="p">);</span>
+
+<span class="n">CrittercismConfig</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CrittercismConfig</span><span class="p">();</span>
+<span class="n">config</span><span class="p">.</span><span class="na">setPreserveQueryStringPatterns</span><span class="p">(</span><span class="n">preserveQueryPatterns</span><span class="p">);</span>
+
+<span class="n">Crittercism</span><span class="p">.</span><span class="na">initialize</span><span class="p">(</span><span class="n">getApplicationContext</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;&lt;CRITTERCISM_APP_ID&gt;&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">config</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id15">
+<h4>位置の更新<a class="headerlink" href="#id15" title="Permalink to this heading">¶</a></h4>
+<p>Crittercism パフォーマンス モニタリングでは、位置情報をネットワーク データに関連付けられるようになりました。デフォルトでは、位置情報は IP の逆引きで取得されます。ライブラリ バージョン 4.2.0 からは、 <code class="docutils literal notranslate"><span class="pre">android.location.LocationManager.NETWORK_PROVIDER</span></code> または <code class="docutils literal notranslate"><span class="pre">android.location.LocationManager.GPS_PROVIDER</span></code> によって提供されるデータで位置情報を更新するオプションがあります。これにより、さらに正確なデータをサーバーに送信できます。Android 開発者ガイドで説明されているように、ネットワークや GPS プロバイダーから位置更新情報を受信するには、 <code class="docutils literal notranslate"><span class="pre">AndroidManifest.xml</span></code> ファイルに <code class="docutils literal notranslate"><span class="pre">ACCESS_COARSE_LOCATION</span></code> または <code class="docutils literal notranslate"><span class="pre">ACCESS_FINE_LOCATION</span></code> パーミッションを含む必要があります。</p>
+<p>位置情報を更新するには、次のコード例で示すように <code class="docutils literal notranslate"><span class="pre">Crittercism.updateLocation(Location)</span></code> 呼び出しを使用します。</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">com.crittercism.app.Crittercism</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">android.content.Context</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">android.os.Bundle</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">android.location.Location</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">android.location.LocationListener</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">android.location.LocationManager</span><span class="p">;</span>
+
+<span class="nd">@Override</span><span class="w"> </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onCreate</span><span class="p">(</span><span class="n">Bundle</span><span class="w"> </span><span class="n">savedInstanceState</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Crittercism</span><span class="p">.</span><span class="na">initialize</span><span class="p">(</span><span class="n">getApplicationContext</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;&lt;CRITTERCISM_APP_ID&gt;&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">startLocationTracking</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">startLocationTracking</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Based on code sample in the Android Developer Guide: Location Strategies.</span>
+<span class="w">    </span><span class="c1">// See http://developer.android.com/guide/topics/location/strategies.html for</span>
+<span class="w">    </span><span class="c1">// more info.</span>
+
+<span class="w">    </span><span class="n">LocationManager</span><span class="w"> </span><span class="n">locationManager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">LocationManager</span><span class="p">)</span><span class="w"> </span><span class="n">getSystemService</span><span class="p">(</span><span class="n">Context</span><span class="p">.</span><span class="na">LOCATION_SERVICE</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">LocationListener</span><span class="w"> </span><span class="n">locationListener</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">LocationListener</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onLocationChanged</span><span class="p">(</span><span class="n">Location</span><span class="w"> </span><span class="n">location</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// Update most recent location in Crittercism.</span>
+<span class="w">            </span><span class="n">Crittercism</span><span class="p">.</span><span class="na">updateLocation</span><span class="p">(</span><span class="n">location</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onStatusChanged</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">provider</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">status</span><span class="p">,</span><span class="w"> </span><span class="n">Bundle</span><span class="w"> </span><span class="n">extras</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// Do something.</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onProviderEnabled</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">provider</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// Do something.</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onProviderDisabled</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">provider</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// Do something.</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">};</span>
+
+<span class="w">    </span><span class="c1">// Request location updates through the GPS tracker. You can also use LocationManager.NETWORK_PROVIDER</span>
+<span class="w">    </span><span class="c1">// to get location information from cell towers and Wifi.</span>
+<span class="w">    </span><span class="c1">// NOTE: Don&#39;t forget to include either the ACCESS_COARSE_LOCATION or ACCESS_FINE_LOCATION permission</span>
+<span class="w">    </span><span class="c1">// in your AndroidManifest.xml file!!)</span>
+<span class="w">    </span><span class="n">locationManager</span><span class="p">.</span><span class="na">requestLocationUpdates</span><span class="p">(</span><span class="n">LocationManager</span><span class="p">.</span><span class="na">GPS_PROVIDER</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">locationListener</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="opt-out-android-jp">
+<span id="id16"></span><h3>ユーザーに対する Crittercism からのオプトアウトの許可<a class="headerlink" href="#opt-out-android-jp" title="Permalink to this heading">¶</a></h3>
+<p>Crittercism では、Crittercismへのあらゆるアプリのレポートを無効にするスタティック型のオプトアウト ステータス設定があります。
+開発者は、ユーザーに Crittercism のロギングとレポートからオプトアウトするかどうかを尋ねるコードを実装し、その後ステータスを変更する <code class="docutils literal notranslate"><span class="pre">setOptOutStatus</span></code> を呼び出すことができます。また、 <code class="docutils literal notranslate"><span class="pre">requestOptOutStatus</span></code> を呼び出して現在のステータス設定を判断することもできます。詳細については、 <a class="reference internal" href="overview.html#opt-out-jp"><span class="std std-ref">Crittercism からのオプトアウト</span></a> を参照してください。</p>
+<p>ユーザーをオプトアウトするには、次の API 呼び出しを使用します。</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">boolean</span><span class="w"> </span><span class="n">optOutStatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="n">Crittercism</span><span class="p">.</span><span class="na">setOptOutStatus</span><span class="p">(</span><span class="n">optOutStatus</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>また、現在のユーザーのオプトアウト ステータスを取得してユーザーが Crittercism からオプトアウトしたかどうかを判断することもできます。次のようにして非同期要求を行います。</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">com.crittercism.app.Crittercism</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.crittercism.app.CritterCallback</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.crittercism.app.CritterUserData</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.crittercism.app.CritterUserDataRequest</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">android.os.Bundle</span><span class="p">;</span>
+
+<span class="nd">@Override</span><span class="w"> </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onCreate</span><span class="p">(</span><span class="n">Bundle</span><span class="w"> </span><span class="n">savedInstanceState</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Crittercism</span><span class="p">.</span><span class="na">initialize</span><span class="p">(</span><span class="n">getApplicationContext</span><span class="p">(),</span>
+<span class="w">        </span><span class="s">&quot;&lt;CRITTERCISM_APP_ID&gt;&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">crittercismConfig</span><span class="p">);</span>
+<span class="w">    </span><span class="n">someMethodInMyCode</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">someMethodInMyCode</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Instantiate callback object.</span>
+<span class="w">    </span><span class="n">CritterCallback</span><span class="w"> </span><span class="n">cb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CritterCallback</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// CritterCallback is an interface that requires you to implement</span>
+<span class="w">        </span><span class="c1">// onCritterDataReceived(CritterUserData).</span>
+<span class="w">        </span><span class="nd">@Override</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onCritterDataReceived</span><span class="p">(</span><span class="n">CritterUserData</span><span class="w"> </span><span class="n">userData</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">boolean</span><span class="w"> </span><span class="n">isOptedOut</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">userData</span><span class="p">.</span><span class="na">isOptedOut</span><span class="p">();</span>
+<span class="w">            </span><span class="c1">// ...do something with isOptedOut</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">};</span>
+
+<span class="w">    </span><span class="c1">// Instantiate data request object, and specify that it should include</span>
+<span class="w">    </span><span class="c1">// information on whether the has opted out.</span>
+<span class="w">    </span><span class="n">CritterUserDataRequest</span><span class="w"> </span><span class="n">request</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CritterUserDataRequest</span><span class="p">(</span><span class="n">cb</span><span class="p">)</span>
+<span class="w">                                            </span><span class="p">.</span><span class="na">requestOptOutStatus</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// Fire off the request.</span>
+<span class="w">    </span><span class="n">request</span><span class="p">.</span><span class="na">makeRequest</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="rate-my-app">
+<h3>Rate My App<a class="headerlink" href="#rate-my-app" title="Permalink to this heading">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ライブラリ バージョン 3.2.0 以降でサポートされています。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>この機能は、API レベル 5 以上でのみ動作します。</p>
+</div>
+<p>[App Settings (アプリ設定)] で Rate App Alert (アプリ評価アラート) を有効にした場合は、Crittercism ライブラリがサーバーの指定に従って Rate My App アラートの設定を受信し、処理します。Rate My App アラートを有効にし、サーバーの設定に従って動作するようにするには、次の 2 つのステップが必要です。</p>
+<ol class="arabic simple">
+<li><p>[Rate My App (アプリ評価)] アラート ダイアログが表示されているかどうかを確認します。</p></li>
+</ol>
+<p>#.アラート ダイアログを作成し、表示します。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ライブラリ バージョン 3.2.0 以降でサポートされています。</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>ライブラリの UI エレメントを正しく処理するのは複雑なため、Crittercism ライブラリは実際には AlertDialog を表示しません。 <code class="docutils literal notranslate"><span class="pre">onPause()</span></code> イベント中のダイアログの表示やその終了は、開発者の責任で行ってください。</p>
+</div>
+<p>最初のステップ (ダイアログが表示されるかどうかの確認) を実施するには、初期化後に次のように非同期要求を行います。</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">com.crittercism.app.Crittercism</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.crittercism.app.CritterCallback</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.crittercism.app.CritterUserData</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.crittercism.app.CritterUserDataRequest</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">android.os.Bundle</span><span class="p">;</span>
+
+<span class="nd">@Override</span><span class="w"> </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onCreate</span><span class="p">(</span><span class="n">Bundle</span><span class="w"> </span><span class="n">savedInstanceState</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Crittercism</span><span class="p">.</span><span class="na">initialize</span><span class="p">(</span><span class="n">getApplicationContext</span><span class="p">(),</span>
+<span class="w">        </span><span class="s">&quot;&lt;CRITTERCISM_APP_ID&gt;&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">crittercismConfig</span><span class="p">);</span>
+<span class="w">    </span><span class="n">someMethodInMyCode</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">someMethodInMyCode</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Instantiate callback object.</span>
+<span class="w">    </span><span class="n">CritterCallback</span><span class="w"> </span><span class="n">cb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CritterCallback</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// CritterCallback is an interface that requires you to implement</span>
+<span class="w">        </span><span class="c1">// onCritterDataReceived(CritterUserData).</span>
+<span class="w">        </span><span class="nd">@Override</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onCritterDataReceived</span><span class="p">(</span><span class="n">CritterUserData</span><span class="w"> </span><span class="n">userData</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">boolean</span><span class="w"> </span><span class="n">shouldShowRateMyAppAlert</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">userData</span><span class="p">.</span><span class="na">shouldShowRateMyAppAlert</span><span class="p">();</span>
+<span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">userData</span><span class="p">.</span><span class="na">getRateMyAppTitle</span><span class="p">();</span>
+<span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">userData</span><span class="p">.</span><span class="na">getRateMyAppMessage</span><span class="p">();</span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">shouldShowRateMyAppAlert</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="c1">// ...send title and message to some code that will generate the</span>
+<span class="w">                </span><span class="c1">// AlertDialog.</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">};</span>
+
+<span class="w">    </span><span class="c1">// Instantiate data request object, and specify that it should include</span>
+<span class="w">    </span><span class="c1">// information for Rate My App.</span>
+<span class="w">    </span><span class="n">CritterUserDataRequest</span><span class="w"> </span><span class="n">request</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CritterUserDataRequest</span><span class="p">(</span><span class="n">cb</span><span class="p">)</span>
+<span class="w">                                            </span><span class="p">.</span><span class="na">requestRateMyAppInfo</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// Fire off the request.</span>
+<span class="w">    </span><span class="n">request</span><span class="p">.</span><span class="na">makeRequest</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">requestRateMyAppInfo()</span></code> を呼び出すのを忘れないようにしてください。これを忘れると、ログに複数の警告が表示され、 <code class="docutils literal notranslate"><span class="pre">CritterUserData.shouldShowRateMyAppAlert()</span></code> が false を返し、 <code class="docutils literal notranslate"><span class="pre">CritterUserData.getRateMyAppTitle()</span></code> および <code class="docutils literal notranslate"><span class="pre">CritterUserData.getRateMyAppMessage()</span></code> は null を返します。</p>
+<p>AlertDialog が表示されることがわかったら、Crittercism ライブラリには Goldilocks アプローチのようなもので AlertDialog を生成する方法が 2 つ用意されています。</p>
+<section id="id17">
+<h4>方法 1 (最も簡単な方法)<a class="headerlink" href="#id17" title="Permalink to this heading">¶</a></h4>
+<p>正しく呼び出せば、 <code class="docutils literal notranslate"><span class="pre">Crittercism.generateRateMyAppAlertDialog(Context)</span></code> が <code class="docutils literal notranslate"><span class="pre">AlertDialog</span></code> インスタンスを作成し、返します。正しく呼び出されない場合には null が返されます (API 呼び出しが null を返す状況については、コード例の下にある箇条書きを参照してください)。これで Handler オブジェクトにメッセージを送信して、AlertDialog を表示できます。</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">com.crittercism.app.Crittercism</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.crittercism.app.CritterCallback</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.crittercism.app.CritterUserData</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.crittercism.app.CritterUserDataRequest</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.crittercism.app.Crittercism</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">android.app.AlertDialog</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">android.os.Bundle</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">android.os.Handler</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">android.os.Looper</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">android.os.Message</span><span class="p">;</span>
+
+<span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">Handler</span><span class="w"> </span><span class="n">myHandler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AlertDialogHandler</span><span class="p">();</span>
+
+<span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AlertDialogHandler</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Handler</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ALERT_DIALOG_WHAT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">AlertDialog</span><span class="w"> </span><span class="n">ad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setAlertDialog</span><span class="p">(</span><span class="n">AlertDialog</span><span class="w"> </span><span class="n">ad</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="k">this</span><span class="p">.</span><span class="na">ad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ad</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">dismissAlertDialog</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">ad</span><span class="p">.</span><span class="na">dismiss</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="nd">@Override</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">handleMessage</span><span class="p">(</span><span class="n">Message</span><span class="w"> </span><span class="n">msg</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">msg</span><span class="p">.</span><span class="na">what</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="n">ALERT_DIALOG_WHAT</span><span class="p">:</span>
+<span class="w">            </span><span class="c1">// Ensure that Crittercism.generateRateMyAppAlertDialog(Context)</span>
+<span class="w">            </span><span class="c1">// did not return null.</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ad</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">ad</span><span class="p">.</span><span class="na">show</span><span class="p">();</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<span class="w">        </span><span class="k">default</span><span class="p">:</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<span class="w">       </span><span class="p">}</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nd">@Override</span><span class="w"> </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onCreate</span><span class="p">(</span><span class="n">Bundle</span><span class="w"> </span><span class="n">savedInstanceState</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Crittercism</span><span class="p">.</span><span class="na">initialize</span><span class="p">(</span><span class="n">getApplicationContext</span><span class="p">(),</span>
+<span class="w">        </span><span class="s">&quot;&lt;CRITTERCISM_APP_ID&gt;&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">crittercismConfig</span><span class="p">);</span>
+<span class="w">    </span><span class="n">someMethodInMyCode</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="nd">@Override</span><span class="w"> </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onPause</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Prevent window leaking by dismissing dialog.</span>
+<span class="w">    </span><span class="p">((</span><span class="n">AlertDialogHandler</span><span class="p">)</span><span class="n">myHandler</span><span class="p">).</span><span class="na">dismissAlertDialog</span><span class="p">();</span>
+<span class="w">    </span><span class="kd">super</span><span class="p">.</span><span class="na">onPause</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">someMethodInMyCode</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Instantiate callback object.</span>
+<span class="w">    </span><span class="n">CritterCallback</span><span class="w"> </span><span class="n">cb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CritterCallback</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// CritterCallback is an interface that requires you to implement</span>
+<span class="w">        </span><span class="c1">// onCritterDataReceived(CritterUserData).</span>
+<span class="w">        </span><span class="nd">@Override</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onCritterDataReceived</span><span class="p">(</span><span class="n">CritterUserData</span><span class="w"> </span><span class="n">userData</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">boolean</span><span class="w"> </span><span class="n">shouldShowRateMyAppAlert</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">userData</span><span class="p">.</span><span class="na">shouldShowRateMyAppAlert</span><span class="p">();</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">shouldShowRateMyAppAlert</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="c1">// Initialize the thread as a looper.</span>
+<span class="w">                </span><span class="n">Looper</span><span class="p">.</span><span class="na">prepare</span><span class="p">();</span>
+
+<span class="w">                </span><span class="c1">// Generate the alert dialog.</span>
+<span class="w">                </span><span class="c1">// IMPORTANT: you must pass in the *Activity* instance to</span>
+<span class="w">                </span><span class="c1">// generateRateMyAppAlertDialog(Context). If you attempt to pass</span>
+<span class="w">                </span><span class="c1">// in getApplicationContext(), the AlertDialog instance will not</span>
+<span class="w">                </span><span class="c1">// be created properly and the method will return null.</span>
+<span class="w">                </span><span class="p">((</span><span class="n">AlertDialogHandler</span><span class="p">)</span><span class="n">myHandler</span><span class="p">).</span><span class="na">setAlertDialog</span><span class="p">(</span>
+<span class="w">                    </span><span class="n">Crittercism</span><span class="p">.</span><span class="na">generateRateMyAppAlertDialog</span><span class="p">(</span><span class="n">MyActivity</span><span class="p">.</span><span class="na">this</span><span class="p">));</span>
+<span class="w">                </span><span class="n">myHandler</span><span class="p">.</span><span class="na">dispatchMessage</span><span class="p">(</span><span class="n">Message</span><span class="p">.</span><span class="na">obtain</span><span class="p">(</span><span class="n">myHandler</span><span class="p">,</span>
+<span class="w">                    </span><span class="n">AlertDialogHandler</span><span class="p">.</span><span class="na">ALERT_DIALOG_WHAT</span><span class="p">));</span>
+
+<span class="w">                </span><span class="n">Looper</span><span class="p">.</span><span class="na">loop</span><span class="p">();</span>
+<span class="w">                </span><span class="n">Looper</span><span class="p">.</span><span class="na">myLooper</span><span class="p">().</span><span class="na">quit</span><span class="p">();</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">};</span>
+
+<span class="w">    </span><span class="c1">// Instantiate data request object, and specify that it should include</span>
+<span class="w">    </span><span class="c1">// information for Rate My App.</span>
+<span class="w">    </span><span class="n">CritterUserDataRequest</span><span class="w"> </span><span class="n">request</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CritterUserDataRequest</span><span class="p">(</span><span class="n">cb</span><span class="p">)</span>
+<span class="w">                                            </span><span class="p">.</span><span class="na">requestRateMyAppInfo</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// Fire off the request.</span>
+<span class="w">    </span><span class="n">request</span><span class="p">.</span><span class="na">makeRequest</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>重要:この方法では、次のような場合に null が返ります。</p>
+</div>
+<ul class="simple">
+<li><p>デバイスが API レベル 5 以上で動作していない。</p></li>
+<li><p>サーバーで Rate App Alert が有効になっていない。</p></li>
+<li><p>呼び出しスレッドがルーパーとして初期化されていない (Looper.prepare() を呼び出していない)。</p></li>
+<li><p>activityContext に有効なアクティビティ インスタンスが提供されていない。</p></li>
+<li><p>ユーザーが Crittercism からオプトアウトしている。</p></li>
+<li><p>アプリケーション パッケージに対する有効な課金の文字列 (<code class="docutils literal notranslate"><span class="pre">&quot;com.amazon.venezia&quot;</span></code> など) がなく、かつ <code class="docutils literal notranslate"><span class="pre">CrittercismConfig.getRateMyAppTestTarget()</span></code> が null である。</p></li>
+</ul>
+<p>これらの条件いずれかが検出されると、ライブラリはログに適切な警告を出力します。AlertDialog を表示する前に、必ず null でないことを確認してください！！！</p>
+</section>
+<section id="id18">
+<h4>方法 2 (こちらも比較的簡単です)<a class="headerlink" href="#id18" title="Permalink to this heading">¶</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">Crittercism.generateRateMyAppAlertDialog(Context,</span> <span class="pre">String,</span> <span class="pre">String)</span></code> は、正しく呼び出せば AlertDialog インスタンスを作成し、返します。正しく呼び出されない場合には null が返されます (API 呼び出しが null を返す状況については、コード例の下にある箇条書きを参照してください)。これで Handler オブジェクトにメッセージを送信して、AlertDialog を表示できます。この方法は、国際化に関する問題に対しては有用となることがあります。</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">com.crittercism.app.Crittercism</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.crittercism.app.CritterCallback</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.crittercism.app.CritterUserData</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.crittercism.app.CritterUserDataRequest</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.crittercism.app.Crittercism</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">android.app.AlertDialog</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">android.os.Bundle</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">android.os.Handler</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">android.os.Looper</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">android.os.Message</span><span class="p">;</span>
+
+<span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">Handler</span><span class="w"> </span><span class="n">myHandler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AlertDialogHandler</span><span class="p">();</span>
+
+<span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AlertDialogHandler</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Handler</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ALERT_DIALOG_WHAT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">AlertDialog</span><span class="w"> </span><span class="n">ad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setAlertDialog</span><span class="p">(</span><span class="n">AlertDialog</span><span class="w"> </span><span class="n">ad</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">ad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ad</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">dismissAlertDialog</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">ad</span><span class="p">.</span><span class="na">dismiss</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">handleMessage</span><span class="p">(</span><span class="n">Message</span><span class="w"> </span><span class="n">msg</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">msg</span><span class="p">.</span><span class="na">what</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="n">ALERT_DIALOG_WHAT</span><span class="p">:</span>
+<span class="w">                </span><span class="c1">// Ensure that Crittercism.generateRateMyAppAlertDialog(Context, String, String)</span>
+<span class="w">                </span><span class="c1">// did not return null.</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ad</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">ad</span><span class="p">.</span><span class="na">show</span><span class="p">();</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">default</span><span class="p">:</span>
+<span class="w">               </span><span class="k">break</span><span class="p">;</span>
+<span class="w">           </span><span class="p">}</span>
+<span class="w">       </span><span class="p">}</span>
+
+<span class="p">}</span>
+
+<span class="nd">@Override</span><span class="w"> </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onCreate</span><span class="p">(</span><span class="n">Bundle</span><span class="w"> </span><span class="n">savedInstanceState</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Crittercism</span><span class="p">.</span><span class="na">initialize</span><span class="p">(</span><span class="n">getApplicationContext</span><span class="p">(),</span>
+<span class="w">        </span><span class="s">&quot;&lt;CRITTERCISM_APP_ID&gt;&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">crittercismConfig</span><span class="p">);</span>
+<span class="w">    </span><span class="n">someMethodInMyCode</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="nd">@Override</span><span class="w"> </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onPause</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Prevent window leaking by dismissing dialog.</span>
+<span class="w">    </span><span class="p">((</span><span class="n">AlertDialogHandler</span><span class="p">)</span><span class="n">myHandler</span><span class="p">).</span><span class="na">dismissAlertDialog</span><span class="p">();</span>
+<span class="w">    </span><span class="kd">super</span><span class="p">.</span><span class="na">onPause</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">someMethodInMyCode</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Instantiate callback object.</span>
+<span class="w">    </span><span class="n">CritterCallback</span><span class="w"> </span><span class="n">cb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CritterCallback</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// CritterCallback is an interface that requires you to implement</span>
+<span class="w">        </span><span class="c1">// onCritterDataReceived(CritterUserData).</span>
+<span class="w">        </span><span class="nd">@Override</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onCritterDataReceived</span><span class="p">(</span><span class="n">CritterUserData</span><span class="w"> </span><span class="n">userData</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">boolean</span><span class="w"> </span><span class="n">shouldShowRateMyAppAlert</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">userData</span><span class="p">.</span><span class="na">shouldShowRateMyAppAlert</span><span class="p">();</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">shouldShowRateMyAppAlert</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">String</span><span class="w"> </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">userData</span><span class="p">.</span><span class="na">getRateMyAppTitle</span><span class="p">();</span>
+<span class="w">                </span><span class="n">String</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">userData</span><span class="p">.</span><span class="na">getRateMyAppMessage</span><span class="p">();</span>
+<span class="w">                </span><span class="c1">// Initialize the thread as a looper.</span>
+<span class="w">                </span><span class="n">Looper</span><span class="p">.</span><span class="na">prepare</span><span class="p">();</span>
+
+<span class="w">                </span><span class="c1">// Generate the alert dialog.</span>
+<span class="w">                </span><span class="c1">// IMPORTANT: you must pass in the *Activity* instance to</span>
+<span class="w">                </span><span class="c1">// generateRateMyAppAlertDialog(Context, String, String). If you</span>
+<span class="w">                </span><span class="c1">// attempt to pass in getApplicationContext(), the AlertDialog</span>
+<span class="w">                </span><span class="c1">// instance will not be created properly and the method will return</span>
+<span class="w">                </span><span class="c1">// null.</span>
+<span class="w">                </span><span class="p">((</span><span class="n">AlertDialogHandler</span><span class="p">)</span><span class="n">myHandler</span><span class="p">).</span><span class="na">setAlertDialog</span><span class="p">(</span>
+<span class="w">                    </span><span class="n">Crittercism</span><span class="p">.</span><span class="na">generateRateMyAppAlertDialog</span><span class="p">(</span><span class="n">MyActivity</span><span class="p">.</span><span class="na">this</span><span class="p">,</span>
+<span class="w">                    </span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">message</span><span class="p">));</span>
+<span class="w">                </span><span class="n">myHandler</span><span class="p">.</span><span class="na">dispatchMessage</span><span class="p">(</span><span class="n">Message</span><span class="p">.</span><span class="na">obtain</span><span class="p">(</span><span class="n">myHandler</span><span class="p">,</span>
+<span class="w">                </span><span class="n">AlertDialogHandler</span><span class="p">.</span><span class="na">ALERT_DIALOG_WHAT</span><span class="p">));</span>
+
+<span class="w">                </span><span class="n">Looper</span><span class="p">.</span><span class="na">loop</span><span class="p">();</span>
+<span class="w">                </span><span class="n">Looper</span><span class="p">.</span><span class="na">myLooper</span><span class="p">().</span><span class="na">quit</span><span class="p">();</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">};</span>
+
+<span class="w">    </span><span class="c1">// Instantiate data request object, and specify that it should include</span>
+<span class="w">    </span><span class="c1">// information for Rate My App.</span>
+<span class="w">    </span><span class="n">CritterUserDataRequest</span><span class="w"> </span><span class="n">request</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CritterUserDataRequest</span><span class="p">(</span><span class="n">cb</span><span class="p">)</span>
+<span class="w">                                         </span><span class="p">.</span><span class="na">requestRateMyAppInfo</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// Fire off the request.</span>
+<span class="w">    </span><span class="n">request</span><span class="p">.</span><span class="na">makeRequest</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>重要:この方法では、次のような場合に <code class="docutils literal notranslate"><span class="pre">null</span></code> が返ります。</p>
+</div>
+<ul class="simple">
+<li><p>デバイスが API レベル 5 以上で動作していない。</p></li>
+<li><p>null メッセージまたは長さゼロのメッセージが入った。</p></li>
+<li><p>呼び出しスレッドがルーパーとして初期化されていない (<code class="docutils literal notranslate"><span class="pre">Looper.prepare()</span></code> を呼び出していない)。</p></li>
+<li><p>activityContext に有効なアクティビティ インスタンスが提供されていない。</p></li>
+<li><p>ユーザーが Crittercism からオプトアウトしている。</p></li>
+<li><p>アプリケーション パッケージに対する有効な課金の文字列 (<code class="docutils literal notranslate"><span class="pre">&quot;com.amazon.venezia&quot;</span></code> など) がなく、かつ``CrittercismConfig.getRateMyAppTestTarget()`` が null である。</p></li>
+<li><p>これらの条件いずれかが検出されると、ライブラリはログに適切な警告を出力します。AlertDialog を表示する前に、必ず null でないことを確認してください！！！</p></li>
+</ul>
+</section>
+</section>
+<section id="sign-up-callback-jp">
+<span id="id19"></span><h3>コールバックとユーザー データ レポート<a class="headerlink" href="#sign-up-callback-jp" title="Permalink to this heading">¶</a></h3>
+<p>ユーザーのオプトアウト ステータス、ユーザー UUID、また最後のアプリのロード時にアプリがクラッシュしたかどうかに関する情報や、非同期ディスク読み出しまたはネットワーク IO を必要とする可能性のあるその他のデータを取得する場合は、ライブラリが <code class="docutils literal notranslate"><span class="pre">CritterCallback</span></code> と呼ばれるコールバック インターフェースを提供します。
+開発者は <code class="docutils literal notranslate"><span class="pre">CritterUserDataRequest</span></code> オブジェクトを <code class="docutils literal notranslate"><span class="pre">CritterCallback</span></code> インスタンスで作成し、 その後返される <code class="docutils literal notranslate"><span class="pre">CritterUserData</span></code> レポートに含むデータのタイプを指定します。</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">com.crittercism.app.Crittercism</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.crittercism.app.CritterCallback</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.crittercism.app.CritterUserData</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.crittercism.app.CritterUserDataRequest</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">android.os.Bundle</span><span class="p">;</span>
+
+<span class="nd">@Override</span><span class="w"> </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onCreate</span><span class="p">(</span><span class="n">Bundle</span><span class="w"> </span><span class="n">savedInstanceState</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Crittercism</span><span class="p">.</span><span class="na">initialize</span><span class="p">(</span><span class="n">getApplicationContext</span><span class="p">(),</span>
+<span class="w">        </span><span class="s">&quot;&lt;CRITTERCISM_APP_ID&gt;&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">crittercismConfig</span><span class="p">);</span>
+<span class="w">    </span><span class="n">someMethodInMyCode</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">someMethodInMyCode</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cm">/* EXAMPLE 1 */</span>
+<span class="w">    </span><span class="c1">// Instantiate a CritterCallback object.</span>
+<span class="w">    </span><span class="n">CritterCallback</span><span class="w"> </span><span class="n">cb1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CritterCallback</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// CritterCallback is an interface that requires you to implement</span>
+<span class="w">        </span><span class="c1">// onCritterDataReceived(CritterUserData).</span>
+<span class="w">        </span><span class="nd">@Override</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onCritterDataReceived</span><span class="p">(</span><span class="n">CritterUserData</span><span class="w"> </span><span class="n">userData</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// ...do something with userData</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">};</span>
+
+<span class="w">    </span><span class="c1">// Instantiate a CritterUserDataRequest object.</span>
+<span class="w">    </span><span class="n">CritterUserDataRequest</span><span class="w"> </span><span class="n">req1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CritterUserDataRequest</span><span class="p">(</span><span class="n">cb1</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Request information on whether previous session crashed.</span>
+<span class="w">    </span><span class="n">req1</span><span class="p">.</span><span class="na">requestDidCrashOnLastLoad</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// Fire off request.</span>
+<span class="w">    </span><span class="n">req1</span><span class="p">.</span><span class="na">makeRequest</span><span class="p">();</span>
+
+
+<span class="w">    </span><span class="cm">/* EXAMPLE 2 */</span>
+<span class="w">    </span><span class="c1">// Instantiate a CritterCallback object.</span>
+<span class="w">    </span><span class="n">CritterCallback</span><span class="w"> </span><span class="n">cb2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CritterCallback</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// CritterCallback is an interface that requires you to implement</span>
+<span class="w">        </span><span class="c1">// onCritterDataReceived(CritterUserData).</span>
+<span class="w">        </span><span class="nd">@Override</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onCritterDataReceived</span><span class="p">(</span><span class="n">CritterUserData</span><span class="w"> </span><span class="n">userData</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// ...do something with userData</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">};</span>
+
+<span class="w">    </span><span class="c1">// The various request* methods return the CritterUserDataRequest instance,</span>
+<span class="w">    </span><span class="c1">// so you can chain their calls.  For example, the following request will</span>
+<span class="w">    </span><span class="c1">// include information on user UUID, Rate My App settings, and last session</span>
+<span class="w">    </span><span class="c1">// crashing.</span>
+<span class="w">    </span><span class="n">CritterUserDataRequest</span><span class="w"> </span><span class="n">req2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CritterUserDataRequest</span><span class="p">(</span><span class="n">cb2</span><span class="p">)</span>
+<span class="w">                                        </span><span class="p">.</span><span class="na">requestDidCrashOnLastLoad</span><span class="p">()</span>
+<span class="w">                                        </span><span class="p">.</span><span class="na">requestUserUUID</span><span class="p">()</span>
+<span class="w">                                        </span><span class="p">.</span><span class="na">requestRateMyAppInfo</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// Fire off request.</span>
+<span class="w">    </span><span class="n">req2</span><span class="p">.</span><span class="na">makeRequest</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>CrittercismUserData オブジェクトは、次の API 呼び出しをサポートしています。</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>API 呼び出し</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">crashedOnLastLoad()</span></code></p></td>
+<td><p>前のセッションでアプリがクラッシュしていれば true を返します。正しく機能するようにするには、ユーザーがオプトアウトされていないこと、また開発者が <code class="docutils literal notranslate"><span class="pre">requestDidCrashOnLastLoad()</span></code> を適切な <code class="docutils literal notranslate"><span class="pre">CritterUserDataRequestObject</span></code> に対して呼び出すことが必要です。それ以外の場合には、false を返します。</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">isOptedOut()</span></code></p></td>
+<td><p>ユーザーが Crittercism からオプトアウトしている場合に true を返します。それ以外の場合には、false を返します。</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">getUserUUID()</span></code></p></td>
+<td><p>Crittercism ライブラリが生成した一意のユーザー UUID を返します。正しく機能するようにするには、ユーザーがオプトアウトされていないこと、また開発者が <code class="docutils literal notranslate"><span class="pre">requestUserUUID()</span></code> を適切な <code class="docutils literal notranslate"><span class="pre">CritterUserDataRequestObject</span></code> に対して呼び出すことが必要です。それ以外の場合には、null を返します。</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">getRateMyAppMessage()</span></code></p></td>
+<td><p>ダイアログが表示されるべき場合には、サーバー指定の Rate My App メッセージを返します。正しく機能するようにするには、ユーザーがオプトアウトされていないこと、また開発者が requestRateMyAppInfo () を適切な CritterUserDataRequestObject に対して呼び出すことが必要です。それ以外の場合には、null を返します。</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">getRateMyAppTitle()</span></code></p></td>
+<td><p>ダイアログが表示されるべき場合には、サーバー指定の My App タイトルを返します。正しく機能するようにするには、ユーザーがオプトアウトされていないこと、また開発者が requestRateMyAppInfo () を適切な CritterUserDataRequestObject に対して呼び出すことが必要です。それ以外の場合には、null を返します。</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">shouldShowRateMyAppAlert()</span></code></p></td>
+<td><p>[Rate My App (アプリ評価)] アラート ダイアログが表示されるべき場合には true を返します。正しく機能するようにするには、ユーザーがオプトアウトされていないこと、また開発者が requestRateMyAppInfo () を適切な CritterUserDataRequestObject に対して呼び出すことが必要です。それ以外の場合には、false を返します。</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id20">
+<h3>Crittercism 詳細オプションの設定<a class="headerlink" href="#id20" title="Permalink to this heading">¶</a></h3>
+<section id="id21">
+<h4>バージョン名のカスタマイズ (オプション)<a class="headerlink" href="#id21" title="Permalink to this heading">¶</a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ライブラリ バージョン 3.0.3 以降でサポートされています。</p>
+</div>
+<p>この設定オプションでは、Crittercism にレポートされるアプリのバージョン診断をカスタマイズできます。クラッシュ、処理される例外、アプリのロード、サービス モニタリング データをカスタム アプリ バージョンでフィルタすることができ、ウェブサイトの Proguard マッピングのアップロード ページでこのバージョンが表示されるようになります。</p>
+<p>ライブラリ バージョン 3.1.4 以降では、次のコード例で示すように <code class="docutils literal notranslate"><span class="pre">CrittercismConfig</span></code> のインスタンスを使用します。</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">com.crittercism.app.Crittercism</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.crittercism.app.CrittercismConfig</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">android.os.Bundle</span><span class="p">;</span>
+
+<span class="nd">@Override</span><span class="w"> </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onCreate</span><span class="p">(</span><span class="n">Bundle</span><span class="w"> </span><span class="n">savedInstanceState</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// create the CrittercismConfig instance.</span>
+<span class="w">    </span><span class="n">CrittercismConfig</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CrittercismConfig</span><span class="p">();</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">myCustomVersionName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;My Custom Version Name&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// set the custom version name.</span>
+<span class="w">    </span><span class="n">config</span><span class="p">.</span><span class="na">setCustomVersionName</span><span class="p">(</span><span class="n">myCustomVersionName</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// initialize.</span>
+<span class="w">    </span><span class="n">Crittercism</span><span class="p">.</span><span class="na">initialize</span><span class="p">(</span><span class="n">getApplicationContext</span><span class="p">(),</span>
+<span class="w">        </span><span class="s">&quot;&lt;CRITTERCISM_APP_ID&gt;&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">crittercismConfig</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="id22">
+<h4>バージョン コードを含める<a class="headerlink" href="#id22" title="Permalink to this heading">¶</a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ライブラリ バージョン 3.0.11 以降でサポートされています。</p>
+</div>
+<p>この設定オプションでは、アプリ バージョン名にマニフェスト ファイルからのバージョン コードを含むことができます。ウェブサイトでは、バージョンのフォーマットが <code class="docutils literal notranslate"><span class="pre">VERSIONNAME-VERSIONCODE</span></code> のようになります。デフォルトでは、この設定は false になっています。</p>
+<p>ライブラリ バージョン 3.1.4 以降では、次のコードで示すように <code class="docutils literal notranslate"><span class="pre">CrittercismConfig</span></code> のインスタンスを使用します。</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">com.crittercism.app.Crittercism</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.crittercism.app.CrittercismConfig</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">android.os.Bundle</span><span class="p">;</span>
+
+<span class="nd">@Override</span><span class="w"> </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onCreate</span><span class="p">(</span><span class="n">Bundle</span><span class="w"> </span><span class="n">savedInstanceState</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Create the CrittercismConfig instance.</span>
+<span class="w">    </span><span class="n">CrittercismConfig</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CrittercismConfig</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">shouldIncludeVersionCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// Set the custom version name.</span>
+<span class="w">    </span><span class="n">config</span><span class="p">.</span><span class="na">setVersionCodeToBeIncludedInVersionString</span><span class="p">(</span><span class="n">shouldIncludeVersionCode</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// Initialize.</span>
+<span class="w">    </span><span class="n">Crittercism</span><span class="p">.</span><span class="na">initialize</span><span class="p">(</span><span class="n">getApplicationContext</span><span class="p">(),</span>
+<span class="w">        </span><span class="s">&quot;&lt;CRITTERCISM_APP_ID&gt;&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">crittercismConfig</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="logcat">
+<h4>Logcat を含む<a class="headerlink" href="#logcat" title="Permalink to this heading">¶</a></h4>
+<p>システム ログ データ (Logcat) を含んでおくと、クラッシュのデバッグに有用なことがあります。Crittercism では、logcat にアクセスしなくても作業ができます。ライブラリ バージョン 3.0 以降を使用している場合は、API レベル 16 以上 (Jelly Bean 以降) の logcat 情報を収集することができます。</p>
+<p>ライブラリ バージョン 3.1.4 以降では、次のコードで示すように CrittercismConfig のインスタンスを使用します。</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">com.crittercism.app.Crittercism</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.crittercism.app.CrittercismConfig</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">android.os.Bundle</span><span class="p">;</span>
+
+<span class="nd">@Override</span><span class="w"> </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onCreate</span><span class="p">(</span><span class="n">Bundle</span><span class="w"> </span><span class="n">savedInstanceState</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Create the CrittercismConfig instance.</span>
+<span class="w">    </span><span class="n">CrittercismConfig</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CrittercismConfig</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">shouldCollectLogcat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// Enable logcat collection.</span>
+<span class="w">    </span><span class="n">config</span><span class="p">.</span><span class="na">setLogcatReportingEnabled</span><span class="p">(</span><span class="n">shouldCollectLogcat</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// Initialize.</span>
+<span class="w">    </span><span class="n">Crittercism</span><span class="p">.</span><span class="na">initialize</span><span class="p">(</span><span class="n">getApplicationContext</span><span class="p">(),</span>
+<span class="w">        </span><span class="s">&quot;&lt;CRITTERCISM_APP_ID&gt;&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">config</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="id23">
+<h4>アプリ ロード データの送信<a class="headerlink" href="#id23" title="Permalink to this heading">¶</a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ライブラリ バージョン 3.0.0 以降でサポートされています。</p>
+</div>
+<p>Crittercism SDK では、Crittercism が初期化されるとアプリのロードをレポートします。アプリのロード データを後で送信するには、適切な設定オプションを true に設定する必要があります。アプリのロード データの送信を遅らせるパラメーターを設定したら、 <code class="docutils literal notranslate"><span class="pre">Crittercism.sendAppLoadData()</span></code> を呼び出せばいつでもアプリのロード情報を送信できます。</p>
+<p>ライブラリ バージョン 3.1.4 以降では、次のコードで示すように CrittercismConfig のインスタンスを使用します。</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">com.crittercism.app.Crittercism</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.crittercism.app.CrittercismConfig</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">android.os.Bundle</span><span class="p">;</span>
+
+<span class="nd">@Override</span><span class="w"> </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onCreate</span><span class="p">(</span><span class="n">Bundle</span><span class="w"> </span><span class="n">savedInstanceState</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Create the CrittercismConfig instance.</span>
+<span class="w">    </span><span class="n">CrittercismConfig</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CrittercismConfig</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">delaySendingAppLoad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// Set the boolean in the config object.</span>
+<span class="w">    </span><span class="n">config</span><span class="p">.</span><span class="na">setDelaySendingAppLoad</span><span class="p">(</span><span class="n">delaySendingAppLoad</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// Initialize.</span>
+<span class="w">    </span><span class="n">Crittercism</span><span class="p">.</span><span class="na">initialize</span><span class="p">(</span><span class="n">getApplicationContext</span><span class="p">(),</span>
+<span class="w">        </span><span class="s">&quot;&lt;CRITTERCISM_APP_ID&gt;&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">crittercismConfig</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// At some later point...</span>
+<span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">sendLoadToCritterz</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Crittercism</span><span class="p">.</span><span class="na">sendAppLoadData</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id24">
+<h3>オプションの設定パラメーター<a class="headerlink" href="#id24" title="Permalink to this heading">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ライブラリ バージョン 3.0.0 以降でサポートされています。</p>
+</div>
+<p>ライブラリ バージョン 3.0.0 以降では、初期化呼び出しでオプションの設定オブジェクトを受信して logcat 収集、バージョン名、アプリのロード要求タイミングの設定をカスタマイズすることができます。</p>
+<p>ライブラリ バージョン 3.1.4 以降では、以下のようにして設定することができます。</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">com.crittercism.app.Crittercism</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.crittercism.app.CrittercismConfig</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">android.os.Bundle</span><span class="p">;</span>
+
+<span class="nd">@Override</span><span class="w"> </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onCreate</span><span class="p">(</span><span class="n">Bundle</span><span class="w"> </span><span class="n">savedInstanceState</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">);</span>
+
+<span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">delaySendingAppLoad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">shouldCollectLogcat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">shouldIncludeVersionCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">myCustomVersionNmae</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;someversion&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">rateMyAppTestTarget</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;http://some.test.target/&quot;</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Create the CrittercismConfig instance.</span>
+<span class="w">    </span><span class="n">CrittercismConfig</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CrittercismConfig</span><span class="p">();</span>
+<span class="w">    </span><span class="c1">// Enable the settings.</span>
+<span class="w">    </span><span class="n">config</span><span class="p">.</span><span class="na">setDelaySendingAppLoad</span><span class="p">(</span><span class="n">delaySendingAppLoad</span><span class="p">);</span>
+<span class="w">    </span><span class="n">config</span><span class="p">.</span><span class="na">setLogcatReportingEnabled</span><span class="p">(</span><span class="n">shouldCollectLogcat</span><span class="p">);</span>
+<span class="w">    </span><span class="n">config</span><span class="p">.</span><span class="na">setVersionCodeToBeIncludedInVersionString</span><span class="p">(</span><span class="n">shouldIncludeVersionCode</span><span class="p">);</span>
+<span class="w">    </span><span class="n">config</span><span class="p">.</span><span class="na">setCustomVersionName</span><span class="p">(</span><span class="n">myCustomVersionName</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">BuildConfig</span><span class="p">.</span><span class="na">DEBUG</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">config</span><span class="p">.</span><span class="na">setRateMyAppTestTarget</span><span class="p">(</span><span class="n">rateMyAppTestTarget</span><span class="p">);</span><span class="w"> </span><span class="c1">// 3.2.0 and above!  FOR TESTING PURPOSES ONLY!!!!</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">   </span><span class="c1">// Initialize.</span>
+<span class="w">    </span><span class="n">Crittercism</span><span class="p">.</span><span class="na">initialize</span><span class="p">(</span><span class="n">getApplicationContext</span><span class="p">(),</span>
+<span class="w">        </span><span class="s">&quot;&lt;CRITTERCISM_APP_ID&gt;&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">config</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">CrittercismConfig</span> <span class="pre">オブジェクト</span></code> には、次のような API 呼び出しがあります。</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>API 呼び出し</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">setDelaySendingAppLoad(boolean)</span></code></p></td>
+<td><p>このパラメーターが true に設定されていると、Crittercism はアプリのロード時にすぐにアプリのロード データを送信しません。アプリのロード データは、後で Crittercism.sendAppLoadData() を使って送信できます。</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">setLogcatReportingEnabled(boolean)</span></code></p></td>
+<td><p>このパラメーターが true に設定されていると、Crittercism は Jelly Bean デバイス上のアプリケーションの logcat データを送信します。詳細については、「Logcat を含む」を参照してください。</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">setVersionCodeToBeIncludedInVersionString(String)</span></code></p></td>
+<td><p>このパラメーターが true に設定されていると、Crittercism はバージョン名にバージョン コードを含めます。詳細については、「バージョン コードを含める」を参照してください。</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">setCustomVersionName(String)</span></code></p></td>
+<td><p>この呼び出しでは、AndroidManifext.xml ファイルで指定されているバージョン名の代わりにカスタマイズしたバージョン名をサーバーに送信できます。</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">setRateMyAppTestTarget(String)</span></code></p></td>
+<td><p>配布されていないバージョンのアプリで Rate My App 機能をテストする場合は、このメソッドに文字列を渡して (アプリ マーケットの代わりに) テスト URIを指定できます。詳細については、「Rate My App」を参照してください。注:本番ビルドではこれは使用しないでください！！</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+	<script type="text/javascript" charset="utf-8" src="../../_static/toc.js"></script>
+  </body>
+</html>

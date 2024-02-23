@@ -1,0 +1,437 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>HTML5 SDK &#8212; Workspace ONE Intelligence  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/adctheme.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/toggle.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+      <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="Workspace ONE Intelligence  documentation" href="../index.html" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <script type="text/javascript">try{document.domain="vmware.com"}catch(e){};</script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-49786008-1']);
+    _gaq.push(['_setDomainName', 'apteligent.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_addIgnoredRef', 'apteligent.com']);   // Stops Self Referrals
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  
+  <meta name="google-translate-customization" content="f0837c562504ad7b-d669caf2b7375c11-g99fd8de75f76752f-14"></meta>
+
+  </head><body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PK9468"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PK9468');</script>
+<!-- End Google Tag Manager -->
+
+
+  <div id="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+          <div id="searchbox" style="display: none">
+              <form class="search" action="../search.html" method="get">
+                <div class="search-wrapper">
+                  <input class="prettysearch" type="text" name="q" size="18" />
+                  <input type="submit" value="Search" class="searchbutton" />
+                </div>
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+      <ul><li class="toctree-l1" id="docs-home"><a href="../index.html">Docs Home</a></li></ul>
+      <ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ios/ios.html">Apple SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../android/android.html">Android SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development_platforms/index.html">Development Platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/eula_accepted.html">SDK Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../release_notes/release_notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/downloads.html">EULA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/checksums.html">SDK Download Checksums</a></li>
+</ul>
+
+      <div id="sidebar-toc-clear"></div>
+      
+    </div>
+  </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            <div class="container">
+              <div class="row">
+                <div class="span12">
+                  
+  <section id="html5-sdk">
+<span id="html5"></span><h1>HTML5 SDK<a class="headerlink" href="#html5-sdk" title="Permalink to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<p>This topic describes how to use Apteligent with HTML5. Apteligent provides the HTML5 library
+using a content delivery network (CDN) for simplicity so that you can get crash reporting up and running
+within your application as quickly as possible.</p>
+<section id="initializing-the-html5-sdk">
+<span id="initialize-html5"></span><h2>Initializing the HTML5 SDK<a class="headerlink" href="#initializing-the-html5-sdk" title="Permalink to this heading">¶</a></h2>
+<p>Obtain your app ID from Workspace ONE Intelligence platform.</p>
+<p>To set up basic integration:</p>
+<ol class="arabic simple">
+<li><p>Include the following Apteligent Javascript library from our CDN in your HTML using a <code class="docutils literal notranslate"><span class="pre">&lt;script&gt;</span></code> tag:</p></li>
+</ol>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://d1a62freaxhn7x.cloudfront.net/v2/24/crittercismClientLibraryMin.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Call <code class="docutils literal notranslate"><span class="pre">Crittercism.init</span></code> with your Apteligent App ID, when the document is ready (the <code class="docutils literal notranslate"><span class="pre">document.ready</span></code> event).</p></li>
+</ol>
+<p>The following example HTML document shows adding Apteligent to an application that uses jQuery.</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Example Document with Apteligent<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://d1a62freaxhn7x.cloudfront.net/v2/24/crittercismClientLibraryMin.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="p">&gt;</span>
+<span class="w">      </span><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">Crittercism</span><span class="p">.</span><span class="nx">init</span><span class="p">({</span>
+<span class="w">          </span><span class="nx">appId</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;appId&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Example: 47cc67093475061e3d95369d</span>
+<span class="w">          </span><span class="nx">appVersion</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;1.0&#39;</span><span class="w"> </span><span class="c1">// Developer-provided application version</span>
+<span class="w">        </span><span class="p">});</span>
+<span class="w">      </span><span class="p">});</span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Crittercism.init(options)</span></code> takes a single argument, <code class="docutils literal notranslate"><span class="pre">options</span></code>.
+The <code class="docutils literal notranslate"><span class="pre">options</span></code> is a JSON dictionary containing key value pairs.</p>
+<blockquote>
+<div><p><strong>Keys</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">appId</span></code></p></td>
+<td><p>AppId string obtained from Apteligent for a registered HTML5 app</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">appVersion</span></code></p></td>
+<td><p>Developer-provided application version (optional)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">debug</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">true</span></code>, causes HTML5 SDK to print messages to console.log (optional)</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>View the raw <a class="reference external" href="https://gist.github.com/NinjaSudo/3895412#file-crittercismintegrationwithjquery-html">CrittercismIntegrationWithJQuery.html</a> hosted on GitHub.</p>
+<p>Now you have the basic crash reporting available from Apteligent. The rest of this topic describes optional features that you can add to your HTML code.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference internal" href="#hybrid-apps-html5"><span class="std std-ref">Hybrid Apps</span></a> don’t and shouldn’t call <code class="docutils literal notranslate"><span class="pre">Crittercism.init()</span></code>.
+<a class="reference internal" href="#hybrid-apps-html5"><span class="std std-ref">Hybrid Apps</span></a> should include Apteligent Javascript library
+using a <code class="docutils literal notranslate"><span class="pre">&lt;script&gt;</span></code> tag.</p>
+</div>
+</section>
+<section id="logging-breadcrumbs">
+<span id="breadcrumbs-html5"></span><h2>Logging Breadcrumbs<a class="headerlink" href="#logging-breadcrumbs" title="Permalink to this heading">¶</a></h2>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">leaveBreadcrumb</span></code> API to write to a chronological log that is
+reported with crashes, handled exceptions, and userflows.</p>
+<p>A <em>breadcrumb</em> is a developer-defined text string (up to 140 characters) that
+allows developers to capture app run-time information. Example breadcrumbs may
+include variable values, progress through the code, user actions, or low memory
+warnings. For an introduction, see <a class="reference internal" href="../overview/overview.html#breadcrumbs"><span class="std std-ref">Breadcrumbs</span></a>.</p>
+<p>Here’s an example of how to leave a breadcrumb:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">Crittercism</span><span class="p">.</span><span class="nx">leaveBreadcrumb</span><span class="p">(</span><span class="s2">&quot;User tapped a button&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="logging-handled-exceptions">
+<span id="handled-exceptions-html5"></span><h2>Logging Handled Exceptions<a class="headerlink" href="#logging-handled-exceptions" title="Permalink to this heading">¶</a></h2>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">logHandledException</span></code> API to track error conditions that do not
+necessarily cause a crash.</p>
+<p>Handled exceptions may be used for tracking exceptions caught
+in a <code class="docutils literal notranslate"><span class="pre">try</span></code>/<code class="docutils literal notranslate"><span class="pre">catch</span></code> statement, 3rd party library exceptions, and monitoring
+areas in the code that may currently be using assertions. Handled
+exceptions can also be used to track error events such as low memory warnings. For an
+introduction, see <a class="reference internal" href="../overview/overview.html#handled-exceptions"><span class="std std-ref">Handled Exceptions</span></a>.</p>
+<p>Handled exceptions are grouped by stacktrace, much like crash reports.
+Handled exceptions may be viewed in the “Handled Exceptions” area of the
+Workspace ONE Intelligence portal.</p>
+<p>Here’s an example of how to log a handled exception:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="s1">&#39;this isnt valid json&#39;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">Crittercism</span><span class="p">.</span><span class="nx">logHandledException</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="logging-user-metadata">
+<span id="metadata-html5"></span><h2>Logging User Metadata<a class="headerlink" href="#logging-user-metadata" title="Permalink to this heading">¶</a></h2>
+<p>Developers can set user metadata to tracking information about individual users.
+For an introduction, see <a class="reference internal" href="../overview/overview.html#user-metadata"><span class="std std-ref">User Name</span></a>.</p>
+<section id="adding-a-username">
+<h3>Adding a Username<a class="headerlink" href="#adding-a-username" title="Permalink to this heading">¶</a></h3>
+<p>Setting a username will allow the ability to monitor app performance for each
+user. We recommend setting a username to a value that can be tied back to your customer support system.</p>
+<p>Here’s an example of how to set a user name:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">Crittercism</span><span class="p">.</span><span class="nx">setUsername</span><span class="p">(</span><span class="s2">&quot;TomCritter&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="logging-userflows">
+<span id="userflows-html5"></span><h2>Logging Userflows<a class="headerlink" href="#logging-userflows" title="Permalink to this heading">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Logging Userflows API is currently only supported for
+<a class="reference internal" href="#hybrid-apps-html5"><span class="std std-ref">Hybrid Apps</span></a> .  The Logging Userflows API methods
+currently act as NOP’s in pure HTML5 web apps.</p>
+</div>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">beginTransaction</span></code>, <code class="docutils literal notranslate"><span class="pre">endTransaction</span></code>, and <code class="docutils literal notranslate"><span class="pre">failTransaction</span></code>
+methods to log userflows.</p>
+<p>User flows allow developers to track key interactions or user flows in their
+app such as login, account registration, and in app purchase. The Workspace
+ONE Intelligence SDK will automatically track application load time as a user
+flow. You can specify additional user flows by adding code to your application.</p>
+<p>Beginning a user flow starts a user flow. Ending, failing, or cancelling a
+user flow stops a user flow. Otherwise, the user flow will be marked as
+crashed or timed out. If a crash occurs, all in progress user flows are
+marked crashed and will be reported with the crash.</p>
+<p>All user flows will appear on Workspace ONE Intelligence portal except for
+cancelled user flows.</p>
+<p>User flows with the same name are aggregated together in the portal by
+Workspace ONE Intelligence.
+Only one user flow for a given name can be in progress at a given time. If you
+begin a second user flow with the same name while another is in progress, the
+first user flow will be cancelled and the new one will take its place.</p>
+<p>Here’s an example of how to log a single userflow:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">Crittercism</span><span class="p">.</span><span class="nx">beginTransaction</span><span class="p">(</span><span class="s2">&quot;login&quot;</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">didLogin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">runMyLoginCode</span><span class="p">();</span>
+<span class="k">if</span><span class="w"> </span><span class="nx">didLogin</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">Crittercism</span><span class="p">.</span><span class="nx">endTransaction</span><span class="p">(</span><span class="s2">&quot;login&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">Crittercism</span><span class="p">.</span><span class="nx">failTransaction</span><span class="p">(</span><span class="s2">&quot;login&quot;</span><span class="p">);</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<section id="beginning-a-userflow">
+<h3>Beginning a Userflow<a class="headerlink" href="#beginning-a-userflow" title="Permalink to this heading">¶</a></h3>
+<p>Beginning a user flow tells Workspace ONE Intelligence SDK that the user flow
+has started. Workspace ONE Intelligence SDK starts timing the duration of the
+user flow and waits for the user flow to succeed, fail, or be cancelled in code.</p>
+<p>Here’s an example of how to begin a userflow:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">Crittercism</span><span class="p">.</span><span class="nx">beginTransaction</span><span class="p">(</span><span class="s2">&quot;my_transaction&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="ending-a-userflow">
+<h3>Ending a Userflow<a class="headerlink" href="#ending-a-userflow" title="Permalink to this heading">¶</a></h3>
+<p>Ending a user flow tells Workspace ONE Intelligence SDK that the given user flow
+has successfully completed. At this point, the user flow time is recorded, and
+the user flow will be reported to Workspace ONE Intelligence.</p>
+<p>Here’s an example of how to end a userflow, which is the same as marking it
+as succeeded:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">Crittercism</span><span class="p">.</span><span class="nx">endTransaction</span><span class="p">(</span><span class="s2">&quot;my_transaction&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="failing-a-userflow">
+<h3>Failing a Userflow<a class="headerlink" href="#failing-a-userflow" title="Permalink to this heading">¶</a></h3>
+<p>Failing a user flow tells Workspace ONE Intelligence SDK that the given user
+flow has failed. At this point, the user flow time is recorded, and the user
+flow will be reported to Workspace ONE Intelligence.</p>
+<p>Here’s how to mark a userflow as failed:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">Crittercism</span><span class="p">.</span><span class="nx">failTransaction</span><span class="p">(</span><span class="s2">&quot;my_transaction&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="modifying-the-value-of-a-userflow">
+<h3>Modifying the Value of a Userflow<a class="headerlink" href="#modifying-the-value-of-a-userflow" title="Permalink to this heading">¶</a></h3>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">setTransactionValue</span></code> method to modify the value of a userflow.
+The value of a userflow should be specified in  cents.</p>
+<p>A developer may optionally set the value of each user flow. This allows
+stakeholders to more accurately evaluate the business impact of failing
+user flows.  Setting user flows values within the app is most useful when
+the value of a user flow can change based on user interactions. One example
+is in-app purchases of varying quantities.</p>
+<p>In addition to being able to specify user flows values in the code, a default
+user flows value may be specified in the Workspace ONE Intelligence portal.
+This allows changing user flows values on the fly.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span><span class="w"> </span><span class="nx">valueInCents</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">999</span><span class="p">;</span>
+<span class="nx">Crittercism</span><span class="p">.</span><span class="nx">setTransactionValue</span><span class="p">(</span><span class="s2">&quot;my_transaction&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">valueInCents</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="logging-network-requests">
+<span id="network-requests-html5"></span><h2>Logging Network Requests<a class="headerlink" href="#logging-network-requests" title="Permalink to this heading">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Logging Network Requests API is currently only supported for
+<a class="reference internal" href="#hybrid-apps-html5"><span class="std std-ref">Hybrid Apps</span></a> .  The Logging Network Requests API methods
+currently act as NOP’s in pure HTML5 web apps.</p>
+</div>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">logNetworkRequest</span></code> method to manually log network library network access to URL’s.</p>
+<p>Here’s an example of how to log a network request:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">Crittercism</span><span class="p">.</span><span class="nx">logNetworkRequest</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+<span class="w">                              </span><span class="s2">&quot;http://www.abc123def456.com&quot;</span><span class="p">,</span>
+<span class="w">                              </span><span class="mf">2000</span><span class="p">,</span>
+<span class="w">                              </span><span class="mf">10000</span><span class="p">,</span>
+<span class="w">                              </span><span class="mf">100</span><span class="p">,</span>
+<span class="w">                              </span><span class="mf">200</span><span class="p">,</span>
+<span class="w">                              </span><span class="mf">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Arguments</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">method</span></code></p></td>
+<td><p>String HTTP verb such as “GET”, “HEAD”, “POST”, “PUT”, “DELETE”, “TRACE”, “OPTIONS”, “CONNECT”, or “PATCH”.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">url</span></code></p></td>
+<td><p>String, representing the contacted endpoint.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">latency</span></code></p></td>
+<td><p>Number, representing the time between start of request and receipt of response, in milliseconds.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">bytesRead</span></code></p></td>
+<td><p>Number, the number of bytes included in response body.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">bytesSent</span></code></p></td>
+<td><p>Number, the number of bytes included in request body.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">responseCode</span></code></p></td>
+<td><p>Number, HTTP status code, generally 100-599, e.g. 200 == OK, 400 == Bad Request, can be 0 if there is an error.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">errorCode</span></code></p></td>
+<td><p>Number, a non-zero error code can be logged if network request failed to contact server, etc.  Pass 0 if there was no error.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="hybrid-apps">
+<span id="hybrid-apps-html5"></span><h2>Hybrid Apps<a class="headerlink" href="#hybrid-apps" title="Permalink to this heading">¶</a></h2>
+<p>The <a class="reference internal" href="#html5"><span class="std std-ref">HTML5 SDK</span></a> supports iOS and Android hybrid applications. A hybrid app is a
+mobile application built using both native code as well as javascript code which is run in a webview.  Using the installation instructions below, you will be able to monitor the performance of both the native code as well as javascript code in the webview in a unified view.</p>
+<p id="initialize-hybrid">To properly instrument a hybrid app, you’ll need to follow these steps:</p>
+<ol class="arabic simple">
+<li><p><strong>Install the Apteligent Native SDK</strong></p></li>
+</ol>
+<p>Download and install the native Apteligent SDKs.</p>
+<ul class="simple">
+<li><p>For iOS, follow the installation guide here: <a class="reference internal" href="../ios/ios_install.html#install-ios"><span class="std std-ref">Installing Workspace ONE Intelligence SDK for iOS</span></a></p></li>
+<li><p>For Android, follow the installation guide here: <a class="reference internal" href="../android/android_install.html#install-android"><span class="std std-ref">Installing the Android SDK</span></a></p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p><strong>Initialize the Apteligent Native SDK</strong></p></li>
+</ol>
+<p>After the SDKs are installed, initialize the native Apteligent SDK in your app.  To obtain an app_id, register an iOS or Android app and use the app_id for that app.  Registering a separate HTML5 app is not necessary.</p>
+<ul class="simple">
+<li><p>For iOS: <a class="reference internal" href="../ios/ios_install.html#initialize-ios"><span class="std std-ref">Basic Setup</span></a></p></li>
+<li><p>For Android: <a class="reference internal" href="../android/android_install.html#initialize-android"><span class="std std-ref">Initializing Workspace ONE Intelligence SDK</span></a></p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p><strong>Enable Webview Monitoring</strong></p></li>
+</ol>
+<p>To monitor the performance of webviews including javascript error monitoring, enable monitoring the webview in the native SDK.</p>
+<ul class="simple">
+<li><p>For iOS: <a class="reference internal" href="../ios/sdk/ws1config_h.html#monitor-web-views-ios-ws1"><span class="std std-ref">Monitoring Web Views</span></a></p></li>
+<li><p>For Android: <a class="reference internal" href="../android/sdk/crittercism.html#webview-instrumentation-android"><span class="std std-ref">Instrumenting WebView</span></a></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Hybrid apps automatically report uncaught JavaScript exceptions as handled
+exceptions to Apteligent.  Hybrid apps also automatically log XMLHttpRequest
+network requests.</p>
+</div>
+<section id="customized-instrumentation-for-hybrid-apps">
+<span id="customize-hybrid"></span><h3>Customized Instrumentation for Hybrid Apps<a class="headerlink" href="#customized-instrumentation-for-hybrid-apps" title="Permalink to this heading">¶</a></h3>
+<p>In addition to automatically monitoring the performance of webviews, users can optionally add instrumentation to measure custom Userflows and custom logging in the HTML5 code to help debug errors:</p>
+<ol class="arabic simple">
+<li><p><strong>Integrate HTML5 SDK</strong></p></li>
+</ol>
+<p>In order to set up custom logging from the HTML5 SDK, include the Apteligent JavaScript library.  This will allow your JavaScript code to call any of the other <a class="reference internal" href="#html5"><span class="std std-ref">HTML5 SDK</span></a> API methods.  The JavaScript code layer of a hybrid app does not need to call <code class="docutils literal notranslate"><span class="pre">Crittercism.init()</span></code> since initialization is performed by the native code layer of the hybrid app.  Once the JavaScript library is included, calls to any of the <a class="reference internal" href="#html5"><span class="std std-ref">HTML5 SDK</span></a> methods will call the native code layer.</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://d1a62freaxhn7x.cloudfront.net/v2/24/crittercismClientLibraryMin.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p><strong>Custom Logging in Hybrid Apps</strong></p></li>
+</ol>
+<p>Add <a class="reference internal" href="../overview/overview.html#breadcrumbs"><span class="std std-ref">Breadcrumbs</span></a> in both JavaScript and native code to help debug errors in crashes, handled exceptions, or userflows.  All JavaScript exceptions are automatically sent as <a class="reference internal" href="../overview/overview.html#handled-exceptions"><span class="std std-ref">Handled Exceptions</span></a>.  Breadcrumbs can be logged in both the native SDK as well as the HTML5 SDK.  Regardless of where breadcrumbs are logged, they will appear in all crashes, handled exceptions, and userflows.</p>
+<ul class="simple">
+<li><p>To add a breadcrumb in the HTML5 SDK: <a class="reference internal" href="#breadcrumbs-html5"><span class="std std-ref">Logging Breadcrumbs</span></a></p></li>
+<li><p>For iOS: <a class="reference internal" href="../ios/sdk/ws1intelligence_h.html#breadcrumbs-ios-ws1"><span class="std std-ref">Logging Breadcrumbs</span></a></p></li>
+<li><p>For Android: <a class="reference internal" href="../android/sdk/crittercism.html#breadcrumbs-android"><span class="std std-ref">Logging Breadcrumbs</span></a></p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p><strong>Custom Userflows in Hybrid Apps</strong></p></li>
+</ol>
+<p>A common performance problem in many hybrid apps is UI lag and errors when the app switches between the hybrid UI and the webview.  Measure these transitions by adding Userflows.  Since the Apteligent HTML5 SDK can communicate directly with the native SDK, you can begin and end Userflows between the two SDKs.</p>
+<p>For example, you can begin a Userflow in your native iOS SDK:</p>
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Crittercism</span><span class="w"> </span><span class="n">beginUserflow</span><span class="o">:</span><span class="s">@&quot;Load Checkout Page&quot;</span><span class="p">];</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="n">Crittercism</span><span class="p">.</span><span class="n">beginUserflow</span><span class="p">(</span><span class="s">&quot;Load Checkout Page&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Then, you can end that same Userflow in your HTML5 SDK:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">Crittercism</span><span class="p">.</span><span class="nx">endTransaction</span><span class="p">(</span><span class="s2">&quot;Load Checkout Page&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>This will allow you to measure the UI lag for transitioning between the native layer and the webview as well as monitor any crashes or javascript errors during the transition.  For more information on instrumenting Userflows, see the following:</p>
+<ul class="simple">
+<li><p>For HTML5: <a class="reference internal" href="#userflows-html5"><span class="std std-ref">Logging Userflows</span></a></p></li>
+<li><p>For iOS: <a class="reference internal" href="../ios/sdk/ws1intelligence_h.html#userflows-ios-ws1"><span class="std std-ref">Logging User Flows</span></a></p></li>
+<li><p>For Android: <a class="reference internal" href="../android/sdk/crittercism.html#userflows-android"><span class="std std-ref">Logging User Flows</span></a></p></li>
+</ul>
+<span class="target" id="other-html5"></span></section>
+</section>
+</section>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+	<script type="text/javascript" charset="utf-8" src="../_static/toc.js"></script>
+  </body>
+</html>

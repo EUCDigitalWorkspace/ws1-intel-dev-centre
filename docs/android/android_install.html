@@ -1,0 +1,324 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Installing the Android SDK &#8212; Workspace ONE Intelligence  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/adctheme.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/toggle.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+      <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="Workspace ONE Intelligence  documentation" href="../index.html" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <script type="text/javascript">try{document.domain="vmware.com"}catch(e){};</script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-49786008-1']);
+    _gaq.push(['_setDomainName', 'apteligent.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_addIgnoredRef', 'apteligent.com']);   // Stops Self Referrals
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  
+  <meta name="google-translate-customization" content="f0837c562504ad7b-d669caf2b7375c11-g99fd8de75f76752f-14"></meta>
+
+  </head><body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PK9468"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PK9468');</script>
+<!-- End Google Tag Manager -->
+
+
+  <div id="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+          <div id="searchbox" style="display: none">
+              <form class="search" action="../search.html" method="get">
+                <div class="search-wrapper">
+                  <input class="prettysearch" type="text" name="q" size="18" />
+                  <input type="submit" value="Search" class="searchbutton" />
+                </div>
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+      <ul><li class="toctree-l1" id="docs-home"><a href="../index.html">Docs Home</a></li></ul>
+      <ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ios/ios.html">Apple SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="android.html">Android SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development_platforms/index.html">Development Platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/eula_accepted.html">SDK Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../release_notes/release_notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/downloads.html">EULA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/checksums.html">SDK Download Checksums</a></li>
+</ul>
+
+      <div id="sidebar-toc-clear"></div>
+      
+    </div>
+  </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            <div class="container">
+              <div class="row">
+                <div class="span12">
+                  
+  <section id="installing-the-android-sdk">
+<span id="install-android"></span><h1>Installing the Android SDK<a class="headerlink" href="#installing-the-android-sdk" title="Permalink to this heading">¶</a></h1>
+<section id="installing-via-gradle">
+<h2>Installing via Gradle<a class="headerlink" href="#installing-via-gradle" title="Permalink to this heading">¶</a></h2>
+<p>In the <code class="docutils literal notranslate"><span class="pre">build.gradle</span></code> file living in the <code class="docutils literal notranslate"><span class="pre">projectname/app</span></code> directory, add
+the Workspace ONE Intelligence repository information in <code class="docutils literal notranslate"><span class="pre">repositories{...}</span></code></p>
+<ul style="margin: 10px 0px 0px; list-style-type: disc; caret-color: rgb(23, 43, 77); color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration: none; text-align: left;">
+   <li>Download the .aar from <a href="https://vdc-download.vmware.com/vmwb-repository/dcr-public/5b0824b6-3146-48c2-a3e0-7af88ab2e9ee/9996ab08-2e94-4d31-a233-a0b52a8a0ea6/com/vmware/ws1/WS1IntelligenceSDK/24.1.0/WS1IntelligenceSDK-24.1.0-20240213.231417-5.aar" rel="nofollow" class="external-link" style="color: rgb(0, 105, 144); text-decoration-style: ; text-decoration-color: ; text-decoration: var(--aui-link-decoration);">HERE</a></li>
+   <li>Add it to the libs directory. NOTE - libs  directory should ideally be under the app  directory.</li>
+   <li>Pull the IntelSDK dependency like below</li>
+</ul><div class="highlight-groovy notranslate"><div class="highlight"><pre><span></span><span class="n">implementation</span><span class="w"> </span><span class="nf">files</span><span class="o">(</span><span class="s1">&#39;libs/WS1IntelligenceSDK-24.1.0-20240213.231417-5.aar&#39;</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>Be sure to sync your project with your gradle files after you add this!</p>
+</section>
+</section>
+<section id="permissions-required">
+<span id="id1"></span><h1>Permissions Required<a class="headerlink" href="#permissions-required" title="Permalink to this heading">¶</a></h1>
+<p>Add the following permissions to your app’s <code class="docutils literal notranslate"><span class="pre">AndroidManifest.xml</span></code> file.</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">INTERNET</span></code></dt><dd><p><strong>Required</strong>. Used to report data to Workspace ONE Intelligence.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">ACCESS_NETWORK_STATE</span></code></dt><dd><p><strong>Optional</strong>. Allows providing network connectivity information such
+as <em>carrier</em> and network type.</p>
+</dd>
+</dl>
+<p>For more information on these permissions, refer to the
+<a class="reference external" href="http://developer.android.com/reference/android/Manifest.permission.html">Android Manifest documentation</a></p>
+</section>
+<section id="permissions-needed-for-intelligencesdk-features">
+<h1>Permissions Needed for IntelligenceSDK Features<a class="headerlink" href="#permissions-needed-for-intelligencesdk-features" title="Permalink to this heading">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These permissions are  optional. If they are not given, the corresponding attributes will not be computed.</p>
+</div>
+<p>The IntelligenceSDK currently utilizes the following Android Permissions:</p>
+<ul style="margin: 10px 0px 0px; list-style-type: disc; caret-color: rgb(23, 43, 77); color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration: none; text-align: left;">
+   <li><a href="https://developer.android.com/reference/android/Manifest.permission#ACCESS_FINE_LOCATION" rel="nofollow" class="external-link" style="color: rgb(0, 105, 144); text-decoration-style: ; text-decoration-color: ; text-decoration: var(--aui-link-decoration);">ACCESS_FINE_LOCATION</a></li>
+   <li><a href="https://developer.android.com/reference/android/Manifest.permission#ACCESS_NETWORK_STATE" rel="nofollow" class="external-link" style="color: rgb(0, 105, 144); text-decoration-style: ; text-decoration-color: ; text-decoration: var(--aui-link-decoration);">ACCESS_NETWORK_STATE</a></li>
+   <li><a href="https://developer.android.com/reference/android/Manifest.permission#ACCESS_WIFI_STATE" rel="nofollow" class="external-link" style="color: rgb(0, 105, 144); text-decoration-style: ; text-decoration-color: ; text-decoration: var(--aui-link-decoration);">ACCESS_WIFI_STATE</a></li>
+   <li><a rel="nofollow" href="https://developer.android.com/reference/android/Manifest.permission#BLUETOOTH" class="external-link" style="color: rgb(0, 105, 144); text-decoration-style: ; text-decoration-color: ; text-decoration: var(--aui-link-decoration);">BLUETOOTH</a></li>
+   <li><a rel="nofollow" href="https://developer.android.com/reference/android/Manifest.permission#BLUETOOTH_CONNECT" class="external-link" style="color: rgb(0, 105, 144); text-decoration-style: ; text-decoration-color: ; text-decoration: var(--aui-link-decoration);">BLUETOOTH_CONNECT</a></li>
+   <li><a class="external-link" href="https://developer.android.com/reference/android/Manifest.permission#CHANGE_NETWORK_STATE" rel="nofollow" style="color: rgb(0, 105, 144); text-decoration-style: ; text-decoration-color: ; text-decoration: var(--aui-link-decoration);">CHANGE_NETWORK_STATE</a></li>
+   <li><a rel="nofollow" href="https://developer.android.com/reference/android/Manifest.permission#INTERNET" class="external-link" style="color: rgb(0, 105, 144); text-decoration-style: ; text-decoration-color: ; text-decoration: var(--aui-link-decoration);">INTERNET</a></li>
+   <li><a rel="nofollow" href="https://developer.android.com/reference/android/Manifest.permission#READ_EXTERNAL_STORAGE" class="external-link" style="color: rgb(0, 105, 144); text-decoration-style: ; text-decoration-color: ; text-decoration: var(--aui-link-decoration);">READ_EXTERNAL_STORAGE</a></li>
+   <li><a rel="nofollow" href="https://developer.android.com/reference/android/Manifest.permission#READ_PHONE_STATE" class="external-link" style="color: rgb(0, 105, 144); text-decoration-style: ; text-decoration-color: ; text-decoration: var(--aui-link-decoration);">READ_PHONE_STATE</a></li>
+   <li><a rel="nofollow" href="https://developer.android.com/reference/android/Manifest.permission#USE_BIOMETRIC" class="external-link" style="color: rgb(0, 105, 144); text-decoration-style: ; text-decoration-color: ; text-decoration: var(--aui-link-decoration);">USE_BIOMETRIC</a></li>
+   <li><a href="https://developer.android.com/reference/android/Manifest.permission#WRITE_EXTERNAL_STORAGE" rel="nofollow" class="external-link" style="color: rgb(0, 105, 144); text-decoration-style: ; text-decoration-color: ; text-decoration: var(--aui-link-decoration);">WRITE_EXTERNAL_STORAGE</a></li>
+</ul><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Attribute</p></th>
+<th class="head"><p>Permissions (Specific SDKs)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>biometric_capabilities</p></td>
+<td><p>USE_BIOMETRIC</p></td>
+</tr>
+<tr class="row-odd"><td><p>biometric_credential_enrolled</p></td>
+<td><p>USE_BIOMETRIC</p></td>
+</tr>
+<tr class="row-even"><td><p>bluetooth_connected</p></td>
+<td><p>BLUETOOTH, BLUETOOTH_CONNECT (SDK 31+)</p></td>
+</tr>
+<tr class="row-odd"><td><p>bssid</p></td>
+<td><p>ACCESS_WIFI_STATE,
+ACCESS_FINE_LOCATION,
+ACCESS_COARSE_LOCATION,
+CHANGE_NETWORK_STATE (SDK 31+)</p></td>
+</tr>
+<tr class="row-even"><td><p>internet_available</p></td>
+<td><p>ACCESS_NETWORK_STATE</p></td>
+</tr>
+<tr class="row-odd"><td><p>ip_address</p></td>
+<td><p>ACCESS_NETWORK_STATE</p></td>
+</tr>
+<tr class="row-even"><td><p>jitter</p></td>
+<td><p>ACCESS_NETWORK_STATE</p></td>
+</tr>
+<tr class="row-odd"><td><p>latency</p></td>
+<td><p>ACCESS_NETWORK_STATE</p></td>
+</tr>
+<tr class="row-even"><td><p>mobile_network_type</p></td>
+<td><p>READ_PHONE_STATE</p></td>
+</tr>
+<tr class="row-odd"><td><p>network_connectivity_type</p></td>
+<td><p>ACCESS_NETWORK_STATE</p></td>
+</tr>
+<tr class="row-even"><td><p>network_interface_change</p></td>
+<td><p>ACCESS_NETWORK_STATE</p></td>
+</tr>
+<tr class="row-odd"><td><p>ssid</p></td>
+<td><p>ACCESS_WIFI_STATE,
+ACCESS_FINE_LOCATION,
+ACCESS_COARSE_LOCATION,
+CHANGE_NETWORK_STATE (SDK 31+)</p></td>
+</tr>
+<tr class="row-even"><td><p>vpn_connected</p></td>
+<td><p>ACCESS_NETWORK_STATE</p></td>
+</tr>
+<tr class="row-odd"><td><p>wifi_enablement</p></td>
+<td><p>ACCESS_WIFI_STATE</p></td>
+</tr>
+<tr class="row-even"><td><p>wifi_frequency</p></td>
+<td><p>ACCESS_WIFI_STATE (SDK &lt; 31),
+ACCESS_FINE_LOCATION (SDK &lt; 31),
+ACCESS_COARSE_LOCATION (SDK &lt; 31),
+CHANGE_NETWORK_STATE (31+)</p></td>
+</tr>
+<tr class="row-odd"><td><p>wifi_signal_strength</p></td>
+<td><p>ACCESS_NETWORK_STATE,
+ACCESS_FINE_LOCATION(SDK &lt; 30),
+ACCESS_COARSE_LOCATION(SDK &lt; 30)</p></td>
+</tr>
+</tbody>
+</table>
+<p>For more information on Android Permissions, please refer to the following <a class="reference external" href="https://developer.android.com/guide/topics/permissions/overview/">Google Documentation</a></p>
+</section>
+<section id="initializing-workspace-one-intelligence-sdk">
+<span id="initialize-android"></span><h1>Initializing Workspace ONE Intelligence SDK<a class="headerlink" href="#initializing-workspace-one-intelligence-sdk" title="Permalink to this heading">¶</a></h1>
+<p>The following initialization instructions are the same for both the standard
+(sdkonly) SDK and the NDK-enabled SDK.</p>
+<p>Obtain your app ID from Workspace ONE Intelligence console.</p>
+<ol class="arabic simple">
+<li><p>To initialize Workspace ONE Intelligence SDK add the following code at the
+beginning of the <code class="docutils literal notranslate"><span class="pre">onCreate()</span></code> of your main Activity:</p></li>
+</ol>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Crittercism</span><span class="p">.</span><span class="na">initialize</span><span class="p">(</span><span class="n">getApplicationContext</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;CRITTERCISM_APP_ID&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Workspace ONE Intelligence SDK should be initialized once on the main thread
+as early as possible.
+Hence, if you subclass the Application singleton, you should initialize
+Workspace ONE Intelligence SDK in the <code class="docutils literal notranslate"><span class="pre">onCreate()</span></code> of that Application
+subclass using the same code, instead of the main activity.
+App loads will be sent from the first visible activity; they will not
+be sent from background services and BroadcastReceivers.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Your main Activity is the one with <code class="docutils literal notranslate"><span class="pre">android.intent.action.MAIN</span></code> intent
+filter in your AndroidManifest.</p>
+</div>
+<p>Or initialize Workspace ONE Intelligence SDK with a CrittercismConfig argument</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">CrittercismConfig</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CrittercismConfig</span><span class="p">();</span>
+<span class="n">config</span><span class="p">.</span><span class="na">setAllowsCellularAccess</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+<span class="n">Crittercism</span><span class="p">.</span><span class="na">initialize</span><span class="p">(</span><span class="n">context</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;CRITTERCISM_APP_ID&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">config</span><span class="p">);</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>You may need to add the following import, if Android Studio has not
+automatically added it already:</p></li>
+</ol>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">com.crittercism.app.Crittercism</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Your Android app is now integrated with Workspace ONE Intelligence and you can
+go ahead and build it. Additional features require adding more code to your
+project.</p>
+</section>
+<section id="configuring-proguard-symbolication">
+<span id="symbolicate-android"></span><h1>Configuring Proguard Symbolication<a class="headerlink" href="#configuring-proguard-symbolication" title="Permalink to this heading">¶</a></h1>
+<p>Symbolication is the process of translating stack traces into a human-readable
+form by mapping hexadecimal addresses to function names using symbol file(s).
+Workspace ONE Intelligence automatically symbolicates crashes once you have
+uploaded your app’s symbol file(s).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Follow the instructions in this section only if your app obfuscates with <a class="reference external" href="http://developer.android.com/tools/help/proguard.html">Android Proguard</a>.
+Otherwise, skip this section.</p>
+</div>
+<p>For Android applications, developers have the option to obfuscate their function
+names using the ProGuard tool in order to reduce app size and to prevent others
+from reverse engineering the app source. In order to replace the obfuscated name
+with a human-readable name, developers use a Proguard mapping file.</p>
+<section id="setting-up-proguard">
+<h2>Setting Up ProGuard<a class="headerlink" href="#setting-up-proguard" title="Permalink to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Add the following lines to your project’s <code class="docutils literal notranslate"><span class="pre">proguard.cfg</span></code> file:</p></li>
+</ol>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>-dontwarn com.crittercism.**
+-keep public class com.crittercism.**
+-keepclassmembers public class com.crittercism.**
+{
+    *;
+}
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>To get line number information, make sure that you keep the file names and
+line numbers in your ProGuard <code class="docutils literal notranslate"><span class="pre">.cfg</span></code> settings file.</p></li>
+</ol>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">keepattributes</span><span class="w"> </span><span class="n">SourceFile</span><span class="p">,</span><span class="w"> </span><span class="n">LineNumberTable</span>
+</pre></div>
+</div>
+<p>This information will be visible in all stacktraces, however - even those that
+are not symbolicated.</p>
+<p>To have your crashes automatically deobfuscated and grouped,
+you must upload a <code class="docutils literal notranslate"><span class="pre">mapping.txt</span></code> file on to the Settings tab of your App.</p>
+<p>Each <code class="docutils literal notranslate"><span class="pre">mapping.txt</span></code> file you upload is associated with a version of your app.
+We deobfuscated crashes for only one version with each mapping.txt file.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Be careful to upload the right file for your version!</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you set a customized app version name in the <code class="docutils literal notranslate"><span class="pre">CrittercismConfig</span></code>
+instance, you should use that string and not the manifest string in
+<code class="docutils literal notranslate"><span class="pre">app-version-name</span></code>. Also, if you choose to include the app version code in
+the app version, that should also be included in <code class="docutils literal notranslate"><span class="pre">app-version-name</span></code>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>At this point, you have enabled Workspace ONE Intelligence SDK to receive
+Application Performance Information from your application</p>
+</div>
+</section>
+</section>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+	<script type="text/javascript" charset="utf-8" src="../_static/toc.js"></script>
+  </body>
+</html>

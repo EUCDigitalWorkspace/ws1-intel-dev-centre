@@ -1,0 +1,347 @@
+.. To add a method in this file, please use the following format.
+..
+.. In general, each method needs to be enclosed in .. container:: toggle
+.. In toggle container, we have header (required), discussion (optional),
+.. declaration (optional), parameters (optional), retval (optional),
+.. availability (optional).
+..
+.. If a method is deprecated, you can mark the header as deprecated.
+.. So you would have .. container :: header deprecated
+..
+.. .. container:: toggle
+..
+..    .. container:: header
+..
+..       <insert method name here>
+..
+..    .. container:: discussion
+..
+..       <Insert method summary>
+..
+..    .. container:: declaration
+..
+..       <insert method declaration in a code block>
+..
+..       For iOS, use
+..
+..       .. example-code::
+..
+..          .. code-block:: objective-c
+..
+..             <insert obj-c code>
+..
+..          .. code-block:: swift
+..
+..             <insert swift code>
+..
+..       For other platform, use code block
+..
+..    .. container:: parameters
+..
+..       +--------+-------------------------------+
+..       | param1 | description                   |
+..       +--------+-------------------------------+
+..
+..    .. container:: retVal
+..
+..       <discuss return value>
+..
+..    .. container:: availability
+..
+..       <discuss when this method is introduced>
+..       <discuss when this method is deprecated>
+..
+..    .. container:: seealso
+..
+..       <list some useful links here>
+..
+
+WS1Filter
+=========
+
+By default, Workspace ONE Intelligence SDK reports Network Insights data for all
+URLs that are accessed by your app and strips each URL of any query parameters.
+For example, ``http://foo.com?name=critter`` becomes ``http://foo.com``.
+This is done to ensure personal information is not transmitted to Workspace ONE
+Intelligence.
+
+It is also possible to customise filter deny list that will completely
+discard matching URLs. Network Insights data that pertains to any URL that
+matches the stored deny values will not be reported to Workspace ONE Intelligence.
+
+Use the ``[WS1Filter filterWithString:]`` to modify the default filtering
+behavior:
+
+Objective-C
+
+.. code-block:: objective-c
+
+   // Add filters at initialization
+   WS1Config *config = [WS1Config defaultConfig];
+   config.urlFilters = @[[WS1Filter filterWithString:@"sensitiveURL"],
+                         [WS1Filter filterWithString:@"additionalURL"]];
+   [WS1Intelligence enableWithAppID:@"MYAPPID" config:config];
+
+   // Add filters later on
+   [WS1Intelligence addFilter:[WS1Filter filterWithString:@"anotherURL"]];
+
+Swift
+
+.. code-block:: swift
+
+   // Add filters at initialization
+   let config : WS1Config = WS1Config.default()
+   config.urlFilters = [WS1Filter(string: "sensitiveURL"), WS1Filter(string: "additionalURL")]
+   WS1Intelligence.enable(withAppID: appID, config: config)
+
+   // Add filters later on
+   WS1Intelligence.add(filter: WS1Filter)
+
+.. note::
+
+   * Filters match URLs via **case sensitive** substring matching
+
+Creating a Filter
+-----------------
+
+.. container:: toggle
+
+    .. container:: header
+
+       \+ filterWithString:
+
+    .. container:: discussion
+
+       Convenience method to create a deny filter.
+
+    .. container:: declaration
+
+       Objective-C
+
+       .. code-block:: objective-c
+
+          + (WS1Filter *)filterWithString:(NSString *)matchToken;
+
+       Swift
+
+       .. code-block:: swift
+
+          class func filter(withString: matchToken)
+
+    .. container:: parameters
+
+       +-------------+-------------------------------------+
+       | matchToken  | An NSString of the url to filter    |
+       +-------------+-------------------------------------+
+
+    .. container:: retVal
+
+       A WS1Filter object for matchToken.
+
+.. container:: toggle
+
+    .. container:: header
+
+       \+ filterWithString:andFilterType:
+
+    .. container:: discussion
+
+       Convenience method to create a filter with the specified filter type.
+
+    .. container:: declaration
+
+       Objective-C
+
+       .. code-block:: objective-c
+
+          + (WS1Filter *)filterWithString:(NSString *)matchToken
+                            andFilterType:(WS1FilterType)filterType
+
+       Swift
+
+       .. code-block:: swift
+
+          class func filter(withString: matchToken andFilterType:filterType)
+
+    .. container:: parameters
+
+       +-------------+-------------------------------------+
+       | matchToken  | An NSString of the url to filter    |
+       +-------------+-------------------------------------+
+       | filterType  | Indicates filter type               |
+       +-------------+-------------------------------------+
+
+    .. container:: retVal
+
+       A WS1Filter object for matchToken.
+
+.. container:: toggle
+
+    .. container:: header
+
+       \- initWithString:
+
+    .. container:: discussion
+
+       Initialize a filter that denies reporting for all URLs that match the specified token.
+
+    .. container:: declaration
+
+       Objective-C
+
+       .. code-block:: objective-c
+
+          - (id)initWithString:(NSString *)matchToken;
+
+       Swift
+
+       .. code-block:: swift
+
+          init?(string matchToken: String)
+
+    .. container:: parameters
+
+       +-------------+-------------------------------------+
+       | matchToken  | An NSString of the url to filter    |
+       +-------------+-------------------------------------+
+
+    .. container:: retVal
+
+       A WS1Filter object of type :ref:`WS1FilterTypeDeny <ws1filtertype_ios>`
+
+    .. container:: seealso
+
+       * :ref:`WS1FilterType <ws1filtertype_ios>`
+
+.. container:: toggle
+
+    .. container:: header
+
+       \- initWithString:andFilterType:
+
+    .. container:: discussion
+
+       Initialize a filter that with the behavior specified by the filter type.
+
+    .. container:: declaration
+
+       Objective-C
+
+       .. code-block:: objective-c
+
+          - (id)initWithString:(NSString *)matchToken
+                 andFilterType:(WS1FilterType)filterType;
+
+       Swift
+
+       .. code-block:: swift
+
+          init?(string matchToken: String,
+            filterType filterType: WS1FilterType)
+
+    .. container:: parameters
+
+       +-------------+-------------------------------------+
+       | matchToken  | An NSString of the url to filter    |
+       +-------------+-------------------------------------+
+       | filterType  | Indicates filter type               |
+       +-------------+-------------------------------------+
+
+    .. container:: retVal
+
+       A WS1Filter object with the indicated filter type.
+
+    .. container:: seealso
+
+       * :ref:`WS1FilterType <ws1filtertype_ios>`
+
+
+Other Methods
+-------------
+
+.. container:: toggle
+
+    .. container:: header
+
+       \+ doesMatch:
+
+    .. container:: discussion
+
+       Returns YES if the filter matches the provided URL string
+
+    .. container:: declaration
+
+       Objective-C
+
+       .. code-block:: objective-c
+
+          - (BOOL)doesMatch:(NSString *)url;
+
+       Swift
+
+       .. code-block:: swift
+
+    .. container:: parameters
+
+       +------+-----------------------------------+
+       | url  | Specifies the url to be matched   |
+       +------+-----------------------------------+
+
+    .. container:: retVal
+
+       Returns YES when the filter matches the provided URL string
+
+Constants
+---------
+
+.. _ws1filtertype_ios:
+
+.. container:: toggle
+
+    .. container:: header
+
+       WS1FilterType
+
+    .. container:: discussion
+
+       The filter type of WS1Filter
+
+    .. container:: declaration
+
+       Objective-C
+
+       .. code-block:: objective-c
+
+          typedef enum : NSInteger {
+             WS1FilterTypeDeny,
+             WS1FilterTypePreserveQuery,
+             WS1FilterTypePreserveFragment,
+             WS1FilterTypePreserveParameters,
+             WS1FilterTypePreserveAll
+          } WS1FilterType;
+
+       Swift
+
+       .. code-block:: swift
+
+          enum WS1FilterType : Int {
+              case Deny
+              case PreserveQuery
+              case PreserveFragment
+              case PreserveParameters
+              case PreserveAll
+          }
+
+    .. container:: constants
+
+       =================================== ===================================================================================================
+       ``WS1FilterTypeDeny``                Deny reporting for certain endpoints. Request with a URL that matches this string are not reported
+
+       ``WS1FilterTypePreserveQuery``       Prevent URL query string from being stripped out
+
+       ``WS1FilterTypePreserveFragment``    Prevent URL fragment identifier from being stripped out
+
+       ``WS1FilterTypePreserveParameters``  Prevent URL parameter string from being stripped out
+
+       ``WS1FilterTypePreserveAll``         Prevent URL query, fragment, and parameters sections from being stripped out
+       =================================== ===================================================================================================

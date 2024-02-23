@@ -1,0 +1,32 @@
+.. _integrate_github:
+
+Github Integration Guide
+------------------------
+
+.. toctree::
+   :maxdepth: 2
+
+Apteligent provides an integration with Github Projects by allowing you to easily connect your Apteligent Crash reports to a Github Issue.
+
+1. Find and click the **Bug Tracking** tab in your app console.
+
+   .. image:: ../img/integration-github-menu-2.png
+
+2. Complete the following form.
+
+   .. image:: ../img/integration-github-connect.png
+
+   ​Wait, a single **Connect** button? It's that simple!
+
+3. Once you authorize the connection with Github, you'll be able to select from your projects via a dropdown to connect the project with the appropriate repository.
+
+   .. image:: ../img/integration-github-save.png
+
+4. Once you've integrated, you can easily connect a crash report with a Github issue via the Crash Details page.
+
+   .. image:: ../img/integration-github-crash-details.png
+
+   Click **Create Issue** to create a new issue with the basic error information, stack trace, and a link back to the Apteligent crash report.
+
+.. include:: ../shared/support_include.txt
+

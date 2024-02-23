@@ -1,0 +1,86 @@
+:orphan:
+
+.. GUIDELINES:
+.. Release notes should be formatted into sections in the following order (not all sections need to be filled out)
+.. ..note:: Super important information goes in an orange note - stuff like "Xcode 7 is required"
+.. **Known issues**
+..   List things that we know are broken that used to work.
+..   It should be rare that we use this section. 
+..   Some examples:
+..     * In iOS 4.1.0, our 64-bit SDK had crash reporting disabled crash reporting.
+..     * Our iOS 5.1.2 SDK had a major bug that we went back and release
+..       noted as a 'Known issue' after we found the bug.
+.. **New**
+..   Put stuff in this section if the line item doesn't fit in the other categories.
+..   Some examples:
+..     * Added a way to cancel transactions
+..     * Handled exceptions are now recorded in breadcrumbs
+..     * URL query parameters are now stripped by default
+.. **Fixes**
+..   This section is for calling out bugs that we fixed.
+..   Any bug reported by a customer should go in this section.
+.. **Removed**
+..   If we stopped sending data, deleted a method, or removed a feature, list it here.
+
+.. _release_notes_unity:
+
+Unity Release Notes
+====================
+.. toctree::
+   :maxdepth: 2
+
+Version 2.1.2 (Jun 5, 2017)
+----------------------------
+
+**New**
+
+* Added App Load userflow for Android devices running Marshmallow and above.
+* Updated the native Android SDK to 5.8.8. Please see :ref:`release_notes_android` for more details
+
+Version 2.1.1 (Nov 30, 2016)
+----------------------------
+
+**New**
+
+* Updated the native iOS SDK to version 5.6.4. Please see :ref:`release_notes_ios` for more details
+
+
+Version 2.1.0 (Oct 25, 2016)
+----------------------------
+
+**New**
+
+* Updated the native iOS SDK to version 5.6.3-rc.3. Please see :ref:`release_notes_ios` for more details
+* Updated the native Android SDK to 5.8.2. Please see :ref:`release_notes_android` for more details
+
+**Fixes**
+
+* SDKs (Android and iOS) would previously send events generated while in opt out mode when the opt out flag was unset later. This event data is no longer sent.
+
+Version 2.1.0-rc.1 (Oct 7, 2016)
+---------------------------------
+
+**New**
+
+* Updated the native iOS SDK to version 5.6.3-rc.2
+* Can now generate C# stack traces for unhandled exceptions in 'Fast but no Exceptions' mode
+
+
+Version 2.0.0 (Apr 8, 2016)
+-----------------------------
+
+**New**
+
+* Unified the CrittercismIOS and CrittercismAndroid classes into a common Crittercism class. The CrittercismIOS and CrittercismAndroid classes are still available, but we strongly recommend using the new Crittercism class as it works for both iOS and Android builds.
+* Updated the native iOS SDK to version 5.5.6
+* (iOS) Enabled asynchronous breadcrumbs by default
+
+**Fixes**
+
+* When compiling on Unity 4.x, a compile error would result because the ``Application.logMessageReceived`` API was not available in 4.x
+* (Android) When compiling for Android with IL2CPP turned on, the iOS plugin would cause compile errors since it was not #ifdef'd properly.
+* (iOS) App load transaction start time is now measured from the time the app icon is tapped.
+* (iOS) Several symbols in PLCrashReporter were not properly being stripped from the SDK which resulted in several ‘duplicate symbol’ errors when compiling for IL2CPP on iOS.
+* (iOS) The iOS plugin would hang during a crash when Script Call Optimizations was set to Fast but no Exceptions and IL2CPP was turned on.
+
+

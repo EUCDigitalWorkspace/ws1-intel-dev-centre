@@ -1,0 +1,372 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>WS1Config &#8212; Workspace ONE Intelligence  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/adctheme.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/toggle.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <link rel="search" title="Search" href="../../search.html" />
+    <link rel="top" title="Workspace ONE Intelligence  documentation" href="../../index.html" />
+      <link rel="up" title="Apple SDK" href="../ios.html" />
+      <link rel="next" title="WS1Filter" href="ws1filter_h.html" />
+      <link rel="prev" title="WS1Intelligence" href="ws1intelligence_h.html" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <script type="text/javascript">try{document.domain="vmware.com"}catch(e){};</script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-49786008-1']);
+    _gaq.push(['_setDomainName', 'apteligent.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_addIgnoredRef', 'apteligent.com']);   // Stops Self Referrals
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  
+  <meta name="google-translate-customization" content="f0837c562504ad7b-d669caf2b7375c11-g99fd8de75f76752f-14"></meta>
+
+  </head><body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PK9468"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PK9468');</script>
+<!-- End Google Tag Manager -->
+
+
+  <div id="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+          <div id="searchbox" style="display: none">
+              <form class="search" action="../../search.html" method="get">
+                <div class="search-wrapper">
+                  <input class="prettysearch" type="text" name="q" size="18" />
+                  <input type="submit" value="Search" class="searchbutton" />
+                </div>
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+      <ul><li class="toctree-l1" id="docs-home"><a href="../../index.html">Docs Home</a></li></ul>
+      <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../overview/overview.html">Overview</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../ios.html">Apple SDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../ios.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ios.html#release-notes">Release Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ios.html#application-requirements">Application Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ios.html#guides">Guides</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../ios.html#sdk-references">SDK References</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="crfilter_h.html">CRFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ws1intelligence_h.html">WS1Intelligence</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">WS1Config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ws1filter_h.html">WS1Filter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ws1constants_h.html">WS1Constants</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ios.html#features">Features</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../android/android.html">Android SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../development_platforms/index.html">Development Platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../downloads/eula_accepted.html">SDK Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release_notes/release_notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../downloads/downloads.html">EULA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../downloads/checksums.html">SDK Download Checksums</a></li>
+</ul>
+
+      <div id="sidebar-toc-clear"></div>
+      
+    </div>
+  </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            <div class="container">
+              <div class="row">
+                <div class="span12">
+                  
+  <section id="ws1config">
+<h1>WS1Config<a class="headerlink" href="#ws1config" title="Permalink to this heading">¶</a></h1>
+<p>This object is used to specify various configuration options for Workspace ONE
+Intelligence SDK.</p>
+<p>Once this object is setup, you can pass it to <code class="docutils literal notranslate"><span class="pre">WS1Intelligence.initialize</span></code>.
+After Workspace ONE Intelligence SDK is initialized, changes to this object will
+have no affect.</p>
+<section id="creating-a-config">
+<h2>Creating a Config<a class="headerlink" href="#creating-a-config" title="Permalink to this heading">¶</a></h2>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>+ defaultConfig</p>
+</div>
+<div class="discussion docutils container">
+<p>Creates a new WS1Config object with the default values for the above
+properties. You can modify the config values and pass this object into
+<code class="docutils literal notranslate"><span class="pre">[WS1Intelligence</span> <span class="pre">enableWithAppID:config:]</span></code></p>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">+</span> <span class="p">(</span><span class="n">WS1Config</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nf">defaultConfig</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">func</span> <span class="k">default</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="n">WS1Config</span>
+</pre></div>
+</div>
+</div>
+<div class="retval docutils container">
+<p>Returns <code class="docutils literal notranslate"><span class="pre">WS1Config</span></code> with default values.</p>
+</div>
+</div>
+</section>
+<section id="network-insights-configuration">
+<span id="ios-crittercism-config-apm-ws1"></span><h2>Network Insights Configuration<a class="headerlink" href="#network-insights-configuration" title="Permalink to this heading">¶</a></h2>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>enableServiceMonitoring <em>Property</em></p>
+</div>
+<div class="discussion docutils container">
+<p>Determines whether automatic collection of network traffic data is enabled in the SDK.</p>
+<p>If this flag is set to NO, then no instrumentation will be installed
+and no data will be collected or sent automatically.</p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">YES</span></code> (enabled)</p>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="k">@property</span><span class="w"> </span><span class="p">(</span><span class="k">nonatomic</span><span class="p">,</span><span class="w"> </span><span class="k">assign</span><span class="p">)</span><span class="w"> </span><span class="kt">BOOL</span><span class="w"> </span><span class="n">enableServiceMonitoring</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nv">enableServiceMonitoring</span><span class="p">:</span> <span class="nb">Bool</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>monitorNSURLConnection <em>Property</em></p>
+</div>
+<div class="discussion docutils container">
+<p>Determines whether Network Insights should automatically capture network performance
+information for network calls made through <code class="docutils literal notranslate"><span class="pre">NSURLConnection</span></code>.</p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">YES</span></code></p>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="k">@property</span><span class="w"> </span><span class="p">(</span><span class="k">nonatomic</span><span class="p">,</span><span class="w"> </span><span class="k">assign</span><span class="p">)</span><span class="w"> </span><span class="kt">BOOL</span><span class="w"> </span><span class="n">monitorNSURLConnection</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nv">monitorNSURLConnection</span><span class="p">:</span> <span class="nb">Bool</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>monitorNSURLSession <em>Property</em></p>
+</div>
+<div class="discussion docutils container">
+<p>Determines whether Network Insights should automatically capture network performance
+information for network calls made through <code class="docutils literal notranslate"><span class="pre">NSURLSession</span></code>.</p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">YES</span></code></p>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="k">@property</span><span class="w"> </span><span class="p">(</span><span class="k">nonatomic</span><span class="p">,</span><span class="w"> </span><span class="k">assign</span><span class="p">)</span><span class="w"> </span><span class="kt">BOOL</span><span class="w"> </span><span class="n">monitorNSURLSession</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nv">monitorNSURLSession</span><span class="p">:</span> <span class="nb">Bool</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>urlFilters <em>Property</em></p>
+</div>
+<div class="discussion docutils container">
+<p>An array of WS1Filter objects. These objects are used to fine tune
+the collection of Network Insights data by the Workspace ONE Intelligence
+SDK. For example, URLs that may contain sensitive information can be blocked.
+The filters can also be used to preserve URL query parameters, fragments,
+and parameters. By default these components are removed from the data reported
+to the WS1Intelligence hub.</p>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="k">@property</span><span class="w"> </span><span class="p">(</span><span class="k">nonatomic</span><span class="p">,</span><span class="w"> </span><span class="k">strong</span><span class="p">)</span><span class="w"> </span><span class="bp">NSArray</span><span class="w"> </span><span class="o">&lt;</span><span class="n">WS1Filter</span><span class="w"> </span><span class="o">*&gt;</span><span class="w"> </span><span class="o">*</span><span class="n">urlFilters</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nv">urlFilters</span><span class="p">:</span> <span class="nb">Array</span><span class="p">&lt;</span><span class="n">WS1Filter</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="monitoring-web-views">
+<span id="monitor-web-views-ios-ws1"></span><h2>Monitoring Web Views<a class="headerlink" href="#monitoring-web-views" title="Permalink to this heading">¶</a></h2>
+<div class="sdk-section-discussion docutils container">
+<p>Workspace ONE Intelligence has the capability to monitor network traffic
+generated by web views and JavaScript errors generated by WKWebViews.</p>
+<p>Monitoring of WKWebView traffic is disabled by default because use of the
+WKWebView class has the side effect of calling the class initialize method,
+which creates a new thread to manage webviews.</p>
+<p>Since Workspace ONE Intelligence cannot prevent these side effects from
+happening and many apps do not use webviews, Network Insights for
+webviews must be explicitly enabled.</p>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>monitorWKWebView <em>Property</em></p>
+</div>
+<div class="discussion docutils container">
+<p>Determine whether Network Insights should capture network performance
+information for network calls made through <code class="docutils literal notranslate"><span class="pre">WKWebView</span></code>.
+Currently only page loads and page transitions are captured.
+Calls made via javascript are currently not captured.</p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">NO</span></code></p>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="k">@property</span><span class="w"> </span><span class="p">(</span><span class="k">nonatomic</span><span class="p">,</span><span class="w"> </span><span class="k">assign</span><span class="p">)</span><span class="w"> </span><span class="kt">BOOL</span><span class="w"> </span><span class="n">monitorWKWebView</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nv">monitorWKWebView</span><span class="p">:</span> <span class="nb">Bool</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="send-data-on-wifi-only">
+<span id="ios-crittercism-config-wifi-only-ws1"></span><h2>Send Data On Wifi Only<a class="headerlink" href="#send-data-on-wifi-only" title="Permalink to this heading">¶</a></h2>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>allowsCellularAccess <em>Property</em></p>
+</div>
+<div class="discussion docutils container">
+<p>Determines whether the client will send data to Workspace ONE
+Intelligence while on a cellular network.</p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">YES</span></code></p>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="k">@property</span><span class="p">(</span><span class="k">nonatomic</span><span class="p">)</span><span class="w"> </span><span class="kt">BOOL</span><span class="w"> </span><span class="n">allowsCellularAccess</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nv">allowsCellularAccess</span><span class="p">:</span> <span class="nb">Bool</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="toggle-mach-exception-capture">
+<span id="ios-ws1-config-mach"></span><h2>Toggle MACH Exception Capture<a class="headerlink" href="#toggle-mach-exception-capture" title="Permalink to this heading">¶</a></h2>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>enableMachExceptionHandling <em>Property</em></p>
+</div>
+<div class="discussion docutils container">
+<p>Enables or disables MACH exception capturing by the SDK.
+This allows capturing additional crashes such as stack overflows.
+Since installing a mach exception handler can interfere with debuggers,
+this setting will not take effect when a debugger is attached.
+You may choose to disable mach exception handling if you have code that
+already handles mach exceptions.</p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">YES</span></code></p>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="k">@property</span><span class="p">(</span><span class="k">nonatomic</span><span class="p">)</span><span class="w"> </span><span class="kt">BOOL</span><span class="w"> </span><span class="n">enableMachExceptionHandling</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nv">enableMachExceptionHandling</span><span class="p">:</span> <span class="nb">Bool</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="extension-support">
+<span id="ios-ws1-config-extensions"></span><h2>Extension Support<a class="headerlink" href="#extension-support" title="Permalink to this heading">¶</a></h2>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>iMessageExtension <em>Property</em></p>
+</div>
+<div class="discussion docutils container">
+<p>Enhances support for iMessage extensions. This configuration flag should be
+set prior to initializing the SDK from inside the iMessage extension.</p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">NO</span></code></p>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="k">@property</span><span class="p">(</span><span class="k">nonatomic</span><span class="p">)</span><span class="w"> </span><span class="kt">BOOL</span><span class="w"> </span><span class="n">iMessageExtension</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nv">iMessageExtension</span><span class="p">:</span> <span class="nb">Bool</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>todayExtension <em>Property</em></p>
+</div>
+<div class="discussion docutils container">
+<blockquote>
+<div><p>Enhances support for today extensions. This configuration flag should be
+set prior to initializing the SDK from inside the today extension.</p>
+</div></blockquote>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">NO</span></code></p>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="k">@property</span><span class="p">(</span><span class="k">nonatomic</span><span class="p">)</span><span class="w"> </span><span class="kt">BOOL</span><span class="w"> </span><span class="n">todayExtension</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nv">todayExtension</span><span class="p">:</span> <span class="nb">Bool</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+	<script type="text/javascript" charset="utf-8" src="../../_static/toc.js"></script>
+  </body>
+</html>

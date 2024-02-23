@@ -1,0 +1,322 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Android Intelligence SDK Network Insights Clients User Guide &#8212; Workspace ONE Intelligence  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/adctheme.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/toggle.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+      <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="Workspace ONE Intelligence  documentation" href="../index.html" />
+      <link rel="up" title="Android SDK" href="android.html" />
+      <link rel="next" title="Development Platforms" href="../development_platforms/index.html" />
+      <link rel="prev" title="Network Insights" href="android_apm.html" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <script type="text/javascript">try{document.domain="vmware.com"}catch(e){};</script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-49786008-1']);
+    _gaq.push(['_setDomainName', 'apteligent.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_addIgnoredRef', 'apteligent.com']);   // Stops Self Referrals
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  
+  <meta name="google-translate-customization" content="f0837c562504ad7b-d669caf2b7375c11-g99fd8de75f76752f-14"></meta>
+
+  </head><body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PK9468"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PK9468');</script>
+<!-- End Google Tag Manager -->
+
+
+  <div id="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+          <div id="searchbox" style="display: none">
+              <form class="search" action="../search.html" method="get">
+                <div class="search-wrapper">
+                  <input class="prettysearch" type="text" name="q" size="18" />
+                  <input type="submit" value="Search" class="searchbutton" />
+                </div>
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+      <ul><li class="toctree-l1" id="docs-home"><a href="../index.html">Docs Home</a></li></ul>
+      <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ios/ios.html">Apple SDK</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="android.html">Android SDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="android.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android.html#release-notes">Release Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android.html#guide">Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android.html#sdk-references">SDK References</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="android.html#features">Features</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="android.html#out-of-the-box-features">Out-of-the-box Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="android.html#main-features">Main Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="android.html#other-features">Other Features</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../development_platforms/index.html">Development Platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/eula_accepted.html">SDK Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../release_notes/release_notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/downloads.html">EULA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/checksums.html">SDK Download Checksums</a></li>
+</ul>
+
+      <div id="sidebar-toc-clear"></div>
+      
+    </div>
+  </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            <div class="container">
+              <div class="row">
+                <div class="span12">
+                  
+  <section id="android-intelligence-sdk-network-insights-clients-user-guide">
+<span id="android-network-insights-clients-user-guide"></span><h1>Android Intelligence SDK Network Insights Clients User Guide<a class="headerlink" href="#android-intelligence-sdk-network-insights-clients-user-guide" title="Permalink to this heading">¶</a></h1>
+<p>This page acts as a guide on how to implement the Network Insights using our supported Http(s) clients.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="#android-httpurlconnection-wrapper"><span class="std std-ref">HttpUrlConnection</span></a></p></li>
+<li><p><a class="reference internal" href="#android-httpsurlconnection-wrapper"><span class="std std-ref">HttpsUrlConnection</span></a></p></li>
+<li><p><a class="reference internal" href="#android-ok-http"><span class="std std-ref">OkHttp</span></a></p></li>
+</ul>
+</div></blockquote>
+<section id="httpurlconnection">
+<span id="android-httpurlconnection-wrapper"></span><h2>HttpUrlConnection<a class="headerlink" href="#httpurlconnection" title="Permalink to this heading">¶</a></h2>
+<p>To report incoming and outgoing network connections previously made using the HttpUrlConnection class, use the provided InstrumentedHttpUrlConnection wrapper class. The wrapper class will function in the exact same was as the original HttpUrlConnection class so there is no need to change the implementation.</p>
+<p>Here’s an example of how to construct and use this client:</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">InstrumentedHttpUrlConnection Example</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Create an Instance of InstrumentedHttpUrlConnection.</span>
+<span class="cm"> * The connection is opened from the provided URL.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param u URL to open the connection to.</span>
+<span class="cm"> * @throws IOException if an I/O exception occurs.</span>
+<span class="cm"> */</span>
+<span class="kd">public</span><span class="w"> </span><span class="nf">InstrumentedHttpUrlConnection</span><span class="p">(</span><span class="n">URL</span><span class="w"> </span><span class="n">u</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Create an Instance of InstrumentedHttpUrlConnection with a Proxy.</span>
+<span class="cm"> * The connection is opened from the provided URL with the given proxy.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param u     URL to open the connection to.</span>
+<span class="cm"> * @param proxy Proxy which the connection to the URL will be opened with.</span>
+<span class="cm"> * @throws IOException if an I/O exception occurs.</span>
+<span class="cm"> */</span>
+<span class="kd">public</span><span class="w"> </span><span class="nf">InstrumentedHttpUrlConnection</span><span class="p">(</span><span class="n">URL</span><span class="w"> </span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="n">Proxy</span><span class="w"> </span><span class="n">proxy</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Create an Instance of InstrumentedHttpUrlConnection as a wrapper around an existing</span>
+<span class="cm"> * HttpUrlConnection instance.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param httpURLConnection HttpUrlConnection instance to instrument.</span>
+<span class="cm"> * @throws IOException if an I/O exception occurs.</span>
+<span class="cm"> */</span>
+<span class="kd">public</span><span class="w"> </span><span class="nf">InstrumentedHttpUrlConnection</span><span class="p">(</span><span class="n">HttpURLConnection</span><span class="w"> </span><span class="n">httpURLConnection</span><span class="p">)</span>
+
+<span class="c1">// Usage Example</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Get Image Data and read response</span>
+<span class="cm"> */</span>
+<span class="w">    </span><span class="n">val</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;http://httpbin.org/image&quot;</span>
+<span class="w">    </span><span class="n">val</span><span class="w"> </span><span class="n">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">InstrumentedHttpUrlConnection</span><span class="p">(</span><span class="n">URL</span><span class="p">(</span><span class="n">url</span><span class="p">))</span>
+
+<span class="w">    </span><span class="n">val</span><span class="w"> </span><span class="n">bout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ByteArrayOutputStream</span><span class="p">()</span>
+<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">val</span><span class="w"> </span><span class="n">buffer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ByteArray</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="n">length</span><span class="p">:</span><span class="w"> </span><span class="n">Int</span>
+<span class="w">        </span><span class="nf">while</span><span class="w"> </span><span class="p">(</span><span class="n">connection</span><span class="p">.</span><span class="na">inputStream</span><span class="p">.</span><span class="na">read</span><span class="p">(</span><span class="n">buffer</span><span class="p">).</span><span class="na">also</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">bout</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">length</span><span class="p">)</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="p">(</span><span class="n">exception</span><span class="p">:</span><span class="w"> </span><span class="n">Exception</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Log</span><span class="p">.</span><span class="na">e</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Error occurred during image request&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">connection</span><span class="p">.</span><span class="na">disconnect</span><span class="p">()</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w"> </span><span class="cm">/**</span>
+<span class="cm"> * Post Data using InstrumentedOutputStream and read response</span>
+<span class="cm"> */</span>
+<span class="w">    </span><span class="n">val</span><span class="w"> </span><span class="n">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">InstrumentedHttpUrlConnection</span><span class="p">(</span><span class="n">URL</span><span class="p">(</span><span class="s">&quot;https://reqres.in/api/users&quot;</span><span class="p">))</span>
+<span class="w">    </span><span class="n">connection</span><span class="p">.</span><span class="na">requestMethod</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;POST&quot;</span>
+<span class="w">    </span><span class="n">connection</span><span class="p">.</span><span class="na">setRequestProperty</span><span class="p">(</span><span class="s">&quot;Content-Type&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;application/json&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">connection</span><span class="p">.</span><span class="na">setRequestProperty</span><span class="p">(</span><span class="s">&quot;Accept&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;application/json&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">connection</span><span class="p">.</span><span class="na">doOutput</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="n">val</span><span class="w"> </span><span class="n">jsonInputString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;{\&quot;name\&quot;: \&quot;Lain\&quot;, \&quot;job\&quot;: \&quot;Programmer\&quot;}&quot;</span>
+
+<span class="w">    </span><span class="c1">// Use InstrumentedOutputStream to Post data</span>
+<span class="w">    </span><span class="n">connection</span><span class="p">.</span><span class="na">outputStream</span><span class="p">.</span><span class="na">use</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">os</span><span class="w"> </span><span class="o">-&gt;</span>
+<span class="w">        </span><span class="n">val</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">jsonInputString</span><span class="p">.</span><span class="na">toByteArray</span><span class="p">(</span><span class="n">charset</span><span class="p">(</span><span class="s">&quot;utf-8&quot;</span><span class="p">))</span>
+<span class="w">        </span><span class="n">os</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="n">input</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">size</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Get our response</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="w">    </span><span class="n">BufferedReader</span><span class="p">(</span>
+<span class="w">        </span><span class="n">InputStreamReader</span><span class="p">(</span><span class="n">connection</span><span class="p">.</span><span class="na">inputStream</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;utf-8&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">).</span><span class="na">use</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">br</span><span class="w"> </span><span class="o">-&gt;</span>
+<span class="w">        </span><span class="n">val</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StringBuilder</span><span class="p">()</span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="n">responseLine</span><span class="p">:</span><span class="w"> </span><span class="n">String</span><span class="o">?</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span>
+<span class="w">        </span><span class="nf">while</span><span class="w"> </span><span class="p">(</span><span class="n">br</span><span class="p">.</span><span class="na">readLine</span><span class="p">().</span><span class="na">also</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">responseLine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">response</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">responseLine</span><span class="o">!!</span><span class="p">.</span><span class="na">trim</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="w"> </span><span class="p">})</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">response</span><span class="p">.</span><span class="na">toString</span><span class="p">()</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">connection</span><span class="p">.</span><span class="na">disconnect</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="httpsurlconnection">
+<span id="android-httpsurlconnection-wrapper"></span><h2>HttpsUrlConnection<a class="headerlink" href="#httpsurlconnection" title="Permalink to this heading">¶</a></h2>
+<p>To report incoming and outgoing network connections previously made using the HttpsUrlConnection class, use the provided InstrumentedHttpsUrlConnection wrapper class. The wrapper class will function in the exact same was as the original HttpsUrlConnection class so there is no need to change the implementation.
+As this is an HTTPS client, remember to only use HTTPS connections, otherwise InstrumentedHttpUrlConnection may be more appropriate.</p>
+<p>Here’s an example of how to construct and use this client:</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">InstrumentedHttpUrlConnection Example</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Create an Instance of InstrumentedHttpsUrlConnection.</span>
+<span class="cm"> * The connection is opened from the provided URL.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param u URL to open the connection to.</span>
+<span class="cm"> * @throws IOException if an I/O exception occurs.</span>
+<span class="cm"> */</span>
+<span class="kd">public</span><span class="w"> </span><span class="nf">InstrumentedHttpsUrlConnection</span><span class="p">(</span><span class="n">URL</span><span class="w"> </span><span class="n">u</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Create an Instance of InstrumentedHttpsUrlConnection with a Proxy.</span>
+<span class="cm"> * The connection is opened from the provided URL with the given proxy.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param u     URL to open the connection to.</span>
+<span class="cm"> * @param proxy Proxy which the connection to the URL will be opened with.</span>
+<span class="cm"> * @throws IOException if an I/O exception occurs.</span>
+<span class="cm"> */</span>
+<span class="kd">public</span><span class="w"> </span><span class="nf">InstrumentedHttpsUrlConnection</span><span class="p">(</span><span class="n">URL</span><span class="w"> </span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="n">Proxy</span><span class="w"> </span><span class="n">proxy</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Create an Instance of InstrumentedHttpsUrlConnection as a wrapper around an existing</span>
+<span class="cm"> * HttpUrlConnection instance.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param httpsURLConnection HttpsUrlConnection instance to instrument.</span>
+<span class="cm"> * @throws IOException if an I/O exception occurs.</span>
+<span class="cm"> */</span>
+<span class="kd">public</span><span class="w"> </span><span class="nf">InstrumentedHttpUrlConnection</span><span class="p">(</span><span class="n">HttpsURLConnection</span><span class="w"> </span><span class="n">httpsURLConnection</span><span class="p">)</span>
+
+<span class="c1">// Usage Example</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Get Image Data and read response</span>
+<span class="cm"> */</span>
+<span class="w">    </span><span class="n">val</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;https://httpbin.org/image&quot;</span>
+<span class="w">    </span><span class="n">val</span><span class="w"> </span><span class="n">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">InstrumentedHttpsUrlConnection</span><span class="p">(</span><span class="n">URL</span><span class="p">(</span><span class="n">url</span><span class="p">))</span>
+
+<span class="w">    </span><span class="n">val</span><span class="w"> </span><span class="n">bout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ByteArrayOutputStream</span><span class="p">()</span>
+<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">val</span><span class="w"> </span><span class="n">buffer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ByteArray</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="n">length</span><span class="p">:</span><span class="w"> </span><span class="n">Int</span>
+<span class="w">        </span><span class="nf">while</span><span class="w"> </span><span class="p">(</span><span class="n">connection</span><span class="p">.</span><span class="na">inputStream</span><span class="p">.</span><span class="na">read</span><span class="p">(</span><span class="n">buffer</span><span class="p">).</span><span class="na">also</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">bout</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">length</span><span class="p">)</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="p">(</span><span class="n">exception</span><span class="p">:</span><span class="w"> </span><span class="n">Exception</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Log</span><span class="p">.</span><span class="na">e</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Error occurred during image request&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">connection</span><span class="p">.</span><span class="na">disconnect</span><span class="p">()</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w"> </span><span class="cm">/**</span>
+<span class="cm"> * Post Data using InstrumentedOutputStream and read response</span>
+<span class="cm"> */</span>
+<span class="w">    </span><span class="n">val</span><span class="w"> </span><span class="n">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">InstrumentedHttpsUrlConnection</span><span class="p">(</span><span class="n">URL</span><span class="p">(</span><span class="s">&quot;https://reqres.in/api/users&quot;</span><span class="p">))</span>
+<span class="w">    </span><span class="n">connection</span><span class="p">.</span><span class="na">requestMethod</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;POST&quot;</span>
+<span class="w">    </span><span class="n">connection</span><span class="p">.</span><span class="na">setRequestProperty</span><span class="p">(</span><span class="s">&quot;Content-Type&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;application/json&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">connection</span><span class="p">.</span><span class="na">setRequestProperty</span><span class="p">(</span><span class="s">&quot;Accept&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;application/json&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">connection</span><span class="p">.</span><span class="na">doOutput</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="n">val</span><span class="w"> </span><span class="n">jsonInputString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;{\&quot;name\&quot;: \&quot;Lain\&quot;, \&quot;job\&quot;: \&quot;Programmer\&quot;}&quot;</span>
+
+<span class="w">    </span><span class="c1">// Use InstrumentedOutputStream to Post data</span>
+<span class="w">    </span><span class="n">connection</span><span class="p">.</span><span class="na">outputStream</span><span class="p">.</span><span class="na">use</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">os</span><span class="w"> </span><span class="o">-&gt;</span>
+<span class="w">        </span><span class="n">val</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">jsonInputString</span><span class="p">.</span><span class="na">toByteArray</span><span class="p">(</span><span class="n">charset</span><span class="p">(</span><span class="s">&quot;utf-8&quot;</span><span class="p">))</span>
+<span class="w">        </span><span class="n">os</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="n">input</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">size</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Get our response</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="w">    </span><span class="n">BufferedReader</span><span class="p">(</span>
+<span class="w">        </span><span class="n">InputStreamReader</span><span class="p">(</span><span class="n">connection</span><span class="p">.</span><span class="na">inputStream</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;utf-8&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">).</span><span class="na">use</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">br</span><span class="w"> </span><span class="o">-&gt;</span>
+<span class="w">        </span><span class="n">val</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StringBuilder</span><span class="p">()</span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="n">responseLine</span><span class="p">:</span><span class="w"> </span><span class="n">String</span><span class="o">?</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span>
+<span class="w">        </span><span class="nf">while</span><span class="w"> </span><span class="p">(</span><span class="n">br</span><span class="p">.</span><span class="na">readLine</span><span class="p">().</span><span class="na">also</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">responseLine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">response</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">responseLine</span><span class="o">!!</span><span class="p">.</span><span class="na">trim</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="w"> </span><span class="p">})</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">response</span><span class="p">.</span><span class="na">toString</span><span class="p">()</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">connection</span><span class="p">.</span><span class="na">disconnect</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="okhttp">
+<span id="android-ok-http"></span><h2>OkHttp<a class="headerlink" href="#okhttp" title="Permalink to this heading">¶</a></h2>
+<p>The implementation for instrumenting OkHttp Clients has not changed since previous versions of the Intelligence SDK.</p>
+<p>It must be called on the main UI thread after the OkHttpClient is set. Once the method is invoked, Intelligence SDK will automatically log network calls made with the returned instrumented client to the Network Insights page of the Workspace ONE Intelligence portal.</p>
+<p>Here’s an example of how to instrument a client:</p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">OkHttp Instrumentation Example</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">OkHttpClient</span><span class="w"> </span><span class="n">uninstrumentedClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">OkHttpClient</span><span class="p">();</span>
+<span class="n">OkHttpClient</span><span class="w"> </span><span class="n">instrumentedClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Crittercism</span><span class="p">.</span><span class="na">getNetworkInstrumentation</span><span class="p">().</span><span class="na">instrumentOkHttpClient</span><span class="p">(</span><span class="n">uninstrumentedClient</span><span class="p">);</span>
+<span class="c1">// Now you can use the instrumented client for network calls (on a different thread)</span>
+<span class="n">instrumentedClient</span><span class="p">.</span><span class="na">newCall</span><span class="p">(...).</span><span class="na">execute</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+	<script type="text/javascript" charset="utf-8" src="../_static/toc.js"></script>
+  </body>
+</html>

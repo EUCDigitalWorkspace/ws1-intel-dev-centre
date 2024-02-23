@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Loggly Integration Guide &#8212; Workspace ONE Intelligence  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/adctheme.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/toggle.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+      <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="Workspace ONE Intelligence  documentation" href="../index.html" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <script type="text/javascript">try{document.domain="vmware.com"}catch(e){};</script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-49786008-1']);
+    _gaq.push(['_setDomainName', 'apteligent.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_addIgnoredRef', 'apteligent.com']);   // Stops Self Referrals
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  
+  <meta name="google-translate-customization" content="f0837c562504ad7b-d669caf2b7375c11-g99fd8de75f76752f-14"></meta>
+
+  </head><body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PK9468"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PK9468');</script>
+<!-- End Google Tag Manager -->
+
+
+  <div id="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+          <div id="searchbox" style="display: none">
+              <form class="search" action="../search.html" method="get">
+                <div class="search-wrapper">
+                  <input class="prettysearch" type="text" name="q" size="18" />
+                  <input type="submit" value="Search" class="searchbutton" />
+                </div>
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+      <ul><li class="toctree-l1" id="docs-home"><a href="../index.html">Docs Home</a></li></ul>
+      <ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ios/ios.html">Apple SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../android/android.html">Android SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development_platforms/index.html">Development Platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/eula_accepted.html">SDK Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../release_notes/release_notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/downloads.html">EULA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/checksums.html">SDK Download Checksums</a></li>
+</ul>
+
+      <div id="sidebar-toc-clear"></div>
+      
+    </div>
+  </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            <div class="container">
+              <div class="row">
+                <div class="span12">
+                  
+  <section id="loggly-integration-guide">
+<span id="integrate-loggly"></span><h1>Loggly Integration Guide<a class="headerlink" href="#loggly-integration-guide" title="Permalink to this heading">¶</a></h1>
+<p>This topic describes how to integrate Apteligent alerts with
+<a class="reference external" href="http://loggly.com">Loggly</a>.
+Loggly is a cloud-based log management service that helps DevOps and technical
+teams make sense of the the massive quantity of logs that are being produced by
+a growing number of cloud-centric applications.</p>
+<p>Using Apteligent’s Loggly integration, all Apteligent alerts can be
+delivered directly to your enterprise’s existing Loggly instance.</p>
+<ol class="arabic">
+<li><p>Login to Apteligent, go to <strong>Alert Center</strong> and <strong>Alert Integrations</strong>,
+and click <strong>Add Integration</strong>.</p>
+<img alt="../_images/integration-loggly-new-alert-integration.png" src="../_images/integration-loggly-new-alert-integration.png" />
+</li>
+<li><p>Select <strong>Webhook</strong> as the Integration type and give your integration a <strong>Name</strong>.</p>
+<img alt="../_images/integration-loggly-new-alert-integration-name.png" src="../_images/integration-loggly-new-alert-integration-name.png" />
+</li>
+<li><p>Find your Loggly <strong>Source URL</strong> by logging into Loggly and selecting
+<strong>Source Setup &gt; Client Side Apps &gt; HTTP/S Endpoint</strong>.</p>
+<img alt="../_images/integration-loggly-source-setup.png" src="../_images/integration-loggly-source-setup.png" />
+<img alt="../_images/integration-loggly-source-setup-http.png" src="../_images/integration-loggly-source-setup-http.png" />
+<p>Copy the URL that is displayed under <strong>Step 1</strong>.</p>
+<img alt="../_images/integration-loggly-http-endpoint.png" src="../_images/integration-loggly-http-endpoint.png" />
+<p>For more information, refer to the <a class="reference external" href="https://www.loggly.com/docs/http-endpoint/">Loggly HTTP Endpoint Documentation</a>.</p>
+</li>
+<li><p>Paste the URL from the previous step. Click <strong>Create Integration</strong>.</p></li>
+<li><p>Create a <strong>New Alert</strong> to test out your integration.</p>
+<img alt="../_images/integration-loggly-new-alert.png" src="../_images/integration-loggly-new-alert.png" />
+</li>
+<li><p>If your Loggly integration is working correctly, every time your
+Apteligent alert is triggered, it will be sent to Loggly.</p>
+<img alt="../_images/integration-loggly-dashboard.png" src="../_images/integration-loggly-dashboard.png" />
+</li>
+</ol>
+<p>For additional assistance, contact Apteligent Support (<a class="reference external" href="mailto:support&#37;&#52;&#48;apteligent&#46;com">support<span>&#64;</span>apteligent<span>&#46;</span>com</a>).</p>
+</section>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+	<script type="text/javascript" charset="utf-8" src="../_static/toc.js"></script>
+  </body>
+</html>

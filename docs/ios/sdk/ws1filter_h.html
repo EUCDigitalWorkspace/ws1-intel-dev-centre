@@ -1,0 +1,390 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>WS1Filter &#8212; Workspace ONE Intelligence  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/adctheme.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/toggle.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <link rel="search" title="Search" href="../../search.html" />
+    <link rel="top" title="Workspace ONE Intelligence  documentation" href="../../index.html" />
+      <link rel="up" title="Apple SDK" href="../ios.html" />
+      <link rel="next" title="WS1Constants" href="ws1constants_h.html" />
+      <link rel="prev" title="WS1Config" href="ws1config_h.html" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <script type="text/javascript">try{document.domain="vmware.com"}catch(e){};</script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-49786008-1']);
+    _gaq.push(['_setDomainName', 'apteligent.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_addIgnoredRef', 'apteligent.com']);   // Stops Self Referrals
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  
+  <meta name="google-translate-customization" content="f0837c562504ad7b-d669caf2b7375c11-g99fd8de75f76752f-14"></meta>
+
+  </head><body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PK9468"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PK9468');</script>
+<!-- End Google Tag Manager -->
+
+
+  <div id="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+          <div id="searchbox" style="display: none">
+              <form class="search" action="../../search.html" method="get">
+                <div class="search-wrapper">
+                  <input class="prettysearch" type="text" name="q" size="18" />
+                  <input type="submit" value="Search" class="searchbutton" />
+                </div>
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+      <ul><li class="toctree-l1" id="docs-home"><a href="../../index.html">Docs Home</a></li></ul>
+      <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../overview/overview.html">Overview</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../ios.html">Apple SDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../ios.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ios.html#release-notes">Release Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ios.html#application-requirements">Application Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ios.html#guides">Guides</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../ios.html#sdk-references">SDK References</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="crfilter_h.html">CRFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ws1intelligence_h.html">WS1Intelligence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ws1config_h.html">WS1Config</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">WS1Filter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ws1constants_h.html">WS1Constants</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ios.html#features">Features</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../android/android.html">Android SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../development_platforms/index.html">Development Platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../downloads/eula_accepted.html">SDK Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release_notes/release_notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../downloads/downloads.html">EULA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../downloads/checksums.html">SDK Download Checksums</a></li>
+</ul>
+
+      <div id="sidebar-toc-clear"></div>
+      
+    </div>
+  </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            <div class="container">
+              <div class="row">
+                <div class="span12">
+                  
+  <section id="ws1filter">
+<h1>WS1Filter<a class="headerlink" href="#ws1filter" title="Permalink to this heading">¶</a></h1>
+<p>By default, Workspace ONE Intelligence SDK reports Network Insights data for all
+URLs that are accessed by your app and strips each URL of any query parameters.
+For example, <code class="docutils literal notranslate"><span class="pre">http://foo.com?name=critter</span></code> becomes <code class="docutils literal notranslate"><span class="pre">http://foo.com</span></code>.
+This is done to ensure personal information is not transmitted to Workspace ONE
+Intelligence.</p>
+<p>It is also possible to customise filter deny list that will completely
+discard matching URLs. Network Insights data that pertains to any URL that
+matches the stored deny values will not be reported to Workspace ONE Intelligence.</p>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">[WS1Filter</span> <span class="pre">filterWithString:]</span></code> to modify the default filtering
+behavior:</p>
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="c1">// Add filters at initialization</span>
+<span class="n">WS1Config</span><span class="w"> </span><span class="o">*</span><span class="n">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">WS1Config</span><span class="w"> </span><span class="n">defaultConfig</span><span class="p">];</span>
+<span class="n">config</span><span class="p">.</span><span class="n">urlFilters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="l">@[</span><span class="p">[</span><span class="n">WS1Filter</span><span class="w"> </span><span class="n">filterWithString</span><span class="o">:</span><span class="s">@&quot;sensitiveURL&quot;</span><span class="p">],</span>
+<span class="w">                      </span><span class="p">[</span><span class="n">WS1Filter</span><span class="w"> </span><span class="n">filterWithString</span><span class="o">:</span><span class="s">@&quot;additionalURL&quot;</span><span class="p">]</span><span class="l">]</span><span class="p">;</span>
+<span class="p">[</span><span class="n">WS1Intelligence</span><span class="w"> </span><span class="n">enableWithAppID</span><span class="o">:</span><span class="s">@&quot;MYAPPID&quot;</span><span class="w"> </span><span class="n">config</span><span class="o">:</span><span class="n">config</span><span class="p">];</span>
+
+<span class="c1">// Add filters later on</span>
+<span class="p">[</span><span class="n">WS1Intelligence</span><span class="w"> </span><span class="n">addFilter</span><span class="o">:</span><span class="p">[</span><span class="n">WS1Filter</span><span class="w"> </span><span class="n">filterWithString</span><span class="o">:</span><span class="s">@&quot;anotherURL&quot;</span><span class="p">]];</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="c1">// Add filters at initialization</span>
+<span class="kd">let</span> <span class="nv">config</span> <span class="p">:</span> <span class="n">WS1Config</span> <span class="p">=</span> <span class="n">WS1Config</span><span class="p">.</span><span class="k">default</span><span class="p">()</span>
+<span class="n">config</span><span class="p">.</span><span class="n">urlFilters</span> <span class="p">=</span> <span class="p">[</span><span class="n">WS1Filter</span><span class="p">(</span><span class="n">string</span><span class="p">:</span> <span class="s">&quot;sensitiveURL&quot;</span><span class="p">),</span> <span class="n">WS1Filter</span><span class="p">(</span><span class="n">string</span><span class="p">:</span> <span class="s">&quot;additionalURL&quot;</span><span class="p">)]</span>
+<span class="n">WS1Intelligence</span><span class="p">.</span><span class="n">enable</span><span class="p">(</span><span class="n">withAppID</span><span class="p">:</span> <span class="n">appID</span><span class="p">,</span> <span class="n">config</span><span class="p">:</span> <span class="n">config</span><span class="p">)</span>
+
+<span class="c1">// Add filters later on</span>
+<span class="n">WS1Intelligence</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="bp">filter</span><span class="p">:</span> <span class="n">WS1Filter</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>Filters match URLs via <strong>case sensitive</strong> substring matching</p></li>
+</ul>
+</div>
+<section id="creating-a-filter">
+<h2>Creating a Filter<a class="headerlink" href="#creating-a-filter" title="Permalink to this heading">¶</a></h2>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>+ filterWithString:</p>
+</div>
+<div class="discussion docutils container">
+<p>Convenience method to create a deny filter.</p>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">+</span> <span class="p">(</span><span class="n">WS1Filter</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nf">filterWithString:</span><span class="p">(</span><span class="bp">NSString</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">matchToken</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">func</span> <span class="bp">filter</span><span class="p">(</span><span class="n">withString</span><span class="p">:</span> <span class="n">matchToken</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>matchToken</p></td>
+<td><p>An NSString of the url to filter</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="retval docutils container">
+<p>A WS1Filter object for matchToken.</p>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>+ filterWithString:andFilterType:</p>
+</div>
+<div class="discussion docutils container">
+<p>Convenience method to create a filter with the specified filter type.</p>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">+</span> <span class="p">(</span><span class="n">WS1Filter</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nf">filterWithString:</span><span class="p">(</span><span class="bp">NSString</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">matchToken</span>
+<span class="w">                  </span><span class="nl">andFilterType</span><span class="p">:(</span><span class="n">WS1FilterType</span><span class="p">)</span><span class="nv">filterType</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">func</span> <span class="bp">filter</span><span class="p">(</span><span class="n">withString</span><span class="p">:</span> <span class="n">matchToken</span> <span class="n">andFilterType</span><span class="p">:</span><span class="n">filterType</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>matchToken</p></td>
+<td><p>An NSString of the url to filter</p></td>
+</tr>
+<tr class="row-even"><td><p>filterType</p></td>
+<td><p>Indicates filter type</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="retval docutils container">
+<p>A WS1Filter object for matchToken.</p>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>- initWithString:</p>
+</div>
+<div class="discussion docutils container">
+<p>Initialize a filter that denies reporting for all URLs that match the specified token.</p>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nf">initWithString:</span><span class="p">(</span><span class="bp">NSString</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">matchToken</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">init</span><span class="p">?(</span><span class="n">string</span> <span class="n">matchToken</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>matchToken</p></td>
+<td><p>An NSString of the url to filter</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="retval docutils container">
+<p>A WS1Filter object of type <a class="reference internal" href="#ws1filtertype-ios"><span class="std std-ref">WS1FilterTypeDeny</span></a></p>
+</div>
+<div class="seealso docutils container">
+<ul class="simple">
+<li><p><a class="reference internal" href="#ws1filtertype-ios"><span class="std std-ref">WS1FilterType</span></a></p></li>
+</ul>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>- initWithString:andFilterType:</p>
+</div>
+<div class="discussion docutils container">
+<p>Initialize a filter that with the behavior specified by the filter type.</p>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nf">initWithString:</span><span class="p">(</span><span class="bp">NSString</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">matchToken</span>
+<span class="w">       </span><span class="nl">andFilterType</span><span class="p">:(</span><span class="n">WS1FilterType</span><span class="p">)</span><span class="nv">filterType</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">init</span><span class="p">?(</span><span class="n">string</span> <span class="n">matchToken</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span>
+  <span class="n">filterType</span> <span class="n">filterType</span><span class="p">:</span> <span class="n">WS1FilterType</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>matchToken</p></td>
+<td><p>An NSString of the url to filter</p></td>
+</tr>
+<tr class="row-even"><td><p>filterType</p></td>
+<td><p>Indicates filter type</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="retval docutils container">
+<p>A WS1Filter object with the indicated filter type.</p>
+</div>
+<div class="seealso docutils container">
+<ul class="simple">
+<li><p><a class="reference internal" href="#ws1filtertype-ios"><span class="std std-ref">WS1FilterType</span></a></p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="other-methods">
+<h2>Other Methods<a class="headerlink" href="#other-methods" title="Permalink to this heading">¶</a></h2>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>+ doesMatch:</p>
+</div>
+<div class="discussion docutils container">
+<p>Returns YES if the filter matches the provided URL string</p>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">doesMatch:</span><span class="p">(</span><span class="bp">NSString</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">url</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>url</p></td>
+<td><p>Specifies the url to be matched</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="retval docutils container">
+<p>Returns YES when the filter matches the provided URL string</p>
+</div>
+</div>
+</section>
+<section id="constants">
+<h2>Constants<a class="headerlink" href="#constants" title="Permalink to this heading">¶</a></h2>
+<div class="toggle docutils container" id="ws1filtertype-ios">
+<div class="header docutils container">
+<p>WS1FilterType</p>
+</div>
+<div class="discussion docutils container">
+<p>The filter type of WS1Filter</p>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">enum</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">NSInteger</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="n">WS1FilterTypeDeny</span><span class="p">,</span>
+<span class="w">   </span><span class="n">WS1FilterTypePreserveQuery</span><span class="p">,</span>
+<span class="w">   </span><span class="n">WS1FilterTypePreserveFragment</span><span class="p">,</span>
+<span class="w">   </span><span class="n">WS1FilterTypePreserveParameters</span><span class="p">,</span>
+<span class="w">   </span><span class="n">WS1FilterTypePreserveAll</span>
+<span class="p">}</span><span class="w"> </span><span class="n">WS1FilterType</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">enum</span> <span class="nc">WS1FilterType</span> <span class="p">:</span> <span class="nb">Int</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="n">Deny</span>
+    <span class="k">case</span> <span class="n">PreserveQuery</span>
+    <span class="k">case</span> <span class="n">PreserveFragment</span>
+    <span class="k">case</span> <span class="n">PreserveParameters</span>
+    <span class="k">case</span> <span class="n">PreserveAll</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="constants docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">WS1FilterTypeDeny</span></code></p></td>
+<td><p>Deny reporting for certain endpoints. Request with a URL that matches this string are not reported</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">WS1FilterTypePreserveQuery</span></code></p></td>
+<td><p>Prevent URL query string from being stripped out</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">WS1FilterTypePreserveFragment</span></code></p></td>
+<td><p>Prevent URL fragment identifier from being stripped out</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">WS1FilterTypePreserveParameters</span></code></p></td>
+<td><p>Prevent URL parameter string from being stripped out</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">WS1FilterTypePreserveAll</span></code></p></td>
+<td><p>Prevent URL query, fragment, and parameters sections from being stripped out</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+</section>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+	<script type="text/javascript" charset="utf-8" src="../../_static/toc.js"></script>
+  </body>
+</html>

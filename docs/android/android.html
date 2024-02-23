@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Android SDK &#8212; Workspace ONE Intelligence  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/adctheme.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/toggle.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+      <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="Workspace ONE Intelligence  documentation" href="../index.html" />
+      <link rel="next" title="Android Release Notes" href="../release_notes/release_notes_android.html" />
+      <link rel="prev" title="Network Insights" href="../ios/ios_apm.html" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <script type="text/javascript">try{document.domain="vmware.com"}catch(e){};</script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-49786008-1']);
+    _gaq.push(['_setDomainName', 'apteligent.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_addIgnoredRef', 'apteligent.com']);   // Stops Self Referrals
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  
+  <meta name="google-translate-customization" content="f0837c562504ad7b-d669caf2b7375c11-g99fd8de75f76752f-14"></meta>
+
+  </head><body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PK9468"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PK9468');</script>
+<!-- End Google Tag Manager -->
+
+
+  <div id="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+          <div id="searchbox" style="display: none">
+              <form class="search" action="../search.html" method="get">
+                <div class="search-wrapper">
+                  <input class="prettysearch" type="text" name="q" size="18" />
+                  <input type="submit" value="Search" class="searchbutton" />
+                </div>
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+      <ul><li class="toctree-l1" id="docs-home"><a href="../index.html">Docs Home</a></li></ul>
+      <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ios/ios.html">Apple SDK</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Android SDK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release-notes">Release Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../release_notes/release_notes_android.html">Android SDK Release Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#guide">Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sdk-references">SDK References</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sdk/crittercism.html">Crittercism</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdk/crittercism_config.html">CrittercismConfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdk/crittercism_callback.html">CrittercismCallback</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdk/crash_data.html">CrashData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdk/network_instrumentation.html">NetworkInstrumentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#features">Features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#out-of-the-box-features">Out-of-the-box Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#main-features">Main Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#other-features">Other Features</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../development_platforms/index.html">Development Platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/eula_accepted.html">SDK Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../release_notes/release_notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/downloads.html">EULA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/checksums.html">SDK Download Checksums</a></li>
+</ul>
+
+      <div id="sidebar-toc-clear"></div>
+      
+    </div>
+  </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            <div class="container">
+              <div class="row">
+                <div class="span12">
+                  
+  <section id="android-sdk">
+<span id="android"></span><h1>Android SDK<a class="headerlink" href="#android-sdk" title="Permalink to this heading">¶</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">¶</a></h2>
+<p>This topic describes how to use Workspace ONE Intelligence with Android apps.
+This guide assumes you have an Workspace ONE Intelligence account set up with a
+valid app ID.</p>
+<p>The Android SDKs may be downloaded <a class="reference internal" href="../downloads/downloads.html#downloads"><span class="std std-ref">here</span></a>.</p>
+</section>
+<section id="release-notes">
+<h2>Release Notes<a class="headerlink" href="#release-notes" title="Permalink to this heading">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../release_notes/release_notes_android.html">Android SDK Release Notes</a></li>
+</ul>
+</div>
+</section>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading">¶</a></h2>
+<p>See <a class="reference internal" href="../release_notes/release_notes_android.html#release-notes-android"><span class="std std-ref">Android Release Notes</span></a></p>
+</section>
+<section id="guide">
+<h2>Guide<a class="headerlink" href="#guide" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="android_install.html#install-android"><span class="std std-ref">How to install and setup the Workspace ONE Intelligence SDK?</span></a></p></li>
+<li><p><a class="reference external" href="https://docs.vmware.com/en/VMware-Workspace-ONE-Intelligence/services/intelligence-documentation/GUID-IntelExpMngtDefMobileIntelligenceSDK.html">SDK Data Sheet</a></p></li>
+</ul>
+</section>
+<section id="sdk-references">
+<h2>SDK References<a class="headerlink" href="#sdk-references" title="Permalink to this heading">¶</a></h2>
+<p>Import <code class="docutils literal notranslate"><span class="pre">com.crittercism.app</span></code> package to use the Workspace ONE Intelligence
+SDK.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sdk/crittercism.html">Crittercism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdk/crittercism_config.html">CrittercismConfig</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdk/crittercism_callback.html">CrittercismCallback</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdk/crash_data.html">CrashData</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdk/network_instrumentation.html">NetworkInstrumentation</a></li>
+</ul>
+</div>
+</section>
+<section id="features">
+<h2>Features<a class="headerlink" href="#features" title="Permalink to this heading">¶</a></h2>
+<section id="out-of-the-box-features">
+<h3>Out-of-the-box Features<a class="headerlink" href="#out-of-the-box-features" title="Permalink to this heading">¶</a></h3>
+<p>Some features are available as soon as you integrate Workspace ONE Intelligence
+SDK into your app.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="android_apm.html">Network Insights</a></li>
+<li class="toctree-l1"><a class="reference internal" href="android_net_insights_user_guide.html">Android Intelligence SDK Network Insights Clients User Guide</a></li>
+</ul>
+</div>
+</section>
+<section id="main-features">
+<h3>Main Features<a class="headerlink" href="#main-features" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="sdk/crittercism.html#breadcrumbs-android"><span class="std std-ref">Logging Breadcrumbs</span></a></p></li>
+<li><p><a class="reference internal" href="sdk/crittercism.html#logging-he-android"><span class="std std-ref">Logging Handled Exceptions</span></a></p></li>
+<li><p><a class="reference internal" href="sdk/crittercism.html#userflows-android"><span class="std std-ref">Logging User Flows</span></a></p></li>
+<li><p><a class="reference internal" href="sdk/crittercism.html#log-network-request"><span class="std std-ref">Logging Network Request</span></a></p></li>
+<li><p><a class="reference internal" href="sdk/crittercism.html#okhttp-instrumentation-android"><span class="std std-ref">Instrumenting OkHttpClient (Beta)</span></a></p></li>
+<li><p><a class="reference internal" href="sdk/crittercism.html#webview-instrumentation-android"><span class="std std-ref">Instrumenting WebView</span></a></p></li>
+</ul>
+</section>
+<section id="other-features">
+<h3>Other Features<a class="headerlink" href="#other-features" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="sdk/crittercism.html#android-detect-crash"><span class="std std-ref">Detecting a Crash Occurred</span></a></p></li>
+<li><p><a class="reference internal" href="sdk/crittercism.html#delay-sending-app-load-android"><span class="std std-ref">Delay Sending App Load Data</span></a></p></li>
+<li><p><a class="reference internal" href="sdk/crittercism.html#opt-out-android"><span class="std std-ref">Opt In Status</span></a></p></li>
+<li><p><a class="reference internal" href="sdk/crittercism_config.html#logcat-android"><span class="std std-ref">Include System Log Data (Logcat)</span></a></p></li>
+<li><p><a class="reference internal" href="sdk/crittercism.html#android-tune-logging"><span class="std std-ref">Setting Log Verbosity of Workspace ONE Intelligence SDK</span></a></p></li>
+<li><p><a class="reference internal" href="sdk/crittercism_config.html#disable-cellular-data-android"><span class="std std-ref">Send Data On Wifi Only</span></a></p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+	<script type="text/javascript" charset="utf-8" src="../_static/toc.js"></script>
+  </body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Network Insights &#8212; Workspace ONE Intelligence  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/adctheme.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/toggle.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+      <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="Workspace ONE Intelligence  documentation" href="../index.html" />
+      <link rel="up" title="Apple SDK" href="ios.html" />
+      <link rel="next" title="Android SDK" href="../android/android.html" />
+      <link rel="prev" title="Logging Crashes" href="ios_crash.html" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <script type="text/javascript">try{document.domain="vmware.com"}catch(e){};</script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-49786008-1']);
+    _gaq.push(['_setDomainName', 'apteligent.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_addIgnoredRef', 'apteligent.com']);   // Stops Self Referrals
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  
+  <meta name="google-translate-customization" content="f0837c562504ad7b-d669caf2b7375c11-g99fd8de75f76752f-14"></meta>
+
+  </head><body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PK9468"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PK9468');</script>
+<!-- End Google Tag Manager -->
+
+
+  <div id="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+          <div id="searchbox" style="display: none">
+              <form class="search" action="../search.html" method="get">
+                <div class="search-wrapper">
+                  <input class="prettysearch" type="text" name="q" size="18" />
+                  <input type="submit" value="Search" class="searchbutton" />
+                </div>
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+      <ul><li class="toctree-l1" id="docs-home"><a href="../index.html">Docs Home</a></li></ul>
+      <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview/overview.html">Overview</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="ios.html">Apple SDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ios.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios.html#release-notes">Release Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios.html#application-requirements">Application Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios.html#guides">Guides</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios.html#sdk-references">SDK References</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="ios.html#features">Features</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="ios.html#out-of-the-box-features">Out-of-the-box Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios.html#main-features">Main Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios.html#other-features">Other Features</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../android/android.html">Android SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development_platforms/index.html">Development Platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/eula_accepted.html">SDK Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../release_notes/release_notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/downloads.html">EULA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/checksums.html">SDK Download Checksums</a></li>
+</ul>
+
+      <div id="sidebar-toc-clear"></div>
+      
+    </div>
+  </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            <div class="container">
+              <div class="row">
+                <div class="span12">
+                  
+  <section id="network-insights">
+<span id="net-stats-ios"></span><h1>Network Insights<a class="headerlink" href="#network-insights" title="Permalink to this heading">¶</a></h1>
+<p>Whenever an app makes a network call, Workspace ONE Intelligence SDK monitors
+and captures certain information automatically.
+You can optionally configure filtering and location details.
+For an introduction, see <a class="reference internal" href="../overview/overview.html#net-stats"><span class="std std-ref">Network Insights</span></a>.</p>
+<p>Workspace ONE Intelligence SDK <em>automatically</em> monitors the performance of
+network requests formed via the following APIs:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>all iOS versions</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">[NSURLConnection</span> <span class="pre">connectionWithRequest:delegate:]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[NSURLConnection</span> <span class="pre">sendAsynchronousRequest:queue:completionHandler]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[NSURLConnection</span> <span class="pre">sendSynchronousRequest:returningResponse:error:]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[NSURLConnection</span> <span class="pre">initWithRequest:delegate:]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[NSURLConnection</span> <span class="pre">initWithRequest:delegate:startImmediately:]</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>iOS 8 and above</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">[NSURLSession</span> <span class="pre">dataTaskWithURL:]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[NSURLSession</span> <span class="pre">dataTaskWithURL:completionHandler:]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[NSURLSession</span> <span class="pre">dataTaskWithRequest:]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[NSURLSession</span> <span class="pre">dataTaskWithRequest:completionHandler:]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[NSURLSession</span> <span class="pre">downloadTaskWithURL:]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[NSURLSession</span> <span class="pre">downloadTaskWithURL:completionHandler:]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[NSURLSession</span> <span class="pre">downloadTaskWithRequest:]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[NSURLSession</span> <span class="pre">downloadTaskWithRequest:completionHandler:]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[NSURLSession</span> <span class="pre">downloadTaskWithResumeData:]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[NSURLSession</span> <span class="pre">downloadTaskWithResumeData:completionHandler:]</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Workspace ONE Intelligence can also monitor requests made via web views.  This
+form of monitoring must be explicitly enabled. See more details see
+<a class="reference internal" href="sdk/ws1config_h.html#monitor-web-views-ios-ws1"><span class="std std-ref">Monitoring Web Views</span></a>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[WKWebView</span> <span class="pre">loadRequest:]</span></code></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Workspace ONE Intelligence does not monitor <code class="docutils literal notranslate"><span class="pre">[UIWebView</span> <span class="pre">loadRequest:]</span></code>.
+If you need this, consider using <code class="docutils literal notranslate"><span class="pre">WKWebView</span></code> or
+<a class="reference internal" href="sdk/ws1intelligence_h.html#network-requests-ios-ws1"><span class="std std-ref">Logging Network Request</span></a>.</p>
+</div>
+<section id="disabling-network-insights">
+<h2>Disabling Network Insights<a class="headerlink" href="#disabling-network-insights" title="Permalink to this heading">¶</a></h2>
+<p>See <a class="reference internal" href="sdk/ws1config_h.html#ios-crittercism-config-apm-ws1"><span class="std std-ref">Network Insights Configuration</span></a> to disable automatic Network Insights.</p>
+</section>
+<section id="filtering-captured-data">
+<h2>Filtering Captured Data<a class="headerlink" href="#filtering-captured-data" title="Permalink to this heading">¶</a></h2>
+<p>It is possible to customise filter blacklists that will completely
+discard matching URLs. See <a class="reference internal" href="sdk/crfilter_h.html#crfilter-ios"><span class="std std-ref">CRFilter</span></a> and
+<a class="reference internal" href="sdk/ws1config_h.html#ios-crittercism-config-apm-ws1"><span class="std std-ref">Network Insights Configuration</span></a> for more information.</p>
+</section>
+<section id="configuring-location">
+<h2>Configuring Location<a class="headerlink" href="#configuring-location" title="Permalink to this heading">¶</a></h2>
+<p>Network Insights can tie location information to network data, if the application provides the location.
+By default, location information is not obtained by Workspace ONE Intelligence SDK.</p>
+<p>You can update location information by using the method
+<a class="reference internal" href="sdk/ws1intelligence_h.html#network-update-location-ios-ws1"><span class="std std-ref">updateLocation</span></a>.</p>
+</section>
+<section id="further-reading">
+<h2>Further Reading<a class="headerlink" href="#further-reading" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="sdk/ws1intelligence_h.html#network-requests-ios-ws1"><span class="std std-ref">Logging Network Request</span></a></p></li>
+<li><p><a class="reference external" href="https://www.apteligent.com/developer-resources/network-insights-best-practices/">Network Insights Best Practices</a></p></li>
+</ul>
+</section>
+</section>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+	<script type="text/javascript" charset="utf-8" src="../_static/toc.js"></script>
+  </body>
+</html>

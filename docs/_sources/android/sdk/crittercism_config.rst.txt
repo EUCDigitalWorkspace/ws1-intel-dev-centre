@@ -1,0 +1,637 @@
+.. To add a method in this file, please use the following format.
+..
+.. In general, each method needs to be enclosed in .. container:: toggle
+.. In toggle container, we have header (required), discussion (optional),
+.. declaration (optional), parameters (optional), retval (optional),
+.. availability (optional).
+..
+.. If a method is deprecated, you can mark the header as deprecated.
+.. So you would have .. container :: header deprecated
+..
+.. .. container:: toggle
+..
+..    .. container:: header
+..
+..       <insert method name here>
+..
+..    .. container:: discussion
+..
+..       <Insert method summary>
+..
+..    .. container:: declaration
+..
+..       <insert method declaration in a code block>
+..
+..       For iOS, use
+..
+..       .. example-code::
+..
+..          .. code-block:: objective-c
+..
+..             <insert obj-c code>
+..
+..          .. code-block:: swift
+..
+..             <insert swift code>
+..
+..       For other platform, use code block
+..
+..    .. container:: parameters
+..
+..       +--------+-------------------------------+
+..       | param1 | description                   |
+..       +--------+-------------------------------+
+..
+..    .. container:: retVal
+..
+..       <discuss return value>
+..
+..    .. container:: availability
+..
+..       <discuss when this method is introduced>
+..       <discuss when this method is deprecated>
+..
+..    .. container:: seealso
+..
+..       <list some useful links here>
+..
+
+
+.. _android_crittercism_config_apm:
+
+CrittercismConfig
+=================
+
+
+Import ``com.crittercism.app`` package to use this class.
+
+This object is used to specify various configuration options to Workspace ONE
+Intelligence SDK.
+Once this object is set up, you can pass it to ``Crittercism.initialize()``.
+After Workspace ONE Intelligence SDK is initialized, changes to this object will
+have no effect.
+
+
+Creating a Config
+-----------------
+
+.. container:: toggle
+
+    .. container:: header
+
+       CrittercismConfig ()
+
+    .. container:: discussion
+
+       Creates a new CrittercismConfig object with the default values for the above
+       properties. You can modify the config values and pass this object into
+       ``Crittercism.initialize()``.
+
+    .. container:: declaration
+
+       .. code-block:: java
+
+          public CrittercismConfig ()
+
+    .. container:: retVal
+
+       Returns ``CrittercismConfig`` with default values.
+
+.. container:: toggle
+
+    .. container:: header
+
+       CrittercismConfig (configToCopy)
+
+    .. container:: discussion
+
+       Create a copy of the input CrittercismConfig.
+
+    .. container:: declaration
+
+       .. code-block:: java
+
+          public CrittercismConfig ((CrittercismConfig configToCopy)
+
+    .. container:: parameters
+
+       ============== ==============================
+       configToCopy   ``CrittercismConfig`` to copy
+       ============== ==============================
+
+
+    .. container:: retVal
+
+       Returns a new instance of ``CrittercismConfig`` with the same values as configToCopy.
+
+
+Network Insights Configuration
+------------------------------
+
+.. container:: toggle
+
+    .. container:: header
+
+       isServiceMonitoringEnabled ()
+
+    .. container:: discussion
+
+       Returns a boolean that describes whether Workspace ONE Intelligence SDK
+       automatically instruments network monitoring.
+
+    .. container:: declaration
+
+       .. code-block:: java
+
+          public final boolean isServiceMonitoringEnabled ()
+
+    .. container:: retval
+
+       Returns ``True`` if Network Insights is enabled at all.
+       Returns ``False`` otherwise.
+
+.. _android_enable_apm:
+
+.. container:: toggle
+
+    .. container:: header
+
+       setServiceMonitoringEnabled (isEnabled)
+
+    .. container:: discussion
+
+       If this flag is set to ``False``, then no instrumentation will be
+       installed **and** the thread that sends Network Insights data will
+       be disabled.
+
+       Default value: ``True`` (enabled)
+
+    .. container:: declaration
+
+       .. code-block:: java
+
+          public final void setServiceMonitoringEnabled (boolean isEnabled)
+
+    .. container:: parameters
+
+       ========= ===================
+       isEnabled Determines whether Workspace ONE Intelligence SDK should automatically instrument network traffic.
+       ========= ===================
+
+    .. container:: availability
+
+       Introduced in Workspace ONE Intelligence Android SDK 5.0
+
+.. _android_enable_apm_deprecated:
+
+.. container:: toggle
+
+    .. container:: header deprecated
+
+       setOptmzEnabled (isEnabled)
+
+    .. container:: discussion
+
+       If this flag is set to ``False``, then no instrumentation will be
+       installed **and** the thread that sends Network Insights data will
+       be disabled.
+
+       Default value: ``True`` (enabled)
+
+    .. container:: declaration
+
+       .. code-block:: java
+
+          public final void setOptmzEnabled (boolean isEnabled)
+
+    .. container:: parameters
+
+       ========= ===================
+       isEnabled Determines whether Workspace ONE Intelligence SDK should automatically instrument network traffic.
+       ========= ===================
+
+    .. container:: availability
+
+       Deprecated in Android SDK 5.0
+
+.. container:: toggle
+
+    .. container:: header
+
+       getURLBlacklistPatterns ()
+
+    .. container:: discussion
+
+       Retrieve a list of blacklisted URLs.
+       Network Insights data that pertains to URLs that match any of the
+       patterns in the returned list will not be sent to Workspace ONE
+       Intelligence.
+       Patterns are case sensitive and may be any length.
+
+
+    .. container:: declaration
+
+       .. code-block:: java
+
+          public List<String> getURLBlacklistPatterns ()
+
+    .. container:: retval
+
+       Returns a copy of blacklisted URLs for which Network Insights data will
+       not be reported to Workspace ONE Intelligence.
+
+.. _android_blacklist_urls:
+
+.. container:: toggle
+
+    .. container:: header
+
+       setURLBlacklistPatterns (patterns)
+
+    .. container:: discussion
+
+       Set a list of blacklisted URLs.
+       Network Insights data that pertains to URLs that match any of the
+       patterns in the supplied list will not be sent to Workspace ONE
+       Intelligence.
+       Patterns are case sensitive and may be any length.
+
+       For example, you may provide URLs that may contain sensitive information.
+       Note that by default all query parameters are removed before being sent
+       to Workspace ONE Intelligence.
+
+    .. container:: declaration
+
+       .. code-block:: java
+
+          public void setURLBlacklistPatterns (List<String> patterns)
+
+    .. container:: parameters
+
+       ============= ==================
+       patterns      List of URL patterns to blacklist
+       ============= ==================
+
+.. container:: toggle
+
+    .. container:: header
+
+       getPreserveQueryStringPatterns ()
+
+    .. container:: discussion
+
+       Returns a copy of the list of URL string patterns for which the query
+       strings will be preserved when Network Insights data is sent to Workspace
+       ONE Intelligence. URLs that are not in this list will have their query
+       strings removed before Network Insights data is sent to Workspace ONE
+       Intelligence.
+
+    .. container:: declaration
+
+       .. code-block:: java
+
+          public List<String> getPreserveQueryStringPatterns ()
+
+    .. container:: retval
+
+       Returns a copy of the list of URL string patterns for which the query
+       strings will be preserved.
+
+.. container:: toggle
+
+    .. container:: header
+
+       setPreserveQueryStringPatterns (patterns)
+
+    .. container:: discussion
+
+       Set a list of URL patterns for which the query strings will be preserved
+       when Network Insights data is sent to Workspace ONE Intelligence.
+       URLs that are not in this list will have their query strings removed
+       before Network Insights data is sent to Workspace ONE Intelligence.
+       If a URL in this list is also blacklisted, then the blacklist takes
+       priority and network data will not be sent to Workspace ONE Intelligence
+       for that URL.
+
+       Patterns are case sensitive and may be any length. A zero length string will
+       result in all query strings being included in Network Insights data sent
+       to Workspace ONE Intelligence.
+
+    .. container:: declaration
+
+       .. code-block:: java
+
+          public void setPreserveQueryStringPatterns (List<String> patterns)
+
+    .. container:: parameters
+
+       ============= ==================
+       patterns      List of URL patterns for which to preserve the query strings
+       ============= ==================
+
+
+Set Custom Version Name
+-----------------------
+
+.. container:: toggle
+
+    .. container:: header
+
+       getCustomVersionName ()
+
+    .. container:: discussion
+
+       Retrieves the custom version name that will be reported to Workspace ONE
+       Intelligence.
+
+    .. container:: declaration
+
+       .. code-block:: java
+
+          public final String getCustomVersionName ()
+
+    .. container:: retval
+
+       Returns the custom version name that will be reported to Workspace ONE
+       Intelligence, or null if Workspace ONE Intelligence SDK uses the
+       ``android:versionName`` from the ``AndroidManifest.xml``.
+       .
+
+.. container:: toggle
+
+    .. container:: header
+
+       setCustomVersionName (customVersionName)
+
+    .. container:: discussion
+
+       Set a custom app version that will be reported to Workspace ONE
+       Intelligence.
+
+       By default, Workspace ONE Intelligence SDK uses the
+       ``android:versionName`` from the ``AndroidManifest.xml`` when reporting
+       data to Workspace ONE Intelligence. Depending on how teams version their
+       apps, it may be desirable to set a custom version string.
+
+    .. container:: declaration
+
+       .. code-block:: java
+
+          public final void setCustomVersionName (String customVersionName)
+
+    .. container:: parameters
+
+       ==================== =================================
+       customVersionName    The version name that will be reported to Workspace ONE Intelligence.
+       ==================== =================================
+
+.. container:: toggle
+
+    .. container:: header
+
+       isVersionCodeToBeIncludedInVersionString ()
+
+    .. container:: discussion
+
+       Returns a boolean to indicate whether Workspace ONE Intelligence SDK
+       concatenates the app version code to the app version that will be
+       reported to Workspace ONE Intelligence. The app's version code is
+       defined in ``android:versionCode`` in the ``AndroidManifest.xml``.
+
+    .. container:: declaration
+
+       .. code-block:: java
+
+          public final boolean isVersionCodeToBeIncludedInVersionString ()
+
+    .. container:: retval
+
+       Returns ``True`` if the app's version code is concatenated to the version
+       name.
+
+.. container:: toggle
+
+    .. container:: header
+
+       setVersionCodeToBeIncludedInVersionString (shouldIncludeVersionCode)
+
+    .. container:: discussion
+
+       Tells Workspace ONE Intelligence SDK whether or not to concatenate the
+       app version code to the app version that will be reported to Workspace
+       ONE Intelligence. The app's version code is defined in
+       ``android:versionCode`` in the ``AndroidManifest.xml``.
+
+    .. container:: declaration
+
+       .. code-block:: java
+
+          public final void setVersionCodeToBeIncludedInVersionString (boolean shouldIncludeVersionCode)
+
+    .. container:: parameters
+
+       =========================== =================================
+       shouldIncludeVersionCode    True if the app's version code should be concatenated to the version name.
+       =========================== =================================
+
+
+.. _delay_sending_app_load:
+
+Delay App Load Configuration
+----------------------------
+
+.. container:: toggle
+
+    .. container:: header
+
+       delaySendingAppLoad ()
+
+    .. container:: discussion
+
+       Determines if Workspace ONE Intelligence SDK delays automatic app load
+       events until the developer calls ``sendAppLoadData``.
+
+       By default, the return value is ``False`` and Workspace ONE Intelligence
+       SDK automatically reports an app load event when Workspace ONE
+       Intelligence SDK is initialized.
+
+       The delay app load feature is most often used to delay counting an app
+       load until after a user has passed a login screen.
+
+    .. container:: declaration
+
+       .. code-block:: java
+
+          public final boolean delaySendingAppLoad ()
+
+    .. container:: retval
+
+       Returns ``True`` if Workspace ONE Intelligence SDK should automatically
+       send app load request.
+       Returns ``False`` if the app will send app load request manually by
+       calling ``sendAppLoadData``.
+
+.. container:: toggle
+
+    .. container:: header
+
+       setDelaySendingAppLoad (delaySendingAppLoad)
+
+    .. container:: discussion
+
+       Configure delayed app load events.
+       By default, Workspace ONE Intelligence SDK immediately reports an app
+       load when Workspace ONE Intelligence SDK is initialized.
+       Set ``delaySendingAppLoad`` to ``True`` if the Workspace ONE Intelligence
+       SDK should delay sending app load events until the app developer calls
+       ``sendAppLoadData``.
+       Otherwise, set it to ``False`` to keep default behavior and send app
+       loads automatically.
+
+       The delay app load feature is most often used to delay counting an app
+       load until after a user has passed a login screen.
+
+    .. container:: declaration
+
+       .. code-block:: java
+
+          public final void setDelaySendingAppLoad (boolean delaySendingAppLoad)
+
+    .. container:: parameters
+
+       ==================== =================================
+       delaySendingAppLoad  A boolean to indicate whether Workspace ONE Intelligence SDK should delay automatic app loads.
+       ==================== =================================
+
+
+.. _disable_cellular_data_android:
+
+Send Data On Wifi Only
+----------------------
+
+.. container:: toggle
+
+    .. container:: header
+
+       allowsCellularAccess ()
+
+    .. container:: discussion
+
+       Returns a boolean to determine if Workspace ONE Intelligence SDK is
+       allowed to send data while on a cellular network.
+
+       Default value is ``True``.
+
+    .. container:: declaration
+
+       .. code-block:: java
+
+          public final boolean allowsCellularAccess ()
+
+    .. container:: retval
+
+       Returns ``True`` if Workspace ONE Intelligence SDK is allowed to send data
+       while on a cellular network. Returns ``False`` if Workspace ONE
+       Intelligence SDK is only sending data on Wifi network.
+
+.. container:: toggle
+
+    .. container:: header
+
+       setAllowsCellularAccess (allowsCellularAccess)
+
+    .. container:: discussion
+
+       Set whether Workspace ONE Intelligence SDK sends data on cellular
+       networks.
+       The default value is ``True``, which means that Workspace ONE
+       Intelligence SDK sends data on both wifi and cellular networks.
+       You can set it to ``False`` if Workspace ONE Intelligence SDK should
+       only send data on wifi network.
+
+       This feature requires adding the ``ACCESS_NETWORK_STATE`` permission to
+       your ``AndroidManifest.xml``.
+       Please see :ref:`permissions_required`.
+
+    .. container:: declaration
+
+       .. code-block:: java
+
+          public final void setAllowsCellularAccess (boolean allowsCellularAccess)
+
+    .. container:: parameters
+
+       ======================== =========================
+       allowsCellularAccess     Set to ``True`` to allow Workspace ONE Intelligence SDK to send data on a cellular network. Set to ``False`` to allow sending data on wifi only.
+       ======================== =========================
+
+    .. container:: availability
+
+       Introduced in Android SDK 5.7.0
+
+
+.. _logcat_android:
+
+Include System Log Data (Logcat)
+--------------------------------
+
+.. note::
+
+   Workspace ONE Intelligence platform does not support collection of system
+   log data (logcat).
+   The following no-op methods are left from old Apteligent platform and
+   have no effect on the behavior of SDK versions 6.0.0 and above.
+
+.. container:: toggle
+
+    .. container:: header
+
+       isLogcatReportingEnabled ()
+
+    .. container:: discussion
+
+       Returns a boolean to determine if system log data (logcat) is included in
+       crashes reported by Workspace ONE Intelligence SDK to the old platform.
+
+    .. container:: declaration
+
+       .. code-block:: java
+
+          public final boolean isLogcatReportingEnabled ()
+
+    .. container:: retval
+
+       Returns ``True`` if system log data is included in crashes reported
+       by Workspace ONE Intelligence SDK to the old platform.
+
+.. container:: toggle
+
+    .. container:: header
+
+       setLogcatReportingEnabled (shouldCollectLogcat)
+
+    .. container:: discussion
+
+       Set whether system log data (logcat) should be included with crashes
+       reported by Workspace ONE Intelligence SDK to the old Apteligent
+       platform.
+       Note that Workspace ONE Intelligence platform does not support logcat
+       collection.
+       Including system log data (logcat) can be helpful for debugging crashes
+       and handled exceptions, but it comes at the cost of slightly increasing
+       disk and network usage, which is why this feature must be manually
+       enabled.
+       Workspace ONE Intelligence SDK collects and sends the last 100 lines of
+       logcat data to the old Apteligent platform.
+
+    .. container:: declaration
+
+       .. code-block:: java
+
+          public final void setLogcatReportingEnabled (boolean shouldCollectLogcat)
+
+    .. container:: parameters
+
+       ======================== =========================
+       shouldCollectLogcat      Set to ``True`` to allow Workspace ONE Intelligence SDK to collect system log data. Set to ``False`` otherwise.
+       ======================== =========================

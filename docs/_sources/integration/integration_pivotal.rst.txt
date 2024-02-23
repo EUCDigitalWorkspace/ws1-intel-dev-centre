@@ -1,0 +1,43 @@
+.. _integrate_pivotal:
+
+Pivotal Tracker Integration Guide
+---------------------------------
+
+.. toctree::
+   :maxdepth: 2
+
+Apteligent provides an integration with the `Pivotal Tracker <http://www.pivotaltracker.com>`_ project communication and issue tracking software by Pivotal Labs. Customers can view error data within the Workspace ONE Intelligence platform and, with the click of a button, create new tickets in their Pivotal Tracker system.
+
+Configuring Pivotal Tracker Integration
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1. Find and click the **Bug Tracking** tab in your app console.
+
+   .. image:: ../img/integration-github-menu-2.png
+
+2. Complete the following form using settings for your Pivotal Tracker implementation. For example:
+
+   .. image:: ../img/integration-pivotal-connect.png
+
+   ====================== =======================================================================================
+   Field                  Description
+   ====================== =======================================================================================
+   Username               Pivotal Tracker username for the account that Apteligent will use to log into the system.
+   
+   Password               Password for the account that Apteligent will use to log into the system.
+   
+   Pivotal Project Key    Unique identifier for the project to which you want to link on your Pivotal Tracker.
+                          
+                          This is the “Project Id” which can be found in Pivotal Tracker in “Settings” under “Access”.  Be sure to allow Public Access.
+   ====================== =======================================================================================
+
+   After clicking “Save”, you should see a message indicating success at the top of the page.
+
+3. Once you’ve integrated, you can easily connect a crash report with a Pivotal Tracker issue via the Crash Details page.
+
+    .. image:: ../img/integration-pivotal-issue.png
+
+    Click Create Issue to create a new issue with the basic error information and a link back to the Apteligent crash report.
+
+.. include:: ../shared/support_include.txt
+

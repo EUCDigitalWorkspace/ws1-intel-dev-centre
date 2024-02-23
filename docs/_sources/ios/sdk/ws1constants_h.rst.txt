@@ -1,0 +1,223 @@
+.. To add a method in this file, please use the following format.
+..
+.. In general, each method needs to be enclosed in .. container:: toggle
+.. In toggle container, we have header (required), discussion (optional),
+.. declaration (optional), parameters (optional), retval (optional),
+.. availability (optional).
+..
+.. If a method is deprecated, you can mark the header as deprecated.
+.. So you would have .. container :: header deprecated
+..
+.. .. container:: toggle
+..
+..    .. container:: header
+..
+..       <insert method name here>
+..
+..    .. container:: discussion
+..
+..       <Insert method summary>
+..
+..    .. container:: declaration
+..
+..       <insert method declaration in a code block>
+..
+..       For iOS, use
+..
+..       .. example-code::
+..
+..          .. code-block:: objective-c
+..
+..             <insert obj-c code>
+..
+..          .. code-block:: swift
+..
+..             <insert swift code>
+..
+..       For other platform, use code block
+..
+..    .. container:: parameters
+..
+..       +--------+-------------------------------+
+..       | param1 | description                   |
+..       +--------+-------------------------------+
+..
+..    .. container:: retVal
+..
+..       <discuss return value>
+..
+..    .. container:: availability
+..
+..       <discuss when this method is introduced>
+..       <discuss when this method is deprecated>
+..
+..    .. container:: seealso
+..
+..       <list some useful links here>
+..
+
+WS1Constants
+============
+
+.. _lastCrashNotification_ios_ws1:
+
+Last Crash Notification
+-----------------------
+
+.. container:: toggle
+
+    .. container:: header
+
+       WS1NotificationDidCrashOnLastLoad
+
+    .. container:: discussion
+
+       Listen to this notification to get crash data from the previous session.
+       The notification userInfo contains some :ref:`useful information <lastCrashUserInfo_ios_ws1>`
+       related to the crash.
+
+       The following example shows how you can register to receive crash notifications.
+
+       Objective-C
+
+       .. code-block:: objective-c
+
+          NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+          NSOperationQueue *mainQueue = [NSOperationQueue mainQueue];
+          self.observer = [center addObserverForName:WS1NotificationDidCrashOnLastLoad
+                                              object:nil
+                                               queue:mainQueue
+                                          usingBlock:^(NSNotification *notification) {
+
+                  NSString *crashName = notification.userInfo[WS1NotificationCrashNameKey];
+                  NSString *crashReason = notification.userInfo[WS1NotificationCrashReasonKey];
+                  NSDate *crashDate = notification.userInfo[WS1NotificationCrashDateKey];
+                  // ...
+              }];
+
+       Swift
+
+       .. code-block:: swift
+
+          let center = NotificationCenter.default
+          let mainQueue = OperationQueue.main
+          let localChangeObserver = center.addObserver(forName: NSLocale.currentLocaleDidChangeNotification,
+                                                      object: nil,
+                                                      queue: mainQueue) { (notification) in
+
+              let crashName = notification.userInfo?[WS1NotificationCrashNameKey];
+              let crashReason = notification.userInfo?[WS1NotificationCrashReasonKey];
+              let crashDate = notification.userInfo?[WS1NotificationCrashDateKey];
+              // ...
+           }
+
+    .. container:: declaration
+
+       Objective-C
+
+       .. code-block:: objective-c
+
+          NSString * const WS1NotificationDidCrashOnLastLoad
+
+       Swift
+
+       .. code-block:: swift
+
+          let WS1NotificationDidCrashOnLastLoad: String
+
+    .. container:: seealso
+
+       * :ref:`Last Crash UserInfo Keys <lastCrashUserInfo_ios_ws1>`
+       * :ref:`Detecting a Crash Occurred <ws1_crash_occured>`
+
+
+.. _lastCrashUserInfo_ios_ws1:
+
+.. container:: toggle
+
+    .. container:: header
+
+       Last Crash UserInfo Keys
+
+    .. container:: discussion
+
+       The :ref:`WS1NotificationDidCrashOnLastLoad <lastCrashNotification_ios_ws1>`
+       userInfo contains the crash name, reason, and date.
+
+    .. container:: constants
+
+       ================================= ==============================
+       ``WS1NotificationCrashNameKey``   Returns an ``NSString`` that describes the crash name
+
+       ``WS1NotificationCrashReasonKey`` Returns an ``NSString`` that describes the crash reason
+
+       ``WS1NotificationCrashDateKey``   Returns an ``NSString`` that informs the time of crash
+       ================================= ==============================
+
+
+.. _ws1_logging_level:
+
+WS1IntelligenceLoggingLevel
+---------------------------
+
+.. container:: sdk-section-discussion
+
+   By default, Workspace ONE Intelligence SDK prints a few messages (via NSLog)
+   to the device log that may be useful to verify that Workspace ONE
+   Intelligence SDK is initialized and properly working. If you don't want to
+   see Workspace ONE Intelligence log messages, you can tune the amount of
+   logging that is displayed.
+
+   See :ref:`ios_tune_logging_ws1` of how to tweak the ``logging level``
+
+.. container:: toggle
+
+    .. container:: header
+
+       WS1IntelligenceLoggingLevel
+
+    .. container:: declaration
+
+       Objective-C
+
+       .. code-block:: objective-c
+
+          typedef enum : NSInteger {
+             WS1IntelligenceLoggingLevelSilent,
+             WS1IntelligenceLoggingLevelError,
+             WS1IntelligenceLoggingLevelWarning,
+             WS1IntelligenceLoggingLevelInfo,
+             WS1IntelligenceLoggingLevelDebug
+          } WS1IntelligenceLoggingLevel;
+
+       Swift
+
+       .. code-block:: swift
+
+          enum WS1IntelligenceLoggingLevel : Int {
+              case Silent
+              case Error
+              case Warning
+              case Info
+              case Debug
+          }
+
+    .. container:: constants
+
+         ====================================== =======================================================================================
+         ``WS1IntelligenceLoggingLevelSilent``  Turns off all Workspace ONE Intelligence SDK log messages
+
+         ``WS1IntelligenceLoggingLevelError``   Only print errors. An error is an unexpected event that will result not capturing important data
+
+         ``WS1IntelligenceLoggingLevelWarning`` *(Default)* Only print warnings. Currently warning messages are printed when calling Workspace ONE Intelligence SDK methods before initializing Workspace ONE Intelligence
+
+         ``WS1IntelligenceLoggingLevelInfo``    The most verbose level of logging
+
+         ``WS1IntelligenceLoggingLevelDebug``   Print internal logging in Workspace ONE Intelligence SDK. Please use this logging level and attach your log in your email to our support
+
+         ====================================== =======================================================================================
+
+    .. container:: seealso
+
+       * :ref:`ios_tune_logging_ws1`
+

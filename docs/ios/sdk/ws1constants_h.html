@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>WS1Constants &#8212; Workspace ONE Intelligence  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/adctheme.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/toggle.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <link rel="search" title="Search" href="../../search.html" />
+    <link rel="top" title="Workspace ONE Intelligence  documentation" href="../../index.html" />
+      <link rel="up" title="Apple SDK" href="../ios.html" />
+      <link rel="next" title="Logging Crashes" href="../ios_crash.html" />
+      <link rel="prev" title="WS1Filter" href="ws1filter_h.html" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <script type="text/javascript">try{document.domain="vmware.com"}catch(e){};</script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-49786008-1']);
+    _gaq.push(['_setDomainName', 'apteligent.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_addIgnoredRef', 'apteligent.com']);   // Stops Self Referrals
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  
+  <meta name="google-translate-customization" content="f0837c562504ad7b-d669caf2b7375c11-g99fd8de75f76752f-14"></meta>
+
+  </head><body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PK9468"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PK9468');</script>
+<!-- End Google Tag Manager -->
+
+
+  <div id="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+          <div id="searchbox" style="display: none">
+              <form class="search" action="../../search.html" method="get">
+                <div class="search-wrapper">
+                  <input class="prettysearch" type="text" name="q" size="18" />
+                  <input type="submit" value="Search" class="searchbutton" />
+                </div>
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+      <ul><li class="toctree-l1" id="docs-home"><a href="../../index.html">Docs Home</a></li></ul>
+      <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../overview/overview.html">Overview</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../ios.html">Apple SDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../ios.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ios.html#release-notes">Release Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ios.html#application-requirements">Application Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ios.html#guides">Guides</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../ios.html#sdk-references">SDK References</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="crfilter_h.html">CRFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ws1intelligence_h.html">WS1Intelligence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ws1config_h.html">WS1Config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ws1filter_h.html">WS1Filter</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">WS1Constants</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ios.html#features">Features</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../android/android.html">Android SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../development_platforms/index.html">Development Platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../downloads/eula_accepted.html">SDK Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release_notes/release_notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../downloads/downloads.html">EULA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../downloads/checksums.html">SDK Download Checksums</a></li>
+</ul>
+
+      <div id="sidebar-toc-clear"></div>
+      
+    </div>
+  </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            <div class="container">
+              <div class="row">
+                <div class="span12">
+                  
+  <section id="ws1constants">
+<h1>WS1Constants<a class="headerlink" href="#ws1constants" title="Permalink to this heading">¶</a></h1>
+<section id="last-crash-notification">
+<span id="lastcrashnotification-ios-ws1"></span><h2>Last Crash Notification<a class="headerlink" href="#last-crash-notification" title="Permalink to this heading">¶</a></h2>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>WS1NotificationDidCrashOnLastLoad</p>
+</div>
+<div class="discussion docutils container">
+<p>Listen to this notification to get crash data from the previous session.
+The notification userInfo contains some <a class="reference internal" href="#lastcrashuserinfo-ios-ws1"><span class="std std-ref">useful information</span></a>
+related to the crash.</p>
+<p>The following example shows how you can register to receive crash notifications.</p>
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="bp">NSNotificationCenter</span><span class="w"> </span><span class="o">*</span><span class="n">center</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="bp">NSNotificationCenter</span><span class="w"> </span><span class="n">defaultCenter</span><span class="p">];</span>
+<span class="bp">NSOperationQueue</span><span class="w"> </span><span class="o">*</span><span class="n">mainQueue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="bp">NSOperationQueue</span><span class="w"> </span><span class="n">mainQueue</span><span class="p">];</span>
+<span class="nb">self</span><span class="p">.</span><span class="n">observer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">center</span><span class="w"> </span><span class="n">addObserverForName</span><span class="o">:</span><span class="n">WS1NotificationDidCrashOnLastLoad</span>
+<span class="w">                                    </span><span class="nl">object</span><span class="p">:</span><span class="nb">nil</span>
+<span class="w">                                     </span><span class="nl">queue</span><span class="p">:</span><span class="n">mainQueue</span>
+<span class="w">                                </span><span class="nl">usingBlock</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="bp">NSNotification</span><span class="w"> </span><span class="o">*</span><span class="n">notification</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="bp">NSString</span><span class="w"> </span><span class="o">*</span><span class="n">crashName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">notification</span><span class="p">.</span><span class="n">userInfo</span><span class="p">[</span><span class="n">WS1NotificationCrashNameKey</span><span class="p">];</span>
+<span class="w">        </span><span class="bp">NSString</span><span class="w"> </span><span class="o">*</span><span class="n">crashReason</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">notification</span><span class="p">.</span><span class="n">userInfo</span><span class="p">[</span><span class="n">WS1NotificationCrashReasonKey</span><span class="p">];</span>
+<span class="w">        </span><span class="bp">NSDate</span><span class="w"> </span><span class="o">*</span><span class="n">crashDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">notification</span><span class="p">.</span><span class="n">userInfo</span><span class="p">[</span><span class="n">WS1NotificationCrashDateKey</span><span class="p">];</span>
+<span class="w">        </span><span class="c1">// ...</span>
+<span class="w">    </span><span class="p">}];</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nv">center</span> <span class="p">=</span> <span class="n">NotificationCenter</span><span class="p">.</span><span class="k">default</span>
+<span class="kd">let</span> <span class="nv">mainQueue</span> <span class="p">=</span> <span class="n">OperationQueue</span><span class="p">.</span><span class="n">main</span>
+<span class="kd">let</span> <span class="nv">localChangeObserver</span> <span class="p">=</span> <span class="n">center</span><span class="p">.</span><span class="n">addObserver</span><span class="p">(</span><span class="n">forName</span><span class="p">:</span> <span class="bp">NSLocale</span><span class="p">.</span><span class="n">currentLocaleDidChangeNotification</span><span class="p">,</span>
+                                            <span class="n">object</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span>
+                                            <span class="n">queue</span><span class="p">:</span> <span class="n">mainQueue</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">notification</span><span class="p">)</span> <span class="k">in</span>
+
+    <span class="kd">let</span> <span class="nv">crashName</span> <span class="p">=</span> <span class="n">notification</span><span class="p">.</span><span class="n">userInfo</span><span class="p">?[</span><span class="n">WS1NotificationCrashNameKey</span><span class="p">];</span>
+    <span class="kd">let</span> <span class="nv">crashReason</span> <span class="p">=</span> <span class="n">notification</span><span class="p">.</span><span class="n">userInfo</span><span class="p">?[</span><span class="n">WS1NotificationCrashReasonKey</span><span class="p">];</span>
+    <span class="kd">let</span> <span class="nv">crashDate</span> <span class="p">=</span> <span class="n">notification</span><span class="p">.</span><span class="n">userInfo</span><span class="p">?[</span><span class="n">WS1NotificationCrashDateKey</span><span class="p">];</span>
+    <span class="c1">// ...</span>
+ <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="bp">NSString</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">WS1NotificationDidCrashOnLastLoad</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nv">WS1NotificationDidCrashOnLastLoad</span><span class="p">:</span> <span class="nb">String</span>
+</pre></div>
+</div>
+</div>
+<div class="seealso docutils container">
+<ul class="simple">
+<li><p><a class="reference internal" href="#lastcrashuserinfo-ios-ws1"><span class="std std-ref">Last Crash UserInfo Keys</span></a></p></li>
+<li><p><a class="reference internal" href="ws1intelligence_h.html#ws1-crash-occured"><span class="std std-ref">Detecting a Crash Occurred</span></a></p></li>
+</ul>
+</div>
+</div>
+<div class="toggle docutils container" id="lastcrashuserinfo-ios-ws1">
+<div class="header docutils container">
+<p>Last Crash UserInfo Keys</p>
+</div>
+<div class="discussion docutils container">
+<p>The <a class="reference internal" href="#lastcrashnotification-ios-ws1"><span class="std std-ref">WS1NotificationDidCrashOnLastLoad</span></a>
+userInfo contains the crash name, reason, and date.</p>
+</div>
+<div class="constants docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">WS1NotificationCrashNameKey</span></code></p></td>
+<td><p>Returns an <code class="docutils literal notranslate"><span class="pre">NSString</span></code> that describes the crash name</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">WS1NotificationCrashReasonKey</span></code></p></td>
+<td><p>Returns an <code class="docutils literal notranslate"><span class="pre">NSString</span></code> that describes the crash reason</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">WS1NotificationCrashDateKey</span></code></p></td>
+<td><p>Returns an <code class="docutils literal notranslate"><span class="pre">NSString</span></code> that informs the time of crash</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="ws1intelligencelogginglevel">
+<span id="ws1-logging-level"></span><h2>WS1IntelligenceLoggingLevel<a class="headerlink" href="#ws1intelligencelogginglevel" title="Permalink to this heading">¶</a></h2>
+<div class="sdk-section-discussion docutils container">
+<p>By default, Workspace ONE Intelligence SDK prints a few messages (via NSLog)
+to the device log that may be useful to verify that Workspace ONE
+Intelligence SDK is initialized and properly working. If you don’t want to
+see Workspace ONE Intelligence log messages, you can tune the amount of
+logging that is displayed.</p>
+<p>See <a class="reference internal" href="ws1intelligence_h.html#ios-tune-logging-ws1"><span class="std std-ref">Setting Log Verbosity Of Workspace ONE Intelligence SDK</span></a> of how to tweak the <code class="docutils literal notranslate"><span class="pre">logging</span> <span class="pre">level</span></code></p>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>WS1IntelligenceLoggingLevel</p>
+</div>
+<div class="declaration docutils container">
+<p>Objective-C</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">enum</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">NSInteger</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="n">WS1IntelligenceLoggingLevelSilent</span><span class="p">,</span>
+<span class="w">   </span><span class="n">WS1IntelligenceLoggingLevelError</span><span class="p">,</span>
+<span class="w">   </span><span class="n">WS1IntelligenceLoggingLevelWarning</span><span class="p">,</span>
+<span class="w">   </span><span class="n">WS1IntelligenceLoggingLevelInfo</span><span class="p">,</span>
+<span class="w">   </span><span class="n">WS1IntelligenceLoggingLevelDebug</span>
+<span class="p">}</span><span class="w"> </span><span class="n">WS1IntelligenceLoggingLevel</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Swift</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">enum</span> <span class="nc">WS1IntelligenceLoggingLevel</span> <span class="p">:</span> <span class="nb">Int</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="n">Silent</span>
+    <span class="k">case</span> <span class="n">Error</span>
+    <span class="k">case</span> <span class="n">Warning</span>
+    <span class="k">case</span> <span class="n">Info</span>
+    <span class="k">case</span> <span class="n">Debug</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="constants docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">WS1IntelligenceLoggingLevelSilent</span></code></p></td>
+<td><p>Turns off all Workspace ONE Intelligence SDK log messages</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">WS1IntelligenceLoggingLevelError</span></code></p></td>
+<td><p>Only print errors. An error is an unexpected event that will result not capturing important data</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">WS1IntelligenceLoggingLevelWarning</span></code></p></td>
+<td><p><em>(Default)</em> Only print warnings. Currently warning messages are printed when calling Workspace ONE Intelligence SDK methods before initializing Workspace ONE Intelligence</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">WS1IntelligenceLoggingLevelInfo</span></code></p></td>
+<td><p>The most verbose level of logging</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">WS1IntelligenceLoggingLevelDebug</span></code></p></td>
+<td><p>Print internal logging in Workspace ONE Intelligence SDK. Please use this logging level and attach your log in your email to our support</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="seealso docutils container">
+<ul class="simple">
+<li><p><a class="reference internal" href="ws1intelligence_h.html#ios-tune-logging-ws1"><span class="std std-ref">Setting Log Verbosity Of Workspace ONE Intelligence SDK</span></a></p></li>
+</ul>
+</div>
+</div>
+</section>
+</section>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+	<script type="text/javascript" charset="utf-8" src="../../_static/toc.js"></script>
+  </body>
+</html>

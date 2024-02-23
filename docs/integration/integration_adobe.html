@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Adobe Integration Guide &#8212; Workspace ONE Intelligence  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/adctheme.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/toggle.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+      <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="Workspace ONE Intelligence  documentation" href="../index.html" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <script type="text/javascript">try{document.domain="vmware.com"}catch(e){};</script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-49786008-1']);
+    _gaq.push(['_setDomainName', 'apteligent.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_addIgnoredRef', 'apteligent.com']);   // Stops Self Referrals
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  
+  <meta name="google-translate-customization" content="f0837c562504ad7b-d669caf2b7375c11-g99fd8de75f76752f-14"></meta>
+
+  </head><body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PK9468"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PK9468');</script>
+<!-- End Google Tag Manager -->
+
+
+  <div id="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+          <div id="searchbox" style="display: none">
+              <form class="search" action="../search.html" method="get">
+                <div class="search-wrapper">
+                  <input class="prettysearch" type="text" name="q" size="18" />
+                  <input type="submit" value="Search" class="searchbutton" />
+                </div>
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+      <ul><li class="toctree-l1" id="docs-home"><a href="../index.html">Docs Home</a></li></ul>
+      <ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ios/ios.html">Apple SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../android/android.html">Android SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development_platforms/index.html">Development Platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/eula_accepted.html">SDK Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../release_notes/release_notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/downloads.html">EULA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/checksums.html">SDK Download Checksums</a></li>
+</ul>
+
+      <div id="sidebar-toc-clear"></div>
+      
+    </div>
+  </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            <div class="container">
+              <div class="row">
+                <div class="span12">
+                  
+  <section id="adobe-integration-guide">
+<span id="integrate-adobe"></span><h1>Adobe Integration Guide<a class="headerlink" href="#adobe-integration-guide" title="Permalink to this heading">¶</a></h1>
+<p>This topic describes how to integrate Workspace ONE Intelligence with
+<a class="reference external" href="http://marketing.adobe.com">Adobe Analytics</a>.
+Adobe Marketing Cloud is a complete set of marketing solutions that give
+enterprises everything they need to get deep insight into their customers,
+build personalized campaigns and manage their content and assets.</p>
+<p>Integrating Workspace ONE Intelligence data with Adobe helps customer have a
+single view of performance metrics in their Adobe Analytics interface.</p>
+<p>This document will guide you through the process of activating Workspace ONE
+Intelligence Data Connector in Adobe Analytics including steps to acquire
+various credentials from your Workspace ONE Intelligence account.</p>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading">¶</a></h2>
+<p>Before you start the integration process, please make sure you have the following:</p>
+<section id="id1">
+<h3>Adobe Analytics<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Current subscription of Adobe Analytics and Mobile Analytics</p></li>
+<li><p>Admin access to Adobe Analytics</p></li>
+</ul>
+</section>
+<section id="workspace-one-intelligence">
+<h3>Workspace ONE Intelligence<a class="headerlink" href="#workspace-one-intelligence" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Current enterprise subscription to Workspace ONE Intelligence</p></li>
+<li><p>Implemented Workspace ONE Intelligence solution in your mobile application</p></li>
+</ul>
+</section>
+</section>
+<section id="implementation">
+<h2>Implementation<a class="headerlink" href="#implementation" title="Permalink to this heading">¶</a></h2>
+<p>The implementation consists of two parts:</p>
+<ol class="arabic simple">
+<li><p>Generating your Workspace ONE Intelligence App ID and Token</p></li>
+<li><p>Activating the Adobe Data Connector</p></li>
+</ol>
+<section id="id2">
+<h3>Workspace ONE Intelligence<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h3>
+<p>Get your Workspace ONE Intelligence API Token from the Workspace ONE
+Intelligence portal:</p>
+<ol class="arabic">
+<li><p>Log into Workspace ONE Intelligence at: <a class="reference external" href="https://app.crittercism.com/developers/login">https://app.crittercism.com/developers/login</a></p>
+<ul class="simple">
+<li><p>Note: Make sure the app(s) that you want to pass data to Adobe from Workspace ONE Intelligence appear in your account.</p></li>
+</ul>
+</li>
+<li><p>Go to the user settings page by clicking on “User Settings” in the left sidebar or go to: <a class="reference external" href="https://app.crittercism.com/developers/user-settings">https://app.crittercism.com/developers/user-settings</a>.</p>
+<img alt="../_images/integration-adobe-user-settings.png" src="../_images/integration-adobe-user-settings.png" />
+</li>
+<li><p>Click on the “OAuth Tokens” Tab.</p>
+<img alt="../_images/integration-adobe-oauth-token.png" src="../_images/integration-adobe-oauth-token.png" />
+</li>
+<li><p>Fill out the form to generate your token:</p>
+<ul class="simple">
+<li><p>Enter in a Name for the token, i.e. “Adobe Integration”</p></li>
+<li><p>Choose a long expiration time for the token, we recommend 1 year</p></li>
+<li><p>Enter in your Workspace ONE Intelligence password</p></li>
+<li><p>Click “Generate an OAuth Token”</p></li>
+</ul>
+</li>
+<li><p>You should now see a newly generated OAuth Token.  Copy that token and save it somewhere.</p>
+<img alt="../_images/integration-adobe-copy-token.png" src="../_images/integration-adobe-copy-token.png" />
+</li>
+</ol>
+</section>
+<section id="adobe-data-connector">
+<h3>Adobe Data Connector<a class="headerlink" href="#adobe-data-connector" title="Permalink to this heading">¶</a></h3>
+<p>Activate the Workspace ONE Intelligence Data Connector in Adobe:</p>
+<ol class="arabic simple">
+<li><p>Login to your Adobe Analytics Account and navigate to the Data Connector.</p></li>
+<li><p>In the Data Connector screen, click on “Add Integration” and sort the list of
+integrations by Name. From the list, drag and drop the Workspace ONE
+Intelligence widget to the Adobe Marketing Cloud.</p></li>
+<li><p>You will see an integration wizard popup with instructions and the
+Terms &amp; Conditions. Check the box to accept and click “Create and Configure
+This Integration.”</p></li>
+<li><p>Choose the report suite where you want to integrate Workspace ONE
+Intelligence data. Each app integrated with Workspace ONE Intelligence will
+require its own integration to be activated in Adobe Analytics. You may
+activate a Data Connector in your Android app and iOS app report suite each
+(recommended), or you can activate multiple Data Connectors for each app in
+your Global Report Suite.</p></li>
+<li><p>Choose a name to the integration so that you can remember which report suite
+and Workspace ONE Intelligence app you are integration.</p></li>
+<li><p>For Workspace ONE Intelligence to send correct data to your selected report
+suite, you need to provide the Workspace ONE Intelligence App ID and
+Workspace ONE Intelligence OAuth Token which you retrieved earlier.</p></li>
+<li><p>That’s it! Review the values that you have entered and hit “Activate”.
+This integration will create the classifications and calculated metrics
+required for this integration automatically. To complete the integration,
+click on “Activate.”</p></li>
+</ol>
+<p>For additional assistance, contact Apteligent Support (<a class="reference external" href="mailto:support&#37;&#52;&#48;apteligent&#46;com">support<span>&#64;</span>apteligent<span>&#46;</span>com</a>).</p>
+</section>
+</section>
+</section>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+	<script type="text/javascript" charset="utf-8" src="../_static/toc.js"></script>
+  </body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>CrashData &#8212; Workspace ONE Intelligence  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/adctheme.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/toggle.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <link rel="search" title="Search" href="../../search.html" />
+    <link rel="top" title="Workspace ONE Intelligence  documentation" href="../../index.html" />
+      <link rel="up" title="Android SDK" href="../android.html" />
+      <link rel="next" title="NetworkInstrumentation" href="network_instrumentation.html" />
+      <link rel="prev" title="CrittercismCallback" href="crittercism_callback.html" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <script type="text/javascript">try{document.domain="vmware.com"}catch(e){};</script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-49786008-1']);
+    _gaq.push(['_setDomainName', 'apteligent.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_addIgnoredRef', 'apteligent.com']);   // Stops Self Referrals
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  
+  <meta name="google-translate-customization" content="f0837c562504ad7b-d669caf2b7375c11-g99fd8de75f76752f-14"></meta>
+
+  </head><body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PK9468"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PK9468');</script>
+<!-- End Google Tag Manager -->
+
+
+  <div id="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+          <div id="searchbox" style="display: none">
+              <form class="search" action="../../search.html" method="get">
+                <div class="search-wrapper">
+                  <input class="prettysearch" type="text" name="q" size="18" />
+                  <input type="submit" value="Search" class="searchbutton" />
+                </div>
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+      <ul><li class="toctree-l1" id="docs-home"><a href="../../index.html">Docs Home</a></li></ul>
+      <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../overview/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ios/ios.html">Apple SDK</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../android.html">Android SDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../android.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../android.html#release-notes">Release Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../android.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../android.html#guide">Guide</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../android.html#sdk-references">SDK References</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="crittercism.html">Crittercism</a></li>
+<li class="toctree-l3"><a class="reference internal" href="crittercism_config.html">CrittercismConfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="crittercism_callback.html">CrittercismCallback</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">CrashData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="network_instrumentation.html">NetworkInstrumentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../android.html#features">Features</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../development_platforms/index.html">Development Platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../downloads/eula_accepted.html">SDK Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release_notes/release_notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../downloads/downloads.html">EULA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../downloads/checksums.html">SDK Download Checksums</a></li>
+</ul>
+
+      <div id="sidebar-toc-clear"></div>
+      
+    </div>
+  </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            <div class="container">
+              <div class="row">
+                <div class="span12">
+                  
+  <section id="crashdata">
+<span id="android-crash-data"></span><h1>CrashData<a class="headerlink" href="#crashdata" title="Permalink to this heading">¶</a></h1>
+<p>Import <code class="docutils literal notranslate"><span class="pre">com.crittercism.app</span></code> package to use this class.</p>
+<p><cite>CrashData</cite> provides information about crash that happens in the last session.
+See <a class="reference internal" href="crittercism.html#android-detect-crash"><span class="std std-ref">Detecting a Crash Occurred</span></a> and <a class="reference internal" href="crittercism_callback.html#android-crittercism-callback"><span class="std std-ref">CrittercismCallback</span></a> for more details</p>
+<section id="initialization">
+<h2>Initialization<a class="headerlink" href="#initialization" title="Permalink to this heading">¶</a></h2>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>CrashData (name, reason, timeOccured)</p>
+</div>
+<div class="discussion docutils container">
+<p>Creates a <code class="docutils literal notranslate"><span class="pre">CrashData</span></code> object with specified name, reason, and time of the crash</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="nf">CrashData</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">reason</span><span class="p">,</span><span class="w"> </span><span class="n">Date</span><span class="w"> </span><span class="n">timeOccurred</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="parameters docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>name</p></td>
+<td><p>A <code class="docutils literal notranslate"><span class="pre">String</span></code> that describes the crash name</p></td>
+</tr>
+<tr class="row-even"><td><p>reason</p></td>
+<td><p>A <code class="docutils literal notranslate"><span class="pre">String</span></code> that describes the crash reason</p></td>
+</tr>
+<tr class="row-odd"><td><p>timeOccured</p></td>
+<td><p>A <code class="docutils literal notranslate"><span class="pre">Date</span></code> that informs the time of crash</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="crash-information">
+<h2>Crash Information<a class="headerlink" href="#crash-information" title="Permalink to this heading">¶</a></h2>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>getName ()</p>
+</div>
+<div class="discussion docutils container">
+<p>Returns a <code class="docutils literal notranslate"><span class="pre">String</span></code> object that describes the name of the crash.</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getName</span><span class="w"> </span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>getReason ()</p>
+</div>
+<div class="discussion docutils container">
+<p>Returns a <code class="docutils literal notranslate"><span class="pre">String</span></code> object that describes why the crash happened.</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getReason</span><span class="w"> </span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>getTimeOccurred ()</p>
+</div>
+<div class="discussion docutils container">
+<p>Returns a <code class="docutils literal notranslate"><span class="pre">Date</span></code> object that describes when the crash occured.</p>
+</div>
+<div class="declaration docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="n">Date</span><span class="w"> </span><span class="nf">getTimeOccurred</span><span class="w"> </span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+	<script type="text/javascript" charset="utf-8" src="../../_static/toc.js"></script>
+  </body>
+</html>

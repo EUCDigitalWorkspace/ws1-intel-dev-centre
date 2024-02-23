@@ -1,0 +1,18 @@
+.. Workspace ONE Intelligence Documentation master file
+
+
+Workspace ONE Intelligence SDK Documentation
+============================================
+
+.. toctree::
+   :maxdepth: 3
+   
+   overview/overview
+   ios/ios
+   android/android
+   development_platforms/index
+   downloads/eula_accepted
+   release_notes/release_notes
+   downloads/downloads
+   downloads/checksums
+

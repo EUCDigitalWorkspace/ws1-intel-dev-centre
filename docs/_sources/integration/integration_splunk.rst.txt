@@ -1,0 +1,24 @@
+.. _integrate_splunk:
+
+Splunk Integration Guide
+------------------------
+
+This topic describes how to integrate Apteligent performance data with
+`Splunk Enterprise <http://splunk.com>`_.
+Splunk Enterprise is an on-premise log management and operational analytics service.
+
+Using the Apteligent app for Splunkbase, Apteligent performance data,
+such as crash reports, breadcrumbs, Network Insights summaries, and others,
+can be automatically indexed in Splunk.
+
+Below is an installation guide for using the Apteligent app.
+
+1. From the Splunk interface, go to **Find More Apps** which brings up the
+   Splunkbase App Store. The Splunk App Store is a directory of apps that can
+   be installed with one click.
+
+2. Search for the Apteligent app. Click on **Install free**.
+
+3. Restart Splunk.
+
+.. include:: ../shared/support_include.txt

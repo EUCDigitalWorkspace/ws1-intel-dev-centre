@@ -1,0 +1,566 @@
+.. Apple SDK Documentation
+
+.. _ios_jp:
+
+Apple SDK
+=========
+
+.. toctree::
+   :maxdepth: 2
+
+このトピックでは、Apple アプリでの Crittercism の使い方を説明します。
+
+.. include:: install_before_include.txt
+
+.. _install_ios_jp:
+
+Crittercism Apple SDK のインストール
+---------------------------------------------------
+
+Crittercism Apple SDK のインストール方法は 2 種類あります。
+
+.. todo Add detail and screen shots to steps 2 and 3 below.
+
+#. **プリコンパイル** 。アプリのソース コードにアクセスできる場合は、次のステップに従って開発環境に Crittercism SDK をインストールできます。
+
+    #. ダウンロードした Apple SDK zip ファイルを解凍します。
+
+    #. ``Crittercism.framework`` フォルダーを XCode プロジェクト内にドラッグします。
+
+    #. SystemConfiguration フレームワークとリンクします。
+
+#. **CocoaPods** 。CocoaPods を使用する場合は、プロジェクトの ``Podfile`` に次の行を追加します。
+
+   .. code-block:: ruby
+      
+      pod 'CrittercismSDK'
+
+   追加したら、必ず ``pod install`` を実行し、.xcworkspace ファイルからプロジェクトを開いてください。
+
+.. _initialize_ios_jp:
+
+Crittercism の初期化
+------------------------
+
+.. include:: initialize_include.txt
+
+1.アプリケーション デリゲートのインプリメンテーション ファイルに Crittercism ヘッダーをインポートします。
+
+.. code-block:: objective-c
+
+   #import "Crittercism.h"
+
+2.AppDelegate の ``application:didFinishLaunchingWithOptions:`` メソッドで Crittercism を有効にします。
+
+.. code-block:: objective-c
+
+   - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+     [Crittercism enableWithAppID: @"アプリケーションID"];
+   // other code for your app
+     // ...
+   }
+   
+.. only:: pdf
+
+   swift:
+
+.. rst-class:: swift
+
+  .. code-block:: objective-c
+
+   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
+     Crittercism.enableWithAppID("アプリケーションID")
+     //other code for your app...
+     return true
+   }
+
+上記コードは、"[MyRegisteredAppName]" アプリ固有のものです。アプリの Crittercism アプリ ID は、 [App Settings (アプリ設定)] ページにあります。
+
+.. note::
+
+    dSYM を Crittercism にアップロードしない限り、シンボル名やソース コード行参照はクラッシュ レポートに含まれません。詳細は、下記の「シンボリケーション」のセクションを参照してください。
+
+3.Apple アプリを構築します。
+
+これで Apple アプリが Crittercism と統合されました。他の機能を使用するには、プロジェクトにさらにコードを追加する必要があります。
+
+.. _symbolicate_ios_jp:
+
+Apple シンボリケーションの設定
+-----------------------------------
+
+.. include:: symbolicate_include.txt
+
+アプリのシンボル名やソース コード行番号とクラッシュ レポートとのマッピングを表示するには、次のいずれかを実施します。
+
+* 当社の API を使用して、jenkins、hudson などや XCode 内のビルド スクリプト ( :ref:`dsym_upload_build_script_jp` を参照) のいずれかを介して dSYM ファイルを自動的にアップロードする。
+
+* アプリの dSYM ファイルを圧縮し、 [App Settings (アプリ設定)] ページでアップロードする ( :ref:`dsym_upload_jp` を参照)。
+
+アップロードされた dSYM ファイルを表示することもできます ( :ref:`dsym_list_jp` を参照)。
+
+.. _dsym_upload_build_script_jp:
+
+
+ビルド スクリプトを介したアップロード
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+dSYM (またはシンボル) ファイルを自動的に Crittercism にアップロードするように Xcode を設定できます。 
+
+詳細については、この `ナレッジベース文献 <http://support.crittercism.com/articles/knowledge_base/Uploading-dSYMs-to-Crittercism-automatically/>`_ を参照してください。
+
+.. _dsym_upload_jp:
+
+コマンド ラインを介した dSYM のアップロード
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+次のコマンドを使用して Crittercism サーバーに dSYM をアップロードします。
+
+**構文**
+
+.. code-block:: bash
+
+    curl "https://app.crittercism.com/api_beta/dsym/<app_id>" -F dsym=@"<path/to/dsym.zip>" -F key=<key>
+
+..  note::
+    このコマンドを使用するときは、「@」記号を指定します。
+
+
+**引数**
+
+====================== =======================================================================================
+名前                   説明
+====================== =======================================================================================
+``app_id``             アプリケーション ID。
+
+``path``               dsym.zip ファイルへのパス。
+
+``key``                キー。
+====================== =======================================================================================
+
+**戻り値**
+
+====================== =======================================================================================
+コード                   意味
+====================== =======================================================================================
+``200``                成功しました。
+
+``400``                指定した dsym.zip ファイルに問題があります。HTML 応答本文が問題を説明します。
+
+``404``                アプリが見つからないか、トークンが正しくありません。
+====================== =======================================================================================
+
+.. _dsym_list_jp:
+
+アプリに対してアップロードされた dSYM のリスト
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+次のコマンドを使用して、特定アプリに対して既にアップロードされている dSYM のリストを取得します。
+
+**構文**
+
+.. code-block:: bash
+
+    curl "https://app.crittercism.com/api_beta/dsyms/<app_id>" -F key=<key>
+
+**引数**
+
+
+====================== =======================================================================================
+名前                   説明
+====================== =======================================================================================
+``app_id``             アプリケーション ID。
+
+``key``                キー。
+====================== =======================================================================================
+
+**戻り値**
+
+そのアプリの dSYMs のリストを次の形式でリストします。
+
+::
+
+    {"dsyms": [<uuid>, <uuid>, ...]}
+
+.. _breadcrumbs_ios_jp:
+
+ブレッドクラムのロギング
+-----------------------------------
+
+``leaveBreadcrumb`` API を使用して、クラッシュや処理される例外と共にレポートされる時系列ログに書き込みます。
+
+.. include:: breadcrumbs_include.txt
+
+以下はブレッドクラムの残し方例です。
+
+.. code-block:: objective-c
+
+   [Crittercism leaveBreadcrumb:@"User tapped start button"];
+
+.. only:: pdf
+
+   swift:
+
+.. rst-class:: swift
+
+    .. code-block:: objective-c
+
+        Crittercism.leaveBreadcrumb("User tapped start button")
+
+
+たとえば、アプリにブレッドクラムを追加すると、このように表示されます。
+
+.. image:: img/crittercism-breadcrumbs.jpg
+   :width: 50%
+
+デフォルトにより、ブレッドクラムは書き込まれた後ただちにディスクにフラッシュされます。ブレッドクラムはアプリがクラッシュする時点までに起きたことすべてを正確に記録するため、設計上このようになっています。
+
+ファイルを書き込むことによるパフォーマンス コストが気になる場合は、ライブラリがバックグラウンド スレッドですべてのブレッドクラムを書き込むように指示します。
+
+例:
+
+.. code-block:: objective-c
+
+   [Crittercism setAsyncBreadcrumbMode:YES];
+
+.. only:: pdf
+
+   swift:
+
+.. rst-class:: swift
+
+    .. code-block:: objective-c
+
+        Crittercism.setAsyncBreadcrumbMode(true)
+
+.. _handled_exceptions_ios_jp:
+
+処理される例外のロギング
+-----------------------------------
+
+``logHandledException`` API を使用して、必ずしもクラッシュを生じるわけではないエラー条件を追跡します。 
+
+.. include:: handled_exceptions_include.txt
+
+以下は処理される例外のロギング例です。
+
+.. code-block:: objective-c
+
+   @try {
+     [NSException raise:NSInvalidArgumentException
+                 format:@"Foo must not be nil"];
+     // OR... call a method, or into a third party library that
+     // you know might raise an exception
+   } @catch (NSException *exception) {
+     // Pass it on to us!
+     [Crittercism logHandledException:exception]
+   }
+
+.. only:: pdf
+
+   swift:
+
+.. rst-class:: swift
+
+    .. code-block:: objective-c
+
+        let exception = NSException(name: "Exception Raised", reason: "foo must not be nil", userInfo: nil)
+        Crittercism.logHandledException(exception)
+
+.. note::
+
+    例外の送信は毎分 5 件までに制限されています。
+
+.. _metadata_ios_jp:
+
+ユーザー メタデータのロギング
+-----------------------------------
+
+.. include:: user_metadata_include.txt
+
+
+ユーザー名の追加
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. include:: set_username_include.txt
+
+以下はユーザー名の設定例です。
+
+.. code-block:: objective-c
+
+   [Crittercism setUsername:@"MrsCritter"];
+
+.. only:: pdf
+
+   swift:
+
+.. rst-class:: swift
+
+    .. code-block:: objective-c
+
+        Crittercism.setUsername("MrsCritter")
+
+.. note::
+
+   1 から 32 文字までの文字列が有効な入力となります。
+
+
+.. _other_ios_jp:
+
+その他のタスク
+--------------
+
+本セクションは、その他のオプションのタスクを説明します。
+
+.. _crash_ios_jp:
+
+クラッシュ レポートの向上
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. include:: crash_include.txt
+
+``@try/@catch`` ブロック外でランタイム例外が作成された場合は、クラッシュ レポートが生成され、優れた診断と共に Crittercism に送信されます。
+
+ではやってみましょう！例外を発生させるボタンを作成します。
+
+.. code-block:: objective-c
+
+   - (IBAction)crashPressed:(id) sender {
+       [NSException raise:NSInvalidArgumentException
+                   format:@"Foo must not be nil"];
+   }
+
+.. only:: pdf
+
+   swift:
+
+.. rst-class:: swift
+
+    .. code-block:: objective-c
+
+          @IBAction func crashPressed(sender: AnyObject) {
+             NSException(name: "Exception Raised!", reason: "Foo must not be nil", userInfo: nil).raise()
+          }
+
+クラッシュ レポートは、次にアプリがロードされるときに送信されます。アプリを再起動したら、クラッシュ概要ページに移動してクラッシュを表示します。またはクラッシュやアプリのロードが発生すると同時に、ライブ統計ページにリアルタイムでクラッシュやアプリのロードを表示することもできます。
+
+.. note::
+
+    シミュレーターでテストしている場合には、Crittercism がクラッシュをキャプチャできなくなりますので XCode デバッガを外してください。
+    
+.. todo *Reviewers:* Need to provide instructions on how to do this.
+
+オフライン クラッシュの処理
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. todo *Reviewers:* The “setMaxOfflineCrashReports” API is one of those silly APIs we added without any reason.  I would prefer that we do not document it.  Just say that we store up to 3 crashes while a user is offline.  When the user comes back online, Crittercism will automatically report the crashes.
+
+ユーザーのデバイスにインターネット接続がない場合は、デバイス上で発生したクラッシュが Crittercism に送信できるようになるまでクラッシュをキャッシュします。デフォルトでは、デバイス上に 3 件までのクラッシュをキャッシュしますが、この値は ``setMaxOfflineCrashReports`` メソッドを使用して変更できます。
+
+.. code-block:: objective-c
+
+   [Crittercism setMaxOfflineCrashReports:(NSUInteger)max;];
+
+.. only:: pdf
+
+   swift:
+
+.. rst-class:: swift
+
+    .. code-block:: objective-c
+
+        Crittercism.setMaxOfflineCrashReports(10)
+
+最大値以上の数のクラッシュが発生した場合は、一番古いクラッシュが上書きされます。この設定の値を少なくしても、オフライン クラッシュ レポートは削除されません。送信されていないクラッシュ レポートは、Crittercism に正常に送信されるまで保持されます。従って、短期間はデバイス上に最大数以上が保存されていることがあります。最大 10 件までのオフライン クラッシュ レポートを指定できます。
+
+クラッシュ発生の検出
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+前回の実行でアプリがクラッシュしたことを検出するには、初期化時に Crittercism にデリゲート オブジェクト (``CrittercismDelegate`` プロトコルに従う) を渡すことができます。
+
+.. code-block:: objective-c
+
+   @interface MyAwesomeViewController : UIViewController <CrittercismDelegate>
+   //...
+   #pragma mark CrittercismDelegate Method
+   - (void)crittercismDidCrashOnLastLoad {
+       NSLog(@"App crashed the last time it was loaded");
+   }
+   //...
+   @end
+
+   [Crittercism enableWithAppID:@"MYAPPID"
+                 andDelegate:myViewController];
+
+.. only:: pdf
+
+   swift:
+
+.. rst-class:: swift
+
+    .. code-block:: objective-c
+
+       class appViewController: UIViewController, CrittercismDelegate {
+           //MARK: CrittercismDelegate Method
+           override func crittercismDidCrashOnLastLoad {
+               print("App crashed the last time it was loaded")
+           }
+       // ....
+       }
+
+       Crittercism.enableWithAppID("MYAPPID", andDelegate: appViewController.self)
+
+.. _net_stats_ios_jp:
+
+サービス モニタリングの設定
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. include:: net_stats_include.txt
+
+Crittercism を有効にすると、 ``NSURLConnection`` によって生成される HTTP トラフィックのパフォーマンスがモニタされます。  
+NSURLConnection API を使って明確に発行された HTTP リクエストは、デリゲート オブジェクトでサポートします。現在は、以下に対する呼び出しのインストルメント化は行っていません。
+
+``+[NSURLConnection sendAsynchronousRequest:queue:completionHandler]``
+
+または
+
+``+[NSURLConnection sendSynchronousRequest:returningResponse:error:]``
+
+詳細については、 `Apple ドキュメンテーション <https://developer.apple.com/library/mac/documentation/Foundation/Reference/NSURLConnectionDelegate_Protocol/Reference/Reference.html>`_ を参照してください。
+
+キャプチャしたデータのフィルタリング
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+要求の実際の内容が検閲されることはもちろん絶対にありませんが、Crittercism ウェブ ポータルに表示したくない URL があることもあります。
+
+Crittercism を有効にすると、フィルタ パラメーターを使って慎重に扱うべき URL がネットワーク機器によってキャプチャされないようにすることができます。これを使用するには、 ``CRFilter`` オブジェクトの ``NSArray`` を渡してライブラリがキャプチャした URL と照合します。
+
+.. note::
+
+    フィルタリングはアプリケーションのメイン スレッドとは離れたところで実行されます。
+    
+.. todo *Reviewers:* Not sure whether we need to call this out.
+
+デフォルトの動作
+""""""""""""""""
+
+フィルタを何も指定しなければ、Crittercism のデフォルトの動作ではすべての URL からクエリ文字列が消去されます。たとえば、次のような URL の場合、
+
+.. code-block:: html
+
+   https://api.compuglobalhypermeganet.com/store/purchase.asp?uname=homerjs
+
+Crittercism のサーバーにレポートされる URL は次のようになります。
+
+.. code-block:: html
+
+   https://api.compuglobalhypermeganet.com/store/purchase.asp
+
+フィルタのタイプ
+""""""""""""""""
+
+使用できるフィルタリング モードは 2 種類あります。
+
+* **ブラックリスト** - 一致する URL を完全に廃棄します。Crittercism にはレポートされません。
+
+* **「クエリ維持」フィルタリング** - クエリ パラメーターを消去するというデフォルトの動作を阻止します。代わりに、一致する URL はクエリ文字列を維持します。
+
+フィルタリング コード例
+"""""""""""""""""""""""
+
+フィルタは、Crittercism 有効化時に供給できます。
+
+.. code-block:: objective-c
+
+   [Crittercism enableWithAppID:@"MYAPPID"
+               andURLFilters:@[[CRFilter filterWithString:@"sensitiveURL"],
+                           [CRFilter queryPreservingFilterWithString:@"lookupMovie"]]];
+
+.. only:: pdf
+
+   swift:
+
+.. rst-class:: swift
+
+    .. code-block:: objective-c
+
+        Crittercism.enableWithAppID("MYAPPID",
+            andURLFilters: [CRFilter(string: "sensitiveURL"), CRFilter.queryPreservingFilterWithString("lookupMovie")])
+
+``addFilter:`` メソッドを使用すると、その場で他のフィルタを追加することができます。
+
+.. code-block:: objective-c
+
+   [Crittercism addFilter:(CRFilter*)filter];
+
+.. only:: pdf
+
+   swift:
+
+.. rst-class:: swift
+
+    .. code-block:: objective-c
+
+        Crittercism.addFilter(filter: CRFilter?)
+
+.. note::
+
+    ネットワーク パフォーマンスのモニタリングは、iOS 5.0  以降で実行する場合にのみ有効になります。
+
+位置の設定
+~~~~~~~~~~~~~~~~~~~~
+
+Crittercism サービス モニタリングは、 位置情報をネットワーク データに関連付けます。 デフォルトでは、位置情報は IP の逆引きで取得されます。 
+ライブラリ バージョン 4.1.1 からは、さらに正確な緯度と経度情報をサーバーに送信するオプションがあります。次の例のように、デバイスの直近の位置を ``updateLocation:`` API 呼び出しを使って Crittercism に通知することができます。
+
+.. code-block:: objective-c
+
+   // Update location information
+   [Crittercism updateLocation:(CLLocation*)location];
+
+.. only:: pdf
+
+   swift:
+
+.. rst-class:: swift
+
+    .. code-block:: objective-c
+
+        Crittercism.updateLocation(location: CLLocation?)
+
+.. _opt_out_ios_jp:
+
+ユーザーに対する Crittercism からのオプトアウトの許可
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. include:: opt_out_include.txt
+
+以下の API 呼び出しを使うと、ユーザーは Crittercism レポートからオプトアウトすることができます。
+
+.. code-block:: objective-c
+
+   // Opt the user out
+   [Crittercism setOptOutStatus:YES];
+
+.. only:: pdf
+
+   swift:
+
+.. rst-class:: swift
+
+    .. code-block:: objective-c
+
+        Crittercism.setOptOutStatus(true)
+
+``OptOutStatus`` を [YES (はい)] に設定すると、ユーザーのアプリからは一切情報やリクエストが送信されなくなります。通常、開発者はこの API 呼び出しを設定メニューのチェックボックスに接続します。
+
+Crittercism にレポートされるアプリ バージョンのカスタマイズ
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Crittercism では、すべてのアプリのパフォーマンス データをアプリ バージョンで自動的にグループ分けします。これにより、新しいアプリ バージョンがリリースされるたびにパフォーマンスの向上や回帰をモニタできます。デフォルトでは、Apple SDK はアプリのInfo.plist ファイルにある「バンドル バージョン」をレポートします。たいていの場合にはこれで十分ですが、Crittercism にレポートされるアプリ バージョンをカスタマイズすることが望ましいこともあります。
+
+カスタム バージョンは、付加的なプロパティである CRAlternateVersion のタイプ `String` をアプリの Info.plist ファイルに追加すると指定できます。
+
+.. image:: img/ios-cralternateversion-example.jpg
+   :width: 50%
+

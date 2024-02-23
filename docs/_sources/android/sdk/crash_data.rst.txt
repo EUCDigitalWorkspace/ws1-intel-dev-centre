@@ -1,0 +1,148 @@
+.. To add a method in this file, please use the following format.
+..
+.. In general, each method needs to be enclosed in .. container:: toggle
+.. In toggle container, we have header (required), discussion (optional),
+.. declaration (optional), parameters (optional), retval (optional),
+.. availability (optional).
+..
+.. If a method is deprecated, you can mark the header as deprecated.
+.. So you would have .. container :: header deprecated
+..
+.. .. container:: toggle
+..
+..    .. container:: header
+..
+..       <insert method name here>
+..
+..    .. container:: discussion
+..
+..       <Insert method summary>
+..
+..    .. container:: declaration
+..
+..       <insert method declaration in a code block>
+..
+..       For iOS, use
+..
+..       .. example-code::
+..
+..          .. code-block:: objective-c
+..
+..             <insert obj-c code>
+..
+..          .. code-block:: swift
+..
+..             <insert swift code>
+..
+..       For other platform, use code block 
+..
+..    .. container:: parameters
+.. 
+..       +--------+-------------------------------+
+..       | param1 | description                   |
+..       +--------+-------------------------------+
+..
+..    .. container:: retVal
+..    
+..       <discuss return value>
+..
+..    .. container:: availability
+..
+..       <discuss when this method is introduced>
+..       <discuss when this method is deprecated>
+..
+..    .. container:: seealso
+..
+..       <list some useful links here>
+..
+
+.. _android_crash_data:
+
+CrashData
+=========
+
+Import ``com.crittercism.app`` package to use this class.
+
+`CrashData` provides information about crash that happens in the last session.
+See :ref:`android_detect_crash` and :ref:`android_crittercism_callback` for more details 
+
+Initialization
+--------------
+
+.. container:: toggle
+
+    .. container:: header
+
+       CrashData (name, reason, timeOccured)
+       
+    .. container:: discussion
+
+       Creates a ``CrashData`` object with specified name, reason, and time of the crash
+
+    .. container:: declaration
+
+       .. code-block:: java
+
+          public CrashData (String name, String reason, Date timeOccurred)
+
+    .. container:: parameters
+
+       ============= ==============================
+       name          A ``String`` that describes the crash name
+       
+       reason        A ``String`` that describes the crash reason
+       
+       timeOccured   A ``Date`` that informs the time of crash
+       ============= ==============================
+
+Crash Information
+-----------------
+
+.. container:: toggle
+
+    .. container:: header
+
+       getName ()
+       
+    .. container:: discussion
+
+       Returns a ``String`` object that describes the name of the crash.
+
+    .. container:: declaration
+
+       .. code-block:: java
+
+          public String getName ()
+
+.. container:: toggle
+
+    .. container:: header
+
+       getReason ()
+       
+    .. container:: discussion
+
+       Returns a ``String`` object that describes why the crash happened.
+
+    .. container:: declaration
+
+       .. code-block:: java
+
+          public String getReason ()
+
+.. container:: toggle
+
+    .. container:: header
+
+       getTimeOccurred ()
+       
+    .. container:: discussion
+
+       Returns a ``Date`` object that describes when the crash occured.
+
+    .. container:: declaration
+
+       .. code-block:: java
+
+          public Date getTimeOccurred ()
+

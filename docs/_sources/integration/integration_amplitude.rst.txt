@@ -1,0 +1,72 @@
+.. _integrate_amplitude:
+
+Amplitude Integration Guide
+----------------------------
+
+This topic describes how to integrate Workspace ONE Intelligence with
+`Amplitude <http://www.amplitude.com>`_.
+Amplitude is a web and mobile analytics platform that helps you build better
+products. Discover user behavior insights about retention, engagement, and
+revenue.  This integration allows companies to pull Workspace ONE Intelligence
+performance data into Amplitude and allow product managers, analysts, and
+marketers to:
+
+* Understand how performance is impacting business metrics like app usage, retention, and churn
+* Create behavioral cohorts of users that have a poor app experience
+* Measure how performance issues impact user paths in the app
+
+This document will guide you through the process of activating sending Workspace
+ONE Intelligence events into Amplitude through a few additional lines of code in
+the SDK.
+
+Requirements
+============
+
+Before you start the integration process, please make sure you have the
+following in the mobile app:
+
+* Implemented the :ref:`Workspace ONE Intelligence SDK <downloads>` (requires
+  v5.6.1 of the iOS SDK and v5.8.0 of the Android SDK)
+* Implemented the `Amplitude SDK <https://amplitude.zendesk.com/hc/en-us/categories/200409887-Installation-and-Integration>`_
+
+Implementation
+==============
+
+The Workspace ONE Intelligence SDK will create a notification that fires when
+the SDK knows that a crash occurred.  On iOS, when the user loads the app after
+a crash occurred, this notification will fire.  The notification will contain
+four pieces of information:
+
+* Crash Name: The name of the crash (i.e., NSRangeException)
+* Crash Reason: More details on why the crash occurred (i.e., "\***\ \-[__NSArrayM objectAtIndex:]:\ index 18446744073709551615 beyond bounds for empty array")
+* Crash Date: The date and time at which the crash occurred
+* Crash View: A list of the views that were active at the time of the crash
+
+Sending a Crash Event to Amplitude (iOS)
+####################################################
+
+..  note::
+
+    Make sure the Amplitude SDK is initialized *before* Workspace ONE
+    Intelligence SDK, otherwise the crash event will not be sent.
+
+To send these crash events to Amplitude, add two lines of code:
+
+1. Register an Observer to Capture the Workspace ONE Intelligence Event
+
+.. code-block:: objc
+
+	[[NSNotificationCenter defaultCenter] addObserver:self
+	    selector:@selector(crashDidOccur:)
+	    name:@"CRCrashNotification" object:nil];
+
+2. Send an Event to Amplitude Upon Notification
+
+.. code-block:: objc
+
+	- (void) crashDidOccur:(NSNotification*)notification {
+	// Send Event to Amplitude
+	[[Amplitude instance] logEvent:@"Workspace ONE Intelligence Crash" withEventProperties:notification.userInfo outOfSession:true];
+	}
+
+.. include:: ../shared/support_include.txt

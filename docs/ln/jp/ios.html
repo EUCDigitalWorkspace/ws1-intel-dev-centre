@@ -1,0 +1,493 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Apple SDK &#8212; Workspace ONE Intelligence  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/adctheme.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/toggle.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <link rel="search" title="Search" href="../../search.html" />
+    <link rel="top" title="Workspace ONE Intelligence  documentation" href="../../index.html" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <script type="text/javascript">try{document.domain="vmware.com"}catch(e){};</script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-49786008-1']);
+    _gaq.push(['_setDomainName', 'apteligent.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_addIgnoredRef', 'apteligent.com']);   // Stops Self Referrals
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  
+  <meta name="google-translate-customization" content="f0837c562504ad7b-d669caf2b7375c11-g99fd8de75f76752f-14"></meta>
+
+  </head><body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PK9468"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PK9468');</script>
+<!-- End Google Tag Manager -->
+
+
+  <div id="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+          <div id="searchbox" style="display: none">
+              <form class="search" action="../../search.html" method="get">
+                <div class="search-wrapper">
+                  <input class="prettysearch" type="text" name="q" size="18" />
+                  <input type="submit" value="Search" class="searchbutton" />
+                </div>
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+      <ul><li class="toctree-l1" id="docs-home"><a href="../../index.html">Docs Home</a></li></ul>
+      <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ios/ios.html">Apple SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../android/android.html">Android SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../development_platforms/index.html">Development Platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../downloads/eula_accepted.html">SDK Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release_notes/release_notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../downloads/downloads.html">EULA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../downloads/checksums.html">SDK Download Checksums</a></li>
+</ul>
+
+      <div id="sidebar-toc-clear"></div>
+      
+    </div>
+  </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            <div class="container">
+              <div class="row">
+                <div class="span12">
+                  
+  <section id="apple-sdk">
+<span id="ios-jp"></span><h1>Apple SDK<a class="headerlink" href="#apple-sdk" title="Permalink to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<p>このトピックでは、Apple アプリでの Crittercism の使い方を説明します。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>初めてCrittercismをご利用になる場合は、まず <a class="reference internal" href="quickstart.html#quickstart-jp"><span class="std std-ref">Crittercism クイックスタート</span></a> をご覧ください。
+Crittercism SDK は、最初に無料の Crittercism アカウントにサインアップし、アプリを登録し (必要な場合)、アプリのプラットフォームの Crittercism SDK をダウンロードしなければインストールできません。
+ダウンロードしたバージョンに関しては、 <a class="reference internal" href="../../release_notes/release_notes.html#release-notes"><span class="std std-ref">Release Notes</span></a> を参照してください。</p>
+</div>
+<section id="crittercism-apple-sdk">
+<span id="install-ios-jp"></span><h2>Crittercism Apple SDK のインストール<a class="headerlink" href="#crittercism-apple-sdk" title="Permalink to this heading">¶</a></h2>
+<p>Crittercism Apple SDK のインストール方法は 2 種類あります。</p>
+<ol class="arabic">
+<li><p><strong>プリコンパイル</strong> 。アプリのソース コードにアクセスできる場合は、次のステップに従って開発環境に Crittercism SDK をインストールできます。</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>ダウンロードした Apple SDK zip ファイルを解凍します。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Crittercism.framework</span></code> フォルダーを XCode プロジェクト内にドラッグします。</p></li>
+<li><p>SystemConfiguration フレームワークとリンクします。</p></li>
+</ol>
+</div></blockquote>
+</li>
+<li><p><strong>CocoaPods</strong> 。CocoaPods を使用する場合は、プロジェクトの <code class="docutils literal notranslate"><span class="pre">Podfile</span></code> に次の行を追加します。</p>
+<div class="highlight-ruby notranslate"><div class="highlight"><pre><span></span><span class="n">pod</span><span class="w"> </span><span class="s1">&#39;CrittercismSDK&#39;</span>
+</pre></div>
+</div>
+<p>追加したら、必ず <code class="docutils literal notranslate"><span class="pre">pod</span> <span class="pre">install</span></code> を実行し、.xcworkspace ファイルからプロジェクトを開いてください。</p>
+</li>
+</ol>
+</section>
+<section id="crittercism">
+<span id="initialize-ios-jp"></span><h2>Crittercism の初期化<a class="headerlink" href="#crittercism" title="Permalink to this heading">¶</a></h2>
+<p><em>初期化</em> とは、Crittercism と通信するためにアプリを編集するプロセスです。</p>
+<p>1.アプリケーション デリゲートのインプリメンテーション ファイルに Crittercism ヘッダーをインポートします。</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#import &quot;Crittercism.h&quot;</span>
+</pre></div>
+</div>
+<p>2.AppDelegate の <code class="docutils literal notranslate"><span class="pre">application:didFinishLaunchingWithOptions:</span></code> メソッドで Crittercism を有効にします。</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">application:</span><span class="p">(</span><span class="bp">UIApplication</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">application</span><span class="w"> </span><span class="nf">didFinishLaunchingWithOptions:</span><span class="p">(</span><span class="bp">NSDictionary</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">launchOptions</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="p">[</span><span class="n">Crittercism</span><span class="w"> </span><span class="n">enableWithAppID</span><span class="o">:</span><span class="w"> </span><span class="s">@&quot;アプリケーションID&quot;</span><span class="p">];</span>
+<span class="c1">// other code for your app</span>
+<span class="w">  </span><span class="c1">// ...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="swift highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="n">func</span><span class="w"> </span><span class="nf">application</span><span class="p">(</span><span class="n">application</span><span class="o">:</span><span class="w"> </span><span class="bp">UIApplication</span><span class="p">,</span><span class="w"> </span><span class="n">didFinishLaunchingWithOptions</span><span class="w"> </span><span class="n">launchOptions</span><span class="o">:</span><span class="w"> </span><span class="bp">NSDictionary</span><span class="o">?</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Bool</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">Crittercism</span><span class="p">.</span><span class="n">enableWithAppID</span><span class="p">(</span><span class="s">&quot;アプリケーションID&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="c1">//other code for your app...</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>上記コードは、”[MyRegisteredAppName]” アプリ固有のものです。アプリの Crittercism アプリ ID は、 [App Settings (アプリ設定)] ページにあります。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>dSYM を Crittercism にアップロードしない限り、シンボル名やソース コード行参照はクラッシュ レポートに含まれません。詳細は、下記の「シンボリケーション」のセクションを参照してください。</p>
+</div>
+<p>3.Apple アプリを構築します。</p>
+<p>これで Apple アプリが Crittercism と統合されました。他の機能を使用するには、プロジェクトにさらにコードを追加する必要があります。</p>
+</section>
+<section id="apple">
+<span id="symbolicate-ios-jp"></span><h2>Apple シンボリケーションの設定<a class="headerlink" href="#apple" title="Permalink to this heading">¶</a></h2>
+<p>デバッグ シンボルが削除されているアプリの場合、 <em>シンボリケーション</em> とはシンボルをマッピングしてスタック トレースを人間が読める形態に翻訳することを言います。
+Crittercism では、自動的なサーバー側のシンボリケーションを提供しており、ユーザーがアプリのシンボル ファイルを提供する必要があります。</p>
+<p>アプリのシンボル名やソース コード行番号とクラッシュ レポートとのマッピングを表示するには、次のいずれかを実施します。</p>
+<ul class="simple">
+<li><p>当社の API を使用して、jenkins、hudson などや XCode 内のビルド スクリプト ( <a class="reference internal" href="#dsym-upload-build-script-jp"><span class="std std-ref">ビルド スクリプトを介したアップロード</span></a> を参照) のいずれかを介して dSYM ファイルを自動的にアップロードする。</p></li>
+<li><p>アプリの dSYM ファイルを圧縮し、 [App Settings (アプリ設定)] ページでアップロードする ( <a class="reference internal" href="#dsym-upload-jp"><span class="std std-ref">コマンド ラインを介した dSYM のアップロード</span></a> を参照)。</p></li>
+</ul>
+<p>アップロードされた dSYM ファイルを表示することもできます ( <a class="reference internal" href="#dsym-list-jp"><span class="std std-ref">アプリに対してアップロードされた dSYM のリスト</span></a> を参照)。</p>
+<section id="dsym-upload-build-script-jp">
+<span id="id1"></span><h3>ビルド スクリプトを介したアップロード<a class="headerlink" href="#dsym-upload-build-script-jp" title="Permalink to this heading">¶</a></h3>
+<p>dSYM (またはシンボル) ファイルを自動的に Crittercism にアップロードするように Xcode を設定できます。</p>
+<p>詳細については、この <a class="reference external" href="http://support.crittercism.com/articles/knowledge_base/Uploading-dSYMs-to-Crittercism-automatically/">ナレッジベース文献</a> を参照してください。</p>
+</section>
+<section id="dsym">
+<span id="dsym-upload-jp"></span><h3>コマンド ラインを介した dSYM のアップロード<a class="headerlink" href="#dsym" title="Permalink to this heading">¶</a></h3>
+<p>次のコマンドを使用して Crittercism サーバーに dSYM をアップロードします。</p>
+<p><strong>構文</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span><span class="s2">&quot;https://app.crittercism.com/api_beta/dsym/&lt;app_id&gt;&quot;</span><span class="w"> </span>-F<span class="w"> </span><span class="nv">dsym</span><span class="o">=</span>@<span class="s2">&quot;&lt;path/to/dsym.zip&gt;&quot;</span><span class="w"> </span>-F<span class="w"> </span><span class="nv">key</span><span class="o">=</span>&lt;key&gt;
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>このコマンドを使用するときは、「&#64;」記号を指定します。</p>
+</div>
+<p><strong>引数</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>名前</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">app_id</span></code></p></td>
+<td><p>アプリケーション ID。</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">path</span></code></p></td>
+<td><p>dsym.zip ファイルへのパス。</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">key</span></code></p></td>
+<td><p>キー。</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>戻り値</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>コード</p></th>
+<th class="head"><p>意味</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">200</span></code></p></td>
+<td><p>成功しました。</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">400</span></code></p></td>
+<td><p>指定した dsym.zip ファイルに問題があります。HTML 応答本文が問題を説明します。</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">404</span></code></p></td>
+<td><p>アプリが見つからないか、トークンが正しくありません。</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="dsym-list-jp">
+<span id="id3"></span><h3>アプリに対してアップロードされた dSYM のリスト<a class="headerlink" href="#dsym-list-jp" title="Permalink to this heading">¶</a></h3>
+<p>次のコマンドを使用して、特定アプリに対して既にアップロードされている dSYM のリストを取得します。</p>
+<p><strong>構文</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span><span class="s2">&quot;https://app.crittercism.com/api_beta/dsyms/&lt;app_id&gt;&quot;</span><span class="w"> </span>-F<span class="w"> </span><span class="nv">key</span><span class="o">=</span>&lt;key&gt;
+</pre></div>
+</div>
+<p><strong>引数</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>名前</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">app_id</span></code></p></td>
+<td><p>アプリケーション ID。</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">key</span></code></p></td>
+<td><p>キー。</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>戻り値</strong></p>
+<p>そのアプリの dSYMs のリストを次の形式でリストします。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;dsyms&quot;</span><span class="p">:</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">uuid</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">uuid</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">...</span><span class="p">]}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="breadcrumbs-ios-jp">
+<span id="id4"></span><h2>ブレッドクラムのロギング<a class="headerlink" href="#breadcrumbs-ios-jp" title="Permalink to this heading">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">leaveBreadcrumb</span></code> API を使用して、クラッシュや処理される例外と共にレポートされる時系列ログに書き込みます。</p>
+<p>以下はブレッドクラムの残し方例です。</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Crittercism</span><span class="w"> </span><span class="n">leaveBreadcrumb</span><span class="o">:</span><span class="s">@&quot;User tapped start button&quot;</span><span class="p">];</span>
+</pre></div>
+</div>
+<div class="swift highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="n">Crittercism</span><span class="p">.</span><span class="n">leaveBreadcrumb</span><span class="p">(</span><span class="s">&quot;User tapped start button&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>たとえば、アプリにブレッドクラムを追加すると、このように表示されます。</p>
+<a class="reference internal image-reference" href="../../_images/crittercism-breadcrumbs.jpg"><img alt="../../_images/crittercism-breadcrumbs.jpg" src="../../_images/crittercism-breadcrumbs.jpg" style="width: 50%;" /></a>
+<p>デフォルトにより、ブレッドクラムは書き込まれた後ただちにディスクにフラッシュされます。ブレッドクラムはアプリがクラッシュする時点までに起きたことすべてを正確に記録するため、設計上このようになっています。</p>
+<p>ファイルを書き込むことによるパフォーマンス コストが気になる場合は、ライブラリがバックグラウンド スレッドですべてのブレッドクラムを書き込むように指示します。</p>
+<p>例:</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Crittercism</span><span class="w"> </span><span class="n">setAsyncBreadcrumbMode</span><span class="o">:</span><span class="nb">YES</span><span class="p">];</span>
+</pre></div>
+</div>
+<div class="swift highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="n">Crittercism</span><span class="p">.</span><span class="n">setAsyncBreadcrumbMode</span><span class="p">(</span><span class="nb">true</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="handled-exceptions-ios-jp">
+<span id="id5"></span><h2>処理される例外のロギング<a class="headerlink" href="#handled-exceptions-ios-jp" title="Permalink to this heading">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">logHandledException</span></code> API を使用して、必ずしもクラッシュを生じるわけではないエラー条件を追跡します。</p>
+<p>処理される例外を使用すると、 <code class="docutils literal notranslate"><span class="pre">try</span></code>/<code class="docutils literal notranslate"><span class="pre">catch</span></code> ブロック内に閉じ込められた例外を追跡したり、第三者製の SDK をテストしたり、現在アサーションを使用している可能性のあるコード内のエリアをモニタしたりすることができます。処理される例外は、メモリ低下警告などのエラー イベントの追跡にも使用できます。詳細については、 <a class="reference internal" href="overview.html#handled-exceptions-jp"><span class="std std-ref">処理される例外</span></a> を参照してください。</p>
+<p>処理される例外は、クラッシュ レポートとほぼ同じようにスタックトレースごとにグループ分けされます。
+また、Crittercism ポータルの Handled Exceptions 処理される例外 エリアで表示できます。</p>
+<p>以下は処理される例外のロギング例です。</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="k">@try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="p">[</span><span class="bp">NSException</span><span class="w"> </span><span class="n">raise</span><span class="o">:</span><span class="n">NSInvalidArgumentException</span>
+<span class="w">              </span><span class="nl">format</span><span class="p">:</span><span class="s">@&quot;Foo must not be nil&quot;</span><span class="p">];</span>
+<span class="w">  </span><span class="c1">// OR... call a method, or into a third party library that</span>
+<span class="w">  </span><span class="c1">// you know might raise an exception</span>
+<span class="p">}</span><span class="w"> </span><span class="k">@catch</span><span class="w"> </span><span class="p">(</span><span class="bp">NSException</span><span class="w"> </span><span class="o">*</span><span class="n">exception</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Pass it on to us!</span>
+<span class="w">  </span><span class="p">[</span><span class="n">Crittercism</span><span class="w"> </span><span class="n">logHandledException</span><span class="o">:</span><span class="n">exception</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="swift highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="n">let</span><span class="w"> </span><span class="n">exception</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">NSException</span><span class="p">(</span><span class="n">name</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Exception Raised&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">reason</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;foo must not be nil&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">userInfo</span><span class="o">:</span><span class="w"> </span><span class="nb">nil</span><span class="p">)</span>
+<span class="n">Crittercism</span><span class="p">.</span><span class="n">logHandledException</span><span class="p">(</span><span class="n">exception</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>例外の送信は毎分 5 件までに制限されています。</p>
+</div>
+</section>
+<section id="metadata-ios-jp">
+<span id="id6"></span><h2>ユーザー メタデータのロギング<a class="headerlink" href="#metadata-ios-jp" title="Permalink to this heading">¶</a></h2>
+<p>開発者は、個々のユーザーに関する情報を追跡するようにユーザーのメタデータを設定できます。
+詳細については、 <a class="reference internal" href="overview.html#user-metadata-jp"><span class="std std-ref">ユーザー メタデータ</span></a> を参照してください。</p>
+<section id="id7">
+<h3>ユーザー名の追加<a class="headerlink" href="#id7" title="Permalink to this heading">¶</a></h3>
+<p>ユーザー名を設定すると、各ユーザーのアプリ パフォーマンスがモニタできるようになります。
+いったんユーザー名を設定すると、Crittercism ポータルの「Userviews (ユーザー検索)」機能Zを使用して特定のユーザーに発生したクラッシュやエラーのリストを検索できるようになります。
+ユーザー名は、カスタマー サポート システムに関連付けられるような値に設定することを推奨します。</p>
+<p>以下はユーザー名の設定例です。</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Crittercism</span><span class="w"> </span><span class="n">setUsername</span><span class="o">:</span><span class="s">@&quot;MrsCritter&quot;</span><span class="p">];</span>
+</pre></div>
+</div>
+<div class="swift highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="n">Crittercism</span><span class="p">.</span><span class="n">setUsername</span><span class="p">(</span><span class="s">&quot;MrsCritter&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>1 から 32 文字までの文字列が有効な入力となります。</p>
+</div>
+</section>
+</section>
+<section id="other-ios-jp">
+<span id="id8"></span><h2>その他のタスク<a class="headerlink" href="#other-ios-jp" title="Permalink to this heading">¶</a></h2>
+<p>本セクションは、その他のオプションのタスクを説明します。</p>
+<section id="crash-ios-jp">
+<span id="id9"></span><h3>クラッシュ レポートの向上<a class="headerlink" href="#crash-ios-jp" title="Permalink to this heading">¶</a></h3>
+<p><em>クラッシュ</em> とは、ユーザーのセッションを終了させる予期しないイベントによって発生するランタイム例外のことを言います。
+クラッシュは <code class="docutils literal notranslate"><span class="pre">try</span></code>/<code class="docutils literal notranslate"><span class="pre">catch</span></code> ブロック内では処理されません。詳細については、 <a class="reference internal" href="overview.html#crash-jp"><span class="std std-ref">クラッシュ レポート (未処理例外)</span></a> を参照してください。</p>
+<p><code class="docutils literal notranslate"><span class="pre">&#64;try/&#64;catch</span></code> ブロック外でランタイム例外が作成された場合は、クラッシュ レポートが生成され、優れた診断と共に Crittercism に送信されます。</p>
+<p>ではやってみましょう！例外を発生させるボタンを作成します。</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="kt">IBAction</span><span class="p">)</span><span class="nf">crashPressed:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span> <span class="nv">sender</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">[</span><span class="bp">NSException</span><span class="w"> </span><span class="n">raise</span><span class="o">:</span><span class="n">NSInvalidArgumentException</span>
+<span class="w">                </span><span class="nl">format</span><span class="p">:</span><span class="s">@&quot;Foo must not be nil&quot;</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="swift highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">@</span><span class="kt">IBAction</span><span class="w"> </span><span class="n">func</span><span class="w"> </span><span class="n">crashPressed</span><span class="p">(</span><span class="n">sender</span><span class="o">:</span><span class="w"> </span><span class="n">AnyObject</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="bp">NSException</span><span class="p">(</span><span class="n">name</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Exception Raised!&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">reason</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Foo must not be nil&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">userInfo</span><span class="o">:</span><span class="w"> </span><span class="nb">nil</span><span class="p">).</span><span class="n">raise</span><span class="p">()</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>クラッシュ レポートは、次にアプリがロードされるときに送信されます。アプリを再起動したら、クラッシュ概要ページに移動してクラッシュを表示します。またはクラッシュやアプリのロードが発生すると同時に、ライブ統計ページにリアルタイムでクラッシュやアプリのロードを表示することもできます。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>シミュレーターでテストしている場合には、Crittercism がクラッシュをキャプチャできなくなりますので XCode デバッガを外してください。</p>
+</div>
+<section id="id10">
+<h4>オフライン クラッシュの処理<a class="headerlink" href="#id10" title="Permalink to this heading">¶</a></h4>
+<p>ユーザーのデバイスにインターネット接続がない場合は、デバイス上で発生したクラッシュが Crittercism に送信できるようになるまでクラッシュをキャッシュします。デフォルトでは、デバイス上に 3 件までのクラッシュをキャッシュしますが、この値は <code class="docutils literal notranslate"><span class="pre">setMaxOfflineCrashReports</span></code> メソッドを使用して変更できます。</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Crittercism</span><span class="w"> </span><span class="n">setMaxOfflineCrashReports</span><span class="o">:</span><span class="p">(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="n">max</span><span class="p">;];</span>
+</pre></div>
+</div>
+<div class="swift highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="n">Crittercism</span><span class="p">.</span><span class="n">setMaxOfflineCrashReports</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>最大値以上の数のクラッシュが発生した場合は、一番古いクラッシュが上書きされます。この設定の値を少なくしても、オフライン クラッシュ レポートは削除されません。送信されていないクラッシュ レポートは、Crittercism に正常に送信されるまで保持されます。従って、短期間はデバイス上に最大数以上が保存されていることがあります。最大 10 件までのオフライン クラッシュ レポートを指定できます。</p>
+</section>
+<section id="id11">
+<h4>クラッシュ発生の検出<a class="headerlink" href="#id11" title="Permalink to this heading">¶</a></h4>
+<p>前回の実行でアプリがクラッシュしたことを検出するには、初期化時に Crittercism にデリゲート オブジェクト (<code class="docutils literal notranslate"><span class="pre">CrittercismDelegate</span></code> プロトコルに従う) を渡すことができます。</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="k">@interface</span> <span class="nc">MyAwesomeViewController</span> : <span class="bp">UIViewController</span><span class="w"> </span><span class="o">&lt;</span><span class="n">CrittercismDelegate</span><span class="o">&gt;</span>
+<span class="c1">//...</span>
+<span class="cp">#pragma mark CrittercismDelegate Method</span>
+<span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">crittercismDidCrashOnLastLoad</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;App crashed the last time it was loaded&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">//...</span>
+<span class="k">@end</span>
+
+<span class="p">[</span><span class="n">Crittercism</span><span class="w"> </span><span class="n">enableWithAppID</span><span class="o">:</span><span class="s">@&quot;MYAPPID&quot;</span>
+<span class="w">              </span><span class="nl">andDelegate</span><span class="p">:</span><span class="n">myViewController</span><span class="p">];</span>
+</pre></div>
+</div>
+<div class="swift highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="n">appViewController</span><span class="o">:</span><span class="w"> </span><span class="bp">UIViewController</span><span class="p">,</span><span class="w"> </span><span class="n">CrittercismDelegate</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">//MARK: CrittercismDelegate Method</span>
+<span class="w">    </span><span class="n">override</span><span class="w"> </span><span class="n">func</span><span class="w"> </span><span class="n">crittercismDidCrashOnLastLoad</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">print</span><span class="p">(</span><span class="s">&quot;App crashed the last time it was loaded&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="c1">// ....</span>
+<span class="p">}</span>
+
+<span class="n">Crittercism</span><span class="p">.</span><span class="n">enableWithAppID</span><span class="p">(</span><span class="s">&quot;MYAPPID&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">andDelegate</span><span class="o">:</span><span class="w"> </span><span class="n">appViewController</span><span class="p">.</span><span class="nb">self</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="net-stats-ios-jp">
+<span id="id12"></span><h3>サービス モニタリングの設定<a class="headerlink" href="#net-stats-ios-jp" title="Permalink to this heading">¶</a></h3>
+<p>アプリがネットワーク呼び出しを行うと、Crittercism は必ず特定の情報を自動的にモニタし、キャプチャします。
+フィルタリングや位置詳細はオプションで設定できます。詳細については、 <a class="reference internal" href="overview.html#net-stats-jp"><span class="std std-ref">サービス モニタリング</span></a> を参照してください。</p>
+<p>Crittercism を有効にすると、 <code class="docutils literal notranslate"><span class="pre">NSURLConnection</span></code> によって生成される HTTP トラフィックのパフォーマンスがモニタされます。
+NSURLConnection API を使って明確に発行された HTTP リクエストは、デリゲート オブジェクトでサポートします。現在は、以下に対する呼び出しのインストルメント化は行っていません。</p>
+<p><code class="docutils literal notranslate"><span class="pre">+[NSURLConnection</span> <span class="pre">sendAsynchronousRequest:queue:completionHandler]</span></code></p>
+<p>または</p>
+<p><code class="docutils literal notranslate"><span class="pre">+[NSURLConnection</span> <span class="pre">sendSynchronousRequest:returningResponse:error:]</span></code></p>
+<p>詳細については、 <a class="reference external" href="https://developer.apple.com/library/mac/documentation/Foundation/Reference/NSURLConnectionDelegate_Protocol/Reference/Reference.html">Apple ドキュメンテーション</a> を参照してください。</p>
+<section id="id14">
+<h4>キャプチャしたデータのフィルタリング<a class="headerlink" href="#id14" title="Permalink to this heading">¶</a></h4>
+<p>要求の実際の内容が検閲されることはもちろん絶対にありませんが、Crittercism ウェブ ポータルに表示したくない URL があることもあります。</p>
+<p>Crittercism を有効にすると、フィルタ パラメーターを使って慎重に扱うべき URL がネットワーク機器によってキャプチャされないようにすることができます。これを使用するには、 <code class="docutils literal notranslate"><span class="pre">CRFilter</span></code> オブジェクトの <code class="docutils literal notranslate"><span class="pre">NSArray</span></code> を渡してライブラリがキャプチャした URL と照合します。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>フィルタリングはアプリケーションのメイン スレッドとは離れたところで実行されます。</p>
+</div>
+<section id="id15">
+<h5>デフォルトの動作<a class="headerlink" href="#id15" title="Permalink to this heading">¶</a></h5>
+<p>フィルタを何も指定しなければ、Crittercism のデフォルトの動作ではすべての URL からクエリ文字列が消去されます。たとえば、次のような URL の場合、</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>https://api.compuglobalhypermeganet.com/store/purchase.asp?uname=homerjs
+</pre></div>
+</div>
+<p>Crittercism のサーバーにレポートされる URL は次のようになります。</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>https://api.compuglobalhypermeganet.com/store/purchase.asp
+</pre></div>
+</div>
+</section>
+<section id="id16">
+<h5>フィルタのタイプ<a class="headerlink" href="#id16" title="Permalink to this heading">¶</a></h5>
+<p>使用できるフィルタリング モードは 2 種類あります。</p>
+<ul class="simple">
+<li><p><strong>ブラックリスト</strong> - 一致する URL を完全に廃棄します。Crittercism にはレポートされません。</p></li>
+<li><p><strong>「クエリ維持」フィルタリング</strong> - クエリ パラメーターを消去するというデフォルトの動作を阻止します。代わりに、一致する URL はクエリ文字列を維持します。</p></li>
+</ul>
+</section>
+<section id="id17">
+<h5>フィルタリング コード例<a class="headerlink" href="#id17" title="Permalink to this heading">¶</a></h5>
+<p>フィルタは、Crittercism 有効化時に供給できます。</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Crittercism</span><span class="w"> </span><span class="n">enableWithAppID</span><span class="o">:</span><span class="s">@&quot;MYAPPID&quot;</span>
+<span class="w">            </span><span class="nl">andURLFilters</span><span class="p">:</span><span class="l">@[</span><span class="p">[</span><span class="n">CRFilter</span><span class="w"> </span><span class="n">filterWithString</span><span class="o">:</span><span class="s">@&quot;sensitiveURL&quot;</span><span class="p">],</span>
+<span class="w">                        </span><span class="p">[</span><span class="n">CRFilter</span><span class="w"> </span><span class="n">queryPreservingFilterWithString</span><span class="o">:</span><span class="s">@&quot;lookupMovie&quot;</span><span class="p">]</span><span class="l">]</span><span class="p">];</span>
+</pre></div>
+</div>
+<div class="swift highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="n">Crittercism</span><span class="p">.</span><span class="n">enableWithAppID</span><span class="p">(</span><span class="s">&quot;MYAPPID&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nl">andURLFilters</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="n">CRFilter</span><span class="p">(</span><span class="n">string</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;sensitiveURL&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">CRFilter</span><span class="p">.</span><span class="n">queryPreservingFilterWithString</span><span class="p">(</span><span class="s">&quot;lookupMovie&quot;</span><span class="p">)])</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">addFilter:</span></code> メソッドを使用すると、その場で他のフィルタを追加することができます。</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Crittercism</span><span class="w"> </span><span class="n">addFilter</span><span class="o">:</span><span class="p">(</span><span class="n">CRFilter</span><span class="o">*</span><span class="p">)</span><span class="n">filter</span><span class="p">];</span>
+</pre></div>
+</div>
+<div class="swift highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="n">Crittercism</span><span class="p">.</span><span class="n">addFilter</span><span class="p">(</span><span class="n">filter</span><span class="o">:</span><span class="w"> </span><span class="n">CRFilter</span><span class="o">?</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ネットワーク パフォーマンスのモニタリングは、iOS 5.0  以降で実行する場合にのみ有効になります。</p>
+</div>
+</section>
+</section>
+<section id="id18">
+<h4>位置の設定<a class="headerlink" href="#id18" title="Permalink to this heading">¶</a></h4>
+<p>Crittercism サービス モニタリングは、 位置情報をネットワーク データに関連付けます。 デフォルトでは、位置情報は IP の逆引きで取得されます。
+ライブラリ バージョン 4.1.1 からは、さらに正確な緯度と経度情報をサーバーに送信するオプションがあります。次の例のように、デバイスの直近の位置を <code class="docutils literal notranslate"><span class="pre">updateLocation:</span></code> API 呼び出しを使って Crittercism に通知することができます。</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="c1">// Update location information</span>
+<span class="p">[</span><span class="n">Crittercism</span><span class="w"> </span><span class="n">updateLocation</span><span class="o">:</span><span class="p">(</span><span class="bp">CLLocation</span><span class="o">*</span><span class="p">)</span><span class="n">location</span><span class="p">];</span>
+</pre></div>
+</div>
+<div class="swift highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="n">Crittercism</span><span class="p">.</span><span class="n">updateLocation</span><span class="p">(</span><span class="n">location</span><span class="o">:</span><span class="w"> </span><span class="bp">CLLocation</span><span class="o">?</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="opt-out-ios-jp">
+<span id="id19"></span><h3>ユーザーに対する Crittercism からのオプトアウトの許可<a class="headerlink" href="#opt-out-ios-jp" title="Permalink to this heading">¶</a></h3>
+<p>Crittercism では、Crittercismへのあらゆるアプリのレポートを無効にするスタティック型のオプトアウト ステータス設定があります。
+開発者は、ユーザーに Crittercism のロギングとレポートからオプトアウトするかどうかを尋ねるコードを実装し、その後ステータスを変更する <code class="docutils literal notranslate"><span class="pre">setOptOutStatus</span></code> を呼び出すことができます。また、 <code class="docutils literal notranslate"><span class="pre">requestOptOutStatus</span></code> を呼び出して現在のステータス設定を判断することもできます。詳細については、 <a class="reference internal" href="overview.html#opt-out-jp"><span class="std std-ref">Crittercism からのオプトアウト</span></a> を参照してください。</p>
+<p>以下の API 呼び出しを使うと、ユーザーは Crittercism レポートからオプトアウトすることができます。</p>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="c1">// Opt the user out</span>
+<span class="p">[</span><span class="n">Crittercism</span><span class="w"> </span><span class="n">setOptOutStatus</span><span class="o">:</span><span class="nb">YES</span><span class="p">];</span>
+</pre></div>
+</div>
+<div class="swift highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="n">Crittercism</span><span class="p">.</span><span class="n">setOptOutStatus</span><span class="p">(</span><span class="nb">true</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">OptOutStatus</span></code> を [YES (はい)] に設定すると、ユーザーのアプリからは一切情報やリクエストが送信されなくなります。通常、開発者はこの API 呼び出しを設定メニューのチェックボックスに接続します。</p>
+</section>
+<section id="id20">
+<h3>Crittercism にレポートされるアプリ バージョンのカスタマイズ<a class="headerlink" href="#id20" title="Permalink to this heading">¶</a></h3>
+<p>Crittercism では、すべてのアプリのパフォーマンス データをアプリ バージョンで自動的にグループ分けします。これにより、新しいアプリ バージョンがリリースされるたびにパフォーマンスの向上や回帰をモニタできます。デフォルトでは、Apple SDK はアプリのInfo.plist ファイルにある「バンドル バージョン」をレポートします。たいていの場合にはこれで十分ですが、Crittercism にレポートされるアプリ バージョンをカスタマイズすることが望ましいこともあります。</p>
+<p>カスタム バージョンは、付加的なプロパティである CRAlternateVersion のタイプ <cite>String</cite> をアプリの Info.plist ファイルに追加すると指定できます。</p>
+<a class="reference internal image-reference" href="../../_images/ios-cralternateversion-example.jpg"><img alt="../../_images/ios-cralternateversion-example.jpg" src="../../_images/ios-cralternateversion-example.jpg" style="width: 50%;" /></a>
+</section>
+</section>
+</section>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+	<script type="text/javascript" charset="utf-8" src="../../_static/toc.js"></script>
+  </body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Zapier Integration Guide &#8212; Workspace ONE Intelligence  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/adctheme.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/toggle.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+      <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="Workspace ONE Intelligence  documentation" href="../index.html" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <script type="text/javascript">try{document.domain="vmware.com"}catch(e){};</script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-49786008-1']);
+    _gaq.push(['_setDomainName', 'apteligent.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_addIgnoredRef', 'apteligent.com']);   // Stops Self Referrals
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  
+  <meta name="google-translate-customization" content="f0837c562504ad7b-d669caf2b7375c11-g99fd8de75f76752f-14"></meta>
+
+  </head><body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PK9468"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PK9468');</script>
+<!-- End Google Tag Manager -->
+
+
+  <div id="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+          <div id="searchbox" style="display: none">
+              <form class="search" action="../search.html" method="get">
+                <div class="search-wrapper">
+                  <input class="prettysearch" type="text" name="q" size="18" />
+                  <input type="submit" value="Search" class="searchbutton" />
+                </div>
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+      <ul><li class="toctree-l1" id="docs-home"><a href="../index.html">Docs Home</a></li></ul>
+      <ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ios/ios.html">Apple SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../android/android.html">Android SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development_platforms/index.html">Development Platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/eula_accepted.html">SDK Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../release_notes/release_notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/downloads.html">EULA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/checksums.html">SDK Download Checksums</a></li>
+</ul>
+
+      <div id="sidebar-toc-clear"></div>
+      
+    </div>
+  </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            <div class="container">
+              <div class="row">
+                <div class="span12">
+                  
+  <section id="zapier-integration-guide">
+<span id="integrate-zapier"></span><h1>Zapier Integration Guide<a class="headerlink" href="#zapier-integration-guide" title="Permalink to this heading">¶</a></h1>
+<p>This topic describes how to integrate Apteligent alerts with
+<a class="reference external" href="http://zapier.com">Zapier</a>. Zapier is a free integration platform that allows
+Apteligent users to connect alerts with hundreds of other apps.</p>
+<p>Using Apteligent’s Zapier integration, whenever a Apteligent alert is
+triggered, Zapier will automatically run a corresponding action. This topic
+describes how to create an example “Zap”, which creates a row in a Google
+Spreadsheet whenever a new Apteligent alert is created.</p>
+<section id="step-1-choose-a-trigger-and-action">
+<h2>Step 1. Choose a Trigger and Action<a class="headerlink" href="#step-1-choose-a-trigger-and-action" title="Permalink to this heading">¶</a></h2>
+<ol class="arabic">
+<li><p>From the Zapier dashboard, go to “Make a New Zap” and you will see the following.</p>
+<img alt="../_images/integration-zapier-choose-trigger.png" src="../_images/integration-zapier-choose-trigger.png" />
+</li>
+<li><p>Under “Choose a Trigger app…” select <strong>Crittercism</strong> and <strong>New Alert</strong>.</p>
+<img alt="../_images/integration-zapier-new-alert.png" src="../_images/integration-zapier-new-alert.png" />
+</li>
+<li><p>Under “Choose an Action app…” select <strong>Google Docs</strong> and <strong>Create Spreadsheet Row</strong>.</p>
+<blockquote>
+<div><img alt="../_images/integration-zapier-choose-action.png" src="../_images/integration-zapier-choose-action.png" />
+</div></blockquote>
+</li>
+</ol>
+</section>
+<section id="step-2-select-a-apteligent-account">
+<h2>Step 2. Select a Apteligent Account<a class="headerlink" href="#step-2-select-a-apteligent-account" title="Permalink to this heading">¶</a></h2>
+<p>Zapier will display a webhook URL to use in Apteligent.</p>
+<ol class="arabic">
+<li><p>Copy the URL.</p>
+<img alt="../_images/integration-zapier-select-crittercism.png" src="../_images/integration-zapier-select-crittercism.png" />
+</li>
+<li><p>Login to <strong>Apteligent</strong>, go to <strong>Alert Center</strong> and <strong>Alert Integrations</strong> and <strong>Add Integration</strong>.</p></li>
+<li><p>Select <strong>Webhook</strong> as the Integration type and give your integration a <strong>Name</strong>.</p></li>
+<li><p>Paste the URL from the previous step.</p></li>
+<li><p>Click <strong>Create Integration</strong>.</p>
+<img alt="../_images/integration-zapier-new-alert-integration.png" src="../_images/integration-zapier-new-alert-integration.png" />
+</li>
+</ol>
+</section>
+<section id="step-3-select-a-google-docs-account">
+<h2>Step 3. Select a Google Docs Account<a class="headerlink" href="#step-3-select-a-google-docs-account" title="Permalink to this heading">¶</a></h2>
+<p>Connect your Google account to Zapier. If this is your first time, you may be presented with a Google authentication screen.</p>
+<blockquote>
+<div><img alt="../_images/integration-zapier-select-google-docs.png" src="../_images/integration-zapier-select-google-docs.png" />
+</div></blockquote>
+</section>
+<section id="step-4-filter-apteligent-triggers">
+<h2>Step 4. Filter Apteligent Triggers<a class="headerlink" href="#step-4-filter-apteligent-triggers" title="Permalink to this heading">¶</a></h2>
+<p>You can choose to produce triggers for all Apteligent alerts or only a subset.
+The following example shows producing triggers for alerts related to the “app loads” metric only.</p>
+<img alt="../_images/integration-zapier-filter-triggers.png" src="../_images/integration-zapier-filter-triggers.png" />
+</section>
+<section id="step-5-match-up-apteligent-alert-to-google-docs-spreadsheet-row">
+<h2>Step 5. Match up Apteligent Alert to Google Docs Spreadsheet Row<a class="headerlink" href="#step-5-match-up-apteligent-alert-to-google-docs-spreadsheet-row" title="Permalink to this heading">¶</a></h2>
+<ol class="arabic">
+<li><p>Create a new <strong>Google Spreadsheet</strong> with the following column headers: <code class="docutils literal notranslate"><span class="pre">client_url</span></code>, <code class="docutils literal notranslate"><span class="pre">event_type</span></code>, <code class="docutils literal notranslate"><span class="pre">incident_key</span></code>, <code class="docutils literal notranslate"><span class="pre">client</span></code>, <code class="docutils literal notranslate"><span class="pre">details</span></code>, and <code class="docutils literal notranslate"><span class="pre">description</span></code>.</p>
+<img alt="../_images/integration-zapier-make-spreadsheet.png" src="../_images/integration-zapier-make-spreadsheet.png" />
+</li>
+<li><p>Assuming you have correctly authenticated your Google Docs account with Zapier,
+select the spreadsheet you just created and the first worksheet created.</p></li>
+<li><p>Match up fields from the Apteligent alert parameters with the spreadsheet columns.</p>
+<img alt="../_images/integration-zapier-trigger-action.png" src="../_images/integration-zapier-trigger-action.png" />
+</li>
+</ol>
+<p>If your Zap is working correctly, every time your Apteligent alert is
+triggered, a new row will be created in your Google Spreadsheet. Depending on
+your Zapier level of service, it may take between 5 and 15 minutes for your
+spreadsheet to begin getting populated.</p>
+<img alt="../_images/integration-zapier-google-sheets.png" src="../_images/integration-zapier-google-sheets.png" />
+<p>For additional assistance, contact Apteligent Support (<a class="reference external" href="mailto:support&#37;&#52;&#48;apteligent&#46;com">support<span>&#64;</span>apteligent<span>&#46;</span>com</a>).</p>
+</section>
+</section>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+	<script type="text/javascript" charset="utf-8" src="../_static/toc.js"></script>
+  </body>
+</html>

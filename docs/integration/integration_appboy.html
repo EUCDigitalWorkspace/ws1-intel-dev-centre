@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Appboy Integration Guide &#8212; Workspace ONE Intelligence  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/adctheme.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/toggle.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+      <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="Workspace ONE Intelligence  documentation" href="../index.html" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <script type="text/javascript">try{document.domain="vmware.com"}catch(e){};</script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-49786008-1']);
+    _gaq.push(['_setDomainName', 'apteligent.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_addIgnoredRef', 'apteligent.com']);   // Stops Self Referrals
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  
+  <meta name="google-translate-customization" content="f0837c562504ad7b-d669caf2b7375c11-g99fd8de75f76752f-14"></meta>
+
+  </head><body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PK9468"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PK9468');</script>
+<!-- End Google Tag Manager -->
+
+
+  <div id="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+          <div id="searchbox" style="display: none">
+              <form class="search" action="../search.html" method="get">
+                <div class="search-wrapper">
+                  <input class="prettysearch" type="text" name="q" size="18" />
+                  <input type="submit" value="Search" class="searchbutton" />
+                </div>
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+      <ul><li class="toctree-l1" id="docs-home"><a href="../index.html">Docs Home</a></li></ul>
+      <ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ios/ios.html">Apple SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../android/android.html">Android SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development_platforms/index.html">Development Platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/eula_accepted.html">SDK Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../release_notes/release_notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/downloads.html">EULA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/checksums.html">SDK Download Checksums</a></li>
+</ul>
+
+      <div id="sidebar-toc-clear"></div>
+      
+    </div>
+  </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            <div class="container">
+              <div class="row">
+                <div class="span12">
+                  
+  <section id="appboy-integration-guide">
+<span id="integrate-appboy"></span><h1>Appboy Integration Guide<a class="headerlink" href="#appboy-integration-guide" title="Permalink to this heading">¶</a></h1>
+<p>This topic describes how to integrate Workspace ONE Intelligence with
+<a class="reference external" href="http://www.appboy.com">Appboy</a>.
+Appboy is mobile marketing automation that empowers marketers to build better relationships with their customers with push, email, in-app and more.  This integration allows companies to use improve retention and reduce by sending targeted notifications to users who have had a bad experience.</p>
+<p>This document will guide you through the process of activating sending Workspace
+ONE Intelligence events into Appboy through a few additional lines of code in
+the SDK.</p>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading">¶</a></h2>
+<p>Before you start the integration process, please make sure you have the following:</p>
+<ul class="simple">
+<li><p>Implemented the <a class="reference internal" href="../downloads/downloads.html#downloads"><span class="std std-ref">Workspace ONE Intelligence SDK</span></a> (requires
+v5.6.1 of the iOS SDK or newer) in the mobile app</p></li>
+<li><p>Implemented the <a class="reference external" href="https://www.appboy.com/documentation/Platform_Wide/">Appboy SDK</a> in the mobile app</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This integration is currently only available on iOS.  Android is coming soon.</p>
+</div>
+</section>
+<section id="implementation">
+<h2>Implementation<a class="headerlink" href="#implementation" title="Permalink to this heading">¶</a></h2>
+<p>The Workspace ONE Intelligence SDK will create a notification that fires when
+the SDK knows that a crash occurred.  On iOS, when the user loads the app after
+a crash occurred, this notification will fire.  The notification will contain
+four pieces of information:</p>
+<ul class="simple">
+<li><p>Crash Name: The name of the crash (i.e., NSRangeException)</p></li>
+<li><p>Crash Reason: More details on why the crash occurred (i.e., “***-[__NSArrayM objectAtIndex:]:index 18446744073709551615 beyond bounds for empty array”)</p></li>
+<li><p>Crash Date: The date and time at which the crash occurred</p></li>
+<li><p>Crash View: A list of the views that were active at the time of the crash</p></li>
+</ul>
+<section id="sending-a-crash-event-to-appboy">
+<h3>Sending a Crash Event to Appboy<a class="headerlink" href="#sending-a-crash-event-to-appboy" title="Permalink to this heading">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Make sure the Appboy SDK is initialized <em>before</em> Workspace ONE Intelligence
+SDK, otherwise the crash event will not be sent.</p>
+</div>
+<p>To send these crash events to Appboy, add two lines of code:</p>
+<ol class="arabic simple">
+<li><p>Register an Observer to Capture the Workspace ONE Intelligence Event</p></li>
+</ol>
+<div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="bp">NSNotificationCenter</span><span class="w"> </span><span class="n">defaultCenter</span><span class="p">]</span><span class="w"> </span><span class="n">addObserver</span><span class="o">:</span><span class="nb">self</span>
+<span class="w">    </span><span class="nl">selector</span><span class="p">:</span><span class="k">@selector</span><span class="p">(</span><span class="n">crashDidOccur</span><span class="o">:</span><span class="p">)</span>
+<span class="w">    </span><span class="nl">name</span><span class="p">:</span><span class="s">@&quot;CRCrashNotification&quot;</span><span class="w"> </span><span class="n">object</span><span class="o">:</span><span class="nb">nil</span><span class="p">];</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Send an Event to Appboy Upon Notification</p></li>
+</ol>
+<div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="nf">crashDidOccur:</span><span class="p">(</span><span class="bp">NSNotification</span><span class="o">*</span><span class="p">)</span><span class="nv">notification</span><span class="w"> </span><span class="p">{</span>
+<span class="c1">// Send Event to Appboy</span>
+<span class="p">[[</span><span class="n">Appboy</span><span class="w"> </span><span class="n">sharedInstance</span><span class="p">]</span><span class="w"> </span><span class="n">logCustomEvent</span><span class="o">:</span><span class="s">@&quot;WorkspaceONEIntelligenceCrashEvent&quot;</span><span class="w"> </span><span class="n">withProperties</span><span class="o">:</span><span class="n">notification</span><span class="p">.</span><span class="n">userInfo</span><span class="p">}];</span>
+<span class="p">[[</span><span class="n">Appboy</span><span class="w"> </span><span class="n">sharedInstance</span><span class="p">].</span><span class="n">user</span><span class="w"> </span><span class="n">setCustomAttributeWithKey</span><span class="o">:</span><span class="s">@&quot;lastCrashName&quot;</span><span class="w"> </span><span class="n">andStringValue</span><span class="o">:</span><span class="n">crashInfo</span><span class="p">[</span><span class="s">@&quot;crashName&quot;</span><span class="p">]];</span>
+<span class="p">[[</span><span class="n">Appboy</span><span class="w"> </span><span class="n">sharedInstance</span><span class="p">].</span><span class="n">user</span><span class="w"> </span><span class="n">setCustomAttributeWithKey</span><span class="o">:</span><span class="s">@&quot;lastCrashReason&quot;</span><span class="w"> </span><span class="n">andStringValue</span><span class="o">:</span><span class="n">crashInfo</span><span class="p">[</span><span class="s">@&quot;crashReason&quot;</span><span class="p">]];</span>
+<span class="p">[[</span><span class="n">Appboy</span><span class="w"> </span><span class="n">sharedInstance</span><span class="p">].</span><span class="n">user</span><span class="w"> </span><span class="n">setCustomAttributeWithKey</span><span class="o">:</span><span class="s">@&quot;lastCrashDate&quot;</span><span class="w"> </span><span class="n">andDateValue</span><span class="o">:</span><span class="n">crashInfo</span><span class="p">[</span><span class="s">@&quot;crashDate&quot;</span><span class="p">]];</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>For additional assistance, contact Apteligent Support (<a class="reference external" href="mailto:support&#37;&#52;&#48;apteligent&#46;com">support<span>&#64;</span>apteligent<span>&#46;</span>com</a>).</p>
+</section>
+</section>
+</section>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+	<script type="text/javascript" charset="utf-8" src="../_static/toc.js"></script>
+  </body>
+</html>

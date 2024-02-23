@@ -1,0 +1,968 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Android Legacy Release Notes &#8212; Workspace ONE Intelligence  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/adctheme.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/toggle.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+      <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="Workspace ONE Intelligence  documentation" href="../index.html" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <script type="text/javascript">try{document.domain="vmware.com"}catch(e){};</script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-49786008-1']);
+    _gaq.push(['_setDomainName', 'apteligent.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_addIgnoredRef', 'apteligent.com']);   // Stops Self Referrals
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  
+  <meta name="google-translate-customization" content="f0837c562504ad7b-d669caf2b7375c11-g99fd8de75f76752f-14"></meta>
+
+  </head><body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PK9468"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PK9468');</script>
+<!-- End Google Tag Manager -->
+
+
+  <div id="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+          <div id="searchbox" style="display: none">
+              <form class="search" action="../search.html" method="get">
+                <div class="search-wrapper">
+                  <input class="prettysearch" type="text" name="q" size="18" />
+                  <input type="submit" value="Search" class="searchbutton" />
+                </div>
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+      <ul><li class="toctree-l1" id="docs-home"><a href="../index.html">Docs Home</a></li></ul>
+      <ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ios/ios.html">Apple SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../android/android.html">Android SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development_platforms/index.html">Development Platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/eula_accepted.html">SDK Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="release_notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/downloads.html">EULA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads/checksums.html">SDK Download Checksums</a></li>
+</ul>
+
+      <div id="sidebar-toc-clear"></div>
+      
+    </div>
+  </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            <div class="container">
+              <div class="row">
+                <div class="span12">
+                  
+  <section id="android-legacy-release-notes">
+<span id="release-notes-android-legacy"></span><h1>Android Legacy Release Notes<a class="headerlink" href="#android-legacy-release-notes" title="Permalink to this heading">¶</a></h1>
+<section id="version-6-1-1-jan-29-2021-ga">
+<h2>Version 6.1.1 (Jan 29, 2021) - GA<a class="headerlink" href="#version-6-1-1-jan-29-2021-ga" title="Permalink to this heading">¶</a></h2>
+<p><strong>New</strong></p>
+<ul class="simple">
+<li><p>Updated SDK architecture to support reporting event data to a tenant view.</p></li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul class="simple">
+<li><p>Crash events were not sent to tenant in some situations.</p></li>
+<li><p>Fixed internal bugs related to new tenant architecture.</p></li>
+</ul>
+</section>
+<section id="version-6-1-0-beta-2-nov-30-2020-beta">
+<h2>Version 6.1.0-beta.2 (Nov 30, 2020) - Beta<a class="headerlink" href="#version-6-1-0-beta-2-nov-30-2020-beta" title="Permalink to this heading">¶</a></h2>
+<p><strong>New</strong></p>
+<ul class="simple">
+<li><p>Updated SDK architecture to support reporting event data to a tenant view.</p></li>
+</ul>
+</section>
+<section id="version-6-1-0-beta-1-oct-31-2020-beta">
+<h2>Version 6.1.0-beta.1 (Oct 31, 2020) - Beta<a class="headerlink" href="#version-6-1-0-beta-1-oct-31-2020-beta" title="Permalink to this heading">¶</a></h2>
+<p><strong>New</strong></p>
+<ul class="simple">
+<li><p>Added functionality to send event data to a tenant view.</p></li>
+</ul>
+</section>
+<section id="version-6-0-0-jun-24-2020-ga">
+<h2>Version 6.0.0 (Jun 24, 2020) - GA<a class="headerlink" href="#version-6-0-0-jun-24-2020-ga" title="Permalink to this heading">¶</a></h2>
+<p><strong>New</strong></p>
+<ul class="simple">
+<li><p>Event reporting to Legacy Apteligent platform has been entirely removed
+from the SDK. Starting with this release, events are only reported to
+Workspace ONE Intelligence platform.</p></li>
+<li><p>App load events report the name of the app from Workspace ONE Intelligence
+Platform (if available).</p></li>
+</ul>
+<p><strong>Removed</strong></p>
+<ul class="simple">
+<li><p>Removed deprecated userflow methods.
+Please see <a class="reference internal" href="../android/sdk/crittercism.html#userflows-android"><span class="std std-ref">Logging User Flows</span></a> for more details.
+(Please note the capital F in the methods names.)</p></li>
+</ul>
+</section>
+<section id="version-5-8-12-ga-feb-29-2020">
+<h2>Version 5.8.12 - GA (Feb 29, 2020)<a class="headerlink" href="#version-5-8-12-ga-feb-29-2020" title="Permalink to this heading">¶</a></h2>
+<p><strong>New</strong></p>
+<ul class="simple">
+<li><p>Update SDK reporting architecture
+for upcoming support for Workspace ONE Intelligence.</p></li>
+</ul>
+</section>
+<section id="version-5-8-12-beta-2-feb-28-2020">
+<h2>Version 5.8.12 - Beta 2 (Feb 28, 2020)<a class="headerlink" href="#version-5-8-12-beta-2-feb-28-2020" title="Permalink to this heading">¶</a></h2>
+<p><strong>Fixes</strong></p>
+<ul class="simple">
+<li><p>Events were not reported to Workspace ONE Intelligence in some situations.</p></li>
+</ul>
+</section>
+<section id="version-5-8-12-beta-1-feb-13-2020">
+<h2>Version 5.8.12 - Beta 1 (Feb 13, 2020)<a class="headerlink" href="#version-5-8-12-beta-1-feb-13-2020" title="Permalink to this heading">¶</a></h2>
+<p><strong>New</strong></p>
+<ul class="simple">
+<li><p>Update SDK reporting architecture
+for upcoming support for Workspace ONE Intelligence.</p></li>
+</ul>
+</section>
+<section id="version-5-8-11-oct-7-2019-ga">
+<h2>Version 5.8.11 (Oct 7, 2019) - GA<a class="headerlink" href="#version-5-8-11-oct-7-2019-ga" title="Permalink to this heading">¶</a></h2>
+<p><strong>New</strong></p>
+<ul class="simple">
+<li><p>Report app name to Workspace ONE Intelligence.</p></li>
+</ul>
+</section>
+<section id="version-5-8-11-rc-sep-18-2019-release-candidate">
+<h2>Version 5.8.11 - RC (Sep 18, 2019) - Release Candidate<a class="headerlink" href="#version-5-8-11-rc-sep-18-2019-release-candidate" title="Permalink to this heading">¶</a></h2>
+<p><strong>New</strong></p>
+<ul class="simple">
+<li><p>Report app name to Workspace ONE Intelligence.</p></li>
+</ul>
+</section>
+<section id="version-5-8-11-beta-11-may-29-2019">
+<h2>Version 5.8.11 - Beta 11 (May 29, 2019)<a class="headerlink" href="#version-5-8-11-beta-11-may-29-2019" title="Permalink to this heading">¶</a></h2>
+<p><strong>New</strong></p>
+<ul class="simple">
+<li><p>Update SDK network insights reporting architecture
+for upcoming support for Workspace ONE Intelligence.</p></li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul class="simple">
+<li><p>Instrumented OkHttpClient did not collect network data in some situations.</p></li>
+<li><p>Improved API for instrumentation of OkHttpClients to avoid runtime warnings.
+(please refer to: <a class="reference internal" href="../android/sdk/crittercism.html#okhttp-instrumentation-android"><span class="std std-ref">Instrumenting OkHttpClient (Beta)</span></a>).</p></li>
+</ul>
+</section>
+<section id="version-5-8-11-beta-10-mar-31-2019">
+<h2>Version 5.8.11 - Beta 10 (Mar 31, 2019)<a class="headerlink" href="#version-5-8-11-beta-10-mar-31-2019" title="Permalink to this heading">¶</a></h2>
+<p><strong>New</strong></p>
+<ul class="simple">
+<li><p>User flow support for Workspace ONE Intelligence on devices running Android
+Lollipop (5.0+) and above.</p></li>
+<li><p>Update SDK crash and exception reporting architecture
+for upcoming support for Workspace ONE Intelligence.</p></li>
+</ul>
+</section>
+<section id="version-5-8-11-beta-9-mar-8-2019">
+<h2>Version 5.8.11 - Beta 9 (Mar 8, 2019)<a class="headerlink" href="#version-5-8-11-beta-9-mar-8-2019" title="Permalink to this heading">¶</a></h2>
+<p><strong>New</strong></p>
+<ul class="simple">
+<li><p>Updated NDK Licenses.</p></li>
+</ul>
+</section>
+<section id="version-5-8-11-beta-8-feb-27-2019">
+<h2>Version 5.8.11 - Beta 8 (Feb 27, 2019)<a class="headerlink" href="#version-5-8-11-beta-8-feb-27-2019" title="Permalink to this heading">¶</a></h2>
+<p><strong>New</strong></p>
+<ul class="simple">
+<li><p>Updated Licenses.</p></li>
+</ul>
+</section>
+<section id="version-5-8-11-beta-7-feb-5-2019">
+<h2>Version 5.8.11 - Beta 7 (Feb 5, 2019)<a class="headerlink" href="#version-5-8-11-beta-7-feb-5-2019" title="Permalink to this heading">¶</a></h2>
+<p><strong>New</strong></p>
+<ul class="simple">
+<li><p>App load support for Workspace ONE Intelligence on devices running Android
+Lollipop (5.0+) and above.</p></li>
+<li><p>Add LoggingLevel.Debug to print SDK debug log.
+Please see <a class="reference internal" href="../android/sdk/crittercism.html#android-tune-logging"><span class="std std-ref">Setting Log Verbosity of Workspace ONE Intelligence SDK</span></a> for more details.</p></li>
+</ul>
+</section>
+<section id="version-5-8-11-beta-6-dec-17-2018">
+<h2>Version 5.8.11 - Beta 6 (Dec 17, 2018)<a class="headerlink" href="#version-5-8-11-beta-6-dec-17-2018" title="Permalink to this heading">¶</a></h2>
+<p><strong>Fixes</strong></p>
+<ul class="simple">
+<li><p>Updates for new app load, userflow and breadcrumb reporting architecture.</p></li>
+</ul>
+</section>
+<section id="version-5-8-11-beta-4-nov-30-2018">
+<h2>Version 5.8.11 - Beta 4 (Nov 30, 2018)<a class="headerlink" href="#version-5-8-11-beta-4-nov-30-2018" title="Permalink to this heading">¶</a></h2>
+<p><strong>New</strong></p>
+<ul class="simple">
+<li><p>Update SDK breadcrumb reporting architecture to support upcoming
+feature development.</p></li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul class="simple">
+<li><p>Some bredcrumb and user flow events were logged while the user was opted out.</p></li>
+</ul>
+</section>
+<section id="version-5-8-11-beta-3-oct-26-2018">
+<h2>Version 5.8.11 - Beta 3 (Oct 26, 2018)<a class="headerlink" href="#version-5-8-11-beta-3-oct-26-2018" title="Permalink to this heading">¶</a></h2>
+<p><strong>New</strong></p>
+<ul class="simple">
+<li><p>Update SDK user flow reporting architecture to support upcoming
+feature development.</p></li>
+<li><p>Improved performance.</p></li>
+</ul>
+</section>
+<section id="version-5-8-11-beta-2-sep-30-2018">
+<h2>Version 5.8.11 - Beta 2 (Sep 30, 2018)<a class="headerlink" href="#version-5-8-11-beta-2-sep-30-2018" title="Permalink to this heading">¶</a></h2>
+<p><strong>New</strong></p>
+<ul class="simple">
+<li><p>New API to instrument OkHttpClients to collect network insights.
+(please refer to: <a class="reference internal" href="../android/sdk/crittercism.html#okhttp-instrumentation-android"><span class="std std-ref">Instrumenting OkHttpClient (Beta)</span></a>).</p></li>
+<li><p>Update SDK app load reporting architecture to support upcoming
+feature development.</p></li>
+<li><p>Improved performance.</p></li>
+</ul>
+</section>
+<section id="version-5-8-11-beta-1-may-4-2018">
+<h2>Version 5.8.11 - Beta 1 (May 4, 2018)<a class="headerlink" href="#version-5-8-11-beta-1-may-4-2018" title="Permalink to this heading">¶</a></h2>
+<p><strong>Fixes</strong></p>
+<ul class="simple">
+<li><p>SDK version 5.8.10 was using an incorrect endpoint for region lookup service.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>SDK Releases listed below are no longer supported.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This topic includes Android NDK as well.</p>
+</div>
+</section>
+<section id="version-5-8-10-mar-22-2018-ga">
+<h2>Version 5.8.10 (Mar 22, 2018) - GA<a class="headerlink" href="#version-5-8-10-mar-22-2018-ga" title="Permalink to this heading">¶</a></h2>
+<p><strong>New</strong></p>
+<ul class="simple">
+<li><p>Update SDK app load reporting architecture to support upcoming
+feature development.</p></li>
+<li><p>Improved performance.</p></li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul class="simple">
+<li><p>Some apps incorrectly reported 100% crashed userflows.</p></li>
+</ul>
+</section>
+<section id="version-5-9-6-beta-mar-1-2018">
+<h2>Version 5.9.6 - Beta (Mar 1, 2018)<a class="headerlink" href="#version-5-9-6-beta-mar-1-2018" title="Permalink to this heading">¶</a></h2>
+<p><strong>Fixes</strong></p>
+<ul class="simple">
+<li><p>SDK version 5.9.5 was using an incorrect endpoint for app load reporting.</p></li>
+</ul>
+</section>
+<section id="version-5-9-5-beta-feb-21-2018">
+<h2>Version 5.9.5 - Beta (Feb 21, 2018)<a class="headerlink" href="#version-5-9-5-beta-feb-21-2018" title="Permalink to this heading">¶</a></h2>
+<p><strong>New</strong></p>
+<ul class="simple">
+<li><p>Update SDK app load reporting architecture to support upcoming
+feature development.</p></li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul class="simple">
+<li><p>Some apps incorrectly reported 100% crashed userflows.</p></li>
+</ul>
+</section>
+<section id="version-5-9-4-beta-aug-22-2017">
+<h2>Version 5.9.4 - Beta (Aug 22, 2017)<a class="headerlink" href="#version-5-9-4-beta-aug-22-2017" title="Permalink to this heading">¶</a></h2>
+<p><strong>Fixes</strong></p>
+<ul class="simple">
+<li><p>Device models were incorrectly reported and did not show on Crash Trends page.</p></li>
+<li><p>Carrier data was missing on Performance Trends page.</p></li>
+</ul>
+</section>
+<section id="version-5-9-3-beta-jun-20-2017">
+<h2>Version 5.9.3 - Beta (Jun 20, 2017)<a class="headerlink" href="#version-5-9-3-beta-jun-20-2017" title="Permalink to this heading">¶</a></h2>
+<p><strong>New</strong></p>
+<ul class="simple">
+<li><p>Improved performance for app load events.</p></li>
+</ul>
+</section>
+<section id="version-5-8-7-jun-5-2017-ga">
+<h2>Version 5.8.7 (Jun 5, 2017) - GA<a class="headerlink" href="#version-5-8-7-jun-5-2017-ga" title="Permalink to this heading">¶</a></h2>
+<p><strong>Fixes</strong></p>
+<ul class="simple">
+<li><p>App Load userflow was not stopped in some apps.</p></li>
+</ul>
+</section>
+<section id="version-5-9-2-beta-may-22-2017">
+<h2>Version 5.9.2 - Beta (May 22, 2017)<a class="headerlink" href="#version-5-9-2-beta-may-22-2017" title="Permalink to this heading">¶</a></h2>
+<p><strong>Fixes</strong></p>
+<ul class="simple">
+<li><p>App Load userflow was not stopped in some apps.</p></li>
+</ul>
+</section>
+<section id="version-5-9-1-beta-jan-17-2017">
+<h2>Version 5.9.1 - Beta (Jan 17, 2017)<a class="headerlink" href="#version-5-9-1-beta-jan-17-2017" title="Permalink to this heading">¶</a></h2>
+<p><strong>New</strong></p>
+<ul class="simple">
+<li><p>Improved performance.</p></li>
+</ul>
+</section>
+<section id="version-5-8-1-oct-23-2016">
+<h2>Version 5.8.1 (Oct 23, 2016)<a class="headerlink" href="#version-5-8-1-oct-23-2016" title="Permalink to this heading">¶</a></h2>
+<p><strong>Fixes</strong></p>
+<ul class="simple">
+<li><p>Some data was saved while user was opted out and later reported when user opts
+back in.</p></li>
+<li><p>Removed dependency on deprecated permission GET_TASKS for augmenting crash
+reports with Activity information.</p></li>
+</ul>
+</section>
+<section id="version-5-8-0-sep-19-2016">
+<h2>Version 5.8.0 (Sep 19, 2016)<a class="headerlink" href="#version-5-8-0-sep-19-2016" title="Permalink to this heading">¶</a></h2>
+<p><strong>New</strong></p>
+<ul class="simple">
+<li><p>Opt in and out of Crittercism multiple times within the same session.</p></li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul class="simple">
+<li><p>Crittercism was saving the Activity context in some situations
+instead of the Application context, causing a memory leak.</p></li>
+<li><p>APM data was sent while user was opted out of Crittercism, until user
+reloaded app.</p></li>
+</ul>
+</section>
+<section id="version-5-7-0-jun-27-2016">
+<h2>Version 5.7.0 (Jun 27, 2016)<a class="headerlink" href="#version-5-7-0-jun-27-2016" title="Permalink to this heading">¶</a></h2>
+<p><strong>New</strong></p>
+<ul class="simple">
+<li><p>Option to send data to Apteligent only when the device is on wifi
+(please refer to: <a class="reference internal" href="../android/sdk/crittercism_config.html#disable-cellular-data-android"><span class="std std-ref">Send Data On Wifi Only</span></a>).</p></li>
+</ul>
+<p><strong>Removed</strong></p>
+<ul class="simple">
+<li><p>Removed Rate My App functionality.
+The Rate My App SDK methods have been deprecated and will have no effect if
+called.</p></li>
+</ul>
+</section>
+<section id="version-5-6-4-may-24-2016">
+<h2>Version 5.6.4 (May 24, 2016)<a class="headerlink" href="#version-5-6-4-may-24-2016" title="Permalink to this heading">¶</a></h2>
+<p><strong>Fixes</strong></p>
+<ul class="simple">
+<li><p>More accurate AppLoad userflow time:
+AppLoad userflows are no longer recorded for background services and broadcast
+receivers.
+AppLoad userflows will only be recorded for the first launched Activity.</p></li>
+</ul>
+</section>
+<section id="version-5-6-3-apr-8-2016">
+<h2>Version 5.6.3 (Apr 8, 2016)<a class="headerlink" href="#version-5-6-3-apr-8-2016" title="Permalink to this heading">¶</a></h2>
+<p><strong>Fixes</strong></p>
+<ul class="simple">
+<li><p>App loads and handled exceptions were not reported on some devices with
+API levels lower than 17.</p></li>
+</ul>
+</section>
+<section id="version-5-6-2-apr-7-2016">
+<h2>Version 5.6.2 (Apr 7, 2016)<a class="headerlink" href="#version-5-6-2-apr-7-2016" title="Permalink to this heading">¶</a></h2>
+<p><strong>New</strong></p>
+<ul class="simple">
+<li><p>Added support for OkHttp3.</p></li>
+</ul>
+</section>
+<section id="version-5-6-1-mar-29-2016">
+<h2>Version 5.6.1 (Mar 29, 2016)<a class="headerlink" href="#version-5-6-1-mar-29-2016" title="Permalink to this heading">¶</a></h2>
+<p><strong>New</strong></p>
+<ul class="simple">
+<li><p>More than 50% reduction in SDK size, and number of method references.</p></li>
+<li><p>More accurate view of the adoption rate of your apps:
+app loads are no longer recorded for background services and broadcast
+receivers.
+App loads will only be recorded for the first launched Activity.
+Please note that the number of app loads and crash rate from some apps will
+likely change as a result.</p></li>
+<li><p>Renamed transaction API methods to userflows.
+The old transactions methods are deprecated and will be removed in a future
+release.
+(please refer to: <a class="reference internal" href="../android/sdk/crittercism.html#userflows-android"><span class="std std-ref">Logging User Flows</span></a>).</p></li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul class="simple">
+<li><p>AppLoad userflows were sometimes reported with 0 milliseconds foreground time.</p></li>
+<li><p>NDK crashes were not reported when using Android Gradle plugin 1.5.</p></li>
+</ul>
+<p><strong>Removed</strong></p>
+<ul class="simple">
+<li><p>Removed support for Android API less than 14 (ICE_CREAM_SANDWICH).</p></li>
+</ul>
+</section>
+<section id="version-5-5-5-jan-7-2016">
+<h2>Version 5.5.5 (Jan 7, 2016)<a class="headerlink" href="#version-5-5-5-jan-7-2016" title="Permalink to this heading">¶</a></h2>
+<p><strong>New</strong></p>
+<ul class="simple">
+<li><p>Support for NDK crashes on 64 bit devices.</p></li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul class="simple">
+<li><p>Removed references to deprecated Apache HTTP Client library.</p></li>
+<li><p>Allow Network Insights of malformed URLs in hybrid apps.</p></li>
+<li><p>Javascript initialization in hybrid apps no longer required.</p></li>
+</ul>
+</section>
+<section id="version-5-5-1-dec-4-2015">
+<h2>Version 5.5.1 (Dec 4, 2015)<a class="headerlink" href="#version-5-5-1-dec-4-2015" title="Permalink to this heading">¶</a></h2>
+<p><strong>New</strong></p>
+<ul class="simple">
+<li><p>Added API call to allow developers to cancel transactions (please refer to:
+<a class="reference internal" href="../android/sdk/crittercism.html#cancel-userflow-android"><span class="std std-ref">Cancel Userflow</span></a>).</p></li>
+</ul>
+</section>
+<section id="version-5-5-0-nov-9-2015">
+<h2>Version 5.5.0 (Nov 9, 2015)<a class="headerlink" href="#version-5-5-0-nov-9-2015" title="Permalink to this heading">¶</a></h2>
+<p><strong>New</strong></p>
+<ul class="simple">
+<li><p>Network Insights for XMLHttpRequests in Android WebViews.</p></li>
+<li><p>Network Insights for WebView page loads in Android Marshmallow.</p></li>
+</ul>
+</section>
+<section id="version-5-4-0-oct-5-2015">
+<h2>Version 5.4.0 (Oct 5, 2015)<a class="headerlink" href="#version-5-4-0-oct-5-2015" title="Permalink to this heading">¶</a></h2>
+<p><strong>New</strong></p>
+<ul class="simple">
+<li><p>Android Marshmallow support.</p></li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul class="simple">
+<li><p>Network Insights data were not sent to Crittercism on Lollipop 5.1.</p></li>
+<li><p>Devices without a battery (A/C powered devices) did not report crashes to
+Crittercism.</p></li>
+</ul>
+</section>
+<section id="version-5-3-4-sep-22-2015">
+<h2>Version 5.3.4 (Sep 22, 2015)<a class="headerlink" href="#version-5-3-4-sep-22-2015" title="Permalink to this heading">¶</a></h2>
+<p><strong>New</strong></p>
+<ul class="simple">
+<li><p>Added API call to allow developers to set the verbosity of Crittercism logs.</p></li>
+<li><p>Opt out status change takes effect immediately.</p></li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul class="simple">
+<li><p>Crittercism.instrumentWebView() did not properly instrument WebViews for some
+flavors of Lollipop.</p></li>
+</ul>
+</section>
+<section id="version-5-3-3-jul-29-2015">
+<h2>Version 5.3.3 (Jul 29, 2015)<a class="headerlink" href="#version-5-3-3-jul-29-2015" title="Permalink to this heading">¶</a></h2>
+<p><strong>Fixes</strong></p>
+<ul class="simple">
+<li><p>For users who opted out of Crittercism and for apps that upgraded from the
+3.x versions of the SDK, an ANR occurred when the app was backgrounded and
+then foregrounded.</p></li>
+</ul>
+</section>
+<section id="version-5-3-2-jul-16-2015">
+<h2>Version 5.3.2 (Jul 16, 2015)<a class="headerlink" href="#version-5-3-2-jul-16-2015" title="Permalink to this heading">¶</a></h2>
+<p><strong>New</strong></p>
+<ul class="simple">
+<li><p>Added an SDK bridge to allow hybrid app developers to call Crittercism Android
+API methods from JavaScript code in a WebView (please refer to:
+<a class="reference internal" href="../html5/html5.html#hybrid-apps-html5"><span class="std std-ref">Hybrid Apps</span></a>).</p></li>
+</ul>
+</section>
+<section id="version-5-3-1-jun-11-2015">
+<h2>Version 5.3.1 (Jun 11, 2015)<a class="headerlink" href="#version-5-3-1-jun-11-2015" title="Permalink to this heading">¶</a></h2>
+<p><strong>New</strong></p>
+<ul class="simple">
+<li><p>System breadcrumbs and network endpoints are now included with handled
+exception data.</p></li>
+</ul>
+</section>
+<section id="version-5-3-0-may-15-2015">
+<h2>Version 5.3.0 (May 15, 2015)<a class="headerlink" href="#version-5-3-0-may-15-2015" title="Permalink to this heading">¶</a></h2>
+<p><strong>New</strong></p>
+<ul class="simple">
+<li><p>Introducing JavaScript error monitoring for Android WebViews! (please refer to <a class="reference internal" href="../android/sdk/crittercism.html#webview-instrumentation-android"><span class="std std-ref">Instrumenting WebView</span></a>)</p></li>
+</ul>
+</section>
+<section id="version-5-2-0-mar-18-2015">
+<h2>Version 5.2.0 (Mar 18, 2015)<a class="headerlink" href="#version-5-2-0-mar-18-2015" title="Permalink to this heading">¶</a></h2>
+<p><strong>Fixes</strong></p>
+<ul class="simple">
+<li><p>SNI host verification failed when attempting to connect to servers with OkHttp 3rd party networking library.</p></li>
+</ul>
+</section>
+<section id="version-5-0-6-mar-4-2015">
+<h2>Version 5.0.6 (Mar 4, 2015)<a class="headerlink" href="#version-5-0-6-mar-4-2015" title="Permalink to this heading">¶</a></h2>
+<p><strong>Fixes</strong></p>
+<ul class="simple">
+<li><p>Data were not being reported on API levels lower than 17.</p></li>
+</ul>
+</section>
+<section id="version-5-0-5-feb-23-2015">
+<h2>Version 5.0.5 (Feb 23, 2015)<a class="headerlink" href="#version-5-0-5-feb-23-2015" title="Permalink to this heading">¶</a></h2>
+<p><strong>Known issues</strong></p>
+<ul class="simple">
+<li><p><em>Known issue</em>: No data was being reported for API levels lower than 17. <strong>Fixed in v5.0.6</strong>.</p></li>
+</ul>
+<p><strong>New</strong></p>
+<ul class="simple">
+<li><p>Added Network Insights capability for Android Lollipop (API Level 21).</p></li>
+<li><p>Modified the behavior of the <code class="docutils literal notranslate"><span class="pre">setDelaySendingAppLoad</span></code> configuration option to not create app loads until <code class="docutils literal notranslate"><span class="pre">sendAppLoadData</span></code> is called. Previously, an app load would be recorded but not sent, and if a crash occurred the app load would be sent. This feature can now be utilized by customers that do not want to record app loads when their app is started via a BroadcastReceiver.  For more detail, please refer to <a class="reference internal" href="../android/sdk/crittercism_config.html#delay-sending-app-load"><span class="std std-ref">Delay App Load Configuration</span></a>.</p></li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul class="simple">
+<li><p>Synchronization issue would occasionally cause transactions not to get reported.</p></li>
+<li><p>Some breadcrumbs showed a bogus timestamp.</p></li>
+</ul>
+</section>
+<section id="version-5-1-2-nov-11-2014">
+<h2>Version 5.1.2 (Nov 11, 2014)<a class="headerlink" href="#version-5-1-2-nov-11-2014" title="Permalink to this heading">¶</a></h2>
+<p><strong>New</strong></p>
+<ul class="simple">
+<li><p>Occurrences of handled exceptions are now sent in traces for failed transactions.</p></li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul class="simple">
+<li><p>A native crash would occur in libssl.so’s <code class="docutils literal notranslate"><span class="pre">SSL_select_next_proto</span></code> function if Crittercism attempted HTTPS connections and certain third party networking libraries were present in the app.</p></li>
+<li><p>On Kitkat and later, some HTTPS connections failed when connecting to servers with SNI enabled.</p></li>
+</ul>
+</section>
+<section id="version-5-0-4-nov-11-2014">
+<h2>Version 5.0.4 (Nov 11, 2014)<a class="headerlink" href="#version-5-0-4-nov-11-2014" title="Permalink to this heading">¶</a></h2>
+<p><strong>New</strong></p>
+<ul class="simple">
+<li><p>Occurrences of handled exceptions are now sent in traces for failed transactions.</p></li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul class="simple">
+<li><p>A native crash would occur in libssl.so’s <code class="docutils literal notranslate"><span class="pre">SSL_select_next_proto</span></code> function if Crittercism attempted HTTPS connections and certain third party networking libraries were present in the app.</p></li>
+</ul>
+</section>
+<section id="version-5-1-0-oct-9-2014">
+<h2>Version 5.1.0 (Oct 9, 2014)<a class="headerlink" href="#version-5-1-0-oct-9-2014" title="Permalink to this heading">¶</a></h2>
+<p><strong>Fixes</strong></p>
+<ul class="simple">
+<li><p>On Kitkat and later, Network Insights caused javax.net.ssl.HttpsURLConnections to fail when connecting to a server with SNI enabled.</p></li>
+</ul>
+</section>
+<section id="version-5-0-3-oct-9-2014">
+<h2>Version 5.0.3 (Oct 9, 2014)<a class="headerlink" href="#version-5-0-3-oct-9-2014" title="Permalink to this heading">¶</a></h2>
+<p><strong>New</strong></p>
+<ul class="simple">
+<li><p>Introducing Crittercism Transactions API! (please refer to <a class="reference internal" href="../android/sdk/crittercism.html#userflows-android"><span class="std std-ref">Logging User Flows</span></a>)</p></li>
+<li><p>Added API call to log network endpoints manually. (please refer to <a class="reference internal" href="../android/sdk/crittercism.html#log-network-request"><span class="std std-ref">Logging Network Request</span></a>)</p></li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul class="simple">
+<li><p>Socket-level network errors were not being reported to Crittercism for Network Insights.</p></li>
+<li><p>When more than ten breadcrumbs were left, they were not being reported in chronological order.</p></li>
+</ul>
+</section>
+<section id="version-4-5-4-jul-3-2014">
+<h2>Version 4.5.4 (Jul 3, 2014)<a class="headerlink" href="#version-4-5-4-jul-3-2014" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fix: Local services that spawned before <code class="docutils literal notranslate"><span class="pre">Crittercism.initialize()</span></code> was called would prevent app loads from being reported.</p></li>
+<li><p>Fix: Spurious log output appeared in KitKat when enabling Network Insights on initialization.</p></li>
+</ul>
+</section>
+<section id="version-4-5-3-apr-24-2014">
+<h2>Version 4.5.3 (Apr 24, 2014)<a class="headerlink" href="#version-4-5-3-apr-24-2014" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fix: Significant overcounting of app loads for apps that spawn their own service processes.</p></li>
+</ul>
+</section>
+<section id="version-4-5-1-mar-13-2014">
+<h2>Version 4.5.1 (Mar 13, 2014)<a class="headerlink" href="#version-4-5-1-mar-13-2014" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fix: User metadata is now only sent when values change. Previously a bug caused data to be sent on every call to <code class="docutils literal notranslate"><span class="pre">Crittercism.setMetadata()</span></code></p></li>
+<li><p>Fix: <code class="docutils literal notranslate"><span class="pre">NoSuchAlgorithmException</span></code> when attempting to generate UUIDs and get MD5 instances while initializing Crittercism. Network monitoring of custom SSL socket factories is disabled for Android versions through Ice Cream Sandwich.</p></li>
+</ul>
+</section>
+<section id="version-4-4-0-nov-7-2013">
+<h2>Version 4.4.0 (Nov 7, 2013)<a class="headerlink" href="#version-4-4-0-nov-7-2013" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fix: Failure to report crashes and exceptions on Nook.</p></li>
+</ul>
+</section>
+<section id="version-4-3-0-oct-24-2013">
+<h2>Version 4.3.0 (Oct 24, 2013)<a class="headerlink" href="#version-4-3-0-oct-24-2013" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>URLs reported in network statistics are now stripped of query parameters before being reported to Crittercism, unless otherwise specified by the API call <code class="docutils literal notranslate"><span class="pre">CrittercismConfig.setPreserveQueryPatterns(List</span> <span class="pre">urlPatterns)</span></code>. (XREF to doc topic)</p></li>
+</ul>
+</section>
+<section id="version-4-2-0-oct-10-2013">
+<h2>Version 4.2.0 (Oct 10, 2013)<a class="headerlink" href="#version-4-2-0-oct-10-2013" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Added API call to update most recent location with network or GPS data. (XREF to doc topic)</p></li>
+<li><p>Fix: <code class="docutils literal notranslate"><span class="pre">OutOfMemory</span></code> error that occurred when logging a handled exception under high memory pressure.</p></li>
+<li><p>Fix: <code class="docutils literal notranslate"><span class="pre">NullPointerException</span></code> in network instrumentation.</p></li>
+<li><p>Fix: <code class="docutils literal notranslate"><span class="pre">NoSuchAlgorithmException</span></code> generated from the Crittercism library when creating a UUID.</p></li>
+</ul>
+</section>
+<section id="version-4-1-0-sep-18-2013">
+<h2>Version 4.1.0 (Sep 18, 2013)<a class="headerlink" href="#version-4-1-0-sep-18-2013" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fix: OPTMZ could ignore Crittercism opt-out setting in certain situations.</p></li>
+<li><p>Breadcrumbs are now reported for Android NDK crashes.</p></li>
+</ul>
+</section>
+<section id="version-4-0-2-sep-18-2013">
+<h2>Version 4.0.2 (Sep 18, 2013)<a class="headerlink" href="#version-4-0-2-sep-18-2013" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fix: Crash due to certain network responses.</p></li>
+<li><p>Fix: Crash due to missing <code class="docutils literal notranslate"><span class="pre">ACCESS_NETWORK_STATE</span></code> permission.</p></li>
+</ul>
+</section>
+<section id="version-4-0-0-aug-26-2013">
+<h2>Version 4.0.0 (Aug 26, 2013)<a class="headerlink" href="#version-4-0-0-aug-26-2013" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>OPTMZ network instrumentation for the following Android networking libraries:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">java.net.HttpURLConnection</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">java.net.ssl.HttpsURLConnection</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">org.apache.http.impl.client.DefaultHttpClient</span></code></p></li>
+<li><p>Third-party Android libraries that use the above networking libraries.</p></li>
+</ul>
+</li>
+<li><p>HTTP network statistics include:</p>
+<ul>
+<li><p>URI</p></li>
+<li><p>HTTP request method (includes GET, POST, PUT, HEAD, DELETE, TRACE, and CONNECT)</p></li>
+<li><p>HTTP status code</p></li>
+<li><p>Network latency</p></li>
+<li><p>Bytes in</p></li>
+<li><p>Bytes out</p></li>
+</ul>
+</li>
+<li><p>Network error reporting for the following conditions:</p>
+<ul>
+<li><p>Failure to establish connection.</p></li>
+<li><p>Server response timeouts.</p></li>
+<li><p>Ability to blacklist URLs from being reported to OPTMZ.</p></li>
+</ul>
+</li>
+<li><p>Known issues</p>
+<ul>
+<li><p>Optmz network monitoring is only be enabled for Android API levels 10 - 18.</p></li>
+<li><p>SSL handshake failures are not reported.</p></li>
+<li><p>Network statistics are not captured for the Chartboost third-party library.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="version-3-2-0-jul-1-2013">
+<h2>Version 3.2.0 (Jul 1, 2013)<a class="headerlink" href="#version-3-2-0-jul-1-2013" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Added API methods for generating and configuring alert dialogs for Rate App Alerts. (XREF to doc topic)</p></li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">CritterCallback</span></code> interface for handling data retrieved asynchronously, including opt out status, settings for Rate My App, user UUID, and whether the app crashed in the previous session. (XREF to doc topic)</p></li>
+<li><p><strong>Deprecation Notice</strong>: The <code class="docutils literal notranslate"><span class="pre">Crittercism.init(Context,</span> <span class="pre">String,</span> <span class="pre">JSONObject...)</span></code> method has been deprecated and replaced by <code class="docutils literal notranslate"><span class="pre">Crittercism.initialize(Context,</span> <span class="pre">String)</span></code> and <code class="docutils literal notranslate"><span class="pre">Crittercism.initialize(Context,</span> <span class="pre">String,</span> <span class="pre">CrittercismConfig)</span></code>. (XREF to Android setup topic)</p></li>
+<li><p><strong>Deprecation Notice</strong>: The following optional methods have now been deprecated: <code class="docutils literal notranslate"><span class="pre">didCrashOnLastLoad()</span></code>, <code class="docutils literal notranslate"><span class="pre">getUserUUID()</span></code>, and <code class="docutils literal notranslate"><span class="pre">getOptOutStatus()</span></code>. Please use the <code class="docutils literal notranslate"><span class="pre">CritterCallback</span></code> interface instead. (XREF to doc topic)</p></li>
+</ul>
+</section>
+<section id="version-3-1-6-jun-14-2013">
+<h2>Version 3.1.6 (Jun 14, 2013)<a class="headerlink" href="#version-3-1-6-jun-14-2013" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fix: Minor bug fixes.</p></li>
+</ul>
+</section>
+<section id="version-3-1-5-jun-13-2013">
+<h2>Version 3.1.5 (Jun 13, 2013)<a class="headerlink" href="#version-3-1-5-jun-13-2013" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fix: Fixed bug with user metadata, where dictionaries were failing to merge properly.</p></li>
+</ul>
+</section>
+<section id="version-3-1-4-jun-11-2013">
+<h2>Version 3.1.4 (Jun 11, 2013)<a class="headerlink" href="#version-3-1-4-jun-11-2013" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Added a <code class="docutils literal notranslate"><span class="pre">CrittercismConfig</span></code> object that may be used to configure Crittercism (in lieu of using the old <code class="docutils literal notranslate"><span class="pre">JSONObject</span></code>). (XREF to doc topic).</p></li>
+<li><p>Improved network thread handling.</p></li>
+</ul>
+</section>
+<section id="version-3-0-11-apr-5-2013">
+<h2>Version 3.0.11 (Apr 5, 2013)<a class="headerlink" href="#version-3-0-11-apr-5-2013" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Added option to Crittercism configuration settings to include version code in app version name. (XREF to doc topic).</p></li>
+</ul>
+</section>
+<section id="version-3-0-10-mar-26-2013">
+<h2>Version 3.0.10 (Mar 26, 2013)<a class="headerlink" href="#version-3-0-10-mar-26-2013" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fix: Fixed bug in which the boolean value indicating whether the app has crashed in the last session was sometimes being reported incorrectly.</p></li>
+</ul>
+</section>
+<section id="version-3-0-9-mar-25-2013">
+<h2>Version 3.0.9 (Mar 25, 2013)<a class="headerlink" href="#version-3-0-9-mar-25-2013" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fix: Addressed issue with offline data consuming a lot of RAM.</p></li>
+</ul>
+</section>
+<section id="version-3-0-8-feb-26-2013">
+<h2>Version 3.0.8 (Feb 26, 2013)<a class="headerlink" href="#version-3-0-8-feb-26-2013" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fix: Addressed issue with sending delayed app load data.</p></li>
+</ul>
+</section>
+<section id="version-3-0-7-dec-14-2012">
+<h2>Version 3.0.7 (Dec 14, 2012)<a class="headerlink" href="#version-3-0-7-dec-14-2012" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fix: Addressed <code class="docutils literal notranslate"><span class="pre">StrictMode</span></code> violation issues with disk reads and writes.</p></li>
+</ul>
+</section>
+<section id="version-3-0-6-oct-30-2012">
+<h2>Version 3.0.6 (Oct 30, 2012)<a class="headerlink" href="#version-3-0-6-oct-30-2012" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Added method for get user UUID. (XREF to doc topic)</p></li>
+</ul>
+</section>
+<section id="version-3-0-5-oct-20-2012">
+<h2>Version 3.0.5 (Oct 20, 2012)<a class="headerlink" href="#version-3-0-5-oct-20-2012" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fix: Fixed an issue that could sometimes lead to duplicate reports of app loads, crashes, and exceptions.</p></li>
+</ul>
+</section>
+<section id="version-3-0-4-oct-10-2012">
+<h2>Version 3.0.4 (Oct 10, 2012)<a class="headerlink" href="#version-3-0-4-oct-10-2012" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fix: Minor bug fixes.</p></li>
+</ul>
+</section>
+<section id="version-3-0-3-sep-25-2012">
+<h2>Version 3.0.3 (Sep 25, 2012)<a class="headerlink" href="#version-3-0-3-sep-25-2012" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Added configuration option for customizing version name. (XREF to doc topic)</p></li>
+<li><p>Android NDK:</p>
+<ul>
+<li><p>Collects memory usage for applications during native crashes.</p></li>
+<li><p>Improved directory structure for local storage of native library / crash data.</p></li>
+<li><p>Added configuration option on where to place native crash data in the filesystem (<code class="docutils literal notranslate"><span class="pre">nativeDumpPath</span></code>).</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="version-3-0-2-aug-11-2012">
+<h2>Version 3.0.2 (Aug 11, 2012)<a class="headerlink" href="#version-3-0-2-aug-11-2012" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Re-enabled logcat collection. (XREF to doc topic)</p></li>
+</ul>
+</section>
+<section id="version-3-0-0-jul-13-2012">
+<h2>Version 3.0.0 (Jul 13, 2012)<a class="headerlink" href="#version-3-0-0-jul-13-2012" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Reduced image size to 40 KB by removing forum, service, and receiver.</p></li>
+<li><p>Modified initialization call to accept JSON object with parameters. (XREF to doc topic)</p></li>
+<li><p>Fix: Addressed issue in which app would sometimes load more slowly.</p></li>
+<li><p>Added functionality to send app load data and receive notifications not immediately after app load, but at some later time. (XREF to doc topic)</p></li>
+<li><p>Temporarily removed logcat functionality to resolve issues with building app.</p></li>
+</ul>
+</section>
+<section id="version-2-1-7-jun-12-2012">
+<h2>Version 2.1.7 (Jun 12, 2012)<a class="headerlink" href="#version-2-1-7-jun-12-2012" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Crittercism.init</span></code> function now returns boolean to indicate whether app crashed on last load.</p></li>
+</ul>
+</section>
+<section id="versions-2-1-3-rev-1-and-2-1-6-rev-1-jun-4-2012">
+<h2>Versions 2.1.3 rev 1 and 2.1.6 rev 1 (Jun 4, 2012)<a class="headerlink" href="#versions-2-1-3-rev-1-and-2-1-6-rev-1-jun-4-2012" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Modified format of app load data being sent.</p></li>
+</ul>
+</section>
+<section id="version-2-1-6-may-30-2012">
+<h2>Version 2.1.6 (May 30, 2012)<a class="headerlink" href="#version-2-1-6-may-30-2012" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Increased connection attempt time from 15 seconds to 20 seconds.</p></li>
+</ul>
+</section>
+<section id="version-2-1-5-may-9-2012">
+<h2>Version 2.1.5 (May 9, 2012)<a class="headerlink" href="#version-2-1-5-may-9-2012" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Off-line app load reporting now supported.</p></li>
+<li><p>Fix: Minor bug fixes for a few edge cases where forum page does not load correctly.</p></li>
+</ul>
+</section>
+<section id="version-2-1-4-apr-25-2012">
+<h2>Version 2.1.4 (Apr 25, 2012)<a class="headerlink" href="#version-2-1-4-apr-25-2012" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Added API call to allow developer to see if last session ended with a crash.</p></li>
+</ul>
+</section>
+<section id="version-2-1-3-apr-16-2012">
+<h2>Version 2.1.3 (Apr 16, 2012)<a class="headerlink" href="#version-2-1-3-apr-16-2012" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Added crash-only version of library (no support forum).</p></li>
+</ul>
+</section>
+<section id="version-2-1-3-mar-22-2012">
+<h2>Version 2.1.3 (Mar 22, 2012)<a class="headerlink" href="#version-2-1-3-mar-22-2012" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fix: Addressed issues with preserving text upon rotating device in forum.</p></li>
+<li><p>Fix: Bug fixes.</p></li>
+</ul>
+</section>
+<section id="version-2-1-2-mar-7-2012">
+<h2>Version 2.1.2 (Mar 7, 2012)<a class="headerlink" href="#version-2-1-2-mar-7-2012" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fix: Addressed a bug with logging handled exceptions.</p></li>
+</ul>
+</section>
+<section id="version-2-1-1-mar-4-2012">
+<h2>Version 2.1.1 (Mar 4, 2012)<a class="headerlink" href="#version-2-1-1-mar-4-2012" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Provided API call to direct compliments to Amazon Marketplace.</p></li>
+<li><p>Provided API call to get opt-out statuses of users.</p></li>
+<li><p>Fix: Minor bug fixes in forum.</p></li>
+</ul>
+</section>
+<section id="version-2-1-0-mar-3-2012">
+<h2>Version 2.1.0 (Mar 3, 2012)<a class="headerlink" href="#version-2-1-0-mar-3-2012" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Added support for handled exceptions.</p></li>
+<li><p>Fix: Resolved minor issue with proguard warnings.</p></li>
+</ul>
+</section>
+<section id="version-2-0-1-feb-14-2012">
+<h2>Version 2.0.1 (Feb 14, 2012)<a class="headerlink" href="#version-2-0-1-feb-14-2012" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fix: Fixed a font-sizing issue in the forum.</p></li>
+<li><p>Fix: Fixed an issue with reloading the forum on device rotation.</p></li>
+</ul>
+</section>
+<section id="version-2-0-0-feb-9-2012">
+<h2>Version 2.0.0 (Feb 9, 2012)<a class="headerlink" href="#version-2-0-0-feb-9-2012" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>MAJOR revamping of forum for feedback.</p></li>
+<li><p>Fix: Minor fix to improve performance.</p></li>
+</ul>
+</section>
+<section id="version-1-3-0-jan-24-2012">
+<h2>Version 1.3.0 (Jan 24, 2012)<a class="headerlink" href="#version-1-3-0-jan-24-2012" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>The Android library now supports breadcrumbs.</p></li>
+</ul>
+</section>
+<section id="version-1-2-5-jan-17-2012">
+<h2>Version 1.2.5 (Jan 17, 2012)<a class="headerlink" href="#version-1-2-5-jan-17-2012" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Cleaned up files and optimized some code.</p></li>
+</ul>
+</section>
+<section id="version-1-2-4-jan-12-2012">
+<h2>Version 1.2.4 (Jan 12, 2012)<a class="headerlink" href="#version-1-2-4-jan-12-2012" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fix: Minor fix for detecting unique users.</p></li>
+</ul>
+</section>
+<section id="version-1-2-3-jan-11-2012">
+<h2>Version 1.2.3 (Jan 11, 2012)<a class="headerlink" href="#version-1-2-3-jan-11-2012" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Localized a few more strings.</p></li>
+</ul>
+</section>
+<section id="version-1-2-2-jan-6-2012">
+<h2>Version 1.2.2 (Jan 6, 2012)<a class="headerlink" href="#version-1-2-2-jan-6-2012" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Developers can now modify the title for crash notifications.</p></li>
+</ul>
+</section>
+<section id="version-1-2-1-jan-5-2012">
+<h2>Version 1.2.1 (Jan 5, 2012)<a class="headerlink" href="#version-1-2-1-jan-5-2012" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fix: Fixed minor bug with notifications.</p></li>
+</ul>
+</section>
+<section id="version-1-2-0-jan-3-2012">
+<h2>Version 1.2.0 (Jan 3, 2012)<a class="headerlink" href="#version-1-2-0-jan-3-2012" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">CrittercismService</span></code> is now DISABLED by default.</p></li>
+<li><p>Developers can allow users to opt out of Crittercism.</p></li>
+</ul>
+</section>
+<section id="version-1-1-2-dec-15-2011">
+<h2>Version 1.1.2 (Dec 15, 2011)<a class="headerlink" href="#version-1-1-2-dec-15-2011" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Service optional.</p></li>
+</ul>
+</section>
+<section id="version-1-1-1-nov-18-2011">
+<h2>Version 1.1.1 (Nov 18, 2011)<a class="headerlink" href="#version-1-1-1-nov-18-2011" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fix: App version merge fix.</p></li>
+</ul>
+</section>
+<section id="version-1-1-0-nov-18-2011">
+<h2>Version 1.1.0 (Nov 18, 2011)<a class="headerlink" href="#version-1-1-0-nov-18-2011" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fix: Fixed backwards compatibility issues, logcat re-enabled.</p></li>
+</ul>
+</section>
+<section id="version-1-0-2-nov-8-2011">
+<h2>Version 1.0.2 (Nov 8, 2011)<a class="headerlink" href="#version-1-0-2-nov-8-2011" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fix: Version fix.</p></li>
+</ul>
+</section>
+<section id="version-1-0-1-oct-27-2011">
+<h2>Version 1.0.1 (Oct 27, 2011)<a class="headerlink" href="#version-1-0-1-oct-27-2011" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Temporarily disabled logcat output.</p></li>
+</ul>
+</section>
+<section id="version-1-0-0-oct-24-2011">
+<h2>Version 1.0.0 (Oct 24, 2011)<a class="headerlink" href="#version-1-0-0-oct-24-2011" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Offline crashes, more diagnostic data.</p></li>
+</ul>
+</section>
+<section id="version-0-82-oct-17-2011">
+<h2>Version 0.82 (Oct 17, 2011)<a class="headerlink" href="#version-0-82-oct-17-2011" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fix: Fixed proguard and app version issue. Improved background thread reporting.</p></li>
+</ul>
+</section>
+</section>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+	<script type="text/javascript" charset="utf-8" src="../_static/toc.js"></script>
+  </body>
+</html>
