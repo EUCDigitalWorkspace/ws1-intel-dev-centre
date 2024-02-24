@@ -1,0 +1,5 @@
+Add this file to bypass the Jekyll tool
+This fixes GitHub Pages problems with folders that begin with underscore '_' 
+See
+https://github.com/mpetrovich/stylemark/issues/65
+https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/
