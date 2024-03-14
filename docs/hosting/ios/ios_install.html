@@ -7,16 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Setting Up Workspace ONE Intelligence SDK for iOS &#8212; Workspace ONE Intelligence  documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/adctheme.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/toggle.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../static/adctheme.css" />
+    <script data-url_root="../" id="documentation_options" src="../static/documentation_options.js"></script>
+    <script src="../static/jquery.js"></script>
+    <script src="../static/underscore.js"></script>
+    <script src="../static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../static/doctools.js"></script>
+    <script src="../static/sphinx_highlight.js"></script>
+    <script src="../static/toggle.js"></script>
+    <link rel="shortcut icon" href="../static/favicon.ico"/>
       <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Workspace ONE Intelligence  documentation" href="../index.html" /> 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
@@ -172,7 +172,7 @@ to upgrade to a newer version. Version 7.69.1 has been confirmed
 to resolved the issue.</p>
 </div>
 <p>In your Xcode application target’s “Build Phases” tab, add a new Run Script.</p>
-<img alt="../_images/xcode-run-script.png" src="../_images/xcode-run-script.png" />
+<img alt="../images1/xcode-run-script.png" src="../images1/xcode-run-script.png" />
 <p>Copy and paste the following code if you’re using <strong>Swift Package Manager</strong>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">APP_ID</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR_APP_ID&gt;&quot;</span>
 <span class="nv">CREDENTIALS_FILE</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">SRCROOT</span><span class="si">}</span><span class="s2">/&lt;PATH_TO_CREDENTIALS_FILE&gt;&quot;</span>
@@ -195,18 +195,18 @@ Workspace ONE Intelligence and become available for crash symbolication.</p>
 <section id="generate-dsym-files-in-build">
 <h3>Generate dSYM Files in Build<a class="headerlink" href="#generate-dsym-files-in-build" title="Permalink to this heading">¶</a></h3>
 <p>DWARF dSYM file generation can be toggled in the build options for the target. If you attempt to run the script without dSYM generation enabled, then the script will fail. Select ‘DWARF with dSYM File’ to generate the dSYM file.</p>
-<img alt="../_images/xcode-enable-dsym.png" src="../_images/xcode-enable-dsym.png" />
+<img alt="../images1/xcode-enable-dsym.png" src="../images1/xcode-enable-dsym.png" />
 </section>
 <section id="generate-credentials-file-from-workspace-one-intelligence-platform">
 <h3>Generate Credentials File from Workspace ONE Intelligence Platform<a class="headerlink" href="#generate-credentials-file-from-workspace-one-intelligence-platform" title="Permalink to this heading">¶</a></h3>
 <p>Log into the Workspace ONE Intelligence Platform and click the <strong>Service Accounts</strong> menu.</p>
-<img alt="../_images/ws1-service-accounts-button.png" src="../_images/ws1-service-accounts-button.png" />
+<img alt="../images1/ws1-service-accounts-button.png" src="../images1/ws1-service-accounts-button.png" />
 <p>At the top of the page, click the <strong>Add</strong> button to add a new account.</p>
-<img alt="../_images/ws1-service-accounts-add-button.png" src="../_images/ws1-service-accounts-add-button.png" />
+<img alt="../images1/ws1-service-accounts-add-button.png" src="../images1/ws1-service-accounts-add-button.png" />
 <p>Name the service account as desired.</p>
-<img alt="../_images/ws1-service-accounts-add-namefield-button.png" src="../_images/ws1-service-accounts-add-namefield-button.png" />
+<img alt="../images1/ws1-service-accounts-add-namefield-button.png" src="../images1/ws1-service-accounts-add-namefield-button.png" />
 <p>Click <strong>GENERATE CLIENT SECRET</strong> button.</p>
-<img alt="../_images/ws1-service-accounts-add-generate-button.png" src="../_images/ws1-service-accounts-add-generate-button.png" />
+<img alt="../images1/ws1-service-accounts-add-generate-button.png" src="../images1/ws1-service-accounts-add-generate-button.png" />
 <p>Save the .json file to your source repository and amend the path in the Xcode Script Phase</p>
 </section>
 <section id="common-dsym-upload-issues">
@@ -302,6 +302,6 @@ Workspace ONE Intelligence and become available for crash symbolication.</p>
       </div>
       <div class="clearer"></div>
     </div>
-	<script type="text/javascript" charset="utf-8" src="../_static/toc.js"></script>
+	<script type="text/javascript" charset="utf-8" src="../static/toc.js"></script>
   </body>
 </html>

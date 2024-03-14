@@ -7,16 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Zapier Integration Guide &#8212; Workspace ONE Intelligence  documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/adctheme.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/toggle.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../static/adctheme.css" />
+    <script data-url_root="../" id="documentation_options" src="../static/documentation_options.js"></script>
+    <script src="../static/jquery.js"></script>
+    <script src="../static/underscore.js"></script>
+    <script src="../static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../static/doctools.js"></script>
+    <script src="../static/sphinx_highlight.js"></script>
+    <script src="../static/toggle.js"></script>
+    <link rel="shortcut icon" href="../static/favicon.ico"/>
       <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Workspace ONE Intelligence  documentation" href="../index.html" /> 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
@@ -101,14 +101,14 @@ Spreadsheet whenever a new Apteligent alert is created.</p>
 <h2>Step 1. Choose a Trigger and Action<a class="headerlink" href="#step-1-choose-a-trigger-and-action" title="Permalink to this heading">¶</a></h2>
 <ol class="arabic">
 <li><p>From the Zapier dashboard, go to “Make a New Zap” and you will see the following.</p>
-<img alt="../_images/integration-zapier-choose-trigger.png" src="../_images/integration-zapier-choose-trigger.png" />
+<img alt="../images1/integration-zapier-choose-trigger.png" src="../images1/integration-zapier-choose-trigger.png" />
 </li>
 <li><p>Under “Choose a Trigger app…” select <strong>Crittercism</strong> and <strong>New Alert</strong>.</p>
-<img alt="../_images/integration-zapier-new-alert.png" src="../_images/integration-zapier-new-alert.png" />
+<img alt="../images1/integration-zapier-new-alert.png" src="../images1/integration-zapier-new-alert.png" />
 </li>
 <li><p>Under “Choose an Action app…” select <strong>Google Docs</strong> and <strong>Create Spreadsheet Row</strong>.</p>
 <blockquote>
-<div><img alt="../_images/integration-zapier-choose-action.png" src="../_images/integration-zapier-choose-action.png" />
+<div><img alt="../images1/integration-zapier-choose-action.png" src="../images1/integration-zapier-choose-action.png" />
 </div></blockquote>
 </li>
 </ol>
@@ -118,13 +118,13 @@ Spreadsheet whenever a new Apteligent alert is created.</p>
 <p>Zapier will display a webhook URL to use in Apteligent.</p>
 <ol class="arabic">
 <li><p>Copy the URL.</p>
-<img alt="../_images/integration-zapier-select-crittercism.png" src="../_images/integration-zapier-select-crittercism.png" />
+<img alt="../images1/integration-zapier-select-crittercism.png" src="../images1/integration-zapier-select-crittercism.png" />
 </li>
 <li><p>Login to <strong>Apteligent</strong>, go to <strong>Alert Center</strong> and <strong>Alert Integrations</strong> and <strong>Add Integration</strong>.</p></li>
 <li><p>Select <strong>Webhook</strong> as the Integration type and give your integration a <strong>Name</strong>.</p></li>
 <li><p>Paste the URL from the previous step.</p></li>
 <li><p>Click <strong>Create Integration</strong>.</p>
-<img alt="../_images/integration-zapier-new-alert-integration.png" src="../_images/integration-zapier-new-alert-integration.png" />
+<img alt="../images1/integration-zapier-new-alert-integration.png" src="../images1/integration-zapier-new-alert-integration.png" />
 </li>
 </ol>
 </section>
@@ -132,32 +132,32 @@ Spreadsheet whenever a new Apteligent alert is created.</p>
 <h2>Step 3. Select a Google Docs Account<a class="headerlink" href="#step-3-select-a-google-docs-account" title="Permalink to this heading">¶</a></h2>
 <p>Connect your Google account to Zapier. If this is your first time, you may be presented with a Google authentication screen.</p>
 <blockquote>
-<div><img alt="../_images/integration-zapier-select-google-docs.png" src="../_images/integration-zapier-select-google-docs.png" />
+<div><img alt="../images1/integration-zapier-select-google-docs.png" src="../images1/integration-zapier-select-google-docs.png" />
 </div></blockquote>
 </section>
 <section id="step-4-filter-apteligent-triggers">
 <h2>Step 4. Filter Apteligent Triggers<a class="headerlink" href="#step-4-filter-apteligent-triggers" title="Permalink to this heading">¶</a></h2>
 <p>You can choose to produce triggers for all Apteligent alerts or only a subset.
 The following example shows producing triggers for alerts related to the “app loads” metric only.</p>
-<img alt="../_images/integration-zapier-filter-triggers.png" src="../_images/integration-zapier-filter-triggers.png" />
+<img alt="../images1/integration-zapier-filter-triggers.png" src="../images1/integration-zapier-filter-triggers.png" />
 </section>
 <section id="step-5-match-up-apteligent-alert-to-google-docs-spreadsheet-row">
 <h2>Step 5. Match up Apteligent Alert to Google Docs Spreadsheet Row<a class="headerlink" href="#step-5-match-up-apteligent-alert-to-google-docs-spreadsheet-row" title="Permalink to this heading">¶</a></h2>
 <ol class="arabic">
 <li><p>Create a new <strong>Google Spreadsheet</strong> with the following column headers: <code class="docutils literal notranslate"><span class="pre">client_url</span></code>, <code class="docutils literal notranslate"><span class="pre">event_type</span></code>, <code class="docutils literal notranslate"><span class="pre">incident_key</span></code>, <code class="docutils literal notranslate"><span class="pre">client</span></code>, <code class="docutils literal notranslate"><span class="pre">details</span></code>, and <code class="docutils literal notranslate"><span class="pre">description</span></code>.</p>
-<img alt="../_images/integration-zapier-make-spreadsheet.png" src="../_images/integration-zapier-make-spreadsheet.png" />
+<img alt="../images1/integration-zapier-make-spreadsheet.png" src="../images1/integration-zapier-make-spreadsheet.png" />
 </li>
 <li><p>Assuming you have correctly authenticated your Google Docs account with Zapier,
 select the spreadsheet you just created and the first worksheet created.</p></li>
 <li><p>Match up fields from the Apteligent alert parameters with the spreadsheet columns.</p>
-<img alt="../_images/integration-zapier-trigger-action.png" src="../_images/integration-zapier-trigger-action.png" />
+<img alt="../images1/integration-zapier-trigger-action.png" src="../images1/integration-zapier-trigger-action.png" />
 </li>
 </ol>
 <p>If your Zap is working correctly, every time your Apteligent alert is
 triggered, a new row will be created in your Google Spreadsheet. Depending on
 your Zapier level of service, it may take between 5 and 15 minutes for your
 spreadsheet to begin getting populated.</p>
-<img alt="../_images/integration-zapier-google-sheets.png" src="../_images/integration-zapier-google-sheets.png" />
+<img alt="../images1/integration-zapier-google-sheets.png" src="../images1/integration-zapier-google-sheets.png" />
 <p>For additional assistance, contact Apteligent Support (<a class="reference external" href="mailto:support&#37;&#52;&#48;apteligent&#46;com">support<span>&#64;</span>apteligent<span>&#46;</span>com</a>).</p>
 </section>
 </section>
@@ -171,6 +171,6 @@ spreadsheet to begin getting populated.</p>
       </div>
       <div class="clearer"></div>
     </div>
-	<script type="text/javascript" charset="utf-8" src="../_static/toc.js"></script>
+	<script type="text/javascript" charset="utf-8" src="../static/toc.js"></script>
   </body>
 </html>
